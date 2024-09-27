@@ -1,0 +1,215 @@
+/* Footer  */
+footer {
+    position: relative;
+}
+
+.footer-contact {
+    height: 130px;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.footer-hr {
+    margin-top: -90px;
+    margin-bottom: 90px;
+    max-width: 100px;
+    border: none;
+    border-top: 5px solid #f4bd07;
+    margin-left: 585px;
+}
+
+.footer__img-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.footer__img {
+    width: 286px;
+    height: 448px;
+    display: block;
+    border: 3px solid orange;
+    border-radius: 10px;
+}
+
+.footer__icon {
+    position: absolute;
+    top: 85%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+}
+
+.footer__icon_2 {
+    position: absolute;
+    top: 85%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+}
+
+.footer__icon_3 {
+    position: absolute;
+    top: 85%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+}
+
+.footer__icon_4 {
+    position: absolute;
+    top: 85%;
+    left: 74%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+}
+
+.footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* position: relative; */
+}
+
+.footer__text-address1-title {
+    color: #f4bd07;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-weight: 500px;
+    font-size: 35px;
+}
+
+.footer__text-address2-p,
+.footer__text-address3-address,
+.footer__text-address3-phone,
+.footer__text-address3-email,
+.footer__text-address3-github,
+.footer__text-information-p {
+
+    margin-top: 20px;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: rgb(171, 172, 173);
+    font-size: 15px;
+}
+
+
+.footeer__address,
+.footeer__phone,
+.footeer__email,
+.footeer__github {
+    font-weight: bold;
+    color: black;
+    font-weight: 800;
+}
+
+.footer__text-copyright {
+    display: flex;
+    position: absolute;
+    left: 420px;
+    bottom: 50px;
+    align-items: center;
+
+}
+
+.footer__text-information4-icon {
+    color: gray;
+    font-size: 50px;
+    padding-right: 10px;
+    position: relative;
+}
+
+.footer__text-copyright-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.footer__text-copyright-final {
+    font-size: 11px;
+    margin-top: 10px;
+    margin-right: 100px;
+}
+
+/* .footer__text-copyright {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 420px;
+    bottom: 50px;
+}  */
+
+.footer__email-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Bo tròn góc */
+    font-size: 16px;
+    width: 200px;
+    margin-left: 30px;
+    /* Độ rộng của ô nhập */
+}
+
+.footer_get_email {
+    background-color: #f4bd07;
+    /* Màu nền cho nút */
+    color: white;
+    /* Màu chữ */
+    border: none;
+    /* Không viền */
+    border-radius: 5px;
+    /* Bo tròn góc */
+    padding: 10px 20px;
+    /* Khoảng cách bên trong nút */
+    font-size: 16px;
+    /* Kích thước chữ */
+    cursor: pointer;
+    /* Hiệu ứng khi hover */
+}
+
+.footer_get_email:hover {
+    background-color: #e3a106;
+    /* Màu khi hover */
+}
+
+
+.footer__last-icon {
+    position: absolute;
+    top: 70px;
+    left: 480px;
+    font-size: 35px;
+}
+
+.footer__last-icon2 {
+    position: absolute;
+    top: 70px;
+    left: 530px;
+    font-size: 35px;
+}
+
+.footer__last-icon3 {
+    position: absolute;
+    top: 70px;
+    left: 580px;
+    font-size: 35px;
+}
+
+.footer__last-icon4 {
+    position: absolute;
+    top: 70px;
+    left: 630px;
+    font-size: 35px;
+}
+
+.footer__last-icon5 {
+    position: absolute;
+    top: 70px;
+    left: 680px;
+    font-size: 35px;
+}
