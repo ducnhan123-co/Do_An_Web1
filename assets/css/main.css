@@ -563,3 +563,58 @@ footer {
   left: 780px;
   font-size: 35px;
 }
+
+/* Thiết kế Best Seller */
+
+
+
+
+
+
+/* Thiết kế phần đánh giá */
+.testimonials-content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.t-box{
+  background: var(--container-color);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.t-box .stars{
+  color: var(--yellow-color);
+  font-size: 18px;
+}
+
+.t-box p{
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.profile{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+.profile-data h3{
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+}
+
+.profile-data span{
+  font-size: 0.94rem;
+  font-weight: 400;
+  color: rgb(18 18 18 / 70%);
+}

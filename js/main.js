@@ -2,7 +2,10 @@ var swiper = new Swiper(".home", {
   spaceBetween: 30,
   centeredSlides: true,
   // Tắt tính năng autoplay
-  autoplay: false,
+  autoplay: {
+    delay: 3000,
+      disableOnInteraction: false,
+  },
   // Kích hoạt pagination (nút chuyển ảnh) có thể click
   pagination: {
     el: ".swiper-pagination",
