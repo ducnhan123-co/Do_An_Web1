@@ -463,7 +463,47 @@ header.shadow .logo {
   background: var(--container-color);
   padding: 30px;
   border-radius: 10px;
+  border: 2px solid var(--yellow-color);
+  transition: border-color 0.3s ease;
+  cursor: zoom-in;
+  position: relative;
+
 }
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #ffcc33;
+    /* Màu vàng */
+  }
+
+  25% {
+    border-color: #ff9933;
+    /* Màu cam nhạt */
+  }
+
+  50% {
+    border-color: #ffcc33;
+    /* Trở lại màu vàng */
+  }
+
+  75% {
+    border-color: #ff9933;
+    /* Màu cam nhạt */
+  }
+
+  100% {
+    border-color: #ffcc33;
+    /* Cuối cùng trở lại màu vàng */
+  }
+}
+
+.t-box:hover {
+  animation: borderAnimation 1s linear infinite;
+  /* Chạy animation khi hover */
+  position: relative;
+}
+
+
 
 .t-box .stars {
   color: var(--yellow-color);
@@ -473,6 +513,51 @@ header.shadow .logo {
 .t-box p {
   font-size: 1.1rem;
   margin: 10px 0;
+}
+
+.t-box {
+  background: var(--container-color);
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid var(--yellow-color);
+  transition: border-color 0.3s ease;
+  cursor: zoom-in;
+  position: relative;
+}
+
+.t-box.zoomed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.zoomed-in {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.zoomed-in .t-box {
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+.zoomed-in img {
+  max-width: none;
+  width: auto;
+  height: auto;
+  transition: transform 0.2s ease;
 }
 
 .profile {
