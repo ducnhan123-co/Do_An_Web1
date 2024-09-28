@@ -1,5 +1,40 @@
-/* Header */
+/* Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Righteous&display=swap');
+ *{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-padding-top: 3rem;
+    font-family: var(--font-family-1);
+ }
 
+ /* Variables */
+ :root{
+    --brown: #4b1204;
+    --yellow-color: #ffa10a;
+    --text-color: #121212;
+    --container-color: #efe8e0;
+    --red: #a72e1b;
+    --bg-color: #fff;
+    --text-alter-color: #94908e;
+    --font-family-1: "Mitr", sans-serif;
+    --font-family-2: "Righteous", sans-serif;
+ }
+
+
+ /* Custom Scroll Bar */
+ html::-webkit-scrollbar{
+  width: 0.5rem;
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: var(--red);
+}
+
+
+/* Header */
 body {
   color: var(--text-color);
   background: var(--bg-color);
@@ -36,6 +71,20 @@ header {
   transition: 0.5s;
 }
 
+/* Khi di chuyển thì thanh menu sẽ tự đổi màu bên js đã code */
+header.shadow{
+  background: var(--yellow-color);
+}
+
+header.shadow .navbar a{
+  color: var(--text-color);
+}
+
+header.shadow .logo{
+  color: var(--text-color);
+}
+
+/* thiết kế sau phần header */
 .nav {
   display: flex;
   align-items: center;
@@ -290,6 +339,8 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  /* ẩn các thông tin đi khi phóng ảnh */
+  overflow: hidden;
 }
 
 .item-box .sale {
@@ -304,13 +355,35 @@ header {
 }
 
 .item-box img {
-  max-width: 264px;
-  width: 100%;
-  object-position: center;
-  margin-bottom: 1.2rem;
+  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    /* Để ảnh luôn căn ra giữa */
+    object-position: center;
+}
+
+.card-img{
+  width: 200px;
+  height: 200px;
+  border: 4px solid var(--yellow-color);
+  border-radius: 50%;
+  /* ẩn các góc của ảnh */
+  overflow: hidden;
+  margin: 0 auto;
+  transform: translateY(25px);
+  transition: 1s;
+}
+
+.card-img:hover{
+  width: 85%;
+  height: 85%;
+  border-radius: unset;
+  transform: unset;
+  border: none;
 }
 
 .item-box h2 {
+  margin-top: 35px;
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--brown);
