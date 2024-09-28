@@ -304,15 +304,32 @@ header.shadow .logo {
   margin-bottom: 2rem !important;
 }
 
-
-.testimonials-hr,
-.feature__heading-hr {
-  max-width: 250px;
+.img-hr-custom {
+  max-width: 425px;
   margin: 0 auto;
-  margin-top: -30px;
+  margin-top: -60px;
   margin-bottom: 40px;
   border: none;
-  border-top: 5px solid #f4bd07;
+  display: block;
+
+}
+
+.img-hr-custom-feature {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: -70px;
+  margin-bottom: -25px;
+  border: none;
+  display: block;
+}
+
+.img-hr-custom-testimonials {
+  max-width: 380px;
+  margin: 0 auto;
+  margin-top: -65px;
+  margin-bottom: 20px;
+  border: none;
+  display: block;
 }
 
 .items-hr {
@@ -601,13 +618,13 @@ footer {
   margin-bottom: 2rem !important;
 }
 
-.footer-hr {
-  max-width: 250px;
+.footer-custom-hr {
+  max-width: 350px;
   margin: 0 auto;
-  margin-top: -30px;
-  margin-bottom: 40px;
+  margin-top: -65px;
+  margin-bottom: 30px;
   border: none;
-  border-top: 5px solid #f4bd07;
+  display: block;
 }
 
 .footer__img-wrapper {
