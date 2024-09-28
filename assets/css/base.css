@@ -31,5 +31,86 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-    background: var(--yellow-color);
+    background-image: linear-gradient(180deg, #ffcc33 0%, #ff9933 99%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease infinite;
+    box-shadow: inset 2px 2px 8px 0 rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 204, 51, 0.5);
+    border-radius: 100px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
+
+/* Hiệu ứng gradient di chuyển qua lại */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Hiệu ứng khi hover */
+html::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(180deg, #ff9933 0%, #ffcc33 99%);
+    background-size: 200% 200%;
+    animation: gradientAnimationHover 1.5s ease infinite;
+    /* Nhanh hơn khi hover */
+    box-shadow: inset 2px 2px 8px 0 rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 204, 51, 1);
+    cursor: pointer;
+}
+
+/* Hiệu ứng gradient nhanh hơn khi hover */
+@keyframes gradientAnimationHover {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+html {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    animation-timeline: scroll(x);
+
+    body>section {
+        scroll-snap-align: start;
+    }
+}
+
+/* CSS cho menu xuấn hiện từ từ  */
+@keyframes scale-a-lil {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.item-box {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.item-box.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* c */

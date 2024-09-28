@@ -1,35 +1,36 @@
 /* Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Righteous&display=swap');
- *{
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    scroll-padding-top: 3rem;
-    font-family: var(--font-family-1);
- }
 
- /* Variables */
- :root{
-    --brown: #4b1204;
-    --yellow-color: #ffa10a;
-    --text-color: #121212;
-    --container-color: #efe8e0;
-    --red: #a72e1b;
-    --bg-color: #fff;
-    --text-alter-color: #94908e;
-    --font-family-1: "Mitr", sans-serif;
-    --font-family-2: "Righteous", sans-serif;
- }
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-padding-top: 3rem;
+  font-family: var(--font-family-1);
+}
+
+/* Variables */
+:root {
+  --brown: #4b1204;
+  --yellow-color: #ffa10a;
+  --text-color: #121212;
+  --container-color: #efe8e0;
+  --red: #a72e1b;
+  --bg-color: #fff;
+  --text-alter-color: #94908e;
+  --font-family-1: "Mitr", sans-serif;
+  --font-family-2: "Righteous", sans-serif;
+}
 
 
- /* Custom Scroll Bar */
- html::-webkit-scrollbar{
+/* Custom Scroll Bar */
+html::-webkit-scrollbar {
   width: 0.5rem;
   background: transparent;
 }
 
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
   background: var(--red);
 }
 
@@ -58,6 +59,9 @@ section {
   width: 100%;
 }
 
+
+
+
 header {
   position: fixed;
   width: 100%;
@@ -72,15 +76,15 @@ header {
 }
 
 /* Khi di chuyển thì thanh menu sẽ tự đổi màu bên js đã code */
-header.shadow{
+header.shadow {
   background: var(--yellow-color);
 }
 
-header.shadow .navbar a{
+header.shadow .navbar a {
   color: var(--text-color);
 }
 
-header.shadow .logo{
+header.shadow .logo {
   color: var(--text-color);
 }
 
@@ -300,6 +304,26 @@ header.shadow .logo{
   margin-bottom: 2rem !important;
 }
 
+
+.testimonials-hr,
+.feature__heading-hr {
+  max-width: 250px;
+  margin: 0 auto;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  border: none;
+  border-top: 5px solid #f4bd07;
+}
+
+.items-hr {
+  max-width: 380px;
+  margin: 0 auto;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  border: none;
+  border-top: 5px solid #ffc400;
+}
+
 /* Định nghĩa phần menu */
 .feature-menu-content {
   display: grid;
@@ -356,13 +380,13 @@ header.shadow .logo{
 
 .item-box img {
   object-fit: cover;
-    width: 100%;
-    height: 100%;
-    /* Để ảnh luôn căn ra giữa */
-    object-position: center;
+  width: 100%;
+  height: 100%;
+  /* Để ảnh luôn căn ra giữa */
+  object-position: center;
 }
 
-.card-img{
+.card-img {
   width: 200px;
   height: 200px;
   border: 4px solid var(--yellow-color);
@@ -374,7 +398,7 @@ header.shadow .logo{
   transition: 1s;
 }
 
-.card-img:hover{
+.card-img:hover {
   width: 85%;
   height: 85%;
   border-radius: unset;
@@ -429,48 +453,48 @@ header.shadow .logo{
 
 
 /* Thiết kế phần đánh giá */
-.testimonials-content{
+.testimonials-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
-.t-box{
+.t-box {
   background: var(--container-color);
   padding: 30px;
   border-radius: 10px;
 }
 
-.t-box .stars{
+.t-box .stars {
   color: var(--yellow-color);
   font-size: 18px;
 }
 
-.t-box p{
+.t-box p {
   font-size: 1.1rem;
   margin: 10px 0;
 }
 
-.profile{
+.profile {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.profile img{
+.profile img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
-.profile-data h3{
+.profile-data h3 {
   font-size: 1rem;
   line-height: 1rem;
   font-weight: 500;
 }
 
-.profile-data span{
+.profile-data span {
   font-size: 0.94rem;
   font-weight: 400;
   color: rgb(18 18 18 / 70%);
@@ -485,19 +509,20 @@ footer {
 }
 
 .footer-contact {
-  height: 130px;
+  font-size: 3.5rem;
+  font-weight: 500;
+  font-family: var(--font-family-2);
   text-align: center;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  margin-bottom: 2rem !important;
 }
 
 .footer-hr {
-  margin-top: -90px;
-  margin-bottom: 90px;
-  max-width: 100px;
+  max-width: 250px;
+  margin: 0 auto;
+  margin-top: -30px;
+  margin-bottom: 40px;
   border: none;
   border-top: 5px solid #f4bd07;
-  margin-left: 585px;
 }
 
 .footer__img-wrapper {
@@ -627,12 +652,12 @@ footer {
 }  */
 
 .footer__email-input {
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
   /* Bo tròn góc */
   font-size: 16px;
-  width: 200px;
+  width: 260px;
   margin-left: 30px;
   /* Độ rộng của ô nhập */
 }
@@ -646,12 +671,13 @@ footer {
   /* Không viền */
   border-radius: 5px;
   /* Bo tròn góc */
-  padding: 10px 20px;
+  padding: 15px 20px;
   /* Khoảng cách bên trong nút */
   font-size: 16px;
   /* Kích thước chữ */
   cursor: pointer;
   /* Hiệu ứng khi hover */
+  margin-left: 15px;
 }
 
 .footer_get_email:hover {
@@ -662,36 +688,35 @@ footer {
 
 .footer__last-icon {
   position: absolute;
-  top: 70px;
+  top: 90px;
   left: 580px;
   font-size: 35px;
 }
 
 .footer__last-icon2 {
   position: absolute;
-  top: 70px;
+  top: 90px;
   left: 630px;
   font-size: 35px;
 }
 
 .footer__last-icon3 {
   position: absolute;
-  top: 70px;
+  top: 90px;
   left: 680px;
   font-size: 35px;
 }
 
 .footer__last-icon4 {
   position: absolute;
-  top: 70px;
+  top: 90px;
   left: 730px;
   font-size: 35px;
 }
 
 .footer__last-icon5 {
   position: absolute;
-  top: 70px;
+  top: 90px;
   left: 780px;
   font-size: 35px;
 }
-

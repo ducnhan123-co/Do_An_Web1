@@ -24,3 +24,21 @@ var swiper = new Swiper(".home", {
     prevEl: ".swiper-button-prev",
   },
 });
+// Javasciprt cho phần menu xổ ra 
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll('.item-box');
+
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+          } else {
+              entry.target.classList.remove('show');
+          }
+      });
+  });
+
+  items.forEach(item => {
+      observer.observe(item);
+  });
+});
