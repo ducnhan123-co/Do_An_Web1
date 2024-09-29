@@ -1,282 +1,302 @@
 /* Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Righteous&display=swap');
- *{
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    scroll-padding-top: 3rem;
-    font-family: var(--font-family-1);
- }
 
- /* Variables */
- :root{
-    --brown: #4b1204;
-    --header-color:linear-gradient(180deg, #db9514 0%, rgb(255, 213, 135) 100%);
-    --yellow-color: #ffa10a;
-    --text-color: #121212;
-    --container-color: #efe8e0;
-    --red: #a72e1b;
-    --bg-color: #fff;
-    --text-alter-color: #94908e;
-    --font-family-1: "Mitr", sans-serif;
-    --font-family-2: "Righteous", sans-serif;
- }
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-padding-top: 3rem;
+  font-family: var(--font-family-1);
+}
 
- /* Custom Scroll Bar */
-html::-webkit-scrollbar{
+/* Variables */
+:root {
+  --brown: #4b1204;
+  --yellow-color: #ffa10a;
+  --text-color: #121212;
+  --container-color: #efe8e0;
+  --red: #a72e1b;
+  --bg-color: #fff;
+  --text-alter-color: #94908e;
+  --font-family-1: "Mitr", sans-serif;
+  --font-family-2: "Righteous", sans-serif;
+}
+
+
+/* Custom Scroll Bar */
+html::-webkit-scrollbar {
   width: 0.5rem;
   background: transparent;
 }
 
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
+  background: var(--red);
+}
+
+
+/* Header */
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  padding: 3rem 0 2rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  width: 100%;
+}
+
+
+
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+  transition: 0.5s;
+}
+
+/* Khi di chuyển thì thanh menu sẽ tự đổi màu bên js đã code */
+header.shadow {
   background: var(--yellow-color);
 }
 
-/* Header */
-
- body{
-    color: var(--text-color);
-    background: var(--bg-color);
- }
-
- a{
-   text-decoration: none;
- }
-
- img {
-   width: 100%;
- }
-
- section{
-   padding: 3rem 0 2rem;
- }
-
- .container{
-   max-width: 1400px;
-   margin: auto;
-   width: 100%;
- }
-
- header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 100px;
-    transition: 0.5s;
+header.shadow .navbar a {
+  color: var(--text-color);
 }
 
- .nav{
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding: 24px 0;
- }
+header.shadow .logo {
+  color: var(--text-color);
+}
 
- .logo img{
-   width: 75px;
- }
+/* thiết kế sau phần header */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
 
- .navbar{
-   display: flex;
-   align-items: center;
-   column-gap: 1.5rem;
- }
+.logo img {
+  width: 75px;
+}
 
- .nav-link{
-   font-size: 1 rem;
-   color: var(--bg-color);
-   transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
- }
+.navbar {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
 
- .nav-link:hover{
-   color: var(--red);
-   transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
- }
+.nav-link {
+  font-size: 1 rem;
+  color: var(--bg-color);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
- .nav-icons{
-   display: flex;
-   align-items: center;
-   column-gap: 1rem;
- }
+.nav-link:hover {
+  color: var(--red);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
- .nav-icons .bx{
-   color: var(--bg-color);
-   font-size: 20px;
- }
+.nav-icons {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
 
- .cart{
-   position: relative;
- }
+.nav-icons .bx {
+  color: var(--bg-color);
+  font-size: 20px;
+}
 
- .cart span{
-   position: absolute;
-   right: -10px;
-   top: -10px;
-   background: var(--text-color);
-   font-size: 10px;
-   width: 20px;
-   height: 20px;
-   border-radius: 50%;
-   color: var(--bg-color);
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   font-family: sans-serif;
- }
+.cart {
+  position: relative;
+}
 
- .menu-icon{
-   display: none;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   row-gap: 5px;
-   cursor: pointer;
-   z-index: 200;
-   transition: 0.3s;
- }
+.cart span {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background: var(--text-color);
+  font-size: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
 
- .menu-icon div{
-   display: block;
-   background: var(--bg-color);
-   height: 2px;
-   width: 23px;
-   transition: 0.3s;
- }
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  cursor: pointer;
+  z-index: 200;
+  transition: 0.3s;
+}
 
- .move .line1{
-   transform: rotate(-45deg) translate(-5px,5px);
- }
- .move .line2{
-   opacity: 0;
- }
- .move .line3{
-   transform: rotate(45deg) translate(-5px, -5px);
- }
+.menu-icon div {
+  display: block;
+  background: var(--bg-color);
+  height: 2px;
+  width: 23px;
+  transition: 0.3s;
+}
+
+.move .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.move .line2 {
+  opacity: 0;
+}
+
+.move .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
 
 
- 
+
 /* Home */
 
-.home-text h1{
-    font-family: var(--font-family-2);
-    font-size: 6.2rem;
-    line-height: 6.8rem;
-    font-weight: 800;
-    color: var(--bg-color);
-    margin-bottom: 1rem;
-  }
-
-  .home-text p{
-    font-size: 1.025rem;
-    margin: 2rem 0 1rem;
- }
- 
- .home-text h3{
-    font-size: 2.7rem;
-    line-height: 2.7rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
- }
- 
- .btn{
-    max-width: 160px;
-    padding: 15px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    background: var(--yellow-color);
-    color: var(--bg-color);
-    cursor: pointer;
- }
- 
- .btn:hover{
-    background: var(--text-color);
-    transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
- }
-
-.conatiner{
-    width: 100%;   
-    min-height: 640px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    background: rgb(2, 3, 7, 0.4);
+.home-text h1 {
+  font-family: var(--font-family-2);
+  font-size: 6.2rem;
+  line-height: 6.8rem;
+  font-weight: 800;
+  color: var(--bg-color);
+  margin-bottom: 1rem;
 }
 
-.conatiner img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transform: translateY(-100);
-    z-index: -1;
-}    
+.home-text p {
+  font-size: 1.025rem;
+  margin: 2rem 0 1rem;
+}
+
+.home-text h3 {
+  font-size: 2.7rem;
+  line-height: 2.7rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  max-width: 160px;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--yellow-color);
+  color: var(--bg-color);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--text-color);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.conatiner {
+  width: 100%;
+  min-height: 640px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgb(2, 3, 7, 0.4);
+}
+
+.conatiner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: translateY(-100);
+  z-index: -1;
+}
 
 /* MAIN.JS */
-.swiper-pagination-bullet{
-    width: 6px  !important;
-    height: 6px !important;
-    border-radius: 0.2rem !important;
-    background: var(--bg-color) !important;
-    opacity: 1 !important;
+.swiper-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 0.2rem !important;
+  background: var(--bg-color) !important;
+  opacity: 1 !important;
 }
 
 /* ---------------INDEX-------------------- */
 
 /* Nút chuyển qua trang */
-.swiper-pagination-bullet-active{
-    width: 1.5rem !important;
-    background: var(--main-color) !important;
-}    
-
-.home-text{
-    z-index: 1000;
-    padding: 0 150px;
+.swiper-pagination-bullet-active {
+  width: 1.5rem !important;
+  background: var(--main-color) !important;
 }
 
-.home-text h1{
-    color: var(--bg-color);
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+.home-text {
+  z-index: 1000;
+  padding: 0 150px;
+}
+
+.home-text h1 {
+  color: var(--bg-color);
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 /* Feature */
-.features{
+.features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(auto,310px));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 310px));
   justify-content: space-between;
   gap: 1rem;
   padding: 2rem 0;
   border-bottom: 1px solid rgb(18 18 18 / 20%);
 }
 
-.feature-box{
+.feature-box {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.feature-img{
+.feature-img {
   width: 50px;
 }
 
-.feature-text h3{
+.feature-text h3 {
   font-size: 1.4rem;
   font-weight: 500;
 }
 
 /* Làm phần menu */
 /* Định nghĩa tiêu đề Feature Menu */
-.heading{
+.heading {
   font-size: 3.5rem;
   font-weight: 500;
   font-family: var(--font-family-2);
@@ -284,38 +304,90 @@ html::-webkit-scrollbar-thumb{
   margin-bottom: 2rem !important;
 }
 
+.img-hr-custom {
+  max-width: 425px;
+  margin: 0 auto;
+  margin-top: -60px;
+  margin-bottom: 40px;
+  border: none;
+  display: block;
+}
+
+
+
+
+/* Thiết kế một lần ở thuộc .img-hr-custom để đồng nhất  */
+/* Không cần thiết kế nhiều lần  */
+/* 
+.img-hr-custom-feature {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: -70px;
+  margin-bottom: -25px;
+  border: none;
+  display: block;
+}
+
+
+.img-hr-custom-testimonials {
+  max-width: 380px;
+  margin: 0 auto;
+  margin-top: -65px;
+  margin-bottom: 20px;
+  border: none;
+  display: block;
+}
+
+.items-hr {
+  max-width: 380px;
+  margin: 0 auto;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  border: none;
+  border-top: 5px solid #ffc400;
+}
+ */
+
 /* Định nghĩa phần menu */
-.feature-menu-content{
+.feature-menu-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(auto,180px));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 180px));
   justify-content: space-between;
   gap: 1rem;
 }
 
-.feature-menu-box{
+.feature-menu-box {
   text-align: center;
 }
 
-.feature-menu-box h3{
+.feature-menu-box a {
+  color: var(--text-color);
+  margin: 25px 20px;
+  font-size: 30px;
+}
+
+.feature-menu-box h3 {
   font-family: var(--font-family-2);
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /* Menu Chính */
 /* Thiết kề phần thực đơn ở phần món ăn */
 
-.items{
-  background: var(--yellow-color);
+.items {
+  background: var(--container-color);
 }
 
-.item-content{
+.item-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
-.item-box{
+.item-box {
   position: relative;
-  background: var(--container-color);
+  background: var(--bg-color);
   padding: 24px 14px;
   border-radius: 8px;
   border: 1px solid rgb(75 18 4 / 10%);
@@ -323,9 +395,15 @@ html::-webkit-scrollbar-thumb{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
 } 
+=======
+  /* ẩn các thông tin đi khi phóng ảnh */
+  overflow: hidden;
+}
+>>>>>>> 38ebec6ff1374152a5274fcc6a795ffe97d92913
 
-.item-box .sale{
+.item-box .sale {
   position: absolute;
   right: 14px;
   top: 14px;
@@ -336,38 +414,60 @@ html::-webkit-scrollbar-thumb{
   border-radius: 4px;
 }
 
-.item-box img{
-  max-width: 264px;
+.item-box img {
+  object-fit: cover;
   width: 100%;
+  height: 100%;
+  /* Để ảnh luôn căn ra giữa */
   object-position: center;
-  margin-bottom: 1.2rem;
 }
 
-.item-box h2{
+.card-img {
+  width: 200px;
+  height: 200px;
+  border: 4px solid var(--yellow-color);
+  border-radius: 50%;
+  /* ẩn các góc của ảnh */
+  overflow: hidden;
+  margin: 0 auto;
+  transform: translateY(25px);
+  transition: 1s;
+}
+
+.card-img:hover {
+  width: 85%;
+  height: 85%;
+  border-radius: unset;
+  transform: unset;
+  border: none;
+}
+
+.item-box h2 {
+  margin-top: 35px;
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--brown);
 }
 
-.item-box .price{
+.item-box .price {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 1.2rem;
 }
 
-.item-box .price h3{
+.item-box .price h3 {
   color: var(--brown);
   font-weight: 500;
 }
 
-.item-box .price p{
+.item-box .price p {
   text-decoration: line-through;
   font-weight: 500;
   color: rgb(var(--brown), 0.8);
 }
 
-.item-btn{
+.item-btn {
   background: var(--yellow-color);
   color: var(--brown);
   font-weight: 500;
@@ -375,96 +475,301 @@ html::-webkit-scrollbar-thumb{
   border-radius: 8px;
 }
 
-.item-btn:hover{
+.item-btn:hover {
   background: var(--brown);
   color: var(--bg-color);
   transition: background 0.4s ease-in-out;
 }
 
+/* Thiết kế Best Seller */
+
+
+
+
+
+
+/* Thiết kế phần đánh giá */
+.testimonials-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.t-box {
+  background: var(--container-color);
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid var(--yellow-color);
+  transition: border-color 0.3s ease;
+  cursor: zoom-in;
+  position: relative;
+
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #ffcc33;
+    /* Màu vàng */
+  }
+
+  25% {
+    border-color: #ff9933;
+    /* Màu cam nhạt */
+  }
+
+  50% {
+    border-color: #ffcc33;
+    /* Trở lại màu vàng */
+  }
+
+  75% {
+    border-color: #ff9933;
+    /* Màu cam nhạt */
+  }
+
+  100% {
+    border-color: #ffcc33;
+    /* Cuối cùng trở lại màu vàng */
+  }
+}
+
+.t-box:hover {
+  animation: borderAnimation 1s linear infinite;
+  /* Chạy animation khi hover */
+  position: relative;
+}
+
+
+
+.t-box .stars {
+  color: var(--yellow-color);
+  font-size: 18px;
+}
+
+.t-box p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.t-box {
+  background: var(--container-color);
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid var(--yellow-color);
+  transition: border-color 0.3s ease;
+  cursor: zoom-in;
+  position: relative;
+}
+
+.t-box.zoomed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.zoomed-in {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.zoomed-in .t-box {
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+.zoomed-in img {
+  max-width: none;
+  width: auto;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-data h3 {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+}
+
+.profile-data span {
+  font-size: 0.94rem;
+  font-weight: 400;
+  color: rgb(18 18 18 / 70%);
+}
+
+.newsletter{
+  max-width: 1040px;
+  width: 90%;
+  margin: auto;
+}
+
+.newsletter h2{
+  font-size: 3.5rem;
+  font-weight: 500;
+  font-family: var(--font-family-2);
+  text-align: center;
+}
+
+.newsletter p{
+  text-align: center;
+}
+
+.newsletter form{
+  max-width: 600px;
+  margin: 1.8rem auto auto auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--text-color);
+  padding: 7px;
+  border-radius: 0.5rem;
+}
+
+.newsletter form input{
+  border: none;
+  outline: none;
+  padding: 0 20px;
+}
+
+.newsletter form .email{
+  width: 100%;
+}
+
+.newsletter form input::placeholder{
+  color: var(--text-color);
+  font-size: 0.94rem;
+  font-weight: 400;
+}
+
+.newsletter form .s-btn{
+  background: var(--yellow-color);
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.newsletter form .s-btn:hover{
+  background: var(--text-color);
+  color: var(--bg-color);
+  transition: 0.4s ease-in-out;
+}
+
+
+
 /* Footer  */
 footer {
-    position: relative;
+  position: relative;
 }
 
 .footer-contact {
-    height: 130px;
-    text-align: center;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+  font-size: 3.5rem;
+  font-weight: 500;
+  font-family: var(--font-family-2);
+  text-align: center;
+  margin-bottom: 2rem !important;
 }
 
-.footer-hr {
-    margin-top: -90px;
-    margin-bottom: 90px;
-    max-width: 100px;
-    border: none;
-    border-top: 5px solid #f4bd07;
-    margin-left: 585px;
-}
+
+/* 
+.footer-custom-hr {
+  max-width: 350px;
+  margin: 0 auto;
+  margin-top: -65px;
+  margin-bottom: 30px;
+  border: none;
+  display: block;
+} */
 
 .footer__img-wrapper {
-    position: relative;
-    display: inline-block;
-    margin-left: 100px;
+  position: relative;
+  display: inline-block;
+  margin-left: 100px;
 }
 
 .footer__img {
-    width: 286px;
-    height: 448px;
-    display: block;
-    border: 3px solid orange;
-    border-radius: 10px;
+  width: 286px;
+  height: 448px;
+  display: block;
+  border: 3px solid orange;
+  border-radius: 10px;
 }
 
 .footer__icon {
-    position: absolute;
-    top: 85%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    color: white;
+  position: absolute;
+  top: 85%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
 }
 
 .footer__icon_2 {
-    position: absolute;
-    top: 85%;
-    left: 38%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    color: white;
+  position: absolute;
+  top: 85%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
 }
 
 .footer__icon_3 {
-    position: absolute;
-    top: 85%;
-    left: 56%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    color: white;
+  position: absolute;
+  top: 85%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
 }
 
 .footer__icon_4 {
-    position: absolute;
-    top: 85%;
-    left: 74%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    color: white;
+  position: absolute;
+  top: 85%;
+  left: 74%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
 }
 
 .footer__content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    /* position: relative; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* position: relative; */
 }
 
 .footer__text-address1-title {
-    color: #f4bd07;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-weight: 500px;
-    font-size: 35px;
+  color: #f4bd07;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-weight: 500px;
+  font-size: 35px;
 }
 
 .footer__text-address2-p,
@@ -474,11 +779,11 @@ footer {
 .footer__text-address3-github,
 .footer__text-information-p {
 
-    margin-top: 20px;
-    font-weight: 100;
-    font-family: sans-serif;
-    color: rgb(171, 172, 173);
-    font-size: 15px;
+  margin-top: 20px;
+  font-weight: 100;
+  font-family: sans-serif;
+  color: rgb(171, 172, 173);
+  font-size: 15px;
 }
 
 
@@ -486,37 +791,37 @@ footer {
 .footeer__phone,
 .footeer__email,
 .footeer__github {
-    font-weight: bold;
-    color: black;
-    font-weight: 800;
+  font-weight: bold;
+  color: black;
+  font-weight: 800;
 }
 
 .footer__text-copyright {
-    display: flex;
-    position: absolute;
-    left: 420px;
-    bottom: 50px;
-    align-items: center;
+  display: flex;
+  position: absolute;
+  left: 420px;
+  bottom: 50px;
+  align-items: center;
 
 }
 
 .footer__text-information4-icon {
-    color: gray;
-    font-size: 50px;
-    padding-right: 10px;
-    position: relative;
+  color: gray;
+  font-size: 50px;
+  padding-right: 10px;
+  position: relative;
 }
 
 .footer__text-copyright-title {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 800;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
 }
 
 .footer__text-copyright-final {
-    font-size: 11px;
-    margin-top: 10px;
-    margin-right: 100px;
+  font-size: 11px;
+  margin-top: 10px;
+  margin-right: 100px;
 }
 
 /* .footer__text-copyright {
@@ -529,70 +834,73 @@ footer {
 }  */
 
 .footer__email-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    /* Bo tròn góc */
-    font-size: 16px;
-    width: 200px;
-    margin-left: 30px;
-    /* Độ rộng của ô nhập */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* Bo tròn góc */
+  font-size: 16px;
+  width: 260px;
+  margin-left: 30px;
+  /* Độ rộng của ô nhập */
 }
 
 .footer_get_email {
-    background-color: #f4bd07;
-    /* Màu nền cho nút */
-    color: white;
-    /* Màu chữ */
-    border: none;
-    /* Không viền */
-    border-radius: 5px;
-    /* Bo tròn góc */
-    padding: 10px 20px;
-    /* Khoảng cách bên trong nút */
-    font-size: 16px;
-    /* Kích thước chữ */
-    cursor: pointer;
-    /* Hiệu ứng khi hover */
+  background-color: #f4bd07;
+  /* Màu nền cho nút */
+  color: white;
+  /* Màu chữ */
+  border: none;
+  /* Không viền */
+  border-radius: 5px;
+  /* Bo tròn góc */
+  padding: 15px 20px;
+  /* Khoảng cách bên trong nút */
+  font-size: 16px;
+  /* Kích thước chữ */
+  cursor: pointer;
+  /* Hiệu ứng khi hover */
+  margin-left: 15px;
 }
 
 .footer_get_email:hover {
-    background-color: #e3a106;
-    /* Màu khi hover */
+  background-color: #e3a106;
+  /* Màu khi hover */
 }
 
 
 .footer__last-icon {
-    position: absolute;
-    top: 70px;
-    left: 480px;
-    font-size: 35px;
+  position: absolute;
+  top: 90px;
+  left: 580px;
+  font-size: 35px;
 }
 
 .footer__last-icon2 {
-    position: absolute;
-    top: 70px;
-    left: 530px;
-    font-size: 35px;
+  position: absolute;
+  top: 90px;
+  left: 630px;
+  font-size: 35px;
 }
 
 .footer__last-icon3 {
-    position: absolute;
-    top: 70px;
-    left: 580px;
-    font-size: 35px;
+  position: absolute;
+  top: 90px;
+  left: 680px;
+  font-size: 35px;
 }
 
 .footer__last-icon4 {
-    position: absolute;
-    top: 70px;
-    left: 630px;
-    font-size: 35px;
+  position: absolute;
+  top: 90px;
+  left: 730px;
+  font-size: 35px;
 }
 
 .footer__last-icon5 {
-    position: absolute;
-    top: 70px;
-    left: 680px;
-    font-size: 35px;
+  position: absolute;
+  top: 90px;
+  left: 780px;
+  font-size: 35px;
 }
+
+/* test ghi chu 3 */
