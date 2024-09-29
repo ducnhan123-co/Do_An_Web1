@@ -323,7 +323,7 @@ html::-webkit-scrollbar-thumb{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
+} 
 
 .item-box .sale{
   position: absolute;
