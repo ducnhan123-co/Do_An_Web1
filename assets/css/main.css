@@ -369,6 +369,7 @@ header.shadow .logo {
 .feature-menu-box h3 {
   font-family: var(--font-family-2);
   cursor: pointer;
+  text-decoration: underline;
 }
 
 /* Menu Chính */
