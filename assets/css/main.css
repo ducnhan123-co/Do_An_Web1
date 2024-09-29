@@ -360,10 +360,10 @@ header.shadow .logo {
   text-align: center;
 }
 
-.feature-menu-box a{
-    color: var(--text-color);
-    margin: 25px 20px;
-    font-size: 30px;
+.feature-menu-box a {
+  color: var(--text-color);
+  margin: 25px 20px;
+  font-size: 30px;
 }
 
 .feature-menu-box h3 {
@@ -838,3 +838,5 @@ footer {
   left: 780px;
   font-size: 35px;
 }
+
+/* test ghi chu 3 */
