@@ -311,9 +311,14 @@ header.shadow .logo {
   margin-bottom: 40px;
   border: none;
   display: block;
-
 }
 
+
+
+
+/* Thiết kế một lần ở thuộc .img-hr-custom để đồng nhất  */
+/* Không cần thiết kế nhiều lần  */
+/* 
 .img-hr-custom-feature {
   max-width: 600px;
   margin: 0 auto;
@@ -322,6 +327,7 @@ header.shadow .logo {
   border: none;
   display: block;
 }
+
 
 .img-hr-custom-testimonials {
   max-width: 380px;
@@ -340,6 +346,7 @@ header.shadow .logo {
   border: none;
   border-top: 5px solid #ffc400;
 }
+ */
 
 /* Định nghĩa phần menu */
 .feature-menu-content {
@@ -353,15 +360,22 @@ header.shadow .logo {
   text-align: center;
 }
 
+.feature-menu-box a{
+    color: var(--text-color);
+    margin: 25px 20px;
+    font-size: 30px;
+}
+
 .feature-menu-box h3 {
   font-family: var(--font-family-2);
+  cursor: pointer;
 }
 
 /* Menu Chính */
 /* Thiết kề phần thực đơn ở phần món ăn */
 
 .items {
-  background: var(--yellow-color);
+  background: var(--container-color);
 }
 
 .item-content {
@@ -372,7 +386,7 @@ header.shadow .logo {
 
 .item-box {
   position: relative;
-  background: var(--container-color);
+  background: var(--bg-color);
   padding: 24px 14px;
   border-radius: 8px;
   border: 1px solid rgb(75 18 4 / 10%);
@@ -618,6 +632,8 @@ footer {
   margin-bottom: 2rem !important;
 }
 
+
+/* 
 .footer-custom-hr {
   max-width: 350px;
   margin: 0 auto;
@@ -625,7 +641,7 @@ footer {
   margin-bottom: 30px;
   border: none;
   display: block;
-}
+} */
 
 .footer__img-wrapper {
   position: relative;
