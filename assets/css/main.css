@@ -107,7 +107,7 @@ header.shadow .logo {
 }
 
 .nav-link {
-  font-size: 1 rem;
+  font-size: 1rem;
   color: var(--bg-color);
   transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
