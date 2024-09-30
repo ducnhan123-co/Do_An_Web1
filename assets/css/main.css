@@ -107,7 +107,7 @@ header.shadow .logo {
 }
 
 .nav-link {
-  font-size: 1 rem;
+  font-size: 1rem;
   color: var(--bg-color);
   transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -396,18 +396,17 @@ header.shadow .logo {
   justify-content: space-between;
   align-items: center;
 
-
   /* ẩn các thông tin đi khi phóng ảnh */
 
   overflow: hidden;
-  align-items: center;
+
 }
 
 
 .item-box .sale {
   position: absolute;
   right: 14px;
-  top: 14px;
+  top: 5px;
   background: var(--text-color);
   color: var(--bg-color);
   font-size: 12px;
