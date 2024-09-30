@@ -190,6 +190,7 @@ header.shadow .logo {
   font-weight: 800;
   color: var(--bg-color);
   margin-bottom: 1rem;
+  padding: 7rem 0 0 0;
 }
 
 .home-text p {
