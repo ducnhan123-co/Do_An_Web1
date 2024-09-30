@@ -395,13 +395,10 @@ header.shadow .logo {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
-} 
-=======
   /* ẩn các thông tin đi khi phóng ảnh */
   overflow: hidden;
 }
->>>>>>> 38ebec6ff1374152a5274fcc6a795ffe97d92913
+
 
 .item-box .sale {
   position: absolute;
@@ -621,24 +618,24 @@ header.shadow .logo {
   color: rgb(18 18 18 / 70%);
 }
 
-.newsletter{
+.newsletter {
   max-width: 1040px;
   width: 90%;
   margin: auto;
 }
 
-.newsletter h2{
+.newsletter h2 {
   font-size: 3.5rem;
   font-weight: 500;
   font-family: var(--font-family-2);
   text-align: center;
 }
 
-.newsletter p{
+.newsletter p {
   text-align: center;
 }
 
-.newsletter form{
+.newsletter form {
   max-width: 600px;
   margin: 1.8rem auto auto auto;
   display: flex;
@@ -649,23 +646,23 @@ header.shadow .logo {
   border-radius: 0.5rem;
 }
 
-.newsletter form input{
+.newsletter form input {
   border: none;
   outline: none;
   padding: 0 20px;
 }
 
-.newsletter form .email{
+.newsletter form .email {
   width: 100%;
 }
 
-.newsletter form input::placeholder{
+.newsletter form input::placeholder {
   color: var(--text-color);
   font-size: 0.94rem;
   font-weight: 400;
 }
 
-.newsletter form .s-btn{
+.newsletter form .s-btn {
   background: var(--yellow-color);
   padding: 14px 24px;
   border-radius: 8px;
@@ -675,7 +672,7 @@ header.shadow .logo {
   cursor: pointer;
 }
 
-.newsletter form .s-btn:hover{
+.newsletter form .s-btn:hover {
   background: var(--text-color);
   color: var(--bg-color);
   transition: 0.4s ease-in-out;
