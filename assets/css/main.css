@@ -404,7 +404,7 @@ header.shadow .logo {
 .item-box .sale {
   position: absolute;
   right: 14px;
-  top: 14px;
+  top: 5px;
   background: var(--text-color);
   color: var(--bg-color);
   font-size: 12px;
