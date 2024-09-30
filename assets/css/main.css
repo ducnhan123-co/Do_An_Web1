@@ -395,13 +395,9 @@ header.shadow .logo {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
-} 
-=======
   /* ẩn các thông tin đi khi phóng ảnh */
   overflow: hidden;
 }
->>>>>>> 38ebec6ff1374152a5274fcc6a795ffe97d92913
 
 .item-box .sale {
   position: absolute;
