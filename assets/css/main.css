@@ -396,14 +396,13 @@ header.shadow .logo {
   justify-content: space-between;
   align-items: center;
 
+
   /* ẩn các thông tin đi khi phóng ảnh */
+
   overflow: hidden;
   align-items: center;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 8ce8a7799b98f43718a23612df4a18b34c03eef7
 
 .item-box .sale {
   position: absolute;
