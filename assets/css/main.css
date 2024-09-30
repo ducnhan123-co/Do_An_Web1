@@ -395,7 +395,6 @@ header.shadow .logo {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* ẩn các thông tin đi khi phóng ảnh */
   overflow: hidden;
 }
 
