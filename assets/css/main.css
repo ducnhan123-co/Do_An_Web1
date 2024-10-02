@@ -12,7 +12,8 @@
 
 /* Variables */
 :root {
-  --cam: #ff4500;
+  --cam: #FAEBD7;
+  /* --cam: linear-gradient(135deg, #cfcf4a, #4199aa); */
   --brown: #4b1204;
   --yellow-color: #ffa10a;
   --text-color: #121212;
@@ -404,7 +405,7 @@ header.shadow .logo {
 
 .item-box {
   position: relative;
-  background: var(--bg-color);
+  background: #FFF5EE;
   padding: 24px 14px;
   border-radius: 16px;
   /* Bo góc mặc định */
@@ -623,6 +624,10 @@ header.shadow .logo {
 
 
 /* Thiết kế phần đánh giá */
+.testimonials{
+  background: var(--cam);
+}
+
 .testimonials-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -754,6 +759,8 @@ header.shadow .logo {
   font-weight: 400;
   color: rgb(18 18 18 / 70%);
 }
+
+/* Newsletter */
 
 .newsletter {
   max-width: 1040px;
