@@ -12,6 +12,7 @@
 
 /* Variables */
 :root {
+  --cam: #ff4500;
   --brown: #4b1204;
   --yellow-color: #ffa10a;
   --text-color: #121212;
@@ -305,13 +306,15 @@ header.shadow .logo {
   margin-bottom: 2rem !important;
 }
 
+/* Định nghĩa phần menu */
+
 .heading__container {
   font-size: 3.5rem;
   font-weight: 500;
   font-family: var(--font-family-2);
   text-align: center;
   margin-bottom: 2rem !important;
-  color: #ff4500;
+  /* color: #ff4500; */
 }
 
 
@@ -359,7 +362,6 @@ header.shadow .logo {
 }
  */
 
-/* Định nghĩa phần menu */
 .feature-menu-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 180px));
@@ -387,9 +389,10 @@ header.shadow .logo {
 /* Thiết kề phần thực đơn ở phần món ăn */
 
 .items {
-  background-image: url(/Do_An_Web1/assets/imgs/banner01.png);
+  /* background-image: url(/Do_An_Web1/assets/imgs/banner01.png);
   border-radius: 10px;
-  background-size: cover;
+  background-size: cover; */
+  background: var(--cam);
 }
 
 .item-content {
@@ -412,19 +415,21 @@ header.shadow .logo {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  overflow: hidden;
-  background-clip: padding-box;
-  transition: border-radius 0.3s ease;
-  background-image: url(/Do_An_Web1/assets/imgs/bgp3.png);
-  background-size: cover;
-  background-position: top;
+
+  /* Lỗi đang tìm cách sửa */
+  /* overflow: hidden; */
+  /* background-clip: padding-box;
+  transition: border-radius 0.3s ease; */
+  /* background-image: url(/Do_An_Web1/assets/imgs/bgp3.png); */
+  /* background-size: cover;
+  background-position: top; */
 
 }
 
 .item-box:hover {
   color: rgb(255, 166, 0);
   transition: color 1s, border-radius 0.3s ease;
-  border-radius: 24px;
+  /* border-radius: 24px; */
   /* Bo góc thêm khi hover */
 }
 
@@ -463,7 +468,7 @@ header.shadow .logo {
   color: var(--bg-color);
   /* Màu chữ */
   font-size: 12px;
-  padding: 5px 10px;
+  padding: 1px 10px;
   /* Tăng khoảng cách cho nút */
   border-radius: 4px;
   /* Bo góc */
