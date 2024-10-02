@@ -73,3 +73,23 @@ zoomedInContainer.addEventListener('click', (event) => {
 document.addEventListener('click', () => {
     zoomedInContainer.style.display = 'none';
 });
+
+
+//JS cho phần menu bấm qua thì chuyển qua menu khác
+document.querySelectorAll('.link__to').forEach(link => {
+  link.addEventListener('click', function() {
+      // Lấy menu cần hiển thị từ data-menu
+      const menuToShow = this.getAttribute('data-menu');
+      
+      // Ẩn tất cả các menu
+      document.querySelectorAll('.item-content').forEach(menu => {
+          menu.style.display = 'none';  // Ẩn menu
+      });
+
+      // Hiển thị menu tương ứng
+      document.getElementById(menuToShow).style.display = 'grid';  // Hiển thị menu bằng grid
+  });
+});
+
+
+
