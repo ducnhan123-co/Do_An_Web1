@@ -390,30 +390,84 @@ header.shadow .logo {
   position: relative;
   background: var(--bg-color);
   padding: 24px 14px;
-  border-radius: 8px;
-  border: 1px solid rgb(75 18 4 / 10%);
+  border-radius: 16px;
+  /* Bo góc mặc định */
+  border: 4px solid transparent;
+  /* Viền ban đầu trong suốt */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
-  /* ẩn các thông tin đi khi phóng ảnh */
-
+  cursor: pointer;
   overflow: hidden;
+  background-clip: padding-box;
+  transition: border-radius 0.3s ease;
+  background-image: url(/Do_An_Web1/assets/imgs/bgp3.png);
+  background-size: cover;
+  background-position: top;
 
 }
+
+.item-box:hover {
+  color: rgb(255, 166, 0);
+  transition: color 1s, border-radius 0.3s ease;
+  border-radius: 24px;
+  /* Bo góc thêm khi hover */
+}
+
+/* Ánh sáng di chuyển và phát sáng trên viền */
+.item-box:hover {
+  border: 3px solid;
+  border-image: linear-gradient(40deg, #ffa600, #ffdd02, #ff5607, #ffa600);
+  border-image-slice: 1;
+  animation: border-glow 1.5s linear infinite;
+}
+
+@keyframes border-glow {
+  0% {
+    border-image-source: linear-gradient(90deg, #ffa600, #ffdd02, #ff5607, #ffa600);
+  }
+
+  50% {
+    border-image-source: linear-gradient(90deg, #ff5607, #ffa600, #ffdd02, #ff5607);
+  }
+
+  100% {
+    border-image-source: linear-gradient(90deg, #ffa600, #ffdd02, #ff5607, #ffa600);
+  }
+}
+
+
 
 
 .item-box .sale {
   position: absolute;
   right: 14px;
-  top: 5px;
-  background: var(--text-color);
+  top: 8px;
+  background: linear-gradient(135deg, #ff7f50, #ff4500);
+  /* Gradient từ màu cam nhạt đến màu cam đậm */
+  /* Màu nền cho nút */
   color: var(--bg-color);
+  /* Màu chữ */
   font-size: 12px;
-  padding: 2px 8px;
+  padding: 5px 10px;
+  /* Tăng khoảng cách cho nút */
   border-radius: 4px;
+  /* Bo góc */
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.8), 0 0 10px rgba(255, 165, 0, 0.6);
+  /* Hiệu ứng phát sáng */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Hiệu ứng chuyển tiếp khi hover */
+
 }
+
+.item-box .sale:hover {
+  transform: scale(1.1);
+  /* Phóng to khi hover */
+  box-shadow: 0 0 10px rgba(255, 165, 0, 1), 0 0 20px rgba(255, 165, 0, 0.6);
+  /* Tăng độ phát sáng khi hover */
+}
+
 
 .item-box img {
   object-fit: cover;
