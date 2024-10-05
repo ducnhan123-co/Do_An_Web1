@@ -437,7 +437,6 @@ header.shadow .logo {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
   cursor: pointer;
 
   /* Lỗi đang tìm cách sửa  */
@@ -448,11 +447,8 @@ header.shadow .logo {
   background-size: cover;
   background-position: top; 
 
-}
-=======
 } 
 /* ẩn các thông tin đi khi phóng ảnh */
->>>>>>> master
 
 .item-box:hover {
   color: rgb(255, 166, 0);
@@ -790,13 +786,9 @@ header.shadow .logo {
   color: rgb(18 18 18 / 70%);
 }
 
-<<<<<<< HEAD
 /* Newsletter */
-
 .newsletter {
-=======
 .newsletter{
->>>>>>> master
   max-width: 1040px;
   width: 90%;
   margin: auto;
@@ -813,11 +805,8 @@ header.shadow .logo {
   text-align: center;
 }
 
-<<<<<<< HEAD
-.form {
-=======
+/* .form {} */
 .newsletter form{
->>>>>>> master
   max-width: 600px;
   margin: 1.8rem auto;
   display: flex;
@@ -878,10 +867,7 @@ header.shadow .logo {
 }
 
 /* Newsletter-specific styles */
-.newsletter form input {
-=======
 .newsletter form input{
->>>>>>> master
   border: none;
   outline: none;
 }
@@ -896,12 +882,8 @@ header.shadow .logo {
   font-weight: 400;
 }
 
-<<<<<<< HEAD
 /* Submit button */
-.newsletter form .s-btn {
-=======
 .newsletter form .s-btn{
->>>>>>> master
   background: var(--yellow-color);
   padding: 14px 24px;
   border-radius: 8px;
