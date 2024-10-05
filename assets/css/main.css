@@ -412,9 +412,9 @@ header.shadow .logo {
 /* Thiết kề phần thực đơn ở phần món ăn */
 
 .items {
-  /* background-image: url(/Do_An_Web1/assets/imgs/banner01.png);
+  background-image: url(/Do_An_Web1/assets/imgs/banner01.png);
   border-radius: 10px;
-  background-size: cover; */
+  background-size: cover;
   background: var(--cam);
 }
 
@@ -439,15 +439,16 @@ header.shadow .logo {
   align-items: center;
   cursor: pointer;
 
-  /* Lỗi đang tìm cách sửa */
-  /* overflow: hidden; */
-  /* background-clip: padding-box;
-  transition: border-radius 0.3s ease; */
-  /* background-image: url(/Do_An_Web1/assets/imgs/bgp3.png); */
-  /* background-size: cover;
-  background-position: top; */
+  /* Lỗi đang tìm cách sửa  */
+  overflow: hidden;
+  background-clip: padding-box;
+  transition: border-radius 0.3s ease;
+  background-image: url(/Do_An_Web1/assets/imgs/bgp3.png);
+  background-size: cover;
+  background-position: top; 
 
-}
+} 
+/* ẩn các thông tin đi khi phóng ảnh */
 
 .item-box:hover {
   color: rgb(255, 166, 0);
@@ -639,7 +640,10 @@ header.shadow .logo {
 
 
 /* Thiết kế Best Seller */
-
+.best seller {
+  padding: 20px;
+  
+}
 
 
 
@@ -783,25 +787,26 @@ header.shadow .logo {
 }
 
 /* Newsletter */
-
 .newsletter {
+.newsletter{
   max-width: 1040px;
   width: 90%;
   margin: auto;
 }
 
-.newsletter h2 {
+.newsletter h2{
   font-size: 3.5rem;
   font-weight: 500;
   font-family: var(--font-family-2);
   text-align: center;
 }
 
-.newsletter p {
+.newsletter p{
   text-align: center;
 }
 
-.form {
+/* .form {} */
+.newsletter form{
   max-width: 600px;
   margin: 1.8rem auto;
   display: flex;
@@ -815,6 +820,7 @@ header.shadow .logo {
   /* Yêu cầu cho border-image */
 }
 
+<<<<<<< HEAD
 .form:focus-within {
   border-image-source: linear-gradient(90deg, rgba(255, 153, 51, 1), rgba(255, 153, 51, 0));
   animation: border-animation 1.5s infinite linear;
@@ -861,23 +867,23 @@ header.shadow .logo {
 }
 
 /* Newsletter-specific styles */
-.newsletter form input {
+.newsletter form input{
   border: none;
   outline: none;
 }
 
-.newsletter form .email {
+.newsletter form .email{
   width: 100%;
 }
 
-.newsletter form input::placeholder {
+.newsletter form input::placeholder{
   color: var(--text-color);
   font-size: 0.94rem;
   font-weight: 400;
 }
 
 /* Submit button */
-.newsletter form .s-btn {
+.newsletter form .s-btn{
   background: var(--yellow-color);
   padding: 14px 24px;
   border-radius: 8px;
@@ -888,7 +894,7 @@ header.shadow .logo {
   border: none;
 }
 
-.newsletter form .s-btn:hover {
+.newsletter form .s-btn:hover{
   background: var(--text-color);
   color: var(--bg-color);
   transition: 0.4s ease-in-out;
