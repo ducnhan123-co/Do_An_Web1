@@ -390,9 +390,9 @@ header.shadow .logo {
 /* Thiết kề phần thực đơn ở phần món ăn */
 
 .items {
-  /* background-image: url(/Do_An_Web1/assets/imgs/banner01.png);
+  background-image: url(/Do_An_Web1/assets/imgs/banner01.png);
   border-radius: 10px;
-  background-size: cover; */
+  background-size: cover;
   background: var(--cam);
 }
 
@@ -417,13 +417,13 @@ header.shadow .logo {
   align-items: center;
   cursor: pointer;
 
-  /* Lỗi đang tìm cách sửa */
-  /* overflow: hidden; */
-  /* background-clip: padding-box;
-  transition: border-radius 0.3s ease; */
-  /* background-image: url(/Do_An_Web1/assets/imgs/bgp3.png); */
-  /* background-size: cover;
-  background-position: top; */
+  /* Lỗi đang tìm cách sửa  */
+  overflow: hidden;
+  background-clip: padding-box;
+  transition: border-radius 0.3s ease;
+  background-image: url(/Do_An_Web1/assets/imgs/bgp3.png);
+  background-size: cover;
+  background-position: top; 
 
 }
 
