@@ -787,7 +787,6 @@ header.shadow .logo {
 }
 
 /* Newsletter */
-.newsletter {
 .newsletter{
   max-width: 1040px;
   width: 90%;
@@ -820,7 +819,6 @@ header.shadow .logo {
   /* Yêu cầu cho border-image */
 }
 
-<<<<<<< HEAD
 .form:focus-within {
   border-image-source: linear-gradient(90deg, rgba(255, 153, 51, 1), rgba(255, 153, 51, 0));
   animation: border-animation 1.5s infinite linear;
