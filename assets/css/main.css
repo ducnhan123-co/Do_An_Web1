@@ -640,13 +640,129 @@ header.shadow .logo {
 
 
 /* Thiết kế Best Seller */
-.best seller {
+.best-seller{
+  background-color: #ff5722;
+  color: black;
   padding: 20px;
-  
+  margin: 4%;
+  text-align: center;
 }
 
+.best-seller-special_foods {
+  font-size: 2em;
+  color: #ff6347; /*Màu cam đỏ*/
+  text-align: center;
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
+.best-seller-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f0d0d0;
+  margin: 40px;
+  width: 92%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 20px ;
+  border-bottom-right-radius: 20px;
+}
+/*
+.best-seller-menu h2{
+  text-align: center;
+  color: #ff5722;
+}
 
+.best-seller-products{
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.best-seller-products img{
+  max-width: 200px;
+  border-radius: 5px;
+} */
+
+.sort-by {
+  display: flex;
+  align-items: center;
+}
+
+.sort-by input {
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-section input {
+  margin-right: 10px;
+}
+
+.search-button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.food-items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.food-item {
+  flex: 1;
+  padding: 20px;
+}
+
+.food-item i {
+  font-size: 24px;
+  margin-right: 8px;
+  color: #ff6347; /*Màu cam đỏ*/
+}
+
+.best-seller-products {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.best-seller-products img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.discount {
+    color: red;
+    margin-left: 10px;
+}
 
 
 /* Thiết kế phần đánh giá */
