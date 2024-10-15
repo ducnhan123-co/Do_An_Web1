@@ -141,3 +141,146 @@ html {
         border-image-source: linear-gradient(90deg, rgb(255, 255, 255), rgba(255, 153, 51, 0));
     }
 }
+
+
+
+/* body {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 3rem 0 2rem;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+    transition: 0.5s;
+  }
+  
+  /* Khi di chuyển thì thanh menu sẽ tự đổi màu bên js đã code */
+/* header.shadow {
+    background: var(--yellow-color);
+}
+
+header.shadow .navbar a {
+    color: var(--text-color);
+}
+
+header.shadow .logo {
+    color: var(--text-color);
+}
+
+/* thiết kế sau phần header */
+/* .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 0;
+} */
+
+/* .logo img {
+    width: 50px;
+} */
+
+/* .navbar {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: var(--bg-color);
+    transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+} */
+/* 
+.nav-link:hover {
+    color: var(--red);
+    transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.nav-icons .bx {
+    color: var(--bg-color);
+    font-size: 20px;
+}
+
+.cart {
+    position: relative;
+} */
+/* 
+.cart span {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background: var(--text-color);
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+} */
+
+/* .menu-icon {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+    transition: 0.3s;
+}
+
+.menu-icon div {
+    display: block;
+    background: var(--bg-color);
+    height: 2px;
+    width: 23px;
+    transition: 0.3s;
+}
+
+.move .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+} */
+
+/* .move .line2 {
+    opacity: 0;
+}
+
+.move .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+*/
