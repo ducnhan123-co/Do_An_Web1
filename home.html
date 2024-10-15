@@ -13,45 +13,87 @@
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <!-- Box Icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <!-- Nav -->
-        <div class="nav container">
-            <!-- Logo -->
-            <a href="#" class="logo">
-                <img src="./assets/imgs/logo2.png" alt="">
-            </a>
-            <!-- Navbar -->
-            <div class="navbar">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#feature-menu" class="nav-link">Menu</a>
-                <a href="#bestseller" class="nav-link">Best Seller</a>
-                <a href="#testimonials" class="nav-link">Testimonials</a>
-                <a href="#footer__contact--title" class="nav-link">Contact us</a>
-            </div>
-            <!-- Nav Icon -->
-            <div class="nav-icons">
-                <a href="#"><i class='bx bx-search'></i></a>
-                <a href="#"><i class='bx bx-user'></i></a>
-                <a href="#" class="cart">
-                    <i class='bx bx-shopping-bag'></i>
-                    <span>O</span>
-                </a>
-                <!-- Menu Icon-->
-                <div class="menu-icon">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
+    <!-- ======================================HEADER====================================== -->
+    <header id="header">
+        <!-- ======================================TOP-HEADER=================================== -->
+        <div class="top-header">
+            <div class="cnt-block">
+                <ul class="list-unstyled list-inline">
+                    <li class="dropdown dropdown-small">
+                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                            <span class="value">USD </span><i class="fas fa-caret-down"></i>
+                        </a>
+                        <!-- <ul class="dropdown-menu">
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">INR</a></li>
+                            <li><a href="#">GBP</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="dropdown dropdown-small">
+                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                            <span class="value">English </span><i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- <li><a href="#">English</a></li>
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">German</a></li> -->
+                        </ul>
+                    </li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">MyCart</a></li>
+                    <li><a href="#">Checkout</a></li>
+
+                </ul>
             </div>
         </div>
+
+        <!-- ======================================MAIN-HEADER=================================== -->
+        <div class="main-header">
+            <div class="main-header-img">
+                <img src="./assets/imgs/logo2.png" alt="">
+                <h2>DICA <br>FOOD</h2>
+            </div>
+            <div class="main-header-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Tìm kiếm món ăn...">
+                <button class="filter-btn">
+                    Lọc
+                </button>
+            </div>
+            <div class="main-header-login">
+                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
+                <a href="./login.html" class="login-link">Đăng Nhập</a>
+                <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
+                <a href="#" class="register-link">Đăng Kí</a>
+            </div>
+            <div class="main-header-cart">
+                <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
+                <a href="">Gio Hang</a>
+            </div>
+        </div>
+        <!-- ======================================CATEGORY-HEADER=================================== -->
+        <div class="category-header">
+            <a href="#" class="category-link">TRANG CHỦ</a>
+            <a href="#" class="category-link">MÓN CHAY</a>
+            <a href="#" class="category-link">MÓN MẶN</a>
+            <a href="#" class="category-link">MÓN NƯỚC</a>
+            <a href="#" class="category-link">MÓN ĂN NHẸ</a>
+            <a href="#" class="category-link">MÓN LẨU</a>
+            <a href="#" class="category-link">MÓN TRÁNG MIỆNG</a>
+        </div>
     </header>
-    <!-- Home -->
+
+
+
+    <!-- =========================================HOME=========================================  -->
     <section class="home swiper" id="home">
         <div class="swiper-wrapper">
             <!-- slider 1 -->
@@ -698,15 +740,15 @@
                         <div class="food-item">
                             <i class=''></i>
                             <p>Rice</p>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
             <div class="best-seller-products">
                 <img src="assets/imgs/LapXuong.jpg" alt="Lạp Xưởng Đài Loan">
                 <div>
                     <h3>Lạp Xưởng Đài Loan (4 cây)</h3>
-                    <p>Lạp xưởng Tươi đặc biệt Đài Loan là món ăn quốc hồn túy của xứ sở Đài Loan, 
+                    <p>Lạp xưởng Tươi đặc biệt Đài Loan là món ăn quốc hồn túy của xứ sở Đài Loan,
                         được làm từ thịt heo nạc, không sử dụng phẩm màu hay chất bảo quản.</p>
                     <p class="price">Giá: <del>100,000 VND</del><span class="discount">80,000 VND</span></p>
                 </div>
@@ -716,7 +758,7 @@
                 <div>
                     <h3>Pizza Pepperoni Hoa Kỳ</h3>
                     <p>Một loại pizza từ Hoa Kỳ được làm từ hỗn hợp thịt lợn và thịt bò
-                       ướp với với Paprika hoặc các loại bột ớt khác đặc biệt. 
+                        ướp với với Paprika hoặc các loại bột ớt khác đặc biệt.
                     </p>
                     <p class="price">Giá: <del>200,000 VND</del><span class="discount">150,000 VND</span></p>
                 </div>
@@ -725,18 +767,18 @@
                 <img src="assets/imgs/Omurice.jpg" alt="Pizza Pepperoni">
                 <div>
                     <h3>Omurice Nhật</h3>
-                    <p>Omurice hay còn gọi là cơm trứng Nhật Bản - là món ăn có sự ảnh hưởng từ hai nền văn hoá 
-                       ẩm thực gọi là washoku (món Nhật truyền thống) và Yoshoku (món Tây Phương). 
+                    <p>Omurice hay còn gọi là cơm trứng Nhật Bản - là món ăn có sự ảnh hưởng từ hai nền văn hoá
+                        ẩm thực gọi là washoku (món Nhật truyền thống) và Yoshoku (món Tây Phương).
                     </p>
                     <p class="price">Giá: <del>60,000 VND</del><span class="discount">45,000 VND</span></p>
                 </div>
             </div>
             <div>
-                
+
             </div>
         </div>
     </section>
-    
+
     <!-- Đánh giá -->
     <section class="testimonials" id="testimonials">
         <h2 class="heading container">Testimonials</h2>
@@ -918,17 +960,8 @@
             </div>
         </div>
     </footer>
-    <!-- Swiper JS -->
-    <!-- Thiết kế slide di chuyển -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+
+
 </body>
 
 </html>
-
-<!-- hello ajinomoto  -->
-
-<!-- Hi ông  -->
-
-<!-- kiki  -->
-
