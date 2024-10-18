@@ -1,0 +1,74 @@
+.breadcrumb {
+    background-color: #f1f1f1;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.breadcrumb-inner {
+    text-align: center;
+}
+
+.breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb ul li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.breadcrumb ul li a {
+    color: #ff7300;
+    text-decoration: none;
+}
+
+.breadcrumb ul li.active {
+    color: #6c757d;
+}
+
+.sign-in-page {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.sign-in h4,
+.create-new-account h4 {
+    font-weight: bold;
+    color: #333;
+}
+
+.sign-in .form-control,
+.create-new-account .form-control {
+    border-radius: 0;
+    border: 1px solid #ced4da;
+}
+
+.sign-in .btn-block,
+.create-new-account .btn-block {
+    border-radius: 0;
+}
+
+.forgot-password {
+    font-size: 14px;
+}
+
+.facebook-sign-in,
+.twitter-sign-in {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+}
+
+.facebook-sign-in {
+    background-color: #985d3b;
+}
+
+.twitter-sign-in {
+    background-color: #1da1f2;
+}
