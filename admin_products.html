@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page - Food Store</title>
+    <link rel="stylesheet" href="./assets/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="./assets/imgs/logo2.png" alt="Logo">
+            <h2>DICA FOOD</h2>
+        </div>
+        <nav>
+            <ul class="sidebar-menu">
+                <li class="tong_quan_first"><a href="admin_tongquan.html"><i class="fas fa-home"></i> Trang tổng
+                        quan</a></li>
+                <li><a href="admin_products.html"><i class="fas fa-utensils"></i> Sản phẩm</a></li>
+                <li><a href="admin_khachhang.html"><i class="fas fa-users"></i> Khách hàng</a></li>
+                <li><a href="admin_donhang.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li>
+                <li><a href="admin_thongke.html"><i class="fas fa-chart-line"></i> Thống kê</a></li>
+                <div class="sidebar-group">
+                    <li class="sidebar-02"><a href=""><i class="fas fa-calculator"></i> Máy tính</a></li>
+                    <li class="sidebar-02"><a href="admin.html"><i class="fas fa-arrow-alt-circle-left"></i> Trang
+                            chủ</a></li>
+                    <li class="sidebar-02"><a href="home.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+                </div>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Chào mừng bạn đến với trang sản phẩm của cửa hàng <span class="main-content-title">DICA
+                    FOOD</span></h1>
+        </header>
+
+        <!-- Form Thêm Sản Phẩm -->
+        <div class="product-form">
+            <h2>Thêm Sản Phẩm Mới</h2>
+            <form>
+                <label for="product-name">Tên sản phẩm:</label>
+                <input type="text" id="product-name" required>
+
+                <label for="product-price">Giá:</label>
+                <input type="number" id="product-price" required>
+
+                <label for="product-description">Mô tả:</label>
+                <textarea id="product-description" required></textarea>
+
+                <label for="product-quantity">Số lượng:</label>
+                <input type="number" id="product-quantity" required>
+
+                <label for="product-status">Trạng thái:</label>
+                <select id="product-status">
+                    <option value="in-stock">Còn hàng</option>
+                    <option value="out-of-stock">Hết hàng</option>
+                </select>
+
+                <label for="product-image">Hình ảnh sản phẩm:</label>
+                <input type="file" id="product-image" accept="image/*" required>
+
+                <button type="submit">Thêm Sản Phẩm</button>
+            </form>
+        </div>
+
+        <!-- Tìm Kiếm Sản Phẩm -->
+        <div class="product-search">
+            <h2>Tìm Kiếm Sản Phẩm</h2>
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search-input" placeholder="Nhập tên sản phẩm...">
+            </div>
+        </div>
+
+        <!-- Danh sách Sản Phẩm -->
+        <div class="product-list">
+            <h2>Danh sách Sản Phẩm</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Mô tả</th>
+                        <th>Số lượng</th>
+                        <th>Trạng thái</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- San pham 1  -->
+                    <tr>
+                        <td><img src="./assets/imgs/item-1.png" alt="Product Image"></td>
+                        <td>Tên sản phẩm</td>
+                        <td>Giá sản phẩm</td>
+                        <td>gà kho</td>
+                        <td>Số lượng</td>
+                        <td>Còn hàng</td>
+                        <td>
+                            <button class="edit-button"><i class="fas fa-edit"></i> Sửa</button>
+                            <button class="delete-button"><i class="fas fa-trash-alt"></i> Xóa</button>
+                        </td>
+                    </tr>
+
+                    <!-- San pham 2  -->
+                    <tr>
+                        <td><img src="./assets/imgs/item-2.png" alt="Product Image"></td>
+                        <td>Tên sản phẩm</td>
+                        <td>Giá sản phẩm</td>
+                        <td>gà chiên</td>
+                        <td>Số lượng</td>
+                        <td>Còn hàng</td>
+                        <td>
+                            <button class="edit-button"><i class="fas fa-edit"></i> Sửa</button>
+                            <button class="delete-button"><i class="fas fa-trash-alt"></i> Xóa</button>
+                        </td>
+                    </tr>
+                    <!-- San pham 3  -->
+                    <tr>
+                        <td><img src="./assets/imgs/item-3.png" alt="Product Image"></td>
+                        <td>Tên sản phẩm</td>
+                        <td>Giá sản phẩm</td>
+                        <td>Gà ủ muối</td>
+                        <td>Số lượng</td>
+                        <td>Còn hàng</td>
+                        <td>
+                            <button class="edit-button"><i class="fas fa-edit"></i> Sửa</button>
+                            <button class="delete-button"><i class="fas fa-trash-alt"></i> Xóa</button>
+                        </td>
+                    </tr>
+                    <!-- San pham 4  -->
+                    <tr>
+                        <td><img src="./assets/imgs/item-1.png" alt="Product Image"></td>
+                        <td>Tên sản phẩm</td>
+                        <td>Giá sản phẩm</td>
+                        <td>Gà không lối thoát</td>
+                        <td>Số lượng</td>
+                        <td>Còn hàng</td>
+                        <td>
+                            <button class="edit-button"><i class="fas fa-edit"></i> Sửa</button>
+                            <button class="delete-button"><i class="fas fa-trash-alt"></i> Xóa</button>
+                        </td>
+                    </tr>
+                    <!-- San pham 5  -->
+                    <tr>
+                        <td><img src="./assets/imgs/item-5.png" alt="Product Image"></td>
+                        <td>Tên sản phẩm</td>
+                        <td>Giá sản phẩm</td>
+                        <td>Gà siêu ngon</td>
+                        <td>Số lượng</td>
+                        <td>Còn hàng</td>
+                        <td>
+                            <button class="edit-button"><i class="fas fa-edit"></i> Sửa</button>
+                            <button class="delete-button"><i class="fas fa-trash-alt"></i> Xóa</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Phân trang -->
+        <div class="pagination">
+            <a href="#">&laquo;</a> <!-- Mũi tên trái -->
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">&raquo;</a> <!-- Mũi tên phải -->
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
