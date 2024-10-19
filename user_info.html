@@ -94,54 +94,122 @@
             <a href="#" class="category-link">MÓN TRÁNG MIỆNG</a>
         </div>
     </header>
-
-
-
-    <!-- =========================================HOME=========================================  -->
-    <section class="home swiper" id="home">
-        <div class="swiper-wrapper">
-            <!-- slider 1 -->
-            <div class="swiper-slide conatiner">
-                <img src="assets/imgs/slider1notext.png" alt="" class="home-img">
-                <div class="home-text">
-                    <h1>Delicious <br> Food Menu</h1>
-                    <p>Special Deal only on TUESDAY every week</p>
-                    <h3>Buy 1 Get ONE FREE</h3>
-                    <a href="#" class="btn">Book Now</a>
-                    <!-- để chữ ở phần code ít font đẹp á nên tạm ẩn tí  -->
-                    <!-- silder vuốt hay bấm nút đều được nha  -->
-
+    <!-- =========================================CUSTOMER INFO=========================================  -->
+    
+    <section>
+        <div class="container-user-info" id="account-user">
+            <div class="main-account">
+                <div class="main-account-header">
+                    <div>
+                        <h3>Thông tin tài khoản của bạn</h3>
+                    </div>
+                    <div>
+                        <p>Quản lý thông tin để bảo mật tài khoản</p>
+                    </div>
+                </div>
+                <div class="main-account-body">
+                    <div class="main-account-body-col">
+                        <form action="" class="info-user">
+                            <div class="form-group">
+                                <label for="infoname" class="form-label">Họ và tên</label>
+                                <input class="form-control" type="text" name="infoname" id="infoname" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="infophone" class="form-label">Số điện thoại</label>
+                                <input class="form-control" type="text" name="infophone" id="infophone" disabled="true"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="infoemail" class="form-label">Email</label>
+                                <input class="form-control" type="email" name="infoemail" id="infoemail"
+                                    placeholder="Thêm địa chỉ email của bạn">
+                                <span class="inforemail-error form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="infoaddress" class="form-label">Địa chỉ</label>
+                                <input class="form-control" type="text" name="infoaddress" id="infoaddress"
+                                    placeholder="Thêm địa chỉ giao hàng của bạn">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="main-account-body-col">
+                        <form action="" class="change-password">
+                            <div class="form-group">
+                                <label for="" class="form-label w60">Mật khẩu hiện tại</label>
+                                <input class="form-control" type="password" name="" id="password-cur-info"
+                                    placeholder="Nhập mật khẩu hiện tại">
+                                <span class="password-cur-info-error form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label w60">Mật khẩu mới </label>
+                                <input class="form-control" type="password" name="" id="password-after-info"
+                                    placeholder="Nhập mật khẩu mới">
+                                <span class="password-after-info-error form-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label w60">Xác nhận mật khẩu mới</label>
+                                <input class="form-control" type="password" name="" id="password-comfirm-info"
+                                    placeholder="Nhập lại mật khẩu mới">
+                                <span class="password-after-comfirm-error form-message"></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="main-account-body-row">
+                        <div>
+                            <button id="save-info-user" onclick="changeInformation()"><i
+                                    class="fa-regular fa-floppy-disk"></i> Lưu thay đổi</button>
+                        </div>
+                        <div>
+                            <button id="save-password" onclick="changePassword()"><i class="fa-regular fa-key"></i> Đổi
+                                mật khẩu</button>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
     </section>
-    <!-- =========================================CUSTOMER INFO=========================================  -->
-    
-    <section class="customer-info">
-        <div class="container">
-            <h2><u>Thông tin khách hàng</u></h2>
-            <div class="info-group">
-                <label>Họ & Tên:</label>
-                <span>Nguyễn Hoàng Lập</span>
+    <div class="footer">
+        <div class="footer-content container">
+            <div class="footer-box">
+                <a href="#" class="footer-logo">
+                    <img src="assets/imgs/logo2.png" alt="">
+                </a>
+                <p>345 Le Thanh Ton Street, District 1, Ho Chi Minh City </p>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#"><i class='bx bxl-tiktok'></i></a>
+                    <a href="#"><i class='bx bxl-pinterest-alt' ></i></a>
+                </div>
             </div>
-            <div class="info-group">
-                <label>Ngày sinh:</label>
-                <span>26/02/2005</span>
+            <div class="footer-box">
+                <h3>Opening Hours</h3>
+                <p><span>Mon</span>: 9:00 - 20:30</p>
+                <p><span>Tue</span>: 9:00 - 20:30</p>
+                <p><span>Wed</span>: 9:00 - 20:30</p>
+                <p><span>Thu</span>: 9:00 - 20:30</p>
+                <p><span>Fri</span>: 9:00 - 20:30</p>
+                <p><span>Sat</span>: 9:00 - 20:00</p>
+                <p><span>Sun</span>: Closed</p>
             </div>
-            <div class="info-group">
-                <label>Email:</label>
-                <span>lapnguyen@gmail.com</span>
+            <div class="footer-box">
+                <h3>Information</h3>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+                <a href="#">Dica Food Gallery</a>
+                <a href="#">Dica Food Talent Chefs</a>
+                <a href="#">Testimonials</a>
             </div>
-            <div class="info-group">
-                <label>SĐT:</label>
-                <span>+84 123 456 789</span>
-            </div>
-            <div class="info-group">
-                <label>Địa chỉ:</label>
-                <span>12 Đường Trần Xuân Soạn, Phường Tân Hưng, Thành phố Hồ Chí Minh</span>
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>+9123456789</p>
+                <p>Dicafood@gmail.com</p>
+                <p>Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh </p>
             </div>
         </div>
-    </section>
+        <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
+     </div>
 </body>
 
 </html>

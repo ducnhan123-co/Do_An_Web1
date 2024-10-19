@@ -1,3 +1,7 @@
+/* .customer-info {
+    background-color: #b9b596;
+}
+
 .customer-info u {
     text-decoration: underline;
 }
@@ -23,9 +27,227 @@
 }
 
 .customer-info span {
-    /* display: block; */   
+    display: block;   
     padding: 8px;
     background-color: #e9e9e9;
     border: 1px solid #ccc;
     border-radius: 4px;
+    transition: background-color 0.8s ease-in-out;
+}
+
+.customer-info span:hover {
+    background-color: #c9bb39;
+    /* cursor: pointer; 
+}
+*/
+
+.container-user-info {
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+    margin-top: 250px;
+    margin-bottom: 100px;
+}
+
+#account-user {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.sidebar-account {
+    width: 20%;
+    margin-right: 40px;
+}
+
+.menu-account {
+    border: 1px solid #dae2e6;
+}
+
+.menu-account-item {
+    padding: 10px 15px;
+    color: var(--text-color);
+    display: block;
+    height: 100%;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.menu-account-item:hover,
+.menu-account-item.active {
+    background-color: #eee;
+}
+
+.menu-account-item:not(last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.menu-account-item i {
+    margin-right: 5px;
+}
+
+.main-account {
+    width: 80%;
+    border: 1px solid #dae2e6;
+    padding: 20px;
+}
+
+.main-account.active {
+    display: block;
+}
+
+
+.main-account-header {
+    padding-bottom: 15px;
+    /* border-bottom: 1px solid #eee; */
+    gap: 20px;
+}
+
+.main-account-header h3 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    /* border-bottom: 1px solid #eee; */
+    gap: 20px;
+}
+
+.main-account-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-account-body-row {
+    width: 100%;
+    display: flex;
+}
+
+.main-account-body-row>div {
+    width: 50%;
+}
+
+
+.main-account-body-col {
+    padding-top: 10px;
+    width: 50%;
+}
+
+.main-account-body-col .form-group {
+    margin-right: 30px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+#save-password,
+#save-info-user {
+    border: none;
+    outline: none;
+    color: var(--white);
+    background-color: var(--red);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s linear;
+}
+
+.form-control.error {
+    border-color: red;
+}
+
+.form-control:focus {
+    border-color: var(--red);
+}
+
+.form-message {
+    color: red;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.form-submit {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    color: var(--white);
+    background-color: var(--red);
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.form-close {
+    background-color: rgba(0, 0, 0, .3);
+    height: 30px;
+    width: 30px;
+    line-height: 29px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.change-login a,
+label a {
+    color: var(--red);
+}
+
+.change-login {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Test login sign up */
+.lg-container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lg-container button {
+    width: 50%;
+    border: 0;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    background-color: var(--red);
+    cursor: pointer;
+}
+
+.lg-container button:first-of-type {
+    border-right: 1px solid #eee;
+}
+
+#save-password i,
+#save-info-user i {
+    margin-right: 5px;
+}
+
+input[type=number] {
+    --moz-appearance: textfield;
 }
