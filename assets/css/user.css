@@ -40,13 +40,44 @@
     /* cursor: pointer; 
 }
 */
+.section-user-info {
+    margin-top: 200px;
+}
 
-.container-user-info {
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* min-height: 100vh; */
+    background: url('img_login/table-5356682_1920\ \(1\).jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: -100px;
+}
+
+/* .container-user-info {
     max-width: 1400px;
     margin: auto;
     width: 100%;
     margin-top: 250px;
     margin-bottom: 100px;
+    background-color: transparent;
+} */
+
+.container-user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 250px;
+    margin-bottom: 100px;
+    background-color: rgb(242, 219, 219);
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blul(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    padding: 20px;
+    border: none; /* Bỏ viền */
+    border-radius: 8px;
 }
 
 #account-user {
@@ -87,9 +118,12 @@
 }
 
 .main-account {
-    width: 80%;
-    border: 1px solid #dae2e6;
-    padding: 20px;
+    width: 100%;
+    border: 5px solid #ffa500;
+    padding: 15px;
+    margin: 0px;
+    border-radius: 8px;
+    background-color: rgb(255, 247, 247);
 }
 
 .main-account.active {
@@ -110,6 +144,22 @@
     /* border-bottom: 1px solid #eee; */
     gap: 20px;
 }
+ 
+.main-account-header h3 {
+    display: inline-block; /* Ensure it only takes the necessary width */
+    padding: 10px 20px; /* Add some padding */
+    border: 2px solid #ccc; /* Add border */
+    border-radius: 15px; /* Round the corners */
+    background-color: #efdbce; /* Light background color */
+    margin-bottom: 20px; /* Some space at the bottom */
+}
+
+.main-account-header p {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    /* border-bottom: 1px solid #eee; */
+}
 
 .main-account-body {
     display: flex;
@@ -119,12 +169,31 @@
 .main-account-body-row {
     width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .main-account-body-row>div {
     width: 50%;
+    padding-left: 20px;
 }
 
+.main-account-body-row button {
+    padding: 15px 30px; /* Tăng kích thước padding để làm nút lớn hơn */
+    font-size: 18px; /* Tăng kích thước chữ */
+    background-color: #ff0000; /* Màu đỏ */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Tăng độ bo góc để nút nhìn mềm mại hơn */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-account-body-row button:hover {
+    background-color: #ffeb3b; /* Màu vàng */
+    color: black; /* Chữ đen */
+}
 
 .main-account-body-col {
     padding-top: 10px;
@@ -137,17 +206,6 @@
     padding-bottom: 20px;
 }
 
-#save-password,
-#save-info-user {
-    border: none;
-    outline: none;
-    color: var(--white);
-    background-color: var(--red);
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
 .form-group {
     margin-bottom: 10px;
 }
@@ -157,6 +215,19 @@
     display: inline-block;
     font-size: 14px;
     font-weight: 600;
+}
+
+.form-group span {
+    display: block;
+    padding: 8px;
+    background-color: #e9e9e9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.8s ease-in-out;
+}
+
+.form-group span:hover {
+    background-color: #ffeb3b; /* Màu vàng */
 }
 
 .form-control {
@@ -243,6 +314,17 @@ label a {
     border-right: 1px solid #eee;
 }
 
+#save-password,
+#save-info-user {
+    border: none;
+    outline: none;
+    color: var(--white);
+    background-color: var(--red);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 #save-password i,
 #save-info-user i {
     margin-right: 5px;
@@ -251,3 +333,73 @@ label a {
 input[type=number] {
     --moz-appearance: textfield;
 }
+
+.footer {
+    background: var(--text-color);
+    color: var(--bg-color);
+    font-family: var(--font-family-1);
+    margin-top: 100px;
+}
+  
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 40px 0 30px;
+}
+  
+.footer-logo {
+    margin-bottom: 10px;
+}
+  
+.footer-logo img {
+    width: 80px;
+}
+  
+.footer-box {
+    display: flex;
+    flex-direction: column;  
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+  
+.social a .bx {
+    font-size: 20px;
+    background: var(--yellow-color);
+    color: var(--bg-color);
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 0.8rem;
+}
+
+.social a .bx:hover {
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition: background 0.4s ease-in-out;
+}
+  
+.footer-box h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+  
+.footer-box p {
+    margin-bottom: 8px;
+}
+  
+.footer-box p span {
+    display: inline-block;
+    width: 50px;
+}
+  
+.footer-box a {
+    color: var(--bg-color);
+    margin-bottom: 10px;
+}
+  
