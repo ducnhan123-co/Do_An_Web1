@@ -75,7 +75,7 @@ header {
 /* Tạo chiều cao nhỏ gọn cho phần top-header */
 .top-header {
   background-color: transparent;
-  padding: 5px 0;
+  padding: 1px 0;
   font-size: 14px;
 }
 
@@ -161,16 +161,16 @@ ul li a .caret {
   position: absolute;
   top: 10px;
   left: 160px;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   color: var(--bg-color);
 }
 
 .main-header-search {
   width: 580px;
-  height: 70px;
+  height: 50px;
   background-color: #bebbb9;
   position: absolute;
-  top: 25px;
+  top: 15px;
   left: 350px;
   border-radius: 50px;
   /* display: flex; */
@@ -179,7 +179,7 @@ ul li a .caret {
 /* Chạy theo phần tử cha của nó ?  */
 .main-header-search i {
   position: absolute;
-  font-size: 39px;
+  font-size: 25px;
   top: 15px;
   left: 20px;
 }
@@ -187,7 +187,7 @@ ul li a .caret {
 .main-header-search input {
   padding: 15px;
   position: absolute;
-  top: 10px;
+  /* top: 10px; */
   left: 80px;
   width: 390px;
   /* height: 100%; */
@@ -199,8 +199,8 @@ ul li a .caret {
 
 .main-header-search button {
   position: absolute;
-  top: 10px;
-  padding: 15px 25px;
+  top: 5px;
+  padding: 10px 25px;
   right: 20px;
   border: none;
   outline: none;
@@ -285,8 +285,8 @@ ul li a .caret {
   justify-content: center;
   /* background: linear-gradient(to right, #ffcc00, #ff9900); */
   background-color: transparent;
-  padding: 25px 15px;
-  margin-bottom: 18px;
+  padding: 5px 15px;
+  /* margin-bottom: 18px; */
 }
 
 .category-link {
@@ -407,7 +407,7 @@ ul li a .caret {
   min-height: 650px;
   background: var(--red);
   position: relative;
-  padding: 15rem 0 2rem;
+  padding: 12rem 0 2rem;
 }
 
 .home-content {
