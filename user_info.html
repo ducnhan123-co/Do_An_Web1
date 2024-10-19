@@ -4,7 +4,7 @@
 <head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOOD SGU</title>
+    <title>User_info</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
@@ -74,9 +74,9 @@
             </div>
             <div class="main-header-login">
                 <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
-                <a href="./login.html" class="login-link">Đăng Nhập</a>
+                <a href="./login.html" class="login-link">Lập Nguyễn</a>
                 <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
-                <a href="#" class="register-link">Đăng Kí</a>
+                <a href="./home.html" class="register-link">Đăng xuất</a>
             </div>
             <div class="main-header-cart">
                 <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
@@ -96,9 +96,8 @@
     </header>
     <!-- =========================================CUSTOMER INFO=========================================  -->
     
-    <section>
-        <div class="container-user-info" id="account-user">
-            <div class="main-account">
+    <section class="section-user-info">
+            <div class="container-user-info">
                 <div class="main-account-header">
                     <div>
                         <h3>Thông tin tài khoản của bạn</h3>
@@ -106,29 +105,26 @@
                     <div>
                         <p>Quản lý thông tin để bảo mật tài khoản</p>
                     </div>
+                    <hr>
                 </div>
                 <div class="main-account-body">
                     <div class="main-account-body-col">
                         <form action="" class="info-user">
                             <div class="form-group">
                                 <label for="infoname" class="form-label">Họ và tên</label>
-                                <input class="form-control" type="text" name="infoname" id="infoname" placeholder="">
+                                <span class="form-control">Nguyễn Hoàng Lập</span>
                             </div>
                             <div class="form-group">
                                 <label for="infophone" class="form-label">Số điện thoại</label>
-                                <input class="form-control" type="text" name="infophone" id="infophone" disabled="true"
-                                    placeholder="">
+                                <span class="form-control">0902752693</span>
                             </div>
                             <div class="form-group">
                                 <label for="infoemail" class="form-label">Email</label>
-                                <input class="form-control" type="email" name="infoemail" id="infoemail"
-                                    placeholder="Thêm địa chỉ email của bạn">
-                                <span class="inforemail-error form-message"></span>
+                                <span class="form-control">lapnguyen26@gmail.com</span>
                             </div>
                             <div class="form-group">
                                 <label for="infoaddress" class="form-label">Địa chỉ</label>
-                                <input class="form-control" type="text" name="infoaddress" id="infoaddress"
-                                    placeholder="Thêm địa chỉ giao hàng của bạn">
+                                <span class="form-control">290B/33/7 Dương Bá Trạc, Phường 1, Quận 8</span>
                             </div>
                         </form>
                     </div>
@@ -138,44 +134,42 @@
                                 <label for="" class="form-label w60">Mật khẩu hiện tại</label>
                                 <input class="form-control" type="password" name="" id="password-cur-info"
                                     placeholder="Nhập mật khẩu hiện tại">
-                                <span class="password-cur-info-error form-message"></span>
+                                <!-- <span class="password-cur-info-error form-message"></span> -->
                             </div>
                             <div class="form-group">
                                 <label for="" class="form-label w60">Mật khẩu mới </label>
                                 <input class="form-control" type="password" name="" id="password-after-info"
                                     placeholder="Nhập mật khẩu mới">
-                                <span class="password-after-info-error form-message"></span>
+                                <!-- <span class="password-after-info-error form-message"></span> -->
                             </div>
                             <div class="form-group">
                                 <label for="" class="form-label w60">Xác nhận mật khẩu mới</label>
                                 <input class="form-control" type="password" name="" id="password-comfirm-info"
                                     placeholder="Nhập lại mật khẩu mới">
-                                <span class="password-after-comfirm-error form-message"></span>
+                                <!-- <span class="password-after-comfirm-error form-message"></span> -->
                             </div>
                         </form>
                     </div>
                     <div class="main-account-body-row">
                         <div>
-                            <button id="save-info-user" onclick="changeInformation()"><i
-                                    class="fa-regular fa-floppy-disk"></i> Lưu thay đổi</button>
+                            <button class="button" class="button"></i> Lưu thay đổi</button>
                         </div>
                         <div>
-                            <button id="save-password" onclick="changePassword()"><i class="fa-regular fa-key"></i> Đổi
-                                mật khẩu</button>
+                            <button class="button" class="button"></i> Đổi mật khẩu</button>
                         </div>
                     </div>
                     
                 </div>
             </div>
-        </div>
     </section>
-    <div class="footer">
+     <!-- Footer -->
+     <div class="footer">
         <div class="footer-content container">
             <div class="footer-box">
                 <a href="#" class="footer-logo">
                     <img src="assets/imgs/logo2.png" alt="">
                 </a>
-                <p>345 Le Thanh Ton Street, District 1, Ho Chi Minh City </p>
+                <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
                 <div class="social">
                     <a href="#"><i class='bx bxl-instagram'></i></a>
                     <a href="#"><i class='bx bxl-linkedin' ></i></a>
@@ -211,5 +205,4 @@
         <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
      </div>
 </body>
-
 </html>
