@@ -1118,10 +1118,10 @@ html::-webkit-scrollbar-thumb {
 }
 
 
-.footer_get_email {
+/* .footer_get_email {
   padding: 15px;
   font-size: 10px;
-}
+} */
 
 /* .footer__last-icon .footer__last-icon2 {
   color: #451ba7;
@@ -1164,7 +1164,7 @@ html::-webkit-scrollbar-thumb {
 
 
 
-@import "bourbon";
+/* @import "bourbon"; */
 
 /* $break-tablet: 992px; */
 
@@ -1174,7 +1174,7 @@ html::-webkit-scrollbar-thumb {
     padding: 40px 0;
   }
 } */
-
+/* 
 .basket,
 .container {
   padding: 0;
@@ -1457,4 +1457,4 @@ p.agreed {
   left: 0px;
   background: rgba(0, 0, 0, 0.5);
   padding: 20px;
-}
+} */
