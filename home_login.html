@@ -1,94 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Sign Up</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <!-- Box Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <div class="breadcrumb-inner">
-                <ul class="list-inline list-unstyled">
-                    <li><a href="home.html">Home</a></li>
-                    <li class='active'>Login</li>
+
+    <header>
+        <!-- ======================================TOP-HEADER=================================== -->
+        <div class="top-header">
+            <div class="cnt-block">
+                <p>+0123 456 789</p>
+                <ul class="list-unstyled list-inline">
+                    <li class="dropdown dropdown-small">
+                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                            <span class="value">USD </span><i class="fas fa-caret-down"></i>
+                        </a>
+                        <!-- <ul class="dropdown-menu">
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">INR</a></li>
+                            <li><a href="#">GBP</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="dropdown dropdown-small">
+                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                            <span class="value">English </span><i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- <li><a href="#">English</a></li>
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">German</a></li> -->
+                        </ul>
+                    </li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">MyCart</a></li>
+                    <li><a href="#">Checkout</a></li>
+
                 </ul>
             </div>
         </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="body-content">
-        <div class="container">
-            <div class="sign-in-page row">
-                <!-- Sign-in Section -->
-                <div class="col-md-6 col-sm-6 sign-in">
-                    <h4>Sign In</h4>
-                    <p>Welcome to your account</p>
-                    <div class="social-sign-in outer-top-xs">
-                        <a href="#" class="btn btn-primary facebook-sign-in"><i class="fa fa-facebook"></i> Sign In with
-                            Facebook</a>
-                        <a href="#" class="btn btn-info twitter-sign-in"><i class="fa fa-twitter"></i> Sign In with
-                            Twitter</a>
-                    </div>
-                    <form class="register-form outer-top-xs" role="form">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email Address <span>*</span></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password <span>*</span></label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="rememberMe">
-                            <label class="form-check-label" for="rememberMe">Remember me!</label>
-                            <a href="#" class="forgot-password float-right">Forgot your Password?</a>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Login</button>
-                    </form>
-                </div>
-                <!-- Sign-up Section -->
-                <div class="col-md-6 col-sm-6 create-new-account">
-                    <h4>Create a new account</h4>
-                    <p>Create your account</p>
-                    <form class="register-form outer-top-xs" role="form">
-                        <div class="form-group">
-                            <label for="signUpEmail">Email Address <span>*</span></label>
-                            <input type="email" class="form-control" id="signUpEmail">
-                        </div>
-                        <div class="form-group">
-                            <label for="signUpName">Name <span>*</span></label>
-                            <input type="text" class="form-control" id="signUpName">
-                        </div>
-                        <div class="form-group">
-                            <label for="signUpPhone">Phone Number <span>*</span></label>
-                            <input type="text" class="form-control" id="signUpPhone">
-                        </div>
-                        <div class="form-group">
-                            <label for="signUpPassword">Password <span>*</span></label>
-                            <input type="password" class="form-control" id="signUpPassword">
-                        </div>
-                        <div class="form-group">
-                            <label for="confirmPassword">Confirm Password <span>*</span></label>
-                            <input type="password" class="form-control" id="confirmPassword">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
-                    </form>
-                </div>
+        <!-- ======================================MAIN-HEADER=================================== -->
+        <div class="main-header">
+            <div class="main-header-img">
+                <img src="./assets/imgs/logo2.png" alt="">
+                <h2>DICA <br>FOOD</h2>
+            </div>
+            <div class="main-header-search">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Tìm kiếm món ăn...">
+                <button class="filter-btn">
+                    Lọc
+                </button>
+            </div>
+            <div class="main-header-login">
+                <i class='bx bxs-user' ></i> <!-- Biểu tượng người trước Đăng Nhập -->
+                <a href="home_login.html" class="login-link">Đăng Nhập</a>
+                <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
+                <a href="#" class="register-link">Đăng Kí</a>
+            </div>
+            <div class="main-header-cart">
+                <i class='bx bxs-shopping-bag' ></i> <!-- Biểu tượng giỏ hàng -->
+                <a href="">Giỏ Hàng</a>
             </div>
         </div>
+        <!-- ======================================CATEGORY-HEADER=================================== -->
+        <div class="category-header">
+            <a href="#" class="category-link">TRANG CHỦ</a>
+            <a href="#" class="category-link">MÓN MẶN</a>
+            <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
+            <a href="#" class="category-link">MÓN ĂN NHẸ</a>
+            <a href="#" class="category-link">MÓN LẨU</a>
+            <a href="#" class="category-link">MÓN TRÁNG MIỆNG</a>
+            <a href="#" class="category-link">MÓN MỚI</a>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? 
+                    <a href="#">Register</a>
+                </p>
+            </div>
+        </form>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+     <!-- Footer -->
+     <div class="footer">
+        <div class="footer-content container">
+            <div class="footer-box">
+                <a href="#" class="footer-logo">
+                    <img src="assets/imgs/logo2.png" alt="">
+                </a>
+                <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#"><i class='bx bxl-tiktok'></i></a>
+                    <a href="#"><i class='bx bxl-pinterest-alt' ></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Opening Hours</h3>
+                <p><span>Mon</span>: 9:00 - 20:30</p>
+                <p><span>Tue</span>: 9:00 - 20:30</p>
+                <p><span>Wed</span>: 9:00 - 20:30</p>
+                <p><span>Thu</span>: 9:00 - 20:30</p>
+                <p><span>Fri</span>: 9:00 - 20:30</p>
+                <p><span>Sat</span>: 9:00 - 20:00</p>
+                <p><span>Sun</span>: Closed</p>
+            </div>
+            <div class="footer-box">
+                <h3>Information</h3>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+                <a href="#">Dica Food Gallery</a>
+                <a href="#">Dica Food Talent Chefs</a>
+                <a href="#">Testimonials</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>+9123456789</p>
+                <p>Dicafood@gmail.com</p>
+                <p>Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh </p>
+            </div>
+        </div>
+        <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
+     </div>
 
+</body>
 </html>
