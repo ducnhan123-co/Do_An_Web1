@@ -1,74 +1,476 @@
-.breadcrumb {
-    background-color: #f1f1f1;
-    padding: 10px 0;
-    margin-bottom: 20px;
-}
+/* Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Righteous&display=swap');
 
-.breadcrumb-inner {
-    text-align: center;
-}
-
-.breadcrumb ul {
-    list-style: none;
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-1);
 }
 
-.breadcrumb ul li {
-    display: inline;
-    margin-right: 5px;
+:root {
+    --brown: #4b1204;
+    --yellow-color: #ffa10a;
+    --text-color: #121212;
+    --container-color: #efe8e0;
+    --red: #a72e1b;
+    --bg-color: #fff;
+    --text-alter-color: #94908e;
+    --font-family-1: "Mitr", sans-serif;
+    --font-family-2: "Righteous", sans-serif;
 }
 
-.breadcrumb ul li a {
-    color: #ff7300;
-    text-decoration: none;
+/* Custom Scroll Bar */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background: transparent;
 }
 
-.breadcrumb ul li.active {
-    color: #6c757d;
+html::-webkit-scrollbar-thumb {
+  background: var(--red);
 }
 
-.sign-in-page {
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* min-height: 100vh; */
+    background: url('img_login/table-5356682_1920\ \(1\).jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.sign-in h4,
-.create-new-account h4 {
-    font-weight: bold;
-    color: #333;
-}
-
-.sign-in .form-control,
-.create-new-account .form-control {
-    border-radius: 0;
-    border: 1px solid #ced4da;
-}
-
-.sign-in .btn-block,
-.create-new-account .btn-block {
-    border-radius: 0;
-}
-
-.forgot-password {
-    font-size: 14px;
-}
-
-.facebook-sign-in,
-.twitter-sign-in {
-    display: inline-block;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-bottom: 10px;
-    text-align: center;
+    background: var(--red);
+    border-bottom: 1px solid rgb(255 255 255 / 10%);
+    z-index: 100;
+  }
+  
+  
+  
+  /* =============================================TOP-HEADER=================================== */
+  /* Tạo chiều cao nhỏ gọn cho phần top-header */
+  .top-header {
+    background-color: transparent;
+    padding: 5px 0;
+    font-size: 14px;
+  }
+  
+  /* Canh giữa các mục */
+  .top-header .cnt-block {
+    display: flex;
+    justify-content: flex-end;
+    /* Đẩy nội dung về bên phải */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .cnt-block p {
+    font-size: 14px;
+    color: #fff;
+    /* float: left; */
+    position: relative;
+    right: 600px;
+  }
+  
+  /* Đặt các mục trong danh sách nhỏ gọn */
+  .top-header ul {
+    display: flex;
+    gap: 30px;
+    /* Khoảng cách giữa các mục */
+  }
+  
+  .top-header ul li {
+    list-style: none;
+  }
+  
+  .top-header ul li a {
+    text-decoration: none;
+    color: #ccc;
+  }
+  
+  .top-header ul li a:hover {
+    color: #ffffff;
+  }
+  
+  /* Tùy chỉnh dropdown */
+  .dropdown-menu {
+    min-width: 80px;
+    font-size: 14px;
+  }
+  
+  .dropdown-menu li a {
+    color: #333;
+  }
+  
+  .dropdown-menu li a:hover {
+    color: #007bff;
+  }
+  
+  /* Ẩn caret cho mục thông thường */
+  ul li a .caret {
+    margin-left: 5px;
+  }
+  
+  /* <!-- ======================================MAIN-HEADER=================================== --> */
+  .main-header {
+    display: flex;
+    position: relative;
+  }
+  
+  .main-header-img {
+    display: flex;
+  }
+  
+  .main-header-img img {
+    width: 30%px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    transform: translateY(-900);
+    z-index: 1000;
+    margin-left: 60px;
+    /* display: inline-block; */
+  }
+  
+  .main-header-img h2 {
+    position: absolute;
+    top: 10px;
+    left: 160px;
+    font-size: 2.4rem;
+    color: var(--bg-color);
+  }
+  
+  .main-header-search {
+    width: 580px;
+    height: 70px;
+    background-color: #bebbb9;
+    position: absolute;
+    top: 25px;
+    left: 350px;
+    border-radius: 50px;
+    /* display: flex; */
+  }
+  
+  /* Chạy theo phần tử cha của nó ?  */
+  .main-header-search i {
+    position: absolute;
+    font-size: 39px;
+    top: 15px;
+    left: 20px;
+  }
+  
+  .main-header-search input {
+    padding: 15px;
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    width: 390px;
+    /* height: 100%; */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 20px;
+  }
+  
+  .main-header-search button {
+    position: absolute;
+    top: 10px;
+    padding: 15px 25px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(215, 87, 23);
+    border-radius: 40px;
+    font-size: 15px;
     color: white;
-    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .main-header-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 15px;
+    right: 200px;
+  }
+  
+  .main-header-login p {
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+    right: 80px;
+  }
+  
+  .main-header-login a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  
+  .main-header-login a:hover {
+    text-decoration: underline;
+    color: #fe6303;
+  }
+  
+  .main-header-login i {
+    margin-right: 5px;
+    /* Khoảng cách giữa icon và chữ */
+    color: var(--yellow-color);
+    /* Màu của icon */
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  
+  .main-header-cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+  }
+  
+  .main-header-cart i {
+    margin-right: 5px;
+    color: #ffae00;
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  
+  .main-header-cart a {
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .main-header-cart a:hover {
+    text-decoration: underline;
+    color: #fe6303;
+  }
+  
+  /* <!-- ======================================CATEGORY-HEADER=================================== --> */
+  
+  .category-header {
+    display: flex;
+    justify-content: center;
+    /* background: linear-gradient(to right, #ffcc00, #ff9900); */
+    background-color: transparent;
+    padding: 25px 15px;
+    margin-bottom: 18px;
+  }
+  
+  .category-link {
+    text-decoration: none;
+    color: white;
+    /* Màu chữ */
+    font-size: 16px;
+    /* Kích thước chữ */
+    margin: 0 15px;
+  }
+  
+  .category-link:hover {
+    text-decoration: underline;
+  }
+/* login */
+
+
+.wrapper{
+    width: 420px;
+    /* ẩn đi khung */
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blul(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    color: var(--bg-color);
+    border-radius: 20px;
+    padding: 30px 40px;
+    margin-top: 300px;
 }
 
-.facebook-sign-in {
-    background-color: #985d3b;
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
 }
 
-.twitter-sign-in {
-    background-color: #1da1f2;
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /* background: var(--yellow-color); */
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: var(--text-color);
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: var(--bg-color);
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+
+}
+
+.wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input{
+    accent-color: var(--bg-color);
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: var(--bg-color);
+    text-decoration: none;
+
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: var(--bg-color);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background: var(--yellow-color);
+}
+
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+
+}
+
+/* Footer */
+.footer {
+  background: var(--text-color);
+  color: var(--bg-color);
+  font-family: var(--font-family-1);
+  margin-top: 200px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 40px 0 30px;
+}
+
+.footer-logo {
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  width: 80px;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.social a .bx {
+  font-size: 20px;
+  background: var(--yellow-color);
+  color: var(--bg-color);
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 0.8rem;
+}
+
+.social a .bx:hover {
+  color: var(--text-color);
+  background: var(--bg-color);
+  transition: background 0.4s ease-in-out;
+}
+
+.footer-box h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--bg-color);
+  margin-bottom: 1rem;
+}
+
+.footer-box p {
+  margin-bottom: 8px;
+}
+
+.footer-box p span {
+  display: inline-block;
+  width: 50px;
+}
+
+.footer-box a {
+  color: var(--bg-color);
+  margin-bottom: 10px;
+}
+
+.copyright {
+  padding: 30px;
+  color: var(--bg-color);
+  text-align: center;
 }
