@@ -20,7 +20,15 @@
     --font-family-2: "Righteous", sans-serif;
 }
 
+/* Custom Scroll Bar */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background: transparent;
+}
 
+html::-webkit-scrollbar-thumb {
+  background: var(--red);
+}
 
 body{
     display: flex;
@@ -28,7 +36,7 @@ body{
     align-items: center;
     flex-direction: column;
     /* min-height: 100vh; */
-    background: url('/assets/imgs/table-5356682_1920\ \(1\).jpg') no-repeat;
+    background: url('img_login/table-5356682_1920\ \(1\).jpg');
     background-size: cover;
     background-position: center;
 }
@@ -389,7 +397,6 @@ header {
     text-decoration: underline;
 
 }
-
 
 /* Footer */
 .footer {
