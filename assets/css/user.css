@@ -1,0 +1,31 @@
+.customer-info u {
+    text-decoration: underline;
+}
+
+.customer-info {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ccc;
+}
+
+.customer-info h2 {
+    margin-bottom: 20px;
+}
+
+.customer-info .info-group {
+    margin-bottom: 15px;
+}
+
+.customer-info label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.customer-info span {
+    /* display: block; */   
+    padding: 8px;
+    background-color: #e9e9e9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

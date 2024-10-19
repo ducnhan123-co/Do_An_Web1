@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD SGU</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Box Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- User_info -->
+    <link rel="stylesheet" href="./assets/css/user.css">
+
+<body>
+
+    <!-- ======================================HEADER====================================== -->
+    <header id="header">
+        <!-- ======================================TOP-HEADER=================================== -->
+        <div class="top-header">
+            <div class="cnt-block">
+                <p>+0123 456 789</p>
+                <ul class="list-unstyled list-inline">
+                    <li class="dropdown dropdown-small">
+                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                            <span class="value">USD </span><i class="fas fa-caret-down"></i>
+                        </a>
+                        <!-- <ul class="dropdown-menu">
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">INR</a></li>
+                            <li><a href="#">GBP</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="dropdown dropdown-small">
+                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                            <span class="value">English </span><i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- <li><a href="#">English</a></li>
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">German</a></li> -->
+                        </ul>
+                    </li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">MyCart</a></li>
+                    <li><a href="#">Checkout</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- ======================================MAIN-HEADER=================================== -->
+        <div class="main-header">
+            <div class="main-header-img">
+                <img src="./assets/imgs/logo2.png" alt="">
+                <h2>DICA <br>FOOD</h2>
+            </div>
+            <div class="main-header-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Tìm kiếm món ăn...">
+                <button class="filter-btn">
+                    Lọc
+                </button>
+            </div>
+            <div class="main-header-login">
+                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
+                <a href="./login.html" class="login-link">Đăng Nhập</a>
+                <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
+                <a href="#" class="register-link">Đăng Kí</a>
+            </div>
+            <div class="main-header-cart">
+                <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
+                <a href="">Gio Hang</a>
+            </div>
+        </div>
+        <!-- ======================================CATEGORY-HEADER=================================== -->
+        <div class="category-header">
+            <a href="#" class="category-link">TRANG CHỦ</a>
+            <a href="#" class="category-link">MÓN CHAY</a>
+            <a href="#" class="category-link">MÓN MẶN</a>
+            <a href="#" class="category-link">MÓN NƯỚC</a>
+            <a href="#" class="category-link">MÓN ĂN NHẸ</a>
+            <a href="#" class="category-link">MÓN LẨU</a>
+            <a href="#" class="category-link">MÓN TRÁNG MIỆNG</a>
+        </div>
+    </header>
+
+
+
+    <!-- =========================================HOME=========================================  -->
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            <!-- slider 1 -->
+            <div class="swiper-slide conatiner">
+                <img src="assets/imgs/slider1notext.png" alt="" class="home-img">
+                <div class="home-text">
+                    <h1>Delicious <br> Food Menu</h1>
+                    <p>Special Deal only on TUESDAY every week</p>
+                    <h3>Buy 1 Get ONE FREE</h3>
+                    <a href="#" class="btn">Book Now</a>
+                    <!-- để chữ ở phần code ít font đẹp á nên tạm ẩn tí  -->
+                    <!-- silder vuốt hay bấm nút đều được nha  -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =========================================CUSTOMER INFO=========================================  -->
+    
+    <section class="customer-info">
+        <div class="container">
+            <h2><u>Thông tin khách hàng</u></h2>
+            <div class="info-group">
+                <label>Họ & Tên:</label>
+                <span>Nguyễn Hoàng Lập</span>
+            </div>
+            <div class="info-group">
+                <label>Ngày sinh:</label>
+                <span>26/02/2005</span>
+            </div>
+            <div class="info-group">
+                <label>Email:</label>
+                <span>lapnguyen@gmail.com</span>
+            </div>
+            <div class="info-group">
+                <label>SĐT:</label>
+                <span>+84 123 456 789</span>
+            </div>
+            <div class="info-group">
+                <label>Địa chỉ:</label>
+                <span>12 Đường Trần Xuân Soạn, Phường Tân Hưng, Thành phố Hồ Chí Minh</span>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
