@@ -385,27 +385,26 @@ a {
     cursor: pointer;
 }
 
-.form-submit-btn{
-    margin-top: 40px;
+
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: var(--text-color);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--bg-color);
+  font-weight: 600;
+  transition: 0.5s;
 }
 
-.form-submit-btn input{
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    font-size: 20px;
-    padding: 10px;
-    border:none;
-    border-radius: 3px;
-    color: rgb(209, 209, 209);
-    background: rgba(63, 114, 76, 0.7);
+.btn:hover{
+  background: var(--yellow-color);
 }
-
-.form-submit-btn input:hover{
-    background: rgba(56, 204, 93, 0.7);
-    color: rgb(255, 255, 255);
-}
-
 /* Footer */
 .footer {
     background: var(--text-color);
