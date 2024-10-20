@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="./assets/css/login.css">
+    <title>Register</title>
+    <link rel="stylesheet" href="assets/css/dangky.css">
+
     <!-- Box Icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -55,7 +56,7 @@
                 <i class='bx bx-search'></i>
                 <input type="text" placeholder="Tìm kiếm món ăn...">
                 <button class="filter-btn">
-                    Lọc
+                    <a href="#">Lọc</a>
                 </button>
             </div>
             <div class="main-header-login">
@@ -80,33 +81,71 @@
             <a href="#" class="category-link">MÓN MỚI</a>
         </div>
     </header>
-
+<!-- Form -->
     <div class="wrapper">
-        <form action="">
-            <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username" required>
-                <i class='bx bxs-user'></i>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Password" required>
-                <i class='bx bxs-lock-alt' ></i>
-            </div>
-            <div class="remember-forgot">
-                <label><input type="checkbox">Remember me</label>
-                <a href="#">Forgot password?</a>
-            </div>
-            <button type="submit" class="btn">Login</button>
-            <div class="register-link">
-                <p>Don't have an account? 
-                    <a href="user_info.html">Register</a>
-                </p>
-            </div>
-        </form>
+      <h1 class="form-title">Registration</h1>
+      <form action="#">
+        <div class="main-user-info">
+          <div class="user-input-box">
+            <label for="fullName">Full Name</label>
+            <input type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter Full Name"/>
+          </div>
+          <div class="user-input-box">
+            <label for="username">Username</label>
+            <input type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter Username"/>
+          </div>
+          <div class="user-input-box">
+            <label for="email">Email</label>
+            <input type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Email"/>
+          </div>
+          <div class="user-input-box">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    placeholder="Enter Phone Number"/>
+          </div>
+          <div class="user-input-box">
+            <label for="password">Password</label>
+            <input type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"/>
+          </div>
+          <div class="user-input-box">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Confirm Password"/>
+          </div>
+        </div>
+        <div class="gender-details-box">
+          <span class="gender-title">Gender</span>
+          <div class="gender-category">
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+          </div>
+        </div>
+        <div class="form-submit-btn">
+          <input type="submit" value="Register">
+        </div>
+      </form>
     </div>
 
-     <!-- Footer -->
-     <div class="footer">
+    <!-- Footer -->
+    <div class="footer">
         <div class="footer-content container">
             <div class="footer-box">
                 <a href="#" class="footer-logo">
@@ -147,6 +186,6 @@
         </div>
         <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
      </div>
-
-</body>
+    
+  </body>
 </html>

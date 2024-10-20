@@ -33,12 +33,30 @@ html::-webkit-scrollbar-thumb {
 body{
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
-    /* min-height: 100vh; */
-    background: url('img_login/login_2.jpg');
+    min-height: 100vh;
+    background: url('img_login/login_2.jpg') no-repeat center center fixed; ;
     background-size: cover;
     background-position: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  padding: 3rem 0 2rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  width: 100%;
 }
 
 header {
@@ -297,7 +315,7 @@ ul li a .caret {
     color: var(--bg-color);
     border-radius: 20px;
     padding: 30px 40px;
-    margin-top: 300px;
+    margin: 200px auto 100px auto;
 }
 
 .wrapper h1{
@@ -404,7 +422,6 @@ ul li a .caret {
   background: var(--text-color);
   color: var(--bg-color);
   font-family: var(--font-family-1);
-  margin-top: 200px;
 }
 
 .footer-content {
