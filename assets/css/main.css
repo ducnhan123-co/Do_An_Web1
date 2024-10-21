@@ -218,14 +218,16 @@ ul li a .caret {
   position: absolute;
   top: 15px;
   right: 200px;
+  flex-wrap: wrap;
 }
 
 .main-header-login p {
   color: #ffffff;
   font-weight: bold;
-  position: relative;
-  top: 30px;
-  right: 80px;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  left: 55px;
 }
 
 .main-header-login a {
@@ -611,6 +613,9 @@ ul li a .caret {
   color: rgb(var(--brown), 0.8);
 }
 
+
+
+
 .item-btn {
   background: var(--yellow-color);
   color: var(--brown);
@@ -625,7 +630,34 @@ ul li a .caret {
   transition: background 0.4s ease-in-out;
 }
 
-/* Thiết kế phần best seller */
+.edit-btn {
+  color: #ff7b00;
+  /* color: #a72e1b; */
+  font-weight: bold;
+  transition: 0.5 ease;
+}
+
+.edit-btn:hover {
+  color: var(--brown);
+  transform: scaleX(1.2);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.delete-btn {
+  color: #ff7b00;
+  font-weight: bold;
+}
+
+
+.delete-btn:hover {
+  color: var(--brown);
+  transform: scaleX(1.2);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+
+/* ============================== BEST SELLER ============================== */
 
 .menu-container {
   background: var(--text-color);
@@ -670,12 +702,53 @@ ul li a .caret {
   gap: 10px;
   cursor: pointer;
   padding: 10px;
+  position: relative;
 }
 
 .m-item-box:hover {
   background: var(--yellow-color);
   transition: background 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  /* Hiệu ứng hover */
 }
+
+
+
+.close-icon {
+  position: absolute;
+  top: 0;
+  /* Khoảng cách từ trên cùng */
+  left: 7px;
+  /* Khoảng cách từ trái */
+  font-size: 24px;
+  /* Kích thước biểu tượng */
+  color: #dc3545;
+  /* Màu đỏ cho dấu x */
+  cursor: pointer;
+  /* Hiển thị con trỏ chuột */
+  /* background-color: #fff; */
+  /* Nền trắng */
+  border-radius: 50%;
+  /* Biến thành hình tròn */
+  width: 25px;
+  /* Chiều rộng của hình tròn */
+  height: 25px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Hiệu ứng bóng */
+}
+
+.close-icon:hover {
+  color: #b30000;
+  /* Tối màu khi hover */
+  background-color: #f8d7da;
+  /* Nền khi hover */
+}
+
+
+
+
 
 .burgers-content:last-child,
 .bbq-content:last-child {
@@ -725,7 +798,7 @@ ul li a .caret {
   margin-top: 7px;
 }
 
-/* Thiết kế phần đánh giá */
+/* ================================Testimonials================================  */
 .testimonials-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -736,6 +809,7 @@ ul li a .caret {
   background: var(--container-color);
   padding: 30px;
   border-radius: 10px;
+  background: url(../imgs/tes1.jpg);
 }
 
 .t-box .stars {
@@ -746,6 +820,11 @@ ul li a .caret {
 .t-box p {
   font-size: 1.1rem;
   margin: 10px 0;
+  color: white;
+}
+
+.fas fa-minus close-icon testi {
+  color: #dc3545;
 }
 
 .profile {
@@ -773,11 +852,13 @@ ul li a .caret {
   color: rgb(18 18 18 / 70%);
 }
 
-/* Newsletter */
+/* ======================================= Newsletter =========================================  */
 .newsletter {
   max-width: 1040px;
   width: 90%;
   margin: auto;
+  /* background: #000; */
+  margin-bottom: 30px;
 }
 
 .newsletter h2 {
@@ -834,7 +915,7 @@ ul li a .caret {
   transition: 0.4s ease-in-out;
 }
 
-/* Footer */
+/* ============================================= Footer ===============================================  */
 .footer {
   background: var(--text-color);
   color: var(--bg-color);
@@ -1127,7 +1208,8 @@ html::-webkit-scrollbar-thumb {
 .img_detail {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Sử dụng flex-start để đảm bảo căn chỉnh phần trên */
+  align-items: flex-start;
+  /* Sử dụng flex-start để đảm bảo căn chỉnh phần trên */
 }
 
 .img_detail_main {
@@ -1139,10 +1221,10 @@ html::-webkit-scrollbar-thumb {
 
 .paragraph {
   width: 50%;
-  flex-grow: 1; 
+  flex-grow: 1;
   font-size: 18px;
   background: linear-gradient(45deg, rgba(255, 165, 0, 0.3), rgba(0, 0, 0, 1));
-  color: lightyellow ;
+  color: lightyellow;
 }
 
 .category {
@@ -1187,7 +1269,7 @@ hr {
   padding: 0;
   list-style: none;
   background-color: #dbdada;
-  
+
 }
 
 .wc-tabs li {
@@ -1222,16 +1304,18 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   padding: 10px;
   border: none;
 }
 
 @media (max-width: 600px) {
   .wc-tabs {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
+
 /* -------Order------- */
 .order-section {
   display: flex;
@@ -1258,7 +1342,7 @@ th, td {
   text-align: center;
 }
 
-.quantity-control button:hover{
+.quantity-control button:hover {
   background-color: #333;
   color: white;
 }
@@ -1308,23 +1392,26 @@ th, td {
 /* Media Query cho màn hình nhỏ */
 @media (max-width: 800px) {
   .img_detail {
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
   }
 
   .img_detail_main,
   .paragraph {
-    width: 100%; 
-    margin-right: 0; 
+    width: 100%;
+    margin-right: 0;
   }
+
   .paragraph {
     margin-top: 20px;
   }
 }
-.similar{
+
+.similar {
   margin: 3% 0px;
 }
-.backgroud-detail{
+
+.backgroud-detail {
   width: 100%;
   background-image: url(../imgs/banner01.png);
 }
