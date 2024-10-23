@@ -288,7 +288,7 @@ ul li a .caret {
   /* background: linear-gradient(to right, #ffcc00, #ff9900); */
   background-color: transparent;
   padding: 5px 15px;
-  /* margin-bottom: 18px; */
+  margin-bottom: 18px;
 }
 
 .category-link {
@@ -298,10 +298,15 @@ ul li a .caret {
   font-size: 16px;
   /* Kích thước chữ */
   margin: 0 15px;
+  font-weight: bold;
+  transition: ease-in-out 0.5s;
 }
 
 .category-link:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  /* background: linear-gradient(to right, #ffcc00, #ff9900); */
+  border-bottom: 4px solid #ffcc00;
+  transition: ease-in;
 }
 
 .img-hr-custom {
@@ -402,6 +407,22 @@ ul li a .caret {
  .move .line3{
    transform: rotate(45deg) translate(-5px, -5px);
  } */
+
+
+/* ========================Payment================== */
+
+/* .user-payment {
+  background-color: white;
+  height: 900px;
+  width: 100%;
+
+
+} */
+
+
+
+
+
 
 
 /* Home Background  */
