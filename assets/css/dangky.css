@@ -33,356 +33,357 @@ html::-webkit-scrollbar-thumb {
   background: var(--red);
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    flex-direction: column;
-    min-height: 100vh;
-    background: url('img_login/login_2.jpg') no-repeat center center fixed; ;
-    background-size: cover;
-    background-position: center;
+body {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('img_login/login_2.jpg') no-repeat center center fixed;
+  ;
+  background-size: cover;
+  background-position: center;
 }
 
 
 a {
-    text-decoration: none;
-  }
-  
-  img {
-    width: 100%;
-  }
-  
-  section {
-    padding: 3rem 0 2rem;
-  }
-  
-  .container {
-    max-width: 1400px;
-    margin: auto;
-    width: 100%;
-  }
-  
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--red);
-    border-bottom: 1px solid rgb(255 255 255 / 10%);
-    z-index: 100;
-  }
-  
-  
-  
-  /* =============================================TOP-HEADER=================================== */
-  /* Tạo chiều cao nhỏ gọn cho phần top-header */
-  .top-header {
-    background-color: transparent;
-    padding: 1px 0;
-    font-size: 14px;
-  }
-  
-  /* Canh giữa các mục */
-  .top-header .cnt-block {
-    display: flex;
-    justify-content: flex-end;
-    /* Đẩy nội dung về bên phải */
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .cnt-block p {
-    font-size: 14px;
-    color: #fff;
-    /* float: left; */
-    position: relative;
-    right: 600px;
-  }
-  
-  /* Đặt các mục trong danh sách nhỏ gọn */
-  .top-header ul {
-    display: flex;
-    gap: 30px;
-    /* Khoảng cách giữa các mục */
-  }
-  
-  .top-header ul li {
-    list-style: none;
-  }
-  
-  .top-header ul li a {
-    text-decoration: none;
-    color: #ccc;
-  }
-  
-  .top-header ul li a:hover {
-    color: #ffffff;
-  }
-  
-  /* Tùy chỉnh dropdown */
-  .dropdown-menu {
-    min-width: 80px;
-    font-size: 14px;
-  }
-  
-  .dropdown-menu li a {
-    color: #333;
-  }
-  
-  .dropdown-menu li a:hover {
-    color: #007bff;
-  }
-  
-  /* Ẩn caret cho mục thông thường */
-  ul li a .caret {
-    margin-left: 5px;
-  }
-  
-  /* <!-- ======================================MAIN-HEADER=================================== --> */
-  .main-header {
-    display: flex;
-    position: relative;
-  }
-  
-  .main-header-img {
-    display: flex;
-  }
-  
-  .main-header-img img {
-    width: 30%px;
-    height: 100px;
-    object-fit: cover;
-    object-position: center;
-    transform: translateY(-900);
-    z-index: 1000;
-    margin-left: 60px;
-    /* display: inline-block; */
-  }
-  
-  .main-header-img h2 {
-    position: absolute;
-    top: 10px;
-    left: 160px;
-    font-size: 2.2rem;
-    color: var(--bg-color);
-  }
-  
-  .main-header-search {
-    width: 580px;
-    height: 50px;
-    background-color: #bebbb9;
-    position: absolute;
-    top: 15px;
-    left: 350px;
-    border-radius: 50px;
-    /* display: flex; */
-  }
-  
-  /* Chạy theo phần tử cha của nó ?  */
-  .main-header-search i {
-    position: absolute;
-    font-size: 25px;
-    top: 15px;
-    left: 20px;
-  }
-  
-  .main-header-search input {
-    padding: 15px;
-    position: absolute;
-    /* top: 10px; */
-    left: 80px;
-    width: 390px;
-    /* height: 100%; */
-    border: none;
-    outline: none;
-    background-color: transparent;
-    font-size: 20px;
-  }
-  
-  .main-header-search button {
-    position: absolute;
-    top: 5px;
-    padding: 10px 25px;
-    right: 20px;
-    border: none;
-    outline: none;
-    background-color: rgb(215, 87, 23);
-    border-radius: 40px;
-    font-size: 15px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .main-header-login {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    top: 15px;
-    right: 200px;
-  }
-  
-  .main-header-login p {
-    color: #ffffff;
-    font-weight: bold;
-    position: relative;
-    top: 30px;
-    right: 80px;
-  }
-  
-  .main-header-login a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-  }
-  
-  
-  .main-header-login a:hover {
-    text-decoration: underline;
-    color: #fe6303;
-  }
-  
-  .main-header-login i {
-    margin-right: 5px;
-    /* Khoảng cách giữa icon và chữ */
-    color: var(--yellow-color);
-    /* Màu của icon */
-    font-size: 40px;
-    margin-top: 10px;
-  }
-  
-  .main-header-cart {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
-    top: 15px;
-    right: 50px;
-  }
-  
-  .main-header-cart i {
-    margin-right: 5px;
-    color: #ffae00;
-    font-size: 40px;
-    margin-top: 10px;
-  }
-  
-  .main-header-cart a {
-    outline: none;
-    border: none;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-  }
-  
-  .main-header-cart a:hover {
-    text-decoration: underline;
-    color: #fe6303;
-  }
-  
-  /* <!-- ======================================CATEGORY-HEADER=================================== --> */
-  
-  .category-header {
-    display: flex;
-    justify-content: center;
-    /* background: linear-gradient(to right, #ffcc00, #ff9900); */
-    background-color: transparent;
-    padding: 5px 15px;
-    /* margin-bottom: 18px; */
-  }
-  
-  .category-link {
-    text-decoration: none;
-    color: white;
-    /* Màu chữ */
-    font-size: 16px;
-    /* Kích thước chữ */
-    margin: 0 15px;
-  }
-  
-  .category-link:hover {
-    text-decoration: underline;
-  }
-  
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  padding: 3rem 0 2rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--red);
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+  z-index: 100;
+}
+
+
+
+/* =============================================TOP-HEADER=================================== */
+/* Tạo chiều cao nhỏ gọn cho phần top-header */
+.top-header {
+  background-color: transparent;
+  padding: 1px 0;
+  font-size: 14px;
+}
+
+/* Canh giữa các mục */
+.top-header .cnt-block {
+  display: flex;
+  justify-content: flex-end;
+  /* Đẩy nội dung về bên phải */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cnt-block p {
+  font-size: 14px;
+  color: #fff;
+  /* float: left; */
+  position: relative;
+  right: 600px;
+}
+
+/* Đặt các mục trong danh sách nhỏ gọn */
+.top-header ul {
+  display: flex;
+  gap: 30px;
+  /* Khoảng cách giữa các mục */
+}
+
+.top-header ul li {
+  list-style: none;
+}
+
+.top-header ul li a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.top-header ul li a:hover {
+  color: #ffffff;
+}
+
+/* Tùy chỉnh dropdown */
+.dropdown-menu {
+  min-width: 80px;
+  font-size: 14px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+}
+
+.dropdown-menu li a:hover {
+  color: #007bff;
+}
+
+/* Ẩn caret cho mục thông thường */
+ul li a .caret {
+  margin-left: 5px;
+}
+
+/* <!-- ======================================MAIN-HEADER=================================== --> */
+.main-header {
+  display: flex;
+  position: relative;
+}
+
+.main-header-img {
+  display: flex;
+}
+
+.main-header-img img {
+  width: 30%px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  transform: translateY(-900);
+  z-index: 1000;
+  margin-left: 60px;
+  /* display: inline-block; */
+}
+
+.main-header-img h2 {
+  position: absolute;
+  top: 10px;
+  left: 160px;
+  font-size: 2.2rem;
+  color: var(--bg-color);
+}
+
+.main-header-search {
+  width: 580px;
+  height: 50px;
+  background-color: #bebbb9;
+  position: absolute;
+  top: 15px;
+  left: 350px;
+  border-radius: 50px;
+  /* display: flex; */
+}
+
+/* Chạy theo phần tử cha của nó ?  */
+.main-header-search i {
+  position: absolute;
+  font-size: 25px;
+  top: 15px;
+  left: 20px;
+}
+
+.main-header-search input {
+  padding: 15px;
+  position: absolute;
+  /* top: 10px; */
+  left: 80px;
+  width: 390px;
+  /* height: 100%; */
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.main-header-search button {
+  position: absolute;
+  top: 5px;
+  padding: 10px 25px;
+  right: 20px;
+  border: none;
+  outline: none;
+  background-color: rgb(215, 87, 23);
+  border-radius: 40px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.main-header-login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 15px;
+  right: 200px;
+}
+
+.main-header-login p {
+  color: #ffffff;
+  font-weight: bold;
+  position: relative;
+  top: 30px;
+  right: 80px;
+}
+
+.main-header-login a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+.main-header-login a:hover {
+  text-decoration: underline;
+  color: #fe6303;
+}
+
+.main-header-login i {
+  margin-right: 5px;
+  /* Khoảng cách giữa icon và chữ */
+  color: var(--yellow-color);
+  /* Màu của icon */
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.main-header-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 15px;
+  right: 50px;
+}
+
+.main-header-cart i {
+  margin-right: 5px;
+  color: #ffae00;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.main-header-cart a {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.main-header-cart a:hover {
+  text-decoration: underline;
+  color: #fe6303;
+}
+
+/* <!-- ======================================CATEGORY-HEADER=================================== --> */
+
+.category-header {
+  display: flex;
+  justify-content: center;
+  /* background: linear-gradient(to right, #ffcc00, #ff9900); */
+  background-color: transparent;
+  padding: 5px 15px;
+  margin-bottom: 18px;
+}
+
+.category-link {
+  text-decoration: none;
+  color: white;
+  /* Màu chữ */
+  font-size: 16px;
+  /* Kích thước chữ */
+  margin: 0 15px;
+}
+
+.category-link:hover {
+  text-decoration: underline;
+}
+
 
 /* register */
-.wrapper{
-    width: 100%;
-    max-width: 650px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 30px 40px;
-    margin: 200px auto 100px auto;
-    border-radius: 10px;
-    box-shadow: inset -2px 2px 2px white;
+.wrapper {
+  width: 100%;
+  max-width: 650px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px 40px;
+  margin: 200px auto 100px auto;
+  border-radius: 10px;
+  box-shadow: inset -2px 2px 2px white;
 }
 
-.form-title{
-    font-size: 26px;
-    font-weight: 600;
-    text-align: center;
-    padding-bottom: 6px;
-    color: white;
-    text-shadow: 2px 2px 2px black;
-    border-bottom: solid 1px white;
+.form-title {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 6px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  border-bottom: solid 1px white;
 }
 
-.main-user-info{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 0;
+.main-user-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
-.user-input-box:nth-child(2n){
-    justify-content: end;
+.user-input-box:nth-child(2n) {
+  justify-content: end;
 }
 
-.user-input-box{
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    padding-bottom: 15px;
+.user-input-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-bottom: 15px;
 }
 
-.user-input-box label{
-    width: 95%;
-    color: white;
-    font-size: 20px;
-    font-weight: 400;
-    margin: 5px 0;
+.user-input-box label {
+  width: 95%;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 5px 0;
 }
 
-.user-input-box input{
-    height: 40px;
-    width: 95%;
-    border-radius: 7px;
-    outline: none;
-    border: 1px solid grey;
-    padding: 0 10px;
+.user-input-box input {
+  height: 40px;
+  width: 95%;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid grey;
+  padding: 0 10px;
 }
 
-.gender-title{
-    color:white;
-    font-size: 24px;
-    font-weight: 600;
-    border-bottom: 1px solid white;
+.gender-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  border-bottom: 1px solid white;
 }
 
-.gender-category{
-    margin: 15px 0;
-    color: white;
+.gender-category {
+  margin: 15px 0;
+  color: white;
 }
 
-.gender-category label{
-    padding: 0 20px 0 5px;
+.gender-category label {
+  padding: 0 20px 0 5px;
 }
 
 .gender-category label,
 .gender-category input,
-.form-submit-btn input{
-    cursor: pointer;
+.form-submit-btn input {
+  cursor: pointer;
 }
 
 
@@ -402,112 +403,113 @@ a {
   transition: 0.5s;
 }
 
-.btn:hover{
+.btn:hover {
   background: var(--yellow-color);
 }
+
 /* Footer */
 .footer {
-    background: var(--text-color);
-    color: var(--bg-color);
-    font-family: var(--font-family-1);
+  background: var(--text-color);
+  color: var(--bg-color);
+  font-family: var(--font-family-1);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 40px 0 30px;
+}
+
+.footer-logo {
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  width: 80px;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.social a .bx {
+  font-size: 20px;
+  background: var(--yellow-color);
+  color: var(--bg-color);
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 0.8rem;
+}
+
+.social a .bx:hover {
+  color: var(--text-color);
+  background: var(--bg-color);
+  transition: background 0.4s ease-in-out;
+}
+
+.footer-box h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--bg-color);
+  margin-bottom: 1rem;
+}
+
+.footer-box p {
+  margin-bottom: 8px;
+}
+
+.footer-box p span {
+  display: inline-block;
+  width: 50px;
+}
+
+.footer-box a {
+  color: var(--bg-color);
+  margin-bottom: 10px;
+}
+
+.copyright {
+  padding: 30px;
+  color: var(--bg-color);
+  text-align: center;
+}
+
+
+@media(max-width: 600px) {
+  .wrapper {
+    min-width: 280px;
   }
-  
-  .footer-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    padding: 40px 0 30px;
+
+  .user-input-box {
+    margin-bottom: 12px;
+    width: 100%;
   }
-  
-  .footer-logo {
-    margin-bottom: 10px;
+
+  .user-input-box:nth-child(2n) {
+    justify-content: space-between;
   }
-  
-  .footer-logo img {
-    width: 80px;
-  }
-  
-  .footer-box {
+
+  .gender-category {
     display: flex;
-    flex-direction: column;
-  
+    justify-content: space-between;
+    width: 100%;
   }
-  
-  .social {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-  }
-  
-  .social a .bx {
-    font-size: 20px;
-    background: var(--yellow-color);
-    color: var(--bg-color);
-    border-radius: 50%;
-    padding: 8px;
-    margin-right: 0.8rem;
-  }
-  
-  .social a .bx:hover {
-    color: var(--text-color);
-    background: var(--bg-color);
-    transition: background 0.4s ease-in-out;
-  }
-  
-  .footer-box h3 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--bg-color);
-    margin-bottom: 1rem;
-  }
-  
-  .footer-box p {
-    margin-bottom: 8px;
-  }
-  
-  .footer-box p span {
-    display: inline-block;
-    width: 50px;
-  }
-  
-  .footer-box a {
-    color: var(--bg-color);
-    margin-bottom: 10px;
-  }
-  
-  .copyright {
-    padding: 30px;
-    color: var(--bg-color);
-    text-align: center;
-  }
-  
 
-@media(max-width: 600px){
-    .wrapper{
-        min-width: 280px;
-    }
+  .main-user-info {
+    max-height: 380px;
+    overflow: auto;
+  }
 
-    .user-input-box{
-        margin-bottom: 12px;
-        width: 100%;
-    }
-
-    .user-input-box:nth-child(2n){
-        justify-content: space-between;
-    }
-
-    .gender-category{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .main-user-info{
-        max-height: 380px;
-        overflow: auto;
-    }
-
-    .main-user-info::-webkit-scrollbar{
-        width: 0;
-    }
+  .main-user-info::-webkit-scrollbar {
+    width: 0;
+  }
 }

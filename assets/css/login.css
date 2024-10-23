@@ -1,23 +1,23 @@
 /* Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Righteous&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-family-1);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-1);
 }
 
 :root {
-    --brown: #4b1204;
-    --yellow-color: #ffa10a;
-    --text-color: #121212;
-    --container-color: #efe8e0;
-    --red: #a72e1b;
-    --bg-color: #fff;
-    --text-alter-color: #94908e;
-    --font-family-1: "Mitr", sans-serif;
-    --font-family-2: "Righteous", sans-serif;
+  --brown: #4b1204;
+  --yellow-color: #ffa10a;
+  --text-color: #121212;
+  --container-color: #efe8e0;
+  --red: #a72e1b;
+  --bg-color: #fff;
+  --text-alter-color: #94908e;
+  --font-family-1: "Mitr", sans-serif;
+  --font-family-2: "Righteous", sans-serif;
 }
 
 /* Custom Scroll Bar */
@@ -30,15 +30,16 @@ html::-webkit-scrollbar-thumb {
   background: var(--red);
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    flex-direction: column;
-    min-height: 100vh;
-    background: url('img_login/login_2.jpg') no-repeat center center fixed; ;
-    background-size: cover;
-    background-position: center;
+body {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('img_login/login_2.jpg') no-repeat center center fixed;
+  ;
+  background-size: cover;
+  background-position: center;
 }
 
 a {
@@ -286,7 +287,7 @@ ul li a .caret {
   /* background: linear-gradient(to right, #ffcc00, #ff9900); */
   background-color: transparent;
   padding: 5px 15px;
-  /* margin-bottom: 18px; */
+  margin-bottom: 18px;
 }
 
 .category-link {
@@ -305,115 +306,115 @@ ul li a .caret {
 /* login */
 
 
-.wrapper{
-    width: 420px;
-    /* ẩn đi khung */
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blul(20px);
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
-    color: var(--bg-color);
-    border-radius: 20px;
-    padding: 30px 40px;
-    margin: 200px auto 100px auto;
+.wrapper {
+  width: 420px;
+  /* ẩn đi khung */
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blul(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: var(--bg-color);
+  border-radius: 20px;
+  padding: 30px 40px;
+  margin: 200px auto 100px auto;
 }
 
-.wrapper h1{
-    font-size: 36px;
-    text-align: center;
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
 }
 
-.wrapper .input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    /* background: var(--yellow-color); */
-    margin: 30px 0;
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  /* background: var(--yellow-color); */
+  margin: 30px 0;
 }
 
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
-    font-size: 16px;
-    color: var(--bg-color);
-    padding: 20px 45px 20px 20px;
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: var(--bg-color);
+  padding: 20px 45px 20px 20px;
 }
 
-.input-box input::placeholder{
-    color: var(--bg-color);
+.input-box input::placeholder {
+  color: var(--bg-color);
 }
 
 .input-box i {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
 
 }
 
-.wrapper .remember-forgot{
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
 }
 
-.remember-forgot label input{
-    accent-color: var(--bg-color);
-    margin-right: 3px;
+.remember-forgot label input {
+  accent-color: var(--bg-color);
+  margin-right: 3px;
 }
 
-.remember-forgot a{
-    color: var(--bg-color);
-    text-decoration: none;
+.remember-forgot a {
+  color: var(--bg-color);
+  text-decoration: none;
 
 }
 
-.remember-forgot a:hover{
-    text-decoration: underline;
+.remember-forgot a:hover {
+  text-decoration: underline;
 
 }
 
 .wrapper .btn {
-    width: 100%;
-    height: 45px;
-    background: var(--text-color);
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 16px;
-    color: var(--bg-color);
-    font-weight: 600;
-    transition: 0.5s;
+  width: 100%;
+  height: 45px;
+  background: var(--text-color);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--bg-color);
+  font-weight: 600;
+  transition: 0.5s;
 }
 
-.btn:hover{
-    background: var(--yellow-color);
+.btn:hover {
+  background: var(--yellow-color);
 }
 
 
-.wrapper .register-link{
-    font-size: 14.5px;
-    text-align: center;
-    margin: 20px 0 15px;
+.wrapper .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
 }
 
 .register-link p a {
-    color: var(--bg-color);
-    text-decoration: none;
-    font-weight: 600;
+  color: var(--bg-color);
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.register-link p a:hover{
-    text-decoration: underline;
+.register-link p a:hover {
+  text-decoration: underline;
 
 }
 
