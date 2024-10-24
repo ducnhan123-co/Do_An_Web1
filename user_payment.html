@@ -7,6 +7,14 @@
     <title>FOOD-SGU</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/payment.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <!-- Box Icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -62,10 +70,10 @@
                 </button>
             </div>
             <div class="main-header-login">
-                <i class='bx bxs-user'></i> <!-- Biểu tượng người trước Đăng Nhập -->
-                <a href="home_login.html" class="login-link">Đăng Nhập</a>
+                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
+                <a href="./login.html" class="login-link">Phan Đức Nhân</a>
                 <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
-                <a href="home_dangky.html" class="register-link">Đăng Kí</a>
+                <a href="./home.html" class="register-link">Đăng xuất</a>
             </div>
             <div class="main-header-cart">
                 <i class='bx bxs-shopping-bag'></i> <!-- Biểu tượng giỏ hàng -->
@@ -85,72 +93,64 @@
     </header>
 
     <section class="user-payment">
-        <div class="payment-container">
-            <h2>Trang Thanh Toán</h2>
-
-            <!-- Hiển thị các món ăn đã chọn -->
-            <div class="order-items">
-                <h3>Món đã chọn</h3>
-                <div class="item">
-                    <img src="assets/imgs/food1.jpg" alt="Món 1">
-                    <div class="item-info">
-                        <h4>Bún Bò Huế</h4>
-                        <p>Giá: 50,000 VND</p>
-                        <p>Số lượng: 1</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="assets/imgs/food2.jpg" alt="Món 2">
-                    <div class="item-info">
-                        <h4>Gỏi Cuốn</h4>
-                        <p>Giá: 30,000 VND</p>
-                        <p>Số lượng: 2</p>
-                    </div>
-                </div>
-                <!-- Tổng tiền -->
-                <div class="total">
-                    <h4>Tổng tiền: 110,000 VND</h4>
-                </div>
-            </div>
-
-            <!-- Thông tin giao hàng -->
-            <div class="delivery-info">
-                <h3>Thông Tin Giao Hàng</h3>
-                <form>
-                    <label for="name">Họ và Tên</label>
-                    <input type="text" id="name" name="name" placeholder="Nguyễn Văn A" required>
-
-                    <label for="address">Địa chỉ giao hàng</label>
-                    <input type="text" id="address" name="address" placeholder="273 An Dương Vương, P3, Q5" required>
-
-                    <label for="phone">Số điện thoại</label>
-                    <input type="tel" id="phone" name="phone" placeholder="0123456789" required>
-
-                    <label for="notes">Ghi chú (tùy chọn)</label>
-                    <textarea id="notes" name="notes" placeholder="Ghi chú cho đơn hàng của bạn"></textarea>
-                </form>
-            </div>
-
-            <!-- Phương thức thanh toán -->
-            <div class="payment-method">
-                <h3>Phương Thức Thanh Toán</h3>
-                <form>
-                    <input type="radio" id="cod" name="payment" value="COD" checked>
-                    <label for="cod">Thanh toán khi nhận hàng (COD)</label><br>
-
-                    <input type="radio" id="credit-card" name="payment" value="CreditCard">
-                    <label for="credit-card">Thẻ tín dụng/ghi nợ</label><br>
-
-                    <input type="radio" id="momo" name="payment" value="MoMo">
-                    <label for="momo">Ví MoMo</label>
-                </form>
-            </div>
-
-            <!-- Nút Thanh Toán -->
-            <div class="payment-action">
-                <button type="submit" class="pay-btn">Thanh Toán</button>
-            </div>
+        <div class="payment-title">
+            <i class="fas fa-cart-arrow-down"></i>
+            <p>Thanh toan</p>
         </div>
+        <hr>
+
+        <div class="payment-body">
+            <div class="payment-details">
+                <p>Payment Details</p>
+
+                <div class="payment-details__methods">
+                    <div class="payment-details__cards">
+
+
+                    </div>
+
+                    <div class="payment-details__paypal">
+
+                    </div>
+
+                </div>
+
+
+                <p class="cardholder_name">Cardholder Name</p>
+                <input type="text" id="cardholderName" placeholder="Enter Cardholder Name" required>
+
+                <p class="card_number">Card Number</p>
+                <input type="text" id="cardNumber" placeholder="Enter Card Number" required>
+
+                <p class="expiration_date">Expiration Date</p>
+                <input type="text" id="expirationDate" placeholder="MM/YY" required>
+
+                <p>Hinh thuc giao nhan </p>
+                <div class="payment-details__methods">
+                    <div class="payment-details__cards">
+
+
+                    </div>
+
+                    <div class="payment-details__paypal">
+
+                    </div>
+
+                </div>
+                <p>Ngay giao hang </p>
+
+                <p>Ghi chu don hang </p>
+
+            </div>
+
+            <div class="order-summery">
+                <p>Don hang</p>
+            </div>
+
+        </div>
+
+
+
     </section>
 
 
