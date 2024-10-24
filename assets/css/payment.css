@@ -1,147 +1,86 @@
 .user-payment {
-    background-color: rgb(255, 141, 3);
+    background-color: #ff6f61;
     height: 1300px;
     width: 100%;
-
-
+    margin-top: 150px;
 }
 
-/* Container chính của phần thanh toán */
-.payment-container {
-    /* position: relative; */
-    /* top: 150px; */
-    max-width: 1300px;
-    margin: 180px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.user-payment hr {
+    border: 3px solid #a3a3a3;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
-/* Tiêu đề chính của trang thanh toán */
-.payment-container h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Phần hiển thị các món ăn */
-.order-items {
-    margin-bottom: 30px;
-}
-
-.order-items h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.item {
+.payment-title {
     display: flex;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #eaeaea;
-    padding-bottom: 10px;
+    gap: 40px;
+    margin-left: 40px;
 }
 
-.item img {
-    width: 80px;
-    height: 80px;
-    border-radius: 8px;
-    margin-right: 20px;
+.payment-title i {
+    font-size: 30px;
+    color: wheat;
 }
 
-.item-info h4 {
-    font-size: 18px;
-    margin: 0 0 5px 0;
-    color: #333;
+.payment-title p {
+    font-size: 30px;
+    font-weight: bold;
 }
 
-.item-info p {
-    margin: 0;
-    color: #777;
+.payment-body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
 }
 
-.total {
-    text-align: right;
-    margin-top: 10px;
+.payment-details {
+    border: 3px solid #ff0000;
+    height: 1100px;
 }
 
-.total h4 {
+.payment-details p {
     font-size: 20px;
-    color: #333;
+    /* font-weight: bold; */
+    color: wheat;
+    margin-left: 40px;
+    padding: 20px;
 }
 
-/* Phần thông tin giao hàng */
-.delivery-info {
-    margin-bottom: 30px;
+.payment-details__methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-.delivery-info h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: #333;
+.payment-details__cards {
+    border: 3px solid #ff0000;
+    height: 80px;
+    margin-left: 40px;
 }
 
-.delivery-info form label {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 5px;
-    display: block;
+.payment-details__paypal {
+    border: 3px solid #ff0000;
+    margin-right: 40px;
 }
 
-.delivery-info form input,
-.delivery-info form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 14px;
-    color: #333;
+.expiration_date,
+.card_number,
+.cardholder_name {
+    font-size: 15px !important;
 }
 
-.delivery-info form textarea {
-    height: 100px;
-    resize: none;
+.payment-details input {
+    border: 3px solid #ff0000;
+    margin-left: 40px;
+    padding: 20px;
+    width: 90%;
 }
 
-/* Phần phương thức thanh toán */
-.payment-method {
-    margin-bottom: 30px;
-}
-
-.payment-method h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.payment-method form input[type="radio"] {
-    margin-right: 10px;
-}
-
-.payment-method form label {
-    font-size: 16px;
-    color: #555;
-}
-
-/* Nút thanh toán */
-.payment-action {
-    text-align: center;
-}
-
-.payment-action .pay-btn {
-    background-color: #ff6f61;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.payment-action .pay-btn:hover {
-    background-color: #ff4f41;
+.order-summery {
+    border: 3px solid #ff0000;
+    /* Màu nền cho tóm tắt đơn hàng */
+    /* Khoảng cách bên trong */
+    /* border-radius: 5px; */
+    /* Bo góc */
 }
