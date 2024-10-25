@@ -6,3 +6,10 @@ function togglePassword(id) {
         x.type = "password";
     }
 }
+
+function navigateToPage(select) {
+    const selectedValue = select.value;
+    if (selectedValue !== "#") {
+        window.location.href = selectedValue; // Điều hướng đến trang đã chọn
+    }
+}

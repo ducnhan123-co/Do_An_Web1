@@ -45,7 +45,7 @@
     margin-bottom: -50px;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,9 +79,10 @@ body{
     /* background-color: rgb(242, 219, 219); */
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blul(20px);
-    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     padding: 10px;
-    border: none; /* Bỏ viền */
+    border: none;
+    /* Bỏ viền */
     border-radius: 8px;
 }
 
@@ -154,14 +155,20 @@ body{
     /* border-bottom: 1px solid #eee; */
     gap: 20px;
 }
- 
+
 .main-account-header h3 {
-    display: inline-block; /* Ensure it only takes the necessary width */
-    padding: 10px 20px; /* Add some padding */
-    border: 2px solid #ccc; /* Add border */
-    border-radius: 15px; /* Round the corners */
-    background-color: #eb3030; /* Light background color */
-    margin-bottom: 20px; /* Some space at the bottom */
+    display: inline-block;
+    /* Ensure it only takes the necessary width */
+    padding: 10px 20px;
+    /* Add some padding */
+    border: 2px solid #ccc;
+    /* Add border */
+    border-radius: 15px;
+    /* Round the corners */
+    background-color: #eb3030;
+    /* Light background color */
+    margin-bottom: 20px;
+    /* Some space at the bottom */
 }
 
 .main-account-header p {
@@ -196,19 +203,25 @@ body{
 }
 
 .main-account-body-row button {
-    padding: 15px 30px; /* Tăng kích thước padding để làm nút lớn hơn */
-    font-size: 18px; /* Tăng kích thước chữ */
-    background-color: #ff0000; /* Màu đỏ */
+    padding: 15px 30px;
+    /* Tăng kích thước padding để làm nút lớn hơn */
+    font-size: 18px;
+    /* Tăng kích thước chữ */
+    background-color: #ff0000;
+    /* Màu đỏ */
     color: white;
     border: none;
-    border-radius: 8px; /* Tăng độ bo góc để nút nhìn mềm mại hơn */
+    border-radius: 8px;
+    /* Tăng độ bo góc để nút nhìn mềm mại hơn */
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .main-account-body-row button:hover {
-    background-color: #ffeb3b; /* Màu vàng */
-    color: black; /* Chữ đen */
+    background-color: #ffeb3b;
+    /* Màu vàng */
+    color: black;
+    /* Chữ đen */
 }
 
 .main-account-body-col {
@@ -221,6 +234,58 @@ body{
     padding-left: 20px;
     padding-bottom: 20px;
 }
+
+
+.main-header-options {
+    position: absolute;
+    top: 60px;
+    right: 170px;
+    color: white;
+    font-weight: bold;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    /* Khoảng cách nhỏ giữa chữ "Tuỳ chọn" và dropdown */
+}
+
+#options-dropdown {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 0;
+    appearance: none;
+    cursor: pointer;
+    color: #ff2200;
+    width: 100%;
+    /* Hiển thị ban đầu với chỉ mũi tên xuống */
+    text-align: left;
+    /* Căn giữa mũi tên xuống */
+}
+
+/* Khi dropdown được kích hoạt */
+#options-dropdown:hover {
+    width: auto;
+    outline: none;
+    color: black;
+}
+
+/* Định dạng cho các tùy chọn */
+#options-dropdown option {
+    color: black;
+    /* Màu cho các lựa chọn */
+}
+
+/* Thêm khoảng cách giữa các phần tử khi dropdown mở */
+#options-dropdown:focus option {
+    padding: 5px;
+}
+
+
+
+
 
 
 
@@ -246,10 +311,11 @@ body{
 }
 
 .form-group span:hover {
-    background-color: #ffeb3b; /* Màu vàng */
+    background-color: #ffeb3b;
+    /* Màu vàng */
 }
 
-.form-group input .show-pass-info{
+.form-group input .show-pass-info {
     padding-right: 100%;
 }
 
@@ -365,25 +431,25 @@ input[type=number] {
     font-family: var(--font-family-1);
     margin-top: 100px;
 }
-  
+
 .footer-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     padding: 40px 0 30px;
 }
-  
+
 .footer-logo {
     margin-bottom: 10px;
 }
-  
+
 .footer-logo img {
     width: 80px;
 }
-  
+
 .footer-box {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
 }
 
 .social {
@@ -391,7 +457,7 @@ input[type=number] {
     align-items: center;
     margin-top: 1rem;
 }
-  
+
 .social a .bx {
     font-size: 20px;
     background: var(--yellow-color);
@@ -406,25 +472,24 @@ input[type=number] {
     background: var(--bg-color);
     transition: background 0.4s ease-in-out;
 }
-  
+
 .footer-box h3 {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--bg-color);
     margin-bottom: 1rem;
 }
-  
+
 .footer-box p {
     margin-bottom: 8px;
 }
-  
+
 .footer-box p span {
     display: inline-block;
     width: 50px;
 }
-  
+
 .footer-box a {
     color: var(--bg-color);
     margin-bottom: 10px;
 }
-  

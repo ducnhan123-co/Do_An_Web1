@@ -79,10 +79,27 @@
                 <i class='bx bxs-shopping-bag'></i> <!-- Biểu tượng giỏ hàng -->
                 <a href="">Giỏ Hàng</a>
             </div>
+            <!-- Phần Tùy chọn và Dropdown -->
+            <div class="main-header-options">
+                <span>Tuỳ chọn</span>
+                <div class="custom-select-wrapper">
+                    <select id="options-dropdown" onchange="navigateToPage(this)">
+                        <option value="#">▼</option> <!-- Hiển thị mũi tên xuống -->
+                        <option value="./user_info.html">Thông tin cá nhân</option>
+                        <option value="./user_theodoisanpham.html">Theo dõi sản phẩm</option>
+                        <option value="./user_payment.html">Thanh toán</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+
+
         </div>
         <!-- ======================================CATEGORY-HEADER=================================== -->
         <div class="category-header">
-            <a href="#" class="category-link">TRANG CHỦ</a>
+            <a href="user.html" class="category-link">TRANG CHỦ</a>
             <a href="#" class="category-link">MÓN MẶN</a>
             <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
             <a href="#" class="category-link">MÓN ĂN NHẸ</a>
@@ -101,16 +118,17 @@
 
         <div class="payment-body">
             <div class="payment-details">
-                <p>Payment Details</p>
+                <h3>Payment Details</h3>
 
                 <div class="payment-details__methods">
                     <div class="payment-details__cards">
+                        <p>Chuyen khoan</p>
 
 
                     </div>
 
                     <div class="payment-details__paypal">
-
+                        <p>Thanh toan khi nhan hang </p>
                     </div>
 
                 </div>
@@ -125,27 +143,144 @@
                 <p class="expiration_date">Expiration Date</p>
                 <input type="text" id="expirationDate" placeholder="MM/YY" required>
 
-                <p>Hinh thuc giao nhan </p>
-                <div class="payment-details__methods">
-                    <div class="payment-details__cards">
-
-
+                <h3>Hinh thuc giao hang </h3>
+                <div class="payment-details__shipping">
+                    <div class="payment-details__s1">
+                        <p>Hoa toc</p>
+                        <!-- <p>Hoa toc</p> -->
                     </div>
 
-                    <div class="payment-details__paypal">
-
+                    <div class="payment-details__s1">
+                        <p>Giao hang</p>
                     </div>
 
                 </div>
-                <p>Ngay giao hang </p>
+                <h3>Ngay giao hang </h3>
+                <div class="payment-orderdates">
+                    <div class="payment-orderdate_1" onclick="activateButton(this)">
+                        <button type="button" class="daybefore-button">Hom nay</button>
+                        <p class="daybefore-text">25/10</p>
+                    </div>
 
-                <p>Ghi chu don hang </p>
+                    <div class="payment-orderdate_1" onclick="activateButton(this)">
+                        <button type="button" class="daybefore-button">Ngay mai</button>
+                        <p class="daybefore-text">26/10</p>
+                    </div>
+
+                    <div class="payment-orderdate_1" onclick="activateButton(this)">
+                        <button type="button" class="daybefore-button">Ngay kia</button>
+                        <p class="daybefore-text">27/10</p>
+                    </div>
+                </div>
+
+
+                <h3>Ghi chu don hang </h3>
+                <textarea name="ghichu" id="">Nhap ghi chu</textarea>
+
+                <h3 class="user-info">Thông tin người nhận</h3>
+                <div class="user-info__methods">
+                    <div class="input-group">
+                        <label for="recipient-name">Tên người nhận:</label>
+                        <input type="text" id="recipient-name" name="recipient-name" placeholder="Nhập tên người nhận">
+                    </div>
+                    <div class="input-group">
+                        <label for="recipient-phone">Số điện thoại:</label>
+                        <input type="text" id="recipient-phone" name="recipient-phone" placeholder="Nhập số điện thoại">
+                    </div>
+                    <div class="input-group">
+                        <label for="recipient-address">Địa chỉ nhận hàng:</label>
+                        <input type="text" id="recipient-address" name="recipient-address"
+                            placeholder="Nhập địa chỉ nhận hàng">
+                    </div>
+                </div>
 
             </div>
 
             <div class="order-summery">
-                <p>Don hang</p>
+                <h3 class="order-summery-title">Don Hang</h3>
+                <div class="order-summery-items">
+                    <!-- Sản phẩm đầu tiên -->
+                    <div class="order-item">
+                        <img src="./assets/imgs/bbq-3.png" alt="Green Tomatoes" class="order-item-image">
+                        <div class="order-item-details">
+                            <p class="order-item-title">Green Tomatoes 1 Kilo</p>
+                            <div class="order-item-quantity">
+                                <button class="order-item-decrease">-</button>
+                                <input type="text" value="6" class="order-item-input">
+                                <button class="order-item-increase">+</button>
+                            </div>
+                            <p class="order-item-price">$ 1.25</p>
+                        </div>
+                        <button class="order-item-remove">X</button>
+                    </div>
+
+                    <!-- Sản phẩm thứ hai -->
+                    <div class="order-item">
+                        <img src="./assets/imgs/bbq-2.png" alt="Cabbage" class="order-item-image">
+                        <div class="order-item-details">
+                            <p class="order-item-title">Cabbage 1 Pcs</p>
+                            <div class="order-item-quantity">
+                                <button class="order-item-decrease">-</button>
+                                <input type="text" value="1" class="order-item-input">
+                                <button class="order-item-increase">+</button>
+                            </div>
+                            <p class="order-item-price">$ 0.80</p>
+                        </div>
+                        <button class="order-item-remove">X</button>
+                    </div>
+
+                    <div class="order-item">
+                        <img src="./assets/imgs/bbq-3.png" alt="Cabbage" class="order-item-image">
+                        <div class="order-item-details">
+                            <p class="order-item-title">Cabbage 1 Pcs</p>
+                            <div class="order-item-quantity">
+                                <button class="order-item-decrease">-</button>
+                                <input type="text" value="5" class="order-item-input">
+                                <button class="order-item-increase">+</button>
+                            </div>
+                            <p class="order-item-price">$ 0.80</p>
+                        </div>
+                        <button class="order-item-remove">X</button>
+                    </div>
+                </div>
+                <hr class="order-summery-hr">
+
+                <!-- Gift card / Discount code -->
+                <div class="order-giftcard">
+                    <input type="text" placeholder="Gift card/Discount code" class="order-giftcard-input">
+                    <button class="order-giftcard-apply">Apply</button>
+                </div>
+
+
+                <div class="order-summary-final">
+                    <div class="order-final-items">
+                        <p class="order-final-label">Tiền hàng <span class="order-items-count">7 món</span></p>
+                        <p class="order-final-price">1.280.000 đ</p>
+                    </div>
+                    <div class="order-final-shipping">
+                        <p class="order-final-label">Phí vận chuyển</p>
+                        <p class="order-final-price">30.000 đ</p>
+                    </div>
+                    <p class="order-final-agreement">
+                        Bằng việc bấm vào nút <strong>“Đặt hàng”</strong>, tôi đồng ý với <a href="#">chính sách hoạt
+                            động</a> của chúng tôi.
+                    </p>
+                    <hr class="order-final-divider">
+                    <div class="order-final-total">
+                        <p class="order-final-total-label">Tổng tiền</p>
+                        <p class="order-final-total-price">1.310.000 đ</p>
+                    </div>
+                    <button class="order-final-button">Đặt hàng</button>
+                </div>
+
+
+
+
+
+
+
             </div>
+
 
         </div>
 
@@ -197,6 +332,26 @@
         <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
 
+
+    <script>
+        function activateButton(element) {
+            // Lấy tất cả các phần tử có lớp "payment-orderdate_1"
+            const buttons = document.querySelectorAll('.payment-orderdate_1');
+
+            // Loại bỏ lớp "active" khỏi tất cả các phần tử
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Thêm lớp "active" vào phần tử được nhấn
+            element.classList.add('active');
+        }
+
+        function navigateToPage(select) {
+            const selectedValue = select.value;
+            if (selectedValue !== "#") {
+                window.location.href = selectedValue; // Điều hướng đến trang đã chọn
+            }
+        }
+    </script>
 
 </body>
 
