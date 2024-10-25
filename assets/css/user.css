@@ -425,6 +425,71 @@ input[type=number] {
     --moz-appearance: textfield;
 }
 
+.order-history {
+    color :white;
+    /* size: 150%; */
+    background-color: #b43232;
+    padding: 20px;
+    margin: 300px;
+    margin-bottom: -30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-history-container {
+    width: 100%;
+}
+
+.order-history h2 {
+    color: #ffffff;
+    text-align: center;
+    margin: 10px 0px 20px 40px;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.history-table th, .history-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.history-table th {
+    
+    background-color: #4CAF50;
+    color: white;
+}
+
+.history-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.history-table tr:hover {
+    background-color: #ff8080;
+    transition: 0.5s;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 500px;
+    margin-bottom: 20px; /* Khoảng cách dưới các phần lọc */
+}
+
+.filters label {
+    margin-right: 10px; /* Khoảng cách giữa label và input */
+}
+
+.filters input {
+    margin-right: 20px; /* Khoảng cách giữa các input */
+    padding: 5px; /* Khoảng cách bên trong input */
+}
+
 .footer {
     background: var(--text-color);
     color: var(--bg-color);
