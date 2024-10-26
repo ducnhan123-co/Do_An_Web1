@@ -4,24 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOOD SGU</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>FOOD-SGU</title>
+    <link rel="stylesheet" href="assets/css/main.css">
 
     <!-- Box Icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-<body>
+</head>
 
-    <!-- ======================================HEADER====================================== -->
-    <header id="header">
+<body>
+    <!-- Header -->
+    <!-- <header> -->
+    <!-- Nav -->
+    <!-- <div class="nav container"> -->
+    <!-- Logo -->
+    <!-- <a href="#" class="logo">
+                <img src="images/logo.png" alt="">
+            </a> -->
+    <!-- Navbar -->
+    <!-- <div class="navbar">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#feature-menu" class="nav-link">Featured Items</a>
+                <a href="#menu-container" class="nav-link">Menu</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#newsletter" class="nav-link">Blog</a>
+             </div> -->
+    <!-- Nav Icon -->
+    <!-- <div class="nav-icons">
+                <a href="#" ><i class='bx bx-user'></i></a>
+                <a href="#" class="cart">
+                    <i class='bx bx-shopping-bag' ></i>
+                    <span>O</span>
+                </a> -->
+    <!-- Menu Icon-->
+    <!-- <div class="menu-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+              </div>
+        </div>
+     </header> -->
+
+    <header>
         <!-- ======================================TOP-HEADER=================================== -->
         <div class="top-header">
             <div class="cnt-block">
@@ -63,78 +88,53 @@
                 <h2>DICA <br>FOOD</h2>
             </div>
             <div class="main-header-search">
-                <i class="fas fa-search"></i>
+                <i class='bx bx-search'></i>
                 <input type="text" placeholder="Tìm kiếm món ăn...">
                 <button class="filter-btn">
-                    Lọc
+                    <a href="#">Lọc</a>
                 </button>
             </div>
             <div class="main-header-login">
-                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
-                <a href="./login.html" class="login-link">Đăng Nhập</a>
+                <i class='bx bxs-user'></i> <!-- Biểu tượng người trước Đăng Nhập -->
+                <a href="home_login.html" class="login-link">Đăng Nhập</a>
                 <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
-                <a href="#" class="register-link">Đăng Kí</a>
+                <a href="home_dangky.html" class="register-link">Đăng Kí</a>
             </div>
             <div class="main-header-cart">
-                <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
-                <a href="">Gio Hang</a>
+                <i class='bx bxs-shopping-bag'></i> <!-- Biểu tượng giỏ hàng -->
+                <a href="">Giỏ Hàng</a>
             </div>
         </div>
         <!-- ======================================CATEGORY-HEADER=================================== -->
         <div class="category-header">
             <a href="#" class="category-link">TRANG CHỦ</a>
-            <a href="#" class="category-link">MÓN CHAY</a>
             <a href="#" class="category-link">MÓN MẶN</a>
-            <a href="#" class="category-link">MÓN NƯỚC</a>
+            <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
             <a href="#" class="category-link">MÓN ĂN NHẸ</a>
             <a href="#" class="category-link">MÓN LẨU</a>
             <a href="#" class="category-link">MÓN TRÁNG MIỆNG</a>
+            <a href="#" class="category-link">MÓN MỚI</a>
         </div>
     </header>
 
 
-
-    <!-- =========================================HOME=========================================  -->
-    <section class="home swiper" id="home">
-        <div class="swiper-wrapper">
-            <!-- slider 1 -->
-            <div class="swiper-slide conatiner">
-                <img src="assets/imgs/slider1notext.png" alt="" class="home-img">
-                <div class="home-text">
-                    <h1>Delicious <br> Food Menu</h1>
-                    <p>Special Deal only on TUESDAY every week</p>
-                    <h3>Buy 1 Get ONE FREE</h3>
-                    <a href="#" class="btn">Book Now</a>
-                    <!-- để chữ ở phần code ít font đẹp á nên tạm ẩn tí  -->
-                    <!-- silder vuốt hay bấm nút đều được nha  -->
-
-                </div>
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="home-content container">
+            <div class="home-text">
+                <h1>
+                    New Grilled Beef
+                    Buger
+                </h1>
+                <p>Bùng nổ thương vị chỉ có tại DICA FOOD</p>
+                <h3>Buy 1 Get ONE FREE</h3>
+                <a href="#" class="btn">Order Now</a>
             </div>
-            <!-- slider 2 -->
-            <div class="swiper-slide conatiner">
-                <img src="assets/imgs/silder2notext.png" alt="" class="home-img">
-                <div class="home-text">
-                    <h1>Giảm Giá <br> Cực Sốc Sell 20%</h1>
-                    <p>Chỉ Có Thể Tại SGU Food</p>
-                    <h3>Buy 1 Get ONE FREE</h3>
-                    <a href="#" class="btn">Order Now</a>
-                </div>
-            </div>
-            <!-- slider 3 -->
-            <div class="swiper-slide conatiner">
-                <img src="assets/imgs/slider3notext.png" alt="" class="home-img">
-                <div class="home-text">
-                    <h1>Món Đặt Biệt <br> Chỉ Có Hôm Nay</h1>
-                    <p>Quá Trời Món Ngon Luôn</p>
-                    <h3>Giá Siêu Rẻ</h3>
-                    <a href="#" class="btn">Order Now</a>
-                </div>
-            </div>
+            <!-- Home Image -->
+            <img src="assets/imgs/home.png" alt="" class="home-img">
         </div>
-
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <!-- Home Mask Image -->
+        <img src="assets/imgs/home-mask.png" alt="" class="home-mask">
     </section>
     <!--  Features -->
     <div class="features container">
@@ -168,622 +168,231 @@
         </div>
     </div>
 
-    <!-- Feature Menu -->
-    <section class="feature-menu container" id="feature-menu">
-        <h2 class="heading" id="feature-menu-title">Feature Menu</h2>
-        <img src="./assets/imgs/udertest1.png" alt="hr custon" class="img-hr-custom">
-        <!-- <img src="assets/imgs/bg4.jpg" alt="" class="menu-mask"> -->
-        <div class="feature-menu-content">
-            <div class="feature-menu-box">
-                <a href="#"><i class='bx bxs-bowl-hot'></i></a>
-                <h3>Noodles</h3>
-            </div>
-            <div class="feature-menu-box">
-                <a href="#"><i class='bx bx-knife'></i></a>
-                <h3>Beefs</h3>
-            </div>
-            <div class="feature-menu-box">
-                <a href="#"><i class='bx bxs-cake'></i></a>
-                <h3>Deserts</h3>
-            </div>
-            <div class="feature-menu-box">
-                <a href="#"><i class='bx bxs-coffee'></i></a>
-                <h3>Coffee</h3>
-            </div>
-            <div class="feature-menu-box">
-                <a href="#"><i class='bx bx-drink'></i></a>
-                <h3>Wine</h3>
-            </div>
-            <div class="feature-menu-box">
-                <a href="#"><i class='bx bxs-dish'></i></a>
-                <h3>Another Dish</h3>
-            </div>
-        </div>
-    </section>
-    <!-- Menu -->
+    <!-- Items -->
     <section class="items" id="items">
-        <h2 class="heading__container">Menu</h2>
-        <img src="./assets/imgs/udertest1.png" alt="hr custon" class="img-hr-custom">
-        <div id="menu1" class="item-content container ">
+        <h2 class="heading container">Menu</h2>
+        <div class="item-content container">
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
+                <img src="assets/imgs/item-12.jpg" alt="">
+                <h2>Bánh Chuối</h2>
                 <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
+                    <h3>From 47.000VND</h3>
+                    <p>56.000VND</p>
                 </div>
-                <a href="#" class="item-btn">View Product</a>
+                <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu2.webp" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu2.webp" alt=""> -->
-                <h2>Phở Tái</h2>
+                <img src="assets/imgs/item-13.jpg" alt="">
+                <h2>Macaron</h2>
                 <div class="price">
-                    <h3>From 35.000VND</h3>
-                    <p>40.000VND</p>
+                    <h3>From 29.000VND</h3>
+                    <p>35.000VND</p>
                 </div>
-                <a href="#" class="item-btn">View Product</a>
+                <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu5.webp" alt="">
-                </div>
-                <h2>Hủ Tiếu</h2>
+                <img src="assets/imgs/item-14.jpg" alt="">
+                <h2>Cà Ri Sốt Cay</h2>
                 <div class="price">
-                    <h3>From 25.000VND</h3>
-                    <p>28.000VND</p>
+                    <h3>From 45.000VND</h3>
+                    <p>59.000VND</p>
                 </div>
-                <a href="#" class="item-btn">View Product</a>
+                <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu6.jpg" alt="">
-                </div>
-                <h2>Sushi</h2>
+                <img src="assets/imgs/Menu8.jpg" alt="">
+                <h2>Chicken With Bacon</h2>
                 <div class="price">
-                    <h3>From 120.000VND</h3>
-                    <p>150.000VND</p>
+                    <h3>From 3.5$</h3>
+                    <p>5.0$</p>
                 </div>
-                <a href="#" class="item-btn">View Product</a>
+                <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu8.jpg" alt="">
-                </div>
-                <h2>Yogourt</h2>
+                <img src="assets/imgs/Menu11.jpg" alt="">
+                <h2>Tiny Quies Fish</h2>
                 <div class="price">
-                    <h3>From 44.000VND</h3>
-                    <p>49.000VND</p>
+                    <h3>From 3.5$</h3>
+                    <p>5.0$</p>
                 </div>
-                <a href="#" class="item-btn">View Product</a>
+                <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu9.jpg" alt="">
-                </div>
-                <h2>Trà Chanh Gừng</h2>
+                <img src="assets/imgs/Menu9.jpg" alt="">
+                <h2>Mixes Pizzas</h2>
                 <div class="price">
-                    <h3>From 38.000VND</h3>
-                    <p>45.000VND</p>
+                    <h3>From 3.5$</h3>
+                    <p>5.0$</p>
                 </div>
-                <a href="#" class="item-btn">View Product</a>
+                <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu10.webp" alt="">
-                </div>
-                <h2>Nước Cam</h2>
+                <img src="assets/imgs/Menu2.webp" alt="">
+                <h2>Meta Burger</h2>
                 <div class="price">
-                    <h3>From 28.000VND</h3>
-                    <p>33.000VND</p>
+                    <h3>From 3.5$</h3>
+                    <p>5.0$</p>
                 </div>
-                <a href="#" class="item-btn">View Product</a>
+                <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu11.jpg" alt="">
-                </div>
-                <h2>Creme Brulee</h2>
+                <img src="assets/imgs/Omurice.jpg" alt="">
+                <h2>Chicken Tiny</h2>
                 <div class="price">
-                    <h3>From 69.000VND</h3>
-                    <p>79.000VND</p>
+                    <h3>From 3.5$</h3>
+                    <p>5.0$</p>
                 </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-        </div>
-        <!-- Menu 2 -->
-        <div id="menu2" class="item-content container">
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu2.webp" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu2.webp" alt=""> -->
-                <h2>Phở Tái</h2>
-                <div class="price">
-                    <h3>From 35.000VND</h3>
-                    <p>40.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu5.webp" alt="">
-                </div>
-                <h2>Hủ Tiếu</h2>
-                <div class="price">
-                    <h3>From 25.000VND</h3>
-                    <p>28.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu6.jpg" alt="">
-                </div>
-                <h2>Sushi</h2>
-                <div class="price">
-                    <h3>From 120.000VND</h3>
-                    <p>150.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-
-        </div>
-
-        <div id="menu3" class="item-content container">
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu2.webp" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu2.webp" alt=""> -->
-                <h2>Phở Tái</h2>
-                <div class="price">
-                    <h3>From 35.000VND</h3>
-                    <p>40.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu5.webp" alt="">
-                </div>
-                <h2>Hủ Tiếu</h2>
-                <div class="price">
-                    <h3>From 25.000VND</h3>
-                    <p>28.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu6.jpg" alt="">
-                </div>
-                <h2>Sushi</h2>
-                <div class="price">
-                    <h3>From 120.000VND</h3>
-                    <p>150.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu8.jpg" alt="">
-                </div>
-                <h2>Yogourt</h2>
-                <div class="price">
-                    <h3>From 44.000VND</h3>
-                    <p>49.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu9.jpg" alt="">
-                </div>
-                <h2>Trà Chanh Gừng</h2>
-                <div class="price">
-                    <h3>From 38.000VND</h3>
-                    <p>45.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-        </div>
-
-        <div id="menu4" class="item-content container">
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu4.jpg" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu4.jpg" alt=""> -->
-                <h2>Ramen</h2>
-                <div class="price">
-                    <h3>From 50.000VND</h3>
-                    <p>75.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu6.jpg" alt="">
-                </div>
-                <h2>Sushi</h2>
-                <div class="price">
-                    <h3>From 120.000VND</h3>
-                    <p>150.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu8.jpg" alt="">
-                </div>
-                <h2>Yogourt</h2>
-                <div class="price">
-                    <h3>From 44.000VND</h3>
-                    <p>49.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu9.jpg" alt="">
-                </div>
-                <h2>Trà Chanh Gừng</h2>
-                <div class="price">
-                    <h3>From 38.000VND</h3>
-                    <p>45.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
+                <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
         </div>
-
-        <div id="menu5" class="item-content container">
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu2.webp" alt="">
-                </div>
-                <!-- <img src="assets/imgs/Menu2.webp" alt=""> -->
-                <h2>Phở Tái</h2>
-                <div class="price">
-                    <h3>From 35.000VND</h3>
-                    <p>40.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu5.webp" alt="">
-                </div>
-                <h2>Hủ Tiếu</h2>
-                <div class="price">
-                    <h3>From 25.000VND</h3>
-                    <p>28.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu6.jpg" alt="">
-                </div>
-                <h2>Sushi</h2>
-                <div class="price">
-                    <h3>From 120.000VND</h3>
-                    <p>150.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu8.jpg" alt="">
-                </div>
-                <h2>Yogourt</h2>
-                <div class="price">
-                    <h3>From 44.000VND</h3>
-                    <p>49.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <div class="card-img">
-                    <img src="assets/imgs/Menu9.jpg" alt="">
-                </div>
-                <h2>Trà Chanh Gừng</h2>
-                <div class="price">
-                    <h3>From 38.000VND</h3>
-                    <p>45.000VND</p>
-                </div>
-                <a href="#" class="item-btn">View Product</a>
-            </div>
-        </div>
-
-        <div class="link__to--anotherMenu">
-            <p class="link__to link_tomenu1" data-menu="menu1">&#10122;</p>
-            <p class="link__to link_tomenu2" data-menu="menu2">&#10123;</p>
-            <p class="link__to link_tomenu3" data-menu="menu3">&#10124;</p>
-            <p class="link__to link_tomenu4" data-menu="menu4">&#10125;</p>
-        </div>
+        
+        <!-- Phân trang -->
+        <ul class="pagination">
+            <li class="pagination_item ">
+                <a href="home.html" class="pagination_item_link">1</a>
+            </li>
+            <li class="pagination_item pagination_item_active">
+                <a href="#" class="pagination_item_link">2</a>
+            </li>
+            <li class="pagination_item">
+                <a href="home_phantrang.html" class="pagination_item_link">3</a>
+            </li>
+        </ul>
     </section>
 
-    <!-- Best seller -->
-    <section>
-        <h2 class="heading__container">Best Seller</h2>
-        <img src="./assets/imgs/udertest1.png" alt="hr custon" class="img-hr-custom">
-        <div class="best-seller-menu">
-            <h2 class="best-seller-special_foods"><u>Special Foods</u></h2>
-            <div class="search-section">
-                <div class="sort-by">
-                    <h4>Sort By: </h4>
-                    <input type="search" placeholder="Name...">
-                    <button class="search-button">Search</button>
-                    <div class="food-items">
-                        <div class="food-item">
-                            <i class=''></i>
-                            <p>Pizza</p>
+    </section>
+    <!-- Best Seller -->
+    <section class="menu-container" id="menu-container">
+        <h2 class="heading container">Best Seller</h2>
+        <img src="assets/imgs/menu-mask.png" alt="" class="menu-mask">
+        <div class="menu-content container">
+            <div class="menu-box">
+                <!-- <h2>Burger</h2> -->
+                <div class="burgers-content">
+                    <div class="m-item-box">
+                        <img src="assets/imgs/Menu11.jpg" alt="">
+                        <div class="m-item-right">
+                            <div class="m-item-des">
+                                <h3>Meta Burger</h3>
+                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                            </div>
+                            <div class="m-item-price">
+                                <h3>From 3.5$</h3>
+                                <p>5.0$</p>
+                            </div>
                         </div>
-                        <div class="food-item">
-                            <i class=''></i>
-                            <p>Noodles</p>
+                    </div>
+                    <div class="m-item-box">
+                        <img src="assets/imgs/Omurice.jpg" alt="">
+                        <div class="m-item-right">
+                            <div class="m-item-des">
+                                <h3>Spicy Meta Burger</h3>
+                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                            </div>
+                            <div class="m-item-price">
+                                <h3>From 3.5$</h3>
+                                <p>5.0$</p>
+                            </div>
                         </div>
-                        <div class="food-item">
-                            <i class=''></i>
-                            <p>Rice</p>
+                    </div>
+                    <div class="m-item-box">
+                        <img src="assets/imgs/Menu20.jpg" alt="">
+                        <div class="m-item-right">
+                            <div class="m-item-des">
+                                <h3>Spicy Burger</h3>
+                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                            </div>
+                            <div class="m-item-price">
+                                <h3>From 3.5$</h3>
+                                <p>5.0$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-item-box">
+                        <img src="assets/imgs/Menu6.jpg" alt="">
+                        <div class="m-item-right">
+                            <div class="m-item-des">
+                                <h3>Beef Burger</h3>
+                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                            </div>
+                            <div class="m-item-price">
+                                <h3>From 3.5$</h3>
+                                <p>5.0$</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="best-seller-products">
-                <img src="assets/imgs/LapXuong.jpg" alt="Lạp Xưởng Đài Loan">
-                <div>
-                    <h3>Lạp Xưởng Đài Loan (4 cây)</h3>
-                    <p>Lạp xưởng Tươi đặc biệt Đài Loan là món ăn quốc hồn túy của xứ sở Đài Loan,
-                        được làm từ thịt heo nạc, không sử dụng phẩm màu hay chất bảo quản.</p>
-                    <p class="price">Giá: <del>100,000 VND</del><span class="discount">80,000 VND</span></p>
+            <div class="menu-box">
+                <!-- <h2>BBQ</h2> -->
+                <div class="bbq-content">
+                    <div class="m-item-box">
+                        <img src="assets/imgs/Menu4.jpg" alt="">
+                        <div class="m-item-right">
+                            <div class="m-item-des">
+                                <h3>Mutton BBQ</h3>
+                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                            </div>
+                            <div class="m-item-price">
+                                <h3>From 3.5$</h3>
+                                <p>5.0$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-item-box">
+                        <img src="assets/imgs/Menu8.jpg" alt="">
+                        <div class="m-item-right">
+                            <div class="m-item-des">
+                                <h3>Chicken BBQ</h3>
+                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                            </div>
+                            <div class="m-item-price">
+                                <h3>From 3.5$</h3>
+                                <p>5.0$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-item-box">
+                        <img src="assets/imgs/Menu9.jpg" alt="">
+                        <div class="m-item-right">
+                            <div class="m-item-des">
+                                <h3>Beef BBQ</h3>
+                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                            </div>
+                            <div class="m-item-price">
+                                <h3>From 3.5$</h3>
+                                <p>5.0$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-item-box">
+                        <img src="assets/imgs/Menu10.webp" alt="">
+                        <div class="m-item-right">
+                            <div class="m-item-des">
+                                <h3>Kachi BBQ</h3>
+                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                            </div>
+                            <div class="m-item-price">
+                                <h3>From 3.5$</h3>
+                                <p>5.0$</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="best-seller-products">
-                <img src="assets/imgs/PizzaPepperoni.jpg" alt="Pizza Pepperoni">
-                <div>
-                    <h3>Pizza Pepperoni Hoa Kỳ</h3>
-                    <p>Một loại pizza từ Hoa Kỳ được làm từ hỗn hợp thịt lợn và thịt bò
-                        ướp với với Paprika hoặc các loại bột ớt khác đặc biệt.
-                    </p>
-                    <p class="price">Giá: <del>200,000 VND</del><span class="discount">150,000 VND</span></p>
-                </div>
-            </div>
-            <div class="best-seller-products">
-                <img src="assets/imgs/Omurice.jpg" alt="Pizza Pepperoni">
-                <div>
-                    <h3>Omurice Nhật</h3>
-                    <p>Omurice hay còn gọi là cơm trứng Nhật Bản - là món ăn có sự ảnh hưởng từ hai nền văn hoá
-                        ẩm thực gọi là washoku (món Nhật truyền thống) và Yoshoku (món Tây Phương).
-                    </p>
-                    <p class="price">Giá: <del>60,000 VND</del><span class="discount">45,000 VND</span></p>
-                </div>
-            </div>
-            <div>
-
             </div>
         </div>
     </section>
-
-    <!-- Đánh giá -->
+    <!-- Testimonials -->
     <section class="testimonials" id="testimonials">
         <h2 class="heading container">Testimonials</h2>
-        <img src="./assets/imgs/udertest1.png" alt="hr custon" class="img-hr-custom">
         <div class="testimonials-content container">
             <div class="t-box">
                 <div class="stars">
@@ -800,7 +409,7 @@
                 <div class="profile">
                     <img src="assets/imgs/profile-5.jpg" alt="">
                     <div class="profile-data">
-                        <h3>Võ Gia Kiệt</h3>
+                        <h3>Kiệt Võ</h3>
                         <span>IT SGU</span>
                     </div>
                 </div>
@@ -814,15 +423,15 @@
                     <i class='bx bxs-star'></i>
                 </div>
                 <p>
-                    "Burger này ngon đến mức ngay cả trái tim mình cũng phải thốt lên: 'Cứu tôi với, quá đã!' Mỗi miếng
-                    cắn như một bản giao hưởng vị giác, chỉ có điều sau khi ăn xong, mình không biết phải tìm đâu ra món
-                    ngon hơn!"
+                    "They make my favorite burgers. I can't find a better one. I pretty
+                    much love BIG King XXL, the best in the world! Healthy choices and
+                    consciousness of the environment. Everything was delicious."
                 </p>
                 <div class="profile">
-                    <img src="assets/imgs/ducnhanfun.jpg" alt="">
+                    <img src="assets/imgs/nguyenlap.jpg" alt="">
                     <div class="profile-data">
-                        <h3>Phan Đức Nhân</h3>
-                        <span>Diễn viên phim Nhật Bản</span>
+                        <h3>Nguyễn Lập</h3>
+                        <span>Art Director</span>
                     </div>
                 </div>
             </div>
@@ -841,10 +450,10 @@
                     is very tasty."
                 </p>
                 <div class="profile">
-                    <img src="assets/imgs/nguyenlap.jpg" alt="">
+                    <img src="assets/imgs/ducnhanfun.jpg" alt="">
                     <div class="profile-data">
-                        <h3>Nguyễn Hoàng Lập</h3>
-                        <span>Professional Chef</span>
+                        <h3>Đức Nhân</h3>
+                        <span>Hair Stylist</span>
                     </div>
                 </div>
             </div>
@@ -859,110 +468,71 @@
                 <p>
                     "They make my favorite burgers. I can't find a better one. I pretty
                     much love BIG King XXL, the best in the world! Healthy choices and
-                    consciousness of the environment. Everything was absolute fucking delicious."
+                    consciousness of the environment. Everything was delicious."
                 </p>
                 <div class="profile">
-                    <img src="assets/imgs/GordonRamsay.jpg" alt="">
+                    <img src="assets//imgs/profile-2.png" alt="">
                     <div class="profile-data">
-                        <h3>Gordon Ramsay</h3>
-                        <span>Master Chef</span>
+                        <h3>Kewil JR</h3>
+                        <span>Hair Stylist</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Newsletter -->
     <section class="newsletter container" id="newsletter">
         <h2>Subscribe and Get 10% Discount</h2>
         <p>Be the first to get the latest news, promotions and much more.</p>
-        <div class="newsletter">
-            <form action="" class="form">
-                <div class="form-field">
-                    <input type="email" class="form-input email" placeholder=" " required>
-                    <label for="email" class="form-label">Email</label>
-                </div>
-                <input type="submit" value="Subscribe" class="s-btn">
-            </form>
-        </div>
-
+        <form action="">
+            <input type="email" name="" id="" class="Email" placeholder="Email" required>
+            <input type="submit" value="Subscribe" class="s-btn">
+        </form>
     </section>
-
-
-
-
-
     <!-- Footer -->
-    <footer>
-        <h2 class="footer-contact" id="footer__contact--title">Contact us</h2>
-        <img src="./assets/imgs/udertest1.png" alt="hr-custom" class="img-hr-custom">
-        <div class="footer__content">
-            <div class="footer__img-wrapper">
-                <img src="./assets/imgs/bg5.webp" alt="Logo" class="footer__img">
-                <a href="#"><i class="fa-brands fa-facebook footer__icon"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram footer__icon_2"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube footer__icon_3"></i></a>
-                <a href=""><i class="fa-brands fa-github footer__icon_4"></i></a>
-            </div>
-            <div class="footer__text-address1">
-                <h2 class="footer__text-address1-title">FOOD-SGU</h2>
-                <p class="footer__text-address2-p">This is easy to update text from footer widget area.Add here
-                    information about your store</p><br><br>
-                <p class="footer__text-address3-address"><span class="footeer__address">Address:</span> 273 An Duong
-                    Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p> <br>
-                <p class="footer__text-address3-phone"><span class="footeer__phone">Phone:</span> 0123456789</p> <br>
-                <p class="footer__text-address3-email"><span class="footeer__email">Email:</span>
-                    abcdesfghijk@gmail.com
-                </p><br>
-                <p class="footer__text-address3-github"><span class="footeer__github">github:</span> <a
-                        href="">github.com</a></p>
-
-            </div>
-            <div class="footer__text-information2">
-                <h3 class="footer__text-information2-title">INFORMATION</h3>
-                <p class="footer__text-information-p"><a href="">Register</a></p>
-                <p class="footer__text-information-p"><a href="">Testmonicals</a></p>
-                <p class="footer__text-information-p"><a href="">Privacy Policu</a></p>
-                <p class="footer__text-information-p"><a href="">Cookies</a></p>
-                <p class="footer__text-information-p"><a href="">Term & Condition</a></p>
-                <p class="footer__text-information-p"><a href="">FAQ's</a></p>
-            </div>
-
-            <div class="footer__text-information3">
-                <h3 class="footer__text-information3-title">ACCOUNT</h3>
-                <p class="footer__text-information-p"><a href="#">My account</a></p>
-                <p class="footer__text-information-p"><a href="">Cart</a></p>
-                <p class="footer__text-information-p"><a href="">WishList</a></p>
-                <p class="footer__text-information-p"><a href="">Contact us</a></p>
-                <p class="footer__text-information-p"><a href="">About us</a></p>
-                <p class="footer__text-information-p"><a href="">Checkout</a></p>
-            </div>
-            <div class="footer__text-information4">
-                <h3 class="footer__text-information4-title">OTHER</h3>
-
-            </div>
-            <div class="footer__text-copyright">
-                <i class="fa-solid fa-envelope footer__text-information4-icon"></i>
-                <div class="footer__text-copyright-content">
-                    <p class="footer__text-copyright-title">Join Our Newsletter Now</p>
-                    <p class="footer__text-copyright-get">Get E-mail updates about our latest shop and special offers
-                    </p>
-                    <p class="footer__text-copyright-final">&copy; 2024 Magenotido dsaeftthek. All rights reserved
-                    </p>
+    <div class="footer">
+        <div class="footer-content container">
+            <div class="footer-box">
+                <a href="#" class="footer-logo">
+                    <img src="assets/imgs/logo2.png" alt="">
+                </a>
+                <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-tiktok'></i></a>
+                    <a href="#"><i class='bx bxl-pinterest-alt'></i></a>
                 </div>
-                <div class="footer_email-container">
-                    <input type="email" placeholder="Enter your email" class="footer__email-input">
-                </div>
-                <i class="fa-brands fa-cc-visa footer__last-icon"></i>
-                <i class="fa-solid fa-money-check-dollar footer__last-icon2"></i>
-                <i class="fa-solid fa-money-bill footer__last-icon3"></i>
-                <i class="fa-solid fa-money-bill-transfer footer__last-icon4"></i>
-                <i class="fa-solid fa-wallet footer__last-icon5"></i>
+            </div>
+            <div class="footer-box">
+                <h3>Opening Hours</h3>
+                <p><span>Mon</span>: 9:00 - 20:30</p>
+                <p><span>Tue</span>: 9:00 - 20:30</p>
+                <p><span>Wed</span>: 9:00 - 20:30</p>
+                <p><span>Thu</span>: 9:00 - 20:30</p>
+                <p><span>Fri</span>: 9:00 - 20:30</p>
+                <p><span>Sat</span>: 9:00 - 20:00</p>
+                <p><span>Sun</span>: Closed</p>
+            </div>
+            <div class="footer-box">
+                <h3>Information</h3>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+                <a href="#">Dica Food Gallery</a>
+                <a href="#">Dica Food Talent Chefs</a>
+                <a href="#">Testimonials</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>+9123456789</p>
+                <p>Dicafood@gmail.com</p>
+                <p>Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh </p>
             </div>
         </div>
-    </footer>
+        <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
+    </div>
 
 
 </body>
 
-</html>
+</html>    
