@@ -523,7 +523,7 @@ ul li a .caret {
 }
 
 /* Làm phần menu */
-/* Định nghĩa tiêu đề Pesto's Feature Menu */
+/* Định nghĩa tiêu đề  */
 
 .heading {
   font-size: 3.5rem;
@@ -674,6 +674,46 @@ ul li a .caret {
   color: var(--brown);
   transform: scaleX(1.2);
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Phân trang  */
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-top: 25px;
+}
+
+.pagination_item{
+  margin: 0 12px;
+}
+
+.pagination_item_active .pagination_item_link{
+  color: var(--bg-color);
+  background-color: var(--yellow-color);
+}
+
+.pagination_item_active .pagination_item_link:hover{
+  background-color: #dc9c35;
+} 
+
+.pagination_item_link{
+  --height: 30px;
+  display: block;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: var(--red);
+  min-width: 40px;
+  height: var(--height);
+  line-height: var(--height);
+  text-align: center;
+  border-radius: 2px;
+}
+
+.pagination_item_icon{
+
 }
 
 
