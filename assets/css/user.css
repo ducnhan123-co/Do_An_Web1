@@ -444,6 +444,16 @@ input[type=number] {
     color: #ffffff;
     text-align: center;
     margin: 10px 0px 20px 40px;
+    padding: 20px 10px;
+    margin-right: 20px;
+    border-width: 10px;
+    /* border-style: ridge; */
+    border: 3px solid #e45b0c;
+    box-shadow: #f61409;
+    max-width: fit-content;
+    border-radius: 4px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .history-table {
@@ -456,6 +466,10 @@ input[type=number] {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
+}
+
+.history-table thead {
+    text-decoration-line: underline;
 }
 
 .history-table th {
@@ -477,16 +491,48 @@ input[type=number] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 500px;
-    margin-bottom: 20px; /* Khoảng cách dưới các phần lọc */
+    padding-right: 50px;
+    margin-bottom: 4%; /* Khoảng cách dưới các phần lọc */
+}
+
+.filter-group {
+    /* display: flex; */
+    align-items: center;
+    margin-right: 30px; /* Khoảng cách giữa các filter group */
 }
 
 .filters label {
-    margin-right: 10px; /* Khoảng cách giữa label và input */
+    margin-right: 100px; /* Khoảng cách giữa label và input */
+}
+
+.search-input {
+    width: 400px; /* Độ rộng của ô tìm kiếm */
+    padding: 5px; /* Khoảng cách bên trong input */
+}
+
+.date-input {
+    width: 120px; /* Độ rộng của ô lọc theo ngày */
+    padding: 5px; /* Khoảng cách bên trong input */
+}
+
+.quantity-input {
+    width: 50px; /* Độ rộng của ô lọc theo số lượng */
+    padding: 5px; /* Khoảng cách bên trong input */
+}
+
+.product-input {
+    width: 150px; /* Độ rộng của ô lọc theo tên sản phẩm */
+    padding: 5px; /* Khoảng cách bên trong input */
 }
 
 .filters input {
-    margin-right: 20px; /* Khoảng cách giữa các input */
+    margin-top: 10px;
+    margin-right: 100px; /* Khoảng cách giữa các input */
+    padding: 5px; /* Khoảng cách bên trong input */
+}
+
+.filter-group .search-order {
+    width: 200px; /* Độ rộng của ô tìm kiếm */
     padding: 5px; /* Khoảng cách bên trong input */
 }
 

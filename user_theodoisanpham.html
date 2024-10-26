@@ -107,16 +107,20 @@
             <table class="history-table">
                 <div class="filters">
                     <div class="filter-group">
+                        <label for="filter-search">Tìm kiếm tên sản phẩm: </label>
+                        <input class="search-input" type="search" id="filter-search">
+                    </div>
+                    <div class="filter-group">
                         <label for="filter-date">Lọc theo ngày: </label>
-                        <input type="date" id="filter-date" onchange="filterTable()">
+                        <input class="date-input" type="date" id="filter-date" onchange="filterTable()">
                     </div>
                     <div class="filter-group">
                         <label for="filter-quantity">Lọc theo số lượng: </label>
-                        <input type="number" id="filter-quantity" onchange="filterTable()">
+                        <input class="quantity-input" type="number" id="filter-quantity" onchange="filterTable()">
                     </div>
                     <div class="filter-group">
-                        <label for="filter-product">Lọc theo tên sản phẩm: </label>
-                        <input type="text" id="filter-product" onkeyup="filterTable()">
+                        <label for="filter-product">Lọc theo mã đơn hàng: </label>
+                        <input class="product-input" type="text" id="filter-product" onkeyup="filterTable()">
                     </div>
                 </div>
                 
@@ -132,7 +136,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>DH123456</td>
+                        <td>DCF312456</td>
                         <td>Omurice</td>
                         <td>1</td>
                         <td>2024-25-10</td>
@@ -142,17 +146,17 @@
                 </tbody>
                 <tbody>
                     <tr>
-                        <td>DH312456</td>
+                        <td>DCF312016</td>
                         <td>Bánh mì</td>
                         <td>9</td>
                         <td>2024-01-01</td>
-                        <td>Đang giao</td>
+                        <td>Đã giao</td>
                         <td>2024-01-03</td>
                     </tr>
                 </tbody>
                 <tbody>
                     <tr>
-                        <td>DH114256</td>
+                        <td>DCF312555</td>
                         <td>Mì Udon</td>
                         <td>4</td>
                         <td>2024-01-10</td>
@@ -162,7 +166,7 @@
                 </tbody>
                 <tbody>
                     <tr>
-                        <td>DH123456</td>
+                        <td>DCF312416</td>
                         <td>Bánh mì than tre</td>
                         <td>5</td>
                         <td>2024-09-09</td>
