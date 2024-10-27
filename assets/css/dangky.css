@@ -309,6 +309,7 @@ ul li a .caret {
 
 
 /* register */
+/* Wrapper */
 .wrapper {
   width: 100%;
   max-width: 650px;
@@ -319,6 +320,7 @@ ul li a .caret {
   box-shadow: inset -2px 2px 2px white;
 }
 
+/* Form Title */
 .form-title {
   font-size: 26px;
   font-weight: 600;
@@ -329,6 +331,7 @@ ul li a .caret {
   border-bottom: solid 1px white;
 }
 
+/* Main User Info */
 .main-user-info {
   display: flex;
   flex-wrap: wrap;
@@ -336,41 +339,50 @@ ul li a .caret {
   padding: 20px 0;
 }
 
-.user-input-box:nth-child(2n) {
-  justify-content: end;
-}
-
+/* Individual Input Box */
 .user-input-box {
   display: flex;
-  flex-wrap: wrap;
-  width: 50%;
+  flex-direction: column;
+  width: 48%; /* Two columns */
   padding-bottom: 15px;
 }
 
+/* Address Box Styling */
+.address-box {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Label Styling */
 .user-input-box label {
-  width: 95%;
+  width: 100%;
   color: white;
   font-size: 20px;
   font-weight: 400;
-  margin: 5px 0;
+  margin-bottom: 5px;
 }
 
+/* Input Styling */
 .user-input-box input {
   height: 40px;
-  width: 95%;
+  width: 100%;
   border-radius: 7px;
   outline: none;
   border: 1px solid grey;
   padding: 0 10px;
 }
 
+
+/* Gender Title */
 .gender-title {
   color: white;
   font-size: 24px;
   font-weight: 600;
   border-bottom: 1px solid white;
+  padding-top: 10px;
 }
 
+/* Gender Category */
 .gender-category {
   margin: 15px 0;
   color: white;
@@ -380,14 +392,7 @@ ul li a .caret {
   padding: 0 20px 0 5px;
 }
 
-.gender-category label,
-.gender-category input,
-.form-submit-btn input {
-  cursor: pointer;
-}
-
-
-
+/* Button Styling */
 .btn {
   width: 100%;
   height: 45px;
@@ -406,6 +411,8 @@ ul li a .caret {
 .btn:hover {
   background: var(--yellow-color);
 }
+
+
 
 /* Footer */
 .footer {
