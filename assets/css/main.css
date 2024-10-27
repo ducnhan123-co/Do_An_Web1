@@ -1471,6 +1471,7 @@ td {
 .backgroud-detail {
   width: 100%;
   background-image: url(../imgs/banner01.png);
+  padding-bottom: 15px;
 }
 
 
