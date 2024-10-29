@@ -540,8 +540,7 @@ input[type=number] {
     background: var(--text-color);
     color: var(--bg-color);
     font-family: var(--font-family-1);
-    margin-top: 100px;
-    padding: 8px;
+    width: 100% ;
 }
 
 .footer-content {
@@ -604,4 +603,10 @@ input[type=number] {
 .footer-box a {
     color: var(--bg-color);
     margin-bottom: 10px;
+}
+
+.copyright {
+    padding: 30px;
+    color: var(--bg-color);
+    text-align: center;
 }
