@@ -536,6 +536,7 @@ input[type=number] {
     padding: 5px; /* Khoảng cách bên trong input */
 }
 
+/* Footer */
 .footer {
     background: var(--text-color);
     color: var(--bg-color);
