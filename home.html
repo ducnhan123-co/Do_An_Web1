@@ -60,7 +60,7 @@
                 <input type="text" placeholder="Tìm kiếm món ăn...">
                 <a href="home_search.html" class="filter-btn">Lọc</a>
             </div>
-            <div class="sort-by">
+            <!-- <div class="sort-by">
                 <label for="sort-options">Sắp xếp theo:</label>
                 <select id="sort-options" class="sort-options">
                     <option value="" disabled selected hidden></option>
@@ -68,7 +68,7 @@
                     <option value="rating">Đánh giá</option>
                     <option value="newest">Mới nhất</option>
                 </select>
-            </div>
+            </div> -->
             <div class="main-header-login">
                 <i class='bx bxs-user'></i>
                 <a href="home_login.html" class="login-link">Đăng Nhập</a>
@@ -146,6 +146,34 @@
 
     <!-- Items -->
     <section class="items" id="items">
+        <div class="sort-container">
+            <div class="sort-by">
+                <label for="sort-options">Sắp xếp theo:</label>
+                <select id="sort-options" class="sort-options">
+                    <option value="all">Tất Cả</option>
+                    <option value="price">Món Nước</option>
+                    <option value="rating">Món Mặn</option>
+                    <option value="newest">Món Ăn Nhẹ</option>
+                    <option value="newest">Món Lẩu</option>
+                    <option value="newest">Món Tráng Miệng</option>
+                    <option value="newest">Món Mới</option>
+                </select>
+                <div class="sort-icon-container">
+                    <a href="#" class="sort-icon"><i class='bx bx-sort'></i></a>
+                </div>
+            </div>
+            
+
+        
+            <!-- Price range filter -->
+            <div class="price-range">
+                <label for="price-from">Giá từ:</label>
+                <input type="number" id="price-from" placeholder="Min" class="price-input">
+                <label for="price-to">đến:</label>
+                <input type="number" id="price-to" placeholder="Max" class="price-input">
+            </div>
+        </div>
+        
         <h2 class="heading container">Menu</h2>
         <div class="item-content container">
             <div class="item-box">
