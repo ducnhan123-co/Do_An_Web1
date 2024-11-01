@@ -237,7 +237,7 @@ header {
 
 /* ======================================SEARCH AND SORT SECTION ==================================  */
   /* Styling cho phần tìm kiếm và sắp xếp */
-  .sort-by {
+  /* .sort-by {
     color: var(--bg-color);
     display: flex;
     align-items: center;
@@ -253,11 +253,11 @@ header {
   .sort-options {
     padding: 5px;
     font-size: 16px;
-    border-radius: 5px; /* Bo góc cho dropdown */
-    border: 1px solid #ccc; /* Đường viền */
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
   }
   
-  
+   */
 
 /* ======================================CATEGORY-HEADER=================================== */
 .category-header {
@@ -446,6 +446,68 @@ header {
 .items {
   background: var(--container-color);
 }
+
+/* sort */
+.sort-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10rem;
+  gap: 1rem;
+}
+
+.sort-by {
+  display: flex;
+  align-items: center;
+}
+
+.sort-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Width for the icon box */
+  height: 40px; /* Height for the icon box */
+  background: var(--bg-color); /* Background color for the icon box */
+  border: 1px solid #ccc; /* Optional: Add border */
+  border-radius: 5px; /* Rounded corners for a smooth look */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+.sort-icon {
+  font-size: 20px; /* Font size for the icon */
+  color: var(--text-color); /* Icon color */
+}
+
+.sort-icon-container:hover {
+  background: #f0f0f0; /* Change background on hover */
+}
+
+.price-range, .close-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sort-options, .price-input {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.close-icon {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 5px;
+}
+
+.close-icon:hover {
+  color: red;
+}
+/* Menu */
 
 .item-content {
   display: grid;
