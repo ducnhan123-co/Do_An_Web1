@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOOD SGU</title>
     <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -93,105 +93,113 @@
     </header>
 
 
+    <!-- =========================================HOME=========================================  -->    
 
-    <!-- =========================================HOME=========================================  -->
-    <section class="home swiper" id="home">
-        <div class="swiper-wrapper">
-            <!-- slider 1 -->
-            <div class="swiper-slide conatiner">
-                <img src="assets/imgs/slider1notext.png" alt="" class="home-img">
-                <div class="home-text">
-                    <h1>Delicious <br> Food Menu</h1>
-                    <p>Special Deal only on TUESDAY every week</p>
-                    <h3>Buy 1 Get ONE FREE</h3>
-                    <a href="#" class="btn">Book Now</a>
-                    <!-- để chữ ở phần code ít font đẹp á nên tạm ẩn tí  -->
-                    <!-- silder vuốt hay bấm nút đều được nha  -->
 
-                </div>
-            </div>
+
+
+
+    <div class="cart">
+        <div class="cart-info">
+            <h2>Thông tin giỏ hàng</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên sản phẩm</th>
+                        <th>Sản phẩm</th>
+                        <th>Ngày đặt hàng</th>
+                        <th>Đơn giá (VNĐ)</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền (VNĐ)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gỏi cuốn</td>
+                        <td><img src="./assets/imgs/goicuon.jpg" alt=""></td>
+                        <td>01/11/2024</td>
+                        <td>150,000</td>
+                        <td>1</td>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <td>Cá hồi</td>
+                        <td><img src="./assets/imgs/cahoi.jpg" alt=""></td>
+                        <td>01/11/2024</td>
+                        <td>150,000</td>
+                        <td>1</td>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <td>Lẩu bò</td>
+                        <td><img src="./assets/imgs/laubo.jpg" alt=""></td>
+                        <td>01/11/2024</td>
+                        <td>150,000</td>
+                        <td>2</td>
+                        <td>300,000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="total-label">Tổng cộng:</td>
+                        <td class="total-price">600,000</td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
-    </section>
-
-
-
-
-    <div class="container">
-        <div class="cart">
-            <div class="basket col-md-6 col-md-offset-1">
-                <div class="product ux-card">
-                    <img src="https://img1.wsimg.com/fos/react/sprite.svg#domains" height="32" width="32" />
-                    <span class="title"><a href="/product/{id}">catstewardesses</a></span>
-                    <span class="price">
-                        $12.99
-                    </span>
-                    <span class="tier">.com</span>
-                    <span class="term">1 year</span>
-                    <span class="attr">Privacy: ON</span>
-                    <span class="renews">Renews at $14.99/yr</span>
-                    <button class="btn btn-canvas btn-xs remove" href="product/remove"><span
-                            class="uxicon uxicon-trash"></span>Remove</button>
-                </div>
-                <div class="product ux-card">
-                    <img src="https://img1.wsimg.com/fos/react/sprite.svg#website-builder" height="32" width="32" />
-                    <span class="title"><a href="/product/{id}">Website Builder</a></span>
-                    <span class="price">$12.00</span>
-                    <span class="tier">Personal</span>
-                    <span class="term">12 months</span>
-                    <span class="renews">Renews at $5.99/mo</span>
-                    <button class="btn btn-canvas btn-xs remove" href="product/remove"><span
-                            class="uxicon uxicon-trash"></span>Remove</button>
-                </div>
-                <div class="product ux-card">
-                    <img src="https://img1.wsimg.com/fos/react/sprite.svg#get-found" height="32" width="32" />
-                    <span class="title"><a href="/product/{id}">Get Found</a></span>
-                    <span class="price"><strike></strike>$143.88</span>
-                    <span class="tier">Essential</span>
-                    <span class="term">12 months</span>
-                    <span class="renews">Renews at $11.99/mo</span>
-                    <button class="btn btn-canvas btn-xs remove" href="product/remove"><span
-                            class="uxicon uxicon-trash"></span>Remove</button>
-                </div>
-            </div>
-            <div class="summary col-md-4">
-                <dl class="subtotal">
-                    <dt>Subtotal</dt>
-                    <dd>$14.99</dd>
-                    <dt><a href="/taxes">Estimated Taxes & Fees</a></dt>
-                    <dd>$3.42</dd>
-                </dl>
-                <dl class="total">
-                    <dt>Total</dt>
-                    <dd>$18.41</dd>
-                </dl>
-                <dl class="support">
-                    <dt><a href="/savings/">Total savings</a></dt>
-                    <dd>$150.00</dd>
-                    <dt><a href="/promocode/add">Have a promocode?</a></dt>
-                </dl>
-                <div class="payment">
-                    <a href="payment/add">Add</a>
-                    <h4 class="headline-primary">Payment</h3>
-                        <div class="ux-card">
-                            <a href="/payment/{id}"><img src="https://img1.wsimg.com/fos/react/sprite.svg#visa"
-                                    height="32" width="50" /> John Doe</a>
-                        </div>
-                </div>
-                <div class="terms">
-                    <h4 class="headline-primary">Terms & Conditions</h3>
-                        <p class="review">Clicking on "I Agree" means you agree to GoDaddy's <a href="terms/show">Terms
-                                & Conditions</a>.</p>
-                        <p class="review"><strong>Products automatically</strong> renew until cancelled, and are billed
-                            to your payment method on file. Turn off auto-renew in your GoDaddy account.</p>
-                        <p class="agreed">I've read and agreed to the <a href="terms/show">Term & Conditions</a>.</p>
-                        <button type="button" class="btn btn-purchase review">I Agree</button>
-                </div>
-                <div class="complete">
-                    <button type="button" disabled="disabled" class="btn btn-purchase">Complete Purchase</button>
-                </div>
-            </div>
+        <div class="shipping-info">
+            <h2>Địa chỉ giao hàng</h2>
+            <form>
+                <input type="text" placeholder="Tên người nhận" value="Nguyễn Đăng Khoa">
+                <input type="text" placeholder="Số điện thoại" value="0908643007">
+                <input type="email" placeholder="Email" value="khoand@gmail.com">
+                <textarea placeholder="Địa chỉ giao hàng">214 Tô Hiến Thành, P.5, Q.10, HCM</textarea>
+                <button type="submit">Xác nhận đặt hàng</button>
+            </form>
         </div>
     </div>
-</body>
 
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content container">
+            <div class="footer-box">
+                <a href="#" class="footer-logo">
+                    <img src="assets/imgs/logo2.png" alt="">
+                </a>
+                <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-tiktok'></i></a>
+                    <a href="#"><i class='bx bxl-pinterest-alt'></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Opening Hours</h3>
+                <p><span>Mon</span>: 9:00 - 20:30</p>
+                <p><span>Tue</span>: 9:00 - 20:30</p>
+                <p><span>Wed</span>: 9:00 - 20:30</p>
+                <p><span>Thu</span>: 9:00 - 20:30</p>
+                <p><span>Fri</span>: 9:00 - 20:30</p>
+                <p><span>Sat</span>: 9:00 - 20:00</p>
+                <p><span>Sun</span>: Closed</p>
+            </div>
+            <div class="footer-box">
+                <h3>Information</h3>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+                <a href="#">Dica Food Gallery</a>
+                <a href="#">Dica Food Talent Chefs</a>
+                <a href="#">Testimonials</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>+9123456789</p>
+                <p>Dicafood@gmail.com</p>
+                <p>Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh </p>
+            </div>
+        </div>
+        <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
+    </div>
+</body>
 </html>
