@@ -250,6 +250,11 @@ body {
   position: absolute;
   top: 40%;
   left: 80%;
+    position: absolute;
+    top: 100px;
+    right: 215px;
+    color: white;
+    font-weight: bold;
 }
 
 .custom-select-wrapper {
@@ -271,13 +276,30 @@ body {
   /* Hiển thị ban đầu với chỉ mũi tên xuống */
   text-align: left;
   /* Căn giữa mũi tên xuống */
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 0;
+    appearance: none;
+    cursor: pointer;
+    /* color: #ff2200; */
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    /* Hiển thị ban đầu với chỉ mũi tên xuống */
+    text-align: left;
+    /* Căn giữa mũi tên xuống */
 }
 
 /* Khi dropdown được kích hoạt */
 #options-dropdown:hover {
+
   width: auto;
   outline: none;
   color: black;
+    width: auto;
+    outline: none;
+    color: rgb(255, 89, 0);
 }
 
 /* Định dạng cho các tùy chọn */
@@ -436,6 +458,14 @@ input[type="number"] {
   margin-bottom: 40px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    /* size: 150%; */
+    background-color: #b43232;
+    padding: 20px;
+    margin: 300px;
+    margin-bottom: -30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .order-history-container {
@@ -469,6 +499,9 @@ input[type="number"] {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
 }
 
 .history-table thead {
@@ -478,6 +511,8 @@ input[type="number"] {
 .history-table th {
   background-color: #4caf50;
   color: white;
+  background-color: #4CAF50;
+    color: white;
 }
 
 .history-table tr:nth-child(even) {
@@ -536,6 +571,67 @@ input[type="number"] {
 .filter-group .search-order {
   width: 200px; /* Độ rộng của ô tìm kiếm */
   padding: 5px; /* Khoảng cách bên trong input */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+    margin-bottom: 4%;
+    /* Khoảng cách dưới các phần lọc */
+}
+
+.filter-group {
+    /* display: flex; */
+    align-items: center;
+    margin-right: 30px;
+    /* Khoảng cách giữa các filter group */
+}
+
+.filters label {
+    margin-right: 100px;
+    /* Khoảng cách giữa label và input */
+}
+
+.search-input {
+    width: 400px;
+    /* Độ rộng của ô tìm kiếm */
+    padding: 5px;
+    /* Khoảng cách bên trong input */
+}
+
+.date-input {
+    width: 120px;
+    /* Độ rộng của ô lọc theo ngày */
+    padding: 5px;
+    /* Khoảng cách bên trong input */
+}
+
+.quantity-input {
+    width: 50px;
+    /* Độ rộng của ô lọc theo số lượng */
+    padding: 5px;
+    /* Khoảng cách bên trong input */
+}
+
+.product-input {
+    width: 150px;
+    /* Độ rộng của ô lọc theo tên sản phẩm */
+    padding: 5px;
+    /* Khoảng cách bên trong input */
+}
+
+.filters input {
+    margin-top: 10px;
+    margin-right: 100px;
+    /* Khoảng cách giữa các input */
+    padding: 5px;
+    /* Khoảng cách bên trong input */
+}
+
+.filter-group .search-order {
+    width: 200px;
+    /* Độ rộng của ô tìm kiếm */
+    padding: 5px;
+    /* Khoảng cách bên trong input */
 }
 
 /* Footer */
@@ -544,6 +640,10 @@ input[type="number"] {
   color: var(--bg-color);
   font-family: var(--font-family-1);
   width: 100%;
+    background: var(--text-color);
+    color: var(--bg-color);
+    font-family: var(--font-family-1);
+    width: 100%;
 }
 
 .footer-content {
@@ -616,4 +716,12 @@ input[type="number"] {
 
 .main-header-cart {
   padding-right: 70px;
+}
+    padding: 30px;
+    color: var(--bg-color);
+    text-align: center;
+}
+
+.main-header-cart {
+    padding-right: 70px;
 }

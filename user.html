@@ -6,7 +6,13 @@
     <title>FOOD-SGU</title>
     <link rel="stylesheet" href="assets/css/user_home.css" />
     <!-- <link rel="stylesheet" href="assets/css/user.css"> -->
-
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Box Icon -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -31,6 +37,18 @@
                 <span class="value">USD </span><i class="fas fa-caret-down"></i>
               </a>
               <!-- <ul class="dropdown-menu">
+<body>
+    <header id="header">
+        <!-- ======================================TOP-HEADER=================================== -->
+        <div class="top-header">
+            <div class="cnt-block">
+                <p>+0123 456 789</p>
+                <ul class="list-unstyled list-inline">
+                    <li class="dropdown dropdown-small">
+                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                            <span class="value">USD </span><i class="fas fa-caret-down"></i>
+                        </a>
+                        <!-- <ul class="dropdown-menu">
                             <li><a href="#">USD</a></li>
                             <li><a href="#">INR</a></li>
                             <li><a href="#">GBP</a></li>
@@ -93,6 +111,54 @@
         <div class="main-header-cart">
           <i class="bx bxs-shopping-bag"></i>
           <a href="">Giỏ Hàng</a>
+        <!-- ======================================MAIN-HEADER=================================== -->
+        <div class="main-header">
+            <div class="main-header-img">
+                <img src="./assets/imgs/logo2.png" alt="">
+                <h2>DICA <br>FOOD</h2>
+            </div>
+            <div class="main-header-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Tìm kiếm món ăn...">
+                <button class="filter-btn">
+                    Lọc
+                </button>
+            </div>
+            <div class="main-header-login">
+                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
+                <a href="./login.html" class="login-link">Lập Nguyễn</a>
+                <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
+                <a href="./home.html" class="register-link">Đăng xuất</a>
+                <div class="custom-select-wrapper">
+                    <select class="dropdown-select" id="options-dropdown" onchange="navigateToPage(this)">
+                        <option value="#"><i class="fas fa-angle-down"></i>Tuỳ chọn</option>
+                        <option value="./user_info.html" style="color: black;">Thông tin cá nhân</option>
+                        <option value="./user_theodoisanpham.html" style="color: black;">Theo dõi sản phẩm</option>
+                        <option value="./user_payment.html" style="color: black;">Thanh toán</option>
+                    </select>
+                </div>
+            </div>
+            <div class="main-header-cart">
+                <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
+                <a href="#">Giỏ hàng</a>
+            </div>
+
+
+            <!-- <span>Tuỳ chọn</span> -->
+
+
+
+        </div>
+
+        <!-- ======================================CATEGORY-HEADER=================================== -->
+        <div class="category-header">
+            <a href="user.html" class="category-link">TRANG CHỦ</a>
+            <a href="#" class="category-link">MÓN CHAY</a>
+            <a href="#" class="category-link">MÓN MẶN</a>
+            <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
+            <a href="#" class="category-link">MÓN ĂN NHẸ</a>
+            <a href="#" class="category-link">MÓN LẨU</a>
+            <a href="#" class="category-link">MÓN TRÁNG MIỆNG</a>
         </div>
       </div>
 
@@ -303,6 +369,43 @@
                 <div class="m-item-des">
                   <h3>Meta Burger</h3>
                   <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+        <div class="sort-container">
+            <div class="sort-by">
+                <label for="sort-options">Sắp xếp theo:</label>
+                <select id="sort-options" class="sort-options">
+                    <option value="all">Tất Cả</option>
+                    <option value="price">Món Nước</option>
+                    <option value="rating">Món Mặn</option>
+                    <option value="newest">Món Ăn Nhẹ</option>
+                    <option value="newest">Món Lẩu</option>
+                    <option value="newest">Món Tráng Miệng</option>
+                    <option value="newest">Món Mới</option>
+                </select>
+                <div class="sort-icon-container">
+                    <a href="#" class="sort-icon"><i class='bx bx-sort'></i></a>
+                </div>
+            </div>
+
+
+
+            <!-- Price range filter -->
+            <div class="price-range">
+                <label for="price-from">Giá từ:</label>
+                <input type="number" id="price-from" placeholder="Min" class="price-input">
+                <label for="price-to">đến:</label>
+                <input type="number" id="price-to" placeholder="Max" class="price-input">
+            </div>
+        </div>
+
+        <h2 class="heading container">Menu</h2>
+        <div class="item-content container">
+            <div class="item-box">
+                <span class="sale">Sale</span>
+                <img src="assets/imgs/Menu4.jpg" alt="">
+                <h2>Mỳ Udon</h2>
+                <div class="price">
+                    <h3>From 65.000VND</h3>
+                    <p>79.000VND$</p>
                 </div>
                 <div class="m-item-price">
                   <h3>From 3.5$</h3>
@@ -360,6 +463,79 @@
                 <div class="m-item-des">
                   <h3>Mutton BBQ</h3>
                   <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+        <!-- Phân trang -->
+        <ul class="pagination">
+            <li class="pagination_item pagination_item_active">
+                <a href="#" class="pagination_item_link">1</a>
+            </li>
+            <li class="pagination_item">
+                <a href="home_phantrang.html" class="pagination_item_link">2</a>
+            </li>
+            <li class="pagination_item">
+                <a href="home_phantrang.html" class="pagination_item_link">3</a>
+            </li>
+        </ul>
+    </section>
+    <!-- Best Seller -->
+    <section class="menu-container" id="menu-container">
+        <h2 class="heading container">Best Seller</h2>
+        <img src="assets/imgs/menu-mask.png" alt="" class="menu-mask">
+        <div class="menu-content container">
+            <div class="menu-box">
+                <!-- <h2>Burger</h2> -->
+                <div class="burgers-content">
+                    <div class="m-item-box">
+                        <img src="assets/imgs/Menu11.jpg" alt="">
+                        <div class="m-item-right">
+                            <div class="m-item-des">
+                                <h3>Meta Burger</h3>
+                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                            </div>
+                            <div class="m-item-price">
+                                <h3>From 3.5$</h3>
+                                <p>5.0$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-item-box">
+                        <img src="assets/imgs/Omurice.jpg" alt="">
+                        <div class="m-item-right">
+                            <div class="m-item-des">
+                                <h3>Spicy Meta Burger</h3>
+                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                            </div>
+                            <div class="m-item-price">
+                                <h3>From 3.5$</h3>
+                                <p>5.0$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-item-box">
+                        <img src="assets/imgs/Menu20.jpg" alt="">
+                        <div class="m-item-right">
+                            <div class="m-item-des">
+                                <h3>Spicy Burger</h3>
+                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                            </div>
+                            <div class="m-item-price">
+                                <h3>From 3.5$</h3>
+                                <p>5.0$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-item-box">
+                        <img src="assets/imgs/Menu6.jpg" alt="">
+                        <div class="m-item-right">
+                            <div class="m-item-des">
+                                <h3>Beef Burger</h3>
+                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                            </div>
+                            <div class="m-item-price">
+                                <h3>From 3.5$</h3>
+                                <p>5.0$</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="m-item-price">
                   <h3>From 3.5$</h3>
@@ -570,4 +746,9 @@
       }
     </script>
   </body>
+</html>
+
+
+</body>
+
 </html>
