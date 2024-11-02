@@ -139,6 +139,61 @@ header {
   color: #007bff;
 }
 
+
+.dropdown-select {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  padding-right: 10px;
+  text-indent: 20%;
+  /* text-wrap: ; */
+  /* margin-left: 5px; */
+  direction: ltr;
+  text-align: left;
+  /* padding-left: 20px; */
+}
+
+
+.custom-select-wrapper {
+  /* float: left; */
+  position: absolute;
+  top: 30px;
+  /* left: 0; */
+}
+
+.custom-select-wrapper-user-info {
+  background-color: transparent;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  /* text-emphasis-color: black; */
+  color: wheat;
+  font-weight: bold;
+}
+
+.custom-select-wrapper-theodoisanpham {
+  background-color: transparent;
+  position: absolute;
+  top: 30px;
+  left: -20px;
+  /* margin-left: 20px; */
+}
+
+.custom-select-wrapper-payment {
+  background-color: transparent;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+}
+
+.dropdown-select-user-info {}
+
 /* ======================================MAIN-HEADER=================================== */
 .main-header {
   display: flex;
@@ -193,17 +248,20 @@ header {
 .filter-btn {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #f8b400; /* Màu nền cho nút */
+  background-color: #f8b400;
+  /* Màu nền cho nút */
   color: white;
   text-align: center;
-  text-decoration: none; /* Loại bỏ gạch chân */
-  border-radius: 25px; 
+  text-decoration: none;
+  /* Loại bỏ gạch chân */
+  border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
 }
 
 .filter-btn:hover {
-  background-color: #e2a300; /* Màu khi hover */
+  background-color: #e2a300;
+  /* Màu khi hover */
 }
 
 /* Login and Cart Styling */
@@ -212,6 +270,10 @@ header {
   display: flex;
   align-items: center;
   color: #ffffff;
+}
+
+.main-header-login {
+  position: relative;
 }
 
 .main-header-login i,
@@ -236,28 +298,28 @@ header {
 }
 
 /* ======================================SEARCH AND SORT SECTION ==================================  */
-  /* Styling cho phần tìm kiếm và sắp xếp */
-  .sort-by {
-    color: var(--bg-color);
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 3px;
-  }
-  
-  .sort-by label {
-    margin-right: 1px;
-  }
-  
-  .sort-options {
-    padding: 5px;
-    font-size: 16px;
-    border-radius: 5px; 
-    border: 1px solid #ccc; 
-  }
-  
-  
+/* Styling cho phần tìm kiếm và sắp xếp */
+.sort-by {
+  color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.sort-by label {
+  margin-right: 1px;
+}
+
+.sort-options {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
 
 /* ======================================CATEGORY-HEADER=================================== */
 .category-header {
@@ -467,31 +529,43 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px; /* Width for the icon box */
-  height: 40px; /* Height for the icon box */
-  background: var(--bg-color); /* Background color for the icon box */
-  border: 1px solid #ccc; /* Optional: Add border */
-  border-radius: 5px; /* Rounded corners for a smooth look */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: background 0.3s; /* Smooth transition for hover effect */
+  width: 40px;
+  /* Width for the icon box */
+  height: 40px;
+  /* Height for the icon box */
+  background: var(--bg-color);
+  /* Background color for the icon box */
+  border: 1px solid #ccc;
+  /* Optional: Add border */
+  border-radius: 5px;
+  /* Rounded corners for a smooth look */
+  cursor: pointer;
+  /* Change cursor to pointer on hover */
+  transition: background 0.3s;
+  /* Smooth transition for hover effect */
 }
 
 .sort-icon {
-  font-size: 20px; /* Font size for the icon */
-  color: var(--text-color); /* Icon color */
+  font-size: 20px;
+  /* Font size for the icon */
+  color: var(--text-color);
+  /* Icon color */
 }
 
 .sort-icon-container:hover {
-  background: #f0f0f0; /* Change background on hover */
+  background: #f0f0f0;
+  /* Change background on hover */
 }
 
-.price-range, .close-icon {
+.price-range,
+.close-icon {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.sort-options, .price-input {
+.sort-options,
+.price-input {
   padding: 5px;
   font-size: 16px;
   border-radius: 5px;
@@ -509,6 +583,7 @@ header {
 .close-icon:hover {
   color: red;
 }
+
 /* Menu */
 
 .item-content {
@@ -616,7 +691,7 @@ header {
 }
 
 /* Phân trang  */
-.pagination{
+.pagination {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -624,20 +699,20 @@ header {
   margin-top: 25px;
 }
 
-.pagination_item{
+.pagination_item {
   margin: 0 12px;
 }
 
-.pagination_item_active .pagination_item_link{
+.pagination_item_active .pagination_item_link {
   color: var(--bg-color);
   background-color: var(--yellow-color);
 }
 
-.pagination_item_active .pagination_item_link:hover{
+.pagination_item_active .pagination_item_link:hover {
   background-color: #dc9c35;
-} 
+}
 
-.pagination_item_link{
+.pagination_item_link {
   --height: 30px;
   display: block;
   font-weight: 300;
