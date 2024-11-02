@@ -56,40 +56,35 @@
                 <h2>DICA <br>FOOD</h2>
             </div>
             <div class="main-header-search">
-                <i class="fas fa-search"></i>
+                <i class='bx bx-search'></i>
                 <input type="text" placeholder="Tìm kiếm món ăn...">
-                <button class="filter-btn">
-                    Lọc
-                </button>
+                <a href="home_search.html" class="filter-btn">Lọc</a>
             </div>
             <div class="main-header-login">
-                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
-                <a href="./login.html" class="login-link">Lập Nguyễn</a>
-                <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
-                <a href="./home.html" class="register-link">Đăng xuất</a>
+                <i class='bx bxs-user'></i>
+                <a href="#" class="login-link">Lập Nguyễn</a>
+                <span>|</span>
+                <a href="home.html" class="register-link">Đăng Xuất</a>
+            </div>
+            <div class="sort-by">
+                <label for="sort-options">Sắp xếp theo:</label>
+                <select id="sort-options" class="sort-options">
+                    <option value="" disabled selected hidden></option>
+                    <option value="price">Giá</option>
+                    <option value="rating">Đánh giá</option>
+                    <option value="newest">Mới nhất</option>
+                </select>
             </div>
             <div class="main-header-cart">
-                <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
-                <a href="#">Giỏ hàng</a>
+                <i class='bx bxs-shopping-bag'></i>
+                <a href="">Giỏ Hàng</a>
             </div>
-
-            <!-- Phần Tùy chọn và Dropdown -->
-            <div class="main-header-options">
-                <span>Tuỳ chọn</span>
-                <div class="custom-select-wrapper">
-                    <select id="options-dropdown" onchange="navigateToPage(this)">
-                        <option value="#">▼</option> <!-- Hiển thị mũi tên xuống -->
-                        <option value="./user_info.html">Thông tin cá nhân</option>
-                        <option value="./user_theodoisanpham.html">Theo dõi sản phẩm</option>
-                        <option value="./user_payment.html">Thanh toán</option>
-                    </select>
-                </div>
-            </div>
-
         </div>
+        
+        
         <!-- ======================================CATEGORY-HEADER=================================== -->
         <div class="category-header">
-            <a href="#user.html" class="category-link">TRANG CHỦ</a>
+            <a href="#" class="category-link">TRANG CHỦ</a>
             <a href="#" class="category-link">MÓN MẶN</a>
             <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
             <a href="#" class="category-link">MÓN ĂN NHẸ</a>
@@ -151,25 +146,53 @@
 
     <!-- Items -->
     <section class="items" id="items">
+        <div class="sort-container">
+            <div class="sort-by">
+                <label for="sort-options">Sắp xếp theo:</label>
+                <select id="sort-options" class="sort-options">
+                    <option value="all">Tất Cả</option>
+                    <option value="price">Món Nước</option>
+                    <option value="rating">Món Mặn</option>
+                    <option value="newest">Món Ăn Nhẹ</option>
+                    <option value="newest">Món Lẩu</option>
+                    <option value="newest">Món Tráng Miệng</option>
+                    <option value="newest">Món Mới</option>
+                </select>
+                <div class="sort-icon-container">
+                    <a href="#" class="sort-icon"><i class='bx bx-sort'></i></a>
+                </div>
+            </div>
+            
+
+        
+            <!-- Price range filter -->
+            <div class="price-range">
+                <label for="price-from">Giá từ:</label>
+                <input type="number" id="price-from" placeholder="Min" class="price-input">
+                <label for="price-to">đến:</label>
+                <input type="number" id="price-to" placeholder="Max" class="price-input">
+            </div>
+        </div>
+        
         <h2 class="heading container">Menu</h2>
         <div class="item-content container">
             <div class="item-box">
                 <span class="sale">Sale</span>
                 <img src="assets/imgs/Menu4.jpg" alt="">
-                <h2>Spicy Burger</h2>
+                <h2>Mỳ Udon</h2>
                 <div class="price">
-                    <h3>From 3.5$</h3>
-                    <p>5.0$</p>
+                    <h3>From 65.000VND</h3>
+                    <p>79.000VND$</p>
                 </div>
                 <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
                 <img src="assets/imgs/Menu2.webp" alt="">
-                <h2>Mutton BBQ</h2>
+                <h2>Phở Tái</h2>
                 <div class="price">
-                    <h3>From 3.5$</h3>
-                    <p>5.0$</p>
+                    <h3>From 35.000VND</h3>
+                    <p>45.000VMD</p>
                 </div>
                 <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
@@ -186,50 +209,50 @@
             <div class="item-box">
                 <span class="sale">Sale</span>
                 <img src="assets/imgs/Menu8.jpg" alt="">
-                <h2>Chicken With Bacon</h2>
+                <h2>Raspberry Juice</h2>
                 <div class="price">
-                    <h3>From 3.5$</h3>
-                    <p>5.0$</p>
+                    <h3>From 75.000VND</h3>
+                    <p>85.000VND</p>
                 </div>
                 <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
                 <img src="assets/imgs/Menu11.jpg" alt="">
-                <h2>Tiny Quies Fish</h2>
+                <h2>BAILEY'S CRÈME BRULEE</h2>
                 <div class="price">
-                    <h3>From 3.5$</h3>
-                    <p>5.0$</p>
+                    <h3>From 119.000VND</h3>
+                    <p>149.000VND</p>
                 </div>
                 <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
                 <img src="assets/imgs/Menu9.jpg" alt="">
-                <h2>Mixes Pizzas</h2>
+                <h2>Trà Gừng</h2>
                 <div class="price">
-                    <h3>From 3.5$</h3>
-                    <p>5.0$</p>
+                    <h3>From 36.000VND</h3>
+                    <p>49.000VND</p>
                 </div>
                 <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <img src="assets/imgs/Menu2.webp" alt="">
-                <h2>Meta Burger</h2>
+                <img src="assets/imgs/sushi.jpg" alt="">
+                <h2>Sushi</h2>
                 <div class="price">
-                    <h3>From 3.5$</h3>
-                    <p>5.0$</p>
+                    <h3>From 55.000VND</h3>
+                    <p>79.000VND</p>
                 </div>
                 <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
                 <img src="assets/imgs/Omurice.jpg" alt="">
-                <h2>Chicken Tiny</h2>
+                <h2>Omurice</h2>
                 <div class="price">
-                    <h3>From 3.5$</h3>
-                    <p>5.0$</p>
+                    <h3>From 89.000VND</h3>
+                    <p>99.000VND</p>
                 </div>
                 <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
@@ -246,7 +269,7 @@
                 <a href="home_phantrang.html" class="pagination_item_link">3</a>
             </li>
         </ul>
-    </section>
+    </section> 
     <!-- Best Seller -->
     <section class="menu-container" id="menu-container">
         <h2 class="heading container">Best Seller</h2>
