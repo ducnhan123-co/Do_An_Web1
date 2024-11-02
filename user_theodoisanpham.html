@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History-Order</title>
+    <title>Order-History</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/user.css">
-    <link rel="stylesheet" href="assets/css/user_home.css">
+
     <!-- Box Icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -68,24 +68,24 @@
                 <a href="./login.html" class="login-link">Lập Nguyễn</a>
                 <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
                 <a href="./home.html" class="register-link">Đăng xuất</a>
-                <div class="custom-select-wrapper-theodoisanpham">
-                    <select class="dropdown-select" id="options-dropdown" onchange="navigateToPage(this)">
-                        <option value="#"><i class="fas fa-angle-down"></i>Tuỳ chọn ▼</option>
-                        <option value="./user_info.html" style="color: black;">Thông tin cá nhân</option>
-                        <option value="./user_theodoisanpham.html" style="color: black;">Theo dõi sản phẩm</option>
-                        <option value="./user_payment.html" style="color: black;">Thanh toán</option>
-                    </select>
-                </div>
             </div>
             <div class="main-header-cart">
                 <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
-                <a href="#">Giỏ hàng</a>
+                <a href="user_carts.html">Giỏ hàng</a>
             </div>
 
-
-            <!-- <span>Tuỳ chọn</span> -->
-
-
+            <!-- Phần Tùy chọn và Dropdown -->
+            <div class="main-header-options">
+                <span>Tuỳ chọn</span>
+                <div class="custom-select-wrapper">
+                    <select id="options-dropdown" onchange="navigateToPage(this)">
+                        <option value="#">▼</option> <!-- Hiển thị mũi tên xuống -->
+                        <option value="./user_info.html">Thông tin cá nhân</option>
+                        <option value="./user_theodoisanpham.html">Theo dõi sản phẩm</option>
+                        <option value="./user_payment.html">Thanh toán</option>
+                    </select>
+                </div>
+            </div>
 
         </div>
         <!-- ======================================CATEGORY-HEADER=================================== -->
@@ -123,7 +123,7 @@
                         <input class="product-input" type="text" id="filter-product" onkeyup="filterTable()">
                     </div>
                 </div>
-
+                
                 <thead>
                     <tr>
                         <th>Mã đơn hàng</th>
@@ -177,7 +177,7 @@
             </table>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <div class="footer">
         <div class="footer-content container">
@@ -230,5 +230,4 @@
         }
     </script>
 </body>
-
 </html>
