@@ -238,8 +238,8 @@ body {
 
 .main-header-options {
     position: absolute;
-    top: 60px;
-    right: 170px;
+    top: 100px;
+    right: 215px;
     color: white;
     font-weight: bold;
 }
@@ -610,4 +610,8 @@ input[type=number] {
     padding: 30px;
     color: var(--bg-color);
     text-align: center;
+}
+
+.main-header-cart {
+    padding-right: 70px;
 }
