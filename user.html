@@ -5,16 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOOD-SGU</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-
+    <link rel="stylesheet" href="assets/css/user_home.css">
+    <!-- <link rel="stylesheet" href="assets/css/user.css"> -->
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Box Icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
 <body>
+    <header id="header">
 
-    <header>
         <!-- ======================================TOP-HEADER=================================== -->
         <div class="top-header">
             <div class="cnt-block">
@@ -56,41 +63,47 @@
                 <h2>DICA <br>FOOD</h2>
             </div>
             <div class="main-header-search">
-                <i class='bx bx-search'></i>
+                <i class="fas fa-search"></i>
                 <input type="text" placeholder="Tìm kiếm món ăn...">
-                <a href="home_search.html" class="filter-btn">Lọc</a>
+                <button class="filter-btn">
+                    Lọc
+                </button>
             </div>
-            <!-- <div class="sort-by">
-                <label for="sort-options">Sắp xếp theo:</label>
-                <select id="sort-options" class="sort-options">
-                    <option value="" disabled selected hidden></option>
-                    <option value="price">Giá</option>
-                    <option value="rating">Đánh giá</option>
-                    <option value="newest">Mới nhất</option>
-                </select>
-            </div> -->
             <div class="main-header-login">
-                <i class='bx bxs-user'></i>
-                <a href="home_login.html" class="login-link">Đăng Nhập</a>
-                <span>|</span>
-                <a href="home_dangky.html" class="register-link">Đăng Kí</a>
+                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
+                <a href="./login.html" class="login-link">Lập Nguyễn</a>
+                <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
+                <a href="./home.html" class="register-link">Đăng xuất</a>
+                <div class="custom-select-wrapper">
+                    <select class="dropdown-select" id="options-dropdown" onchange="navigateToPage(this)">
+                        <option value="#"><i class="fas fa-angle-down"></i>Tuỳ chọn</option>
+                        <option value="./user_info.html" style="color: black;">Thông tin cá nhân</option>
+                        <option value="./user_theodoisanpham.html" style="color: black;">Theo dõi sản phẩm</option>
+                        <option value="./user_payment.html" style="color: black;">Thanh toán</option>
+                    </select>
+                </div>
             </div>
             <div class="main-header-cart">
-                <i class='bx bxs-shopping-bag'></i>
-                <a href="">Giỏ Hàng</a>
+                <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
+                <a href="#">Giỏ hàng</a>
             </div>
+
+
+            <!-- <span>Tuỳ chọn</span> -->
+
+
+
         </div>
-        
-        
+
         <!-- ======================================CATEGORY-HEADER=================================== -->
         <div class="category-header">
-            <a href="#" class="category-link">TRANG CHỦ</a>
+            <a href="user.html" class="category-link">TRANG CHỦ</a>
+            <a href="#" class="category-link">MÓN CHAY</a>
             <a href="#" class="category-link">MÓN MẶN</a>
             <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
             <a href="#" class="category-link">MÓN ĂN NHẸ</a>
             <a href="#" class="category-link">MÓN LẨU</a>
             <a href="#" class="category-link">MÓN TRÁNG MIỆNG</a>
-            <a href="#" class="category-link">MÓN MỚI</a>
         </div>
     </header>
 
@@ -100,7 +113,8 @@
         <div class="home-content container">
             <div class="home-text">
                 <h1>
-                    New Grilled Beef Buger
+                    New Grilled Beef
+                    Buger
                 </h1>
                 <p>Bùng nổ thương vị chỉ có tại DICA FOOD</p>
                 <h3>Buy 1 Get ONE FREE</h3>
@@ -162,9 +176,6 @@
                     <a href="#" class="sort-icon"><i class='bx bx-sort'></i></a>
                 </div>
             </div>
-            
-
-        
             <!-- Price range filter -->
             <div class="price-range">
                 <label for="price-from">Giá từ:</label>
@@ -173,7 +184,7 @@
                 <input type="number" id="price-to" placeholder="Max" class="price-input">
             </div>
         </div>
-        
+      
         <h2 class="heading container">Menu</h2>
         <div class="item-content container">
             <div class="item-box">
@@ -532,6 +543,15 @@
         </div>
         <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
+    <script>
+        function navigateToPage(select) {
+            const selectedValue = select.value;
+            if (selectedValue !== "#") {
+                window.location.href = selectedValue; // Điều hướng đến trang đã chọn
+            }
+        }
+    </script>
+
 
 </body>
 
