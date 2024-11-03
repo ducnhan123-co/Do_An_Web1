@@ -57,7 +57,7 @@
             </div>
             <div class="main-header-search">
                 <i class='bx bx-search'></i>
-                <input type="text" placeholder="Tìm kiếm món ăn...">
+                <input type="text" placeholder="Tìm kiếm món ăn..." class="search-input">
                 <a href="home_search.html" class="filter-btn">Lọc</a>
             </div>
             <!-- <div class="sort-by">
@@ -77,7 +77,7 @@
             </div>
             <div class="main-header-cart">
                 <i class='bx bxs-shopping-bag'></i>
-                <a href="">Giỏ Hàng</a>
+                <a href="" class="cart-link">Giỏ Hàng</a>
             </div>
         </div>
 
@@ -146,33 +146,7 @@
 
     <!-- Items -->
     <section class="items" id="items">
-        <div class="sort-container">
-            <div class="sort-by">
-                <label for="sort-options">Sắp xếp theo:</label>
-                <select id="sort-options" class="sort-options">
-                    <option value="all">Tất Cả</option>
-                    <option value="price"><a href="#Monnuoc.html">Món Nước</a></option>
-                    <option value="rating">Món Mặn</option>
-                    <option value="newest">Món Ăn Nhẹ</option>
-                    <option value="newest">Món Lẩu</option>
-                    <option value="newest">Món Tráng Miệng</option>
-                    <option value="newest">Món Mới</option>
-                </select>
-                <div class="sort-icon-container">
-                    <a href="#" class="sort-icon"><i class='bx bx-sort'></i></a>
-                </div>
-            </div>
 
-
-
-            <!-- Price range filter -->
-            <div class="price-range">
-                <label for="price-from">Giá từ:</label>
-                <input type="number" id="price-from" placeholder="Min" class="price-input">
-                <label for="price-to">đến:</label>
-                <input type="number" id="price-to" placeholder="Max" class="price-input">
-            </div>
-        </div>
 
         <h2 class="heading container">Menu</h2>
         <div class="item-content container">
@@ -532,6 +506,27 @@
         </div>
         <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
+
+    <script>
+        let giohang = document.querySelector(".cart-link");
+        giohang.addEventListener("click", function (e) {
+            e.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+            alert("Bạn cần phải đăng nhập mới vào giỏ hàng được");
+
+            if (confirm("Bạn có muốn chuyển đến trang đăng nhập không?")) {
+                window.location.href = "./home_login.html";
+            }
+        });
+
+        let search = document.querySelector(".search-input");
+        search.addEventListener("keyup", function (e) {
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                window.location.href = "home_search.html";
+            }
+        });
+    </script>
 
 </body>
 

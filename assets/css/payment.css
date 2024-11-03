@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+body.user-payment {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
 .user-payment {
-    background-color: #dadada;
+    background-color: #ffffff;
     height: 1300px;
     height: 100%;
     width: 100%;
     margin-top: 150px;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -92,8 +101,10 @@
     /* border: 3px solid #ff0000; */
     /* height: 1400px; */
     height: 100%;
-    border: 2px solid #cccaca;
+    border: 5px solid #ff2121;
     background-color: #ededed;
+    border-radius: 15px;
+    box-shadow: #ff0000 0px 0px 10px;
 }
 
 .payment-details>p {
@@ -116,11 +127,44 @@
     border: 3px solid #d2d2d2;
     height: 80px;
     margin-left: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.payment-details__paypal:hover,
+.payment-details__cards:hover {
+    border: solid #ff0000;
+}
+
+.payment-details__cards:hover p {
+    color: #ff0000;
+}
+
+.payment-details__paypal:focus,
+.payment-details__cards:focus {
+    border: solid #ff0000;
+    font-weight: bold;
+    font-size: 30px;
+    background: linear-gradient(to right, #ff9999, #ff6666);
+    color: white;
 }
 
 .payment-details__paypal {
     border: 3px solid #d2d2d2;
-    margin-right: 40px;
+    margin-right: 70px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
+    /* overflow: hidden; */
+    /* max-width: 100%; */
 }
 
 .expiration_date,
@@ -227,6 +271,10 @@ h3 {
     gap: -10px;
 }
 
+.input-group:last-child {
+    margin-bottom: 30px;
+}
+
 .input-group label {
     margin-bottom: 5px;
     font-weight: bold;
@@ -257,9 +305,11 @@ h3 {
 
 
 .order-summery {
-    border: 2px solid #ff0000;
+    border: 5px solid #ff0000;
     font-family: Arial, sans-serif;
     height: fit-content;
+    border-radius: 15px;
+    box-shadow: #c0392b 0px 0px 10px;
 }
 
 
