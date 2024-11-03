@@ -76,11 +76,12 @@
                 <a href="./home.html" class="register-link">Đăng xuất</a>
                 <div class="custom-select-wrapper">
                     <select class="dropdown-select" id="options-dropdown" onchange="navigateToPage(this)">
-                        <option value="#"><i class="fas fa-angle-down"></i>Tuỳ chọn</option>
+                        <option value="#">Tuỳ chọn</option>
                         <option value="./user_info.html" style="color: black;">Thông tin cá nhân</option>
                         <option value="./user_theodoisanpham.html" style="color: black;">Theo dõi sản phẩm</option>
                         <option value="./user_payment.html" style="color: black;">Thanh toán</option>
                     </select>
+
                 </div>
             </div>
             <div class="main-header-cart">
@@ -96,8 +97,8 @@
         </div>
         <!-- ======================================CATEGORY-HEADER=================================== -->
         <div class="category-header">
-            <a href="#" class="category-link">TRANG CHỦ</a>
-            <a href="#" class="category-link">MÓN CHAY</a>
+            <a href="user.html" class="category-link">TRANG CHỦ</a>
+            <a href="Monnuoc.html" class="category-link">MÓN CHAY</a>
             <a href="#" class="category-link">MÓN MẶN</a>
             <a href="#" class="category-link">MÓN NƯỚC</a>
             <a href="#" class="category-link">MÓN ĂN NHẸ</a>
@@ -215,6 +216,14 @@
         </div>
         <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
+    <script>
+        function navigateToPage(select) {
+            const url = select.value;
+            if (url !== "#") { // Kiểm tra để không chuyển trang khi chọn "Tuỳ chọn"
+                window.location.href = url;
+            }
+        }
+    </script>
 </body>
 
 </html>
