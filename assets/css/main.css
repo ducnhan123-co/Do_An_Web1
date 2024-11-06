@@ -1,3 +1,4 @@
+main-header-cart
 /* Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Righteous&display=swap');
 
@@ -7,7 +8,7 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
   scroll-padding-top: 3rem;
-  font-family: var(--font-family-1);
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Variables */
@@ -159,7 +160,7 @@ header {
 .main-header-img img {
   width: 100px;
   height: auto;
-  
+
 }
 
 .main-header-img h2 {
@@ -460,6 +461,7 @@ header {
 /* Thiết kề phần thực đơn ở phần món ăn */
 .items {
   background: var(--container-color);
+  padding-top: 80px;
 }
 
 /* sort */
