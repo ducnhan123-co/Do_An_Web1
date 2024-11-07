@@ -239,7 +239,7 @@ body {
 .main-header-options {
     position: absolute;
     top: 100px;
-    right: 215px;
+    right: 245px;
     color: white;
     font-weight: bold;
 }
@@ -434,8 +434,10 @@ input[type=number] {
     padding: 20px;
     margin: 350px;
     margin-bottom: 80px;
+    border: 10px solid  #ff0000;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: #c0392b 0px 0px 10px;
+    
 }
 
 .order-history-container {
