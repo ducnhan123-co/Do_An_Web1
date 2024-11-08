@@ -373,10 +373,17 @@ header {
 
 /* Thiết kề phần thực đơn ở phần món ăn */
 .heading {
+  width: 550px;
   text-align: center;
   font-size: 50px;
-
+  border: 5px solid #bd1111;
+  padding: 20px;
+  padding-inline: 10px;
+  margin: 0 auto;
+  background-color: #ffa10a; /* Màu nền cho tiêu đề */
+  border-radius: 10px;
 }
+
 
 .items {
   margin-top: 10rem;
