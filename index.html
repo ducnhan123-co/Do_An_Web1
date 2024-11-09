@@ -147,8 +147,36 @@
 
     <!-- Items -->
     <section class="items" id="items">
-
-
+        <!-- Sort section -->
+        <div class="filter-sort-container">
+            <label for="sort-options">Phân loại</label>
+            <div class="select-container">
+                <select id="sort-options">
+                    <option value="all">Tất cả</option>
+                    <option value="drinks">Món Nước</option>
+                    <option value="main-dish">Món Mặn</option>
+                    <option value="snacks">Món Ăn Nhẹ</option>
+                    <option value="hotpot">Món Lẩu</option>
+                    <option value="dessert">Món Tráng Miệng</option>
+                    <option value="new">Món Mới</option>
+                </select>
+            </div>
+        
+            <label for="price-from">Giá từ:</label>
+            <input type="number" id="price-from" placeholder="Tối thiểu" class="price-input" min="0">
+            <label for="price-to">đến:</label>
+            <input type="number" id="price-to" placeholder="Tối đa" class="price-input" min="0">
+            <!-- Add an anchor tag around the search button -->
+            <a href="home_search.html" class="search-button">
+                <i class='bx bx-search'></i> <!-- Search icon -->
+            </a>
+        
+            <div class="icon-button"><i class='bx bx-sort-up'></i></div>
+            <div class="icon-button"><i class='bx bx-sort-down'></i></div>
+            <div class="icon-button"><i class='bx bx-refresh'></i></div>
+            <div class="icon-button"><i class='bx bx-x'></i></div>
+        </div>
+        
         <h2 class="heading container">Menu</h2>
         <div class="item-content container">
             <div class="item-box">
