@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOOD-SGU</title>
     <link rel="stylesheet" href="assets/css/timkiem.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <!-- <link rel="stylesheet" href="assets/css/home.css"> -->
 
     <!-- Box Icon -->
@@ -89,35 +90,33 @@
     <!-- Items -->
     <section class="items" id="items">
         <!-- Sort section -->
-        <div class="sort-container">
-            <div class="sort-by">
-                <label for="sort-options">Sắp xếp theo:</label>
-                <select id="sort-options" class="sort-options">
-                    <option value="all">Tất Cả</option>
-                    <option value="price">Món Nước</option>
-                    <option value="rating">Món Mặn</option>
-                    <option value="newest">Món Ăn Nhẹ</option>
-                    <option value="newest">Món Lẩu</option>
-                    <option value="newest">Món Tráng Miệng</option>
-                    <option value="newest">Món Mới</option>
+        <div class="filter-sort-container">
+            <label for="sort-options">Phân loại</label>
+            <div class="select-container">
+                <select id="sort-options">
+                    <option value="all">Tất cả</option>
+                    <option value="drinks">Món Nước</option>
+                    <option value="main-dish">Món Mặn</option>
+                    <option value="snacks">Món Ăn Nhẹ</option>
+                    <option value="hotpot">Món Lẩu</option>
+                    <option value="dessert">Món Tráng Miệng</option>
+                    <option value="new">Món Mới</option>
                 </select>
-                <div class="sort-icon-container">
-                    <a href="#" class="sort-icon"><i class='bx bx-sort'></i></a>
-                </div>
             </div>
-
-
-
-            <!-- Price range filter -->
-            <div class="price-range">
-                <label for="price-from">Giá từ:</label>
-                <input type="number" id="price-from" placeholder="Min" class="price-input">
-                <label for="price-to">đến:</label>
-                <input type="number" id="price-to" placeholder="Max" class="price-input">
-            </div>
-
-            <!-- Close icon -->
-            <span class="close-icon"><a href="index.html">X</a></span>
+        
+            <label for="price-from">Giá từ:</label>
+            <input type="number" id="price-from" placeholder="Tối thiểu" class="price-input" min="0">
+            <label for="price-to">đến:</label>
+            <input type="number" id="price-to" placeholder="Tối đa" class="price-input" min="0">
+            <!-- Add an anchor tag around the search button -->
+            <a href="home_search.html" class="search-button">
+                <i class='bx bx-search'></i> <!-- Search icon -->
+            </a>
+        
+            <div class="icon-button"><i class='bx bx-sort-up'></i></div>
+            <div class="icon-button"><i class='bx bx-sort-down'></i></div>
+            <div class="icon-button"><i class='bx bx-refresh'></i></div>
+            <div class="icon-button"><i class='bx bx-x'></i></div>
         </div>
 
 
