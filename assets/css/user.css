@@ -427,11 +427,12 @@ input[type=number] {
     --moz-appearance: textfield;
 }
 
+/* Order-History */
 .order-history {
     color: white;
-    /* size: 150%; */
+    width: 99%;
     background-color: #b43232;
-    padding: 20px;
+    padding: 20px 0px;
     margin: 350px;
     margin-bottom: 80px;
     border: 10px solid  #ff0000;
@@ -442,6 +443,7 @@ input[type=number] {
 
 .order-history-container {
     width: 100%;
+    padding: 5px;
 }
 
 .order-history h2 {
@@ -454,6 +456,7 @@ input[type=number] {
     /* border-style: ridge; */
     border: 3px solid #e45b0c;
     box-shadow: #f61409;
+    background-color: #ff0000;
     max-width: fit-content;
     border-radius: 4px;
     margin: auto;
@@ -463,7 +466,6 @@ input[type=number] {
 .history-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0 auto;
 }
 
 .history-table th,
@@ -478,7 +480,6 @@ input[type=number] {
 }
 
 .history-table th {
-
     background-color: #4CAF50;
     color: white;
 }
@@ -488,72 +489,108 @@ input[type=number] {
 }
 
 .history-table tr:hover {
-    background-color: #ff8080;
+    background-color: #862929;
     transition: 0.5s;
 }
 
 .filters {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 50px;
+    display: flex;           /* Để các filter group nằm ngang */
+    flex-wrap: nowrap;       /* Không cho phép các phần tử xuống dòng */
+    align-items: center;     /* Căn giữa các phần tử theo chiều dọc */
+    justify-content: flex-start; /* Căn trái các nhóm lọc */
+    gap: 20px;               /* Khoảng cách giữa các filter group */
     margin-bottom: 4%;
-    /* Khoảng cách dưới các phần lọc */
+    padding-right: 50px;
 }
 
 .filter-group {
-    /* display: flex; */
-    align-items: center;
-    margin-right: 30px;
-    /* Khoảng cách giữa các filter group */
+    display: flex;           /* Để label và input nằm ngang trong mỗi filter group */
+    align-items: center;     /* Căn giữa các phần tử trong nhóm */
+    gap: 10px;               /* Khoảng cách giữa label, input và button */
 }
 
 .filters label {
-    margin-right: 100px;
-    /* Khoảng cách giữa label và input */
+    margin-right: 10px; /* Khoảng cách giữa label và input */
+}
+
+.search-input,
+.date-input,
+.quantity-input,
+.product-input {
+    padding: 5px;
+    margin-right: 10px; /* Khoảng cách giữa input và nút */
 }
 
 .search-input {
-    width: 400px;
-    /* Độ rộng của ô tìm kiếm */
-    padding: 5px;
-    /* Khoảng cách bên trong input */
+    width: 400px; /* Độ rộng của ô tìm kiếm */
 }
 
 .date-input {
-    width: 120px;
-    /* Độ rộng của ô lọc theo ngày */
-    padding: 5px;
-    /* Khoảng cách bên trong input */
+    width: 120px; /* Độ rộng của ô lọc theo ngày */
 }
 
 .quantity-input {
-    width: 50px;
-    /* Độ rộng của ô lọc theo số lượng */
-    padding: 5px;
-    /* Khoảng cách bên trong input */
+    width: 50px; /* Độ rộng của ô lọc theo số lượng */
 }
 
 .product-input {
-    width: 150px;
-    /* Độ rộng của ô lọc theo tên sản phẩm */
-    padding: 5px;
-    /* Khoảng cách bên trong input */
+    width: 150px; /* Độ rộng của ô lọc theo tên sản phẩm */
 }
 
-.filters input {
-    margin-top: 10px;
-    margin-right: 100px;
-    /* Khoảng cách giữa các input */
-    padding: 5px;
-    /* Khoảng cách bên trong input */
+.filter-btn {
+    padding: 6px 15px;
+    font-size: 14px;
+    color: white;
+    transition: background-color 0.3s;
+    display: inline-block;
+    background-color: #f8b400;
+    /* Màu nền cho nút */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    /* Loại bỏ gạch chân */
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.filter-group .search-order {
-    width: 200px;
-    /* Độ rộng của ô tìm kiếm */
-    padding: 5px;
-    /* Khoảng cách bên trong input */
+.filter-btn:hover {
+    background-color: #e2a300; /* Màu khi hover */
+}
+
+.table-btn {
+    padding: 6px 15px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+    display: inline-block;
+    background-color: #f8b400;
+    /* Màu nền cho nút */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    /* Loại bỏ gạch chân */
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.table-btn:hover {
+    background-color: #e2a300; /* Màu khi hover */
+}
+
+/* Cải thiện giao diện của liên kết "View" */
+.view-detail-link {
+    color: #0db4fcf5; /* Màu của liên kết */
+    text-decoration: none; /* Bỏ gạch chân */
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.view-detail-link:hover {
+    color: #0056b3; /* Màu khi hover */
+    transform: scale(1.1); /* Phóng to một chút khi hover */
 }
 
 /* Footer */
