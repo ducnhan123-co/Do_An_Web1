@@ -71,7 +71,7 @@
             </div>
             <div class="main-header-login">
                 <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
-                <a href="./login.html" class="login-link">Lập Nguyễn</a>
+                <a href="user.html" class="login-link">Lập Nguyễn</a>
                 <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
                 <a href="./index.html" class="register-link">Đăng xuất</a>
                 <div class="custom-select-wrapper">
@@ -115,7 +115,7 @@
                     New Grilled Beef
                     Buger
                 </h1>
-                <p>Bùng nổ thương vị chỉ có tại DICA FOOD</p>
+                <p>Bùng nổ hương vị chỉ có tại DICA FOOD</p>
                 <h3>Buy 1 Get ONE FREE</h3>
                 <a href="#" class="btn">Order Now</a>
             </div>
@@ -160,28 +160,42 @@
     <!-- Items -->
     <section class="items" id="items">
         <div class="sort-container">
-            <div class="sort-by">
-                <label for="sort-options">Sắp xếp theo:</label>
-                <select id="sort-options" class="sort-options">
-                    <option value="all">Tất Cả</option>
-                    <option value="price">Món Nước</option>
-                    <option value="rating">Món Mặn</option>
-                    <option value="newest">Món Ăn Nhẹ</option>
-                    <option value="newest">Món Lẩu</option>
-                    <option value="newest">Món Tráng Miệng</option>
-                    <option value="newest">Món Mới</option>
-                </select>
+            
+                <label for="sort-options">Phân loại:</label>
+                <div class="select-container">
+                    <select id="sort-options" class="sort-options">
+                        <option value="all">Tất Cả</option>
+                        <option value="price">Món Nước</option>
+                        <option value="rating">Món Mặn</option>
+                        <option value="newest">Món Ăn Nhẹ</option>
+                        <option value="newest">Món Lẩu</option>
+                        <option value="newest">Món Tráng Miệng</option>
+                        <option value="newest">Món Mới</option>
+                    </select>
+                </div>
                 <div class="sort-icon-container">
                     <a href="#" class="sort-icon"><i class='bx bx-sort'></i></a>
                 </div>
-            </div>
+            
+            <label for="price-from">Giá từ:</label>
+            <input type="number" id="price-from" placeholder="Min" class="price-input">
+            <label for="price-to">đến:</label>
+            <input type="number" id="price-to" placeholder="Max" class="price-input">
             <!-- Price range filter -->
-            <div class="price-range">
+            <!-- <div class="price-range">
                 <label for="price-from">Giá từ:</label>
                 <input type="number" id="price-from" placeholder="Min" class="price-input">
                 <label for="price-to">đến:</label>
                 <input type="number" id="price-to" placeholder="Max" class="price-input">
-            </div>
+            </div> -->
+            <a href="user.html" class="search-button">
+                <i class='bx bx-search'></i> <!-- Search icon -->
+            </a>
+        
+            <div class="icon-button"><i class='bx bx-sort-up'></i></div>
+            <div class="icon-button"><i class='bx bx-sort-down'></i></div>
+            <div class="icon-button"><i class='bx bx-refresh'></i></div>
+            <div class="icon-button"><i class='bx bx-x'></i></div>
         </div>
 
         <h2 class="heading container">Menu</h2>

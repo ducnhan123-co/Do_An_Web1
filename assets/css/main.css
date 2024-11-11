@@ -466,7 +466,7 @@ header {
 .filter-sort-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   padding: 10px;
   background: var(--container-color);
   border-top: none;

@@ -516,13 +516,67 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 10rem;
-  gap: 1rem;
+  padding-left: 20px;
+  gap: 10px;
+  padding: 10px;
+  background: var(--container-color);
+  border-top: none;
+  border-bottom: none;
+  max-width: 1000px; /* Adjust as needed for your page width */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.select-container, .price-input, .icon-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.select-container select {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+}
+.price-input {
+  width: 100px; /* Increase width to make the input fields wider */
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 12px; /* Optional: adjust padding for a more spacious feel */
+}
+
+.search-button {
+  padding: 8px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none; /* Remove underline */
+  display: flex;
+  align-items: center;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
 }
 
 .sort-by {
   display: flex;
   align-items: center;
+  color: #121212;
+  gap: 10px;
 }
 
 .sort-icon-container {
