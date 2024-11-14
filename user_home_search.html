@@ -7,11 +7,20 @@
     <title>FOOD-SGU</title>
     <link rel="stylesheet" href="assets/css/timkiem.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/user_home.css">
     <!-- <link rel="stylesheet" href="assets/css/home.css"> -->
 
     <!-- Box Icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Box Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -57,33 +66,47 @@
                 <img src="./assets/imgs/logo2.png" alt="">
                 <h2>DICA <br>FOOD</h2>
             </div>
-            <div class="main-header-search">
-                <i class='bx bx-search'></i>
-                <input type="text" placeholder="Tìm kiếm món ăn...">
-                <a href="home_search.html" class="filter-btn">Lọc</a>
+            <div class="main-header-search" style="padding: 10px 10px;">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Tìm kiếm món ăn..." style="font-weight: bold;">
+                <button class="filter-btn">
+                    Loc
+                </button>
             </div>
             <div class="main-header-login">
-                <i class='bx bxs-user'></i>
-                <a href="home_login.html" class="login-link">Đăng Nhập</a>
-                <span>|</span>
-                <a href="home_dangky.html" class="register-link">Đăng Kí</a>
+                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
+                <a href="user.html" class="login-link">Lập Nguyễn</a>
+                <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
+                <a href="./index.html" class="register-link">Đăng xuất</a>
+                <div class="custom-select-wrapper">
+                    <select class="dropdown-select" id="options-dropdown" onchange="navigateToPage(this)">
+                        <option value="#"><i class="fas fa-angle-down"></i>Tuỳ chọn</option>
+                        <option value="./user_info.html" style="color: black;">Thông tin cá nhân</option>
+                        <option value="./user_theodoisanpham.html" style="color: black;">Theo dõi sản phẩm</option>
+                        <option value="./user_payment.html" style="color: black;">Thanh toán</option>
+                    </select>
+                </div>
             </div>
             <div class="main-header-cart">
-                <i class='bx bxs-shopping-bag'></i>
-                <a href="home_login.html">Giỏ Hàng</a>
+                <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
+                <a href="user_carts.html">Giỏ hàng</a>
             </div>
-        </div>
 
+
+            <!-- <span>Tuỳ chọn</span> -->
+
+
+        </div>
 
         <!-- ======================================CATEGORY-HEADER=================================== -->
         <div class="category-header">
-            <a href="index.html" class="category-link">TRANG CHỦ</a>
-            <a href="Monnuoc.html" class="category-link">MÓN MẶN</a>
-            <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
-            <a href="Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
-            <a href="Monnuoc.html" class="category-link">MÓN LẨU</a>
-            <a href="Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
-            <a href="Monnuoc.html" class="category-link">MÓN MỚI</a>
+            <a href="user.html" class="category-link">TRANG CHỦ</a>
+            <a href="user_Monnuoc.html" class="category-link">MÓN MẶN</a>
+            <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
+            <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
+            <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
+            <a href="user_Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
+            <a href="user_Monnuoc.html" class="category-link">MÓN MỚI</a>
         </div>
     </header>
 
@@ -132,7 +155,7 @@
                     <h3>From 35.000VND</h3>
                     <p>45.000VMD</p>
                 </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
+                <a href="user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
@@ -142,7 +165,7 @@
                     <h3>From 3.5$</h3>
                     <p>5.0$</p>
                 </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
+                <a href="user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
@@ -152,7 +175,7 @@
                     <h3>From 75.000VND</h3>
                     <p>85.000VND</p>
                 </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
+                <a href="user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
@@ -162,7 +185,7 @@
                     <h3>From 119.000VND</h3>
                     <p>149.000VND</p>
                 </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
+                <a href="user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
@@ -172,7 +195,7 @@
                     <h3>From 36.000VND</h3>
                     <p>49.000VND</p>
                 </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
+                <a href="user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
@@ -182,7 +205,7 @@
                     <h3>From 55.000VND</h3>
                     <p>79.000VND</p>
                 </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
+                <a href="user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
@@ -192,16 +215,19 @@
                     <h3>From 89.000VND</h3>
                     <p>99.000VND</p>
                 </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
+                <a href="user_product_detail.html" class="item-btn">View Product</a>
             </div>
+
+
+
         </div>
 
         <div class="product_detail_phantrang" style="margin-top: 40px;">
             <button class="product_detail_phantrang--left"> > </button>
-            <a href="home_search.html" style="color: rgb(255, 72, 0);">1</a>
-            <a href="home_search.html" style="color: rgb(255, 72, 0);">2</a>
-            <a href="home_search.html" style=" color: rgb(255, 72, 0);">3</a>
-            <a href="home_search.html" style="color: rgb(255, 72, 0);">4</a>
+            <a href="user_home_search.html" style="color: rgb(255, 72, 0);">1</a>
+            <a href="user_home_search.html" style="color: rgb(255, 72, 0);">2</a>
+            <a href="user_home_search.html" style=" color: rgb(255, 72, 0);">3</a>
+            <a href="user_home_search.html" style="color: rgb(255, 72, 0);">4</a>
             <button class="product_detail_phantrang--right"> > </button>
         </div>
     </section>
@@ -249,7 +275,18 @@
         </div>
         <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
+    <script>
+        btnClick.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.location.href = "user_home_search.html";
+        });
 
+        let btnClick2 = document.querySelector(".product_detail_phantrang--right");
+        btnClick2.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.location.href = "user_home_search.html";
+        });
+    </script>
 </body>
 
 </html>
