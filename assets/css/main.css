@@ -1,4 +1,3 @@
-
 /* Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Righteous&display=swap');
 
@@ -462,6 +461,7 @@ header {
   background: var(--container-color);
   padding-top: 80px;
 }
+
 /* Sort */
 .filter-sort-container {
   display: flex;
@@ -471,15 +471,20 @@ header {
   background: var(--container-color);
   border-top: none;
   border-bottom: none;
-  max-width: 1000px; /* Adjust as needed for your page width */
-  margin: 0 auto; /* Center horizontally */
+  max-width: 1000px;
+  /* Adjust as needed for your page width */
+  margin: 0 auto;
+  /* Center horizontally */
 }
 
 .filter-sort-container label {
   font-weight: 500;
   color: #666;
 }
-.select-container, .price-input, .icon-button {
+
+.select-container,
+.price-input,
+.icon-button {
   display: inline-flex;
   align-items: center;
   padding: 8px 12px;
@@ -487,17 +492,22 @@ header {
   background-color: #f0f0f0;
   border-radius: 4px;
 }
+
 .select-container select {
   border: none;
   background: transparent;
   font-size: 14px;
 }
+
 .price-input {
-  width: 100px; /* Increase width to make the input fields wider */
+  width: 100px;
+  /* Increase width to make the input fields wider */
   text-align: center;
   font-size: 14px;
-  padding: 8px 12px; /* Optional: adjust padding for a more spacious feel */
+  padding: 8px 12px;
+  /* Optional: adjust padding for a more spacious feel */
 }
+
 .search-button {
   padding: 8px;
   background-color: #d32f2f;
@@ -506,7 +516,8 @@ header {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
+  /* Remove underline */
   display: flex;
   align-items: center;
 }
@@ -1762,3 +1773,27 @@ p.agreed {
   background: rgba(0, 0, 0, 0.5);
   padding: 20px;
 } */
+
+.product_detail_phantrang {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 20px;
+}
+
+.product_detail_phantrang a {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product_detail_phantrang--left,
+.product_detail_phantrang--right {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}

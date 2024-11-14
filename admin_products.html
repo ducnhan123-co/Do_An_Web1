@@ -53,7 +53,7 @@
 
         <!-- Form Thêm Sản Phẩm -->
         <div class="product-form">
-            <h2>Thay đổi sản phẩm</h2>
+            <h2>Thêm sản phẩm mới</h2>
             <form>
                 <label for="product-name">Tên sản phẩm:</label>
                 <input type="text" id="product-name" required>
@@ -114,7 +114,7 @@
                         <td>Số lượng</td>
                         <td>Còn hàng</td>
                         <td>
-                            <button class="edit-button"><i class="fas fa-edit"></i> Sửa</button>
+                            <button class="edit-button" onclick="addNew()"><i class="fas fa-edit"></i> Sửa</button>
                             <button class="delete-button"><i class="fas fa-trash-alt"></i> Xóa</button>
                         </td>
                     </tr>
@@ -128,7 +128,7 @@
                         <td>Số lượng</td>
                         <td>Còn hàng</td>
                         <td>
-                            <button class="edit-button"><i class="fas fa-edit"></i> Sửa</button>
+                            <button class="edit-button" onclick="addNew()"><i class="fas fa-edit"></i> Sửa</button>
                             <button class="delete-button"><i class="fas fa-trash-alt"></i> Xóa</button>
                         </td>
                     </tr>
@@ -141,7 +141,7 @@
                         <td>Số lượng</td>
                         <td>Còn hàng</td>
                         <td>
-                            <button class="edit-button"><i class="fas fa-edit"></i> Sửa</button>
+                            <button class="edit-button" onclick="addNew()"><i class="fas fa-edit"></i> Sửa</button>
                             <button class="delete-button"><i class="fas fa-trash-alt"></i> Xóa</button>
                         </td>
                     </tr>
@@ -154,7 +154,7 @@
                         <td>Số lượng</td>
                         <td>Còn hàng</td>
                         <td>
-                            <button class="edit-button"><i class="fas fa-edit"></i> Sửa</button>
+                            <button class="edit-button" onclick="addNew()"><i class="fas fa-edit"></i> Sửa</button>
                             <button class="delete-button"><i class="fas fa-trash-alt"></i> Xóa</button>
                         </td>
                     </tr>
@@ -167,7 +167,7 @@
                         <td>Số lượng</td>
                         <td>Còn hàng</td>
                         <td>
-                            <button class="edit-button"><i class="fas fa-edit"></i> Sửa</button>
+                            <button class="edit-button" onclick="addNew()"><i class="fas fa-edit"></i> Sửa</button>
                             <button class="delete-button"><i class="fas fa-trash-alt"></i> Xóa</button>
                         </td>
                     </tr>
@@ -187,7 +187,12 @@
 
 
     </div>
-
+    <script>
+        function addNew() {
+            // Điều hướng đến trang thêm sản phẩm mới
+            window.location.href = "admin_product-details.html";
+        }
+    </script>
 </body>
 
 </html>
