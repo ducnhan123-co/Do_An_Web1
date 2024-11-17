@@ -1,0 +1,250 @@
+.main-header-login {
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.4s;
+    /* margin-right: -60px; */
+    /* border: 1px solid black; */
+    margin-right: 20px;
+
+}
+
+.main-header-login:first-child:hover {
+    color: red;
+    /* margin-right: 10px; */
+}
+
+.main-header-login i {
+    margin-left: 10px;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+.edit-category {
+    background-color: #4CAF50;
+    /* Màu nền xanh lá */
+    color: #fff;
+    /* Màu chữ trắng */
+    font-size: 15px;
+    outline: none;
+    padding: 10px 20px;
+    /* Tăng độ rộng của padding cho nút lớn hơn */
+    border-radius: 15px;
+    border: none;
+    /* Xóa viền mặc định */
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng nhẹ */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* Hiệu ứng chuyển đổi mượt */
+    margin-top: 5px;
+}
+
+/* Hiệu ứng khi rê chuột vào nút */
+.edit-category:hover {
+    background-color: #45a049;
+    /* Tông màu xanh đậm hơn khi hover */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    /* Tăng đổ bóng khi hover */
+}
+
+/* Hiệu ứng khi nhấn vào nút */
+.edit-category:active {
+    background-color: #3e8e41;
+    /* Tông màu xanh đậm hơn khi nhấn */
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+    /* Giảm đổ bóng khi nhấn */
+    transform: translateY(2px);
+    /* Hiệu ứng nhấn xuống nhẹ */
+}
+
+
+.category-control {
+    display: flex;
+    align-items: center;
+}
+
+.category-name {
+    margin-right: 10px;
+}
+
+.edit-input {
+    display: none;
+    font-size: 1em;
+    padding: 4px;
+    width: 100px;
+}
+
+.editing .category-name {
+    display: none;
+}
+
+.editing .edit-input {
+    display: inline-block;
+}
+
+/* Kiểu cho tiêu đề sản phẩm */
+.product-name-display {
+    color: rgb(226, 63, 63);
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Kiểu cho input chỉnh sửa tên sản phẩm */
+.edit-product-input {
+    display: none;
+    font-size: 24px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Kiểu cho nút sửa tên sản phẩm */
+.edit-product-name {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hiệu ứng hover cho nút */
+.edit-product-name:hover {
+    background-color: #0069d9;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Hiệu ứng khi nhấn */
+.edit-product-name:active {
+    background-color: #0056b3;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+/* Hiển thị input và ẩn tên khi đang chỉnh sửa */
+.editing .product-name-display {
+    display: none;
+}
+
+.editing .edit-product-input {
+    display: inline-block;
+}
+
+.add-to-cart {
+    padding: 6px;
+}
+
+.edit-mota {
+    background-color: #007bff;
+    color: #fff;
+    /* font-size: 15px; */
+    padding: 6px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-left: 10px;
+}
+
+.img_detail_main {
+    position: relative;
+}
+
+#main-img {
+    width: 100%;
+    /* Đảm bảo ảnh có thể thay đổi kích thước */
+
+    border-radius: 10px;
+}
+
+.upload-btn {
+    position: absolute;
+    top: -10px;
+    right: -18px;
+    background-color: #ff0000;
+    color: #fff;
+    /* font-size: 15px; */
+    padding: 6px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgb(255, 255, 255);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-left: 10px;
+}
+
+.img_detail_main img {
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.9);
+}
+
+.img_detail_extra {
+    position: relative;
+}
+
+.upload-extra-btn {
+    position: absolute;
+    top: -10px;
+    right: -18px;
+    /* background-color: #ff0000; */
+    color: #fff;
+    /* font-size: 15px; */
+    padding: 3px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgb(255, 255, 255);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* margin-left: 10px; */
+}
+
+.upload-extra-btn:nth-child(2) {
+    position: absolute;
+    top: -10px;
+    right: -128px;
+    /* background-color: #ff0000; */
+    color: #fff;
+    /* font-size: 15px; */
+    padding: 3px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgb(255, 255, 255);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* margin-left: 10px; */
+}
+
+.upload-extra-btn:last-child {
+    position: absolute;
+    top: -10px;
+    right: -238px;
+    /* background-color: #ff0000; */
+    color: #fff;
+    /* font-size: 15px; */
+    padding: 3px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgb(255, 255, 255);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* margin-left: 10px; */
+}
+
+.img_detail_extra img {
+    border-radius: 10px !important;
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}

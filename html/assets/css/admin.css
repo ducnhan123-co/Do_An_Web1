@@ -1,0 +1,850 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for body and layout */
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    /* height: 100vh; */
+    /* height: 100%; */
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 400px;
+    background-color: #ffcc4d;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 1440px; */
+    border: 3px solid rgb(255, 136, 0);
+    position: relative;
+
+}
+
+.sidebar .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.sidebar .logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.sidebar h2 {
+    color: #ff4b4b;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding-left: 0px;
+
+
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* Xếp theo cột */
+    /* flex: 1; */
+}
+
+.sidebar-menu li {
+    margin: 0px 0;
+
+}
+
+.sidebar-menu i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+
+.sidebar-menu li a {
+    color: #686666;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 15px 20px;
+    background-color: transparent;
+    border-radius: 8px;
+    border-left: solid 5px transparent;
+    margin-left: -20px;
+    width: 120%;
+    transition: background-color 0.3s ease, border-left 0.3s ease;
+}
+
+.sidebar-group li {
+    width: 100%;
+    display: block;
+    padding-left: 15px 20px;
+}
+
+
+
+/* quan trong  */
+.sidebar-group {
+    /* abosuolute sẽ làm web bị thay đổi kích thước */
+
+    position: absolute;
+    bottom: 50px;
+
+
+
+}
+
+
+
+
+
+/* Trạng thái mặc định cho mục "Trang tổng quan" */
+.tong_quan a {
+    background-color: #ffbb8e;
+    border-left: solid 5px #ff0000;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
+.sidebar-menu li a:hover {
+    background-color: #ffbb8e;
+    border-left: solid 5px #ff8800;
+    color: #fff;
+}
+
+
+/* Main content */
+.main-content {
+    flex-grow: 1;
+    background-color: #f4f4f9;
+    padding: 30px;
+    overflow-y: auto;
+    border: 2px solid rgb(179, 179, 179);
+}
+
+.main-content header {
+    background-color: #ffcc4d;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.main-content header:hover {
+    transform: translateY(-10px);
+}
+
+.main-content-title {
+    color: #ff8800;
+}
+
+
+.main-content_banner {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: #fc0202;
+}
+
+.main-content_banner_img {
+    width: 100%;
+    /* Đảm bảo ảnh bao phủ toàn bộ chiều rộng */
+    height: 100%;
+    /* Chiều cao khớp với chiều cao của thẻ cha */
+    object-fit: cover;
+    /* Đảm bảo ảnh vừa với khung mà không bị biến dạng */
+}
+
+.main-content-goal {
+    text-align: center;
+    font-size: 30px;
+    color: #ff8800;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    display: block;
+    box-shadow: 0 2px 5px rgba(255, 136, 0, 0.5);
+    /* Hiệu ứng nổi */
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.main-content-goal:hover {
+    background-color: #ffffff;
+    transform: translateY(-10px);
+}
+
+.main-content__features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.main-content__features-01,
+.main-content__features-02,
+.main-content__features-03 {
+    background-color: #ffffff;
+    border: 10px solid #ebebeb;
+    width: 100%;
+    max-width: 400px;
+    min-height: 450px;
+    overflow: hidden;
+    padding: 20px;
+    /* Tăng padding cho không gian bên trong */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Để các phần tử phân bố đều hơn */
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Thêm bóng đổ để tạo chiều sâu */
+    border-radius: 15px;
+    /* Làm bo tròn góc nhiều hơn */
+    transition: transform 0.2s;
+    /* Hiệu ứng chuyển tiếp khi hover */
+}
+
+.main-content__features-03:hover,
+.main-content__features-02:hover,
+.main-content__features-01:hover {
+    transform: translateY(-10px);
+    /* Tạo hiệu ứng nhấc lên khi hover */
+}
+
+
+.main-content__features-soluong {
+    margin: 0;
+    padding: 0;
+    /* float: left; */
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    margin-left: 250px;
+}
+
+.main-content__features-img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-content__features-content {
+    margin-top: 5px;
+}
+
+.main-content__features-title {
+    margin-bottom: 14px;
+}
+
+
+/* ===================================Admin_products=============================== */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-form {
+    margin-bottom: 40px;
+}
+
+.product-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-form h2 {
+    margin-bottom: 20px;
+}
+
+.product-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+.product-form input,
+.product-form textarea,
+.product-form select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.product-form button {
+    padding: 10px;
+    background-color: #ff8800;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-form button:hover {
+    background-color: #e07b00;
+}
+
+.product-list {
+    margin-top: 20px;
+}
+
+.product-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-list th,
+.product-list td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-list td {
+    word-wrap: break-word;
+    /* Cho phép từ dài xuống dòng */
+    max-width: 150px;
+    /* Chiều rộng tối đa của ô, có thể điều chỉnh */
+    overflow: hidden;
+    /* Ẩn nội dung tràn */
+    text-overflow: ellipsis;
+    /* Hiển thị dấu ba chấm khi nội dung tràn */
+}
+
+.product-list th {
+    background-color: #f2f2f2;
+}
+
+.product-list img {
+    max-width: 100px;
+    /* Đặt chiều rộng tối đa cho hình ảnh */
+    max-height: 100px;
+    /* Đặt chiều cao tối đa cho hình ảnh */
+    width: auto;
+    /* Để hình ảnh tự động điều chỉnh theo tỷ lệ */
+    height: auto;
+    /* Để hình ảnh tự động điều chỉnh theo tỷ lệ */
+}
+
+.edit-button,
+.delete-button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Các style trước đó vẫn giữ nguyên */
+
+/* Các style trước đó vẫn giữ nguyên */
+
+.product-search {
+    margin: 20px 0;
+}
+
+.product-search h2 {
+    margin-bottom: 18px;
+
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
+.product-search input {
+    width: 100%;
+    padding: 10px 40px;
+    /* Thêm padding bên trái để đủ chỗ cho icon */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    /* Căn chỉnh icon ở bên trái */
+    top: 50%;
+    transform: translateY(-50%);
+    /* Giữa theo chiều dọc */
+    color: #aaa;
+}
+
+.product-list table {
+    width: 100%;
+}
+
+.product-list h2 {
+    margin-bottom: 14px;
+}
+
+.product-list table td {
+    text-align: center;
+    /* Căn giữa nội dung trong các ô */
+}
+
+.product-list .edit-button,
+.product-list .delete-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #fff;
+    /* Màu chữ trắng cho các nút */
+}
+
+.product-list .edit-button {
+    color: #28a745;
+    /* Màu xanh cho nút sửa */
+}
+
+.product-list .delete-button {
+    color: #dc3545;
+    /* Màu đỏ cho nút xóa */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    /* Căn giữa các phần tử */
+    margin-top: 20px;
+    /* Khoảng cách phía trên */
+}
+
+.pagination a {
+    color: #ffa600;
+    /* Màu chữ */
+    padding: 8px 12px;
+    /* Khoảng cách bên trong */
+    margin: 0 4px;
+    /* Khoảng cách giữa các liên kết */
+    text-decoration: none;
+    /* Bỏ gạch chân */
+    border: 1px solid #ddd;
+    /* Viền cho các liên kết */
+    border-radius: 4px;
+    /* Bo góc */
+    font-weight: bold;
+}
+
+.pagination a:hover {
+    background-color: #ff5500;
+    /* Màu nền khi hover */
+    color: white;
+    /* Màu chữ khi hover */
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    /* Màu nền cho trang đang hoạt động */
+    color: white;
+    /* Màu chữ cho trang đang hoạt động */
+    border: 1px solid #007bff;
+    /* Viền cho trang đang hoạt động */
+}
+
+
+/* ===========================ADMIN khach hang =========================== */
+/* Search bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar-title {
+    margin-right: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #27ae60;
+}
+
+/* Customer table */
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.customer-table th,
+.customer-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.customer-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.customer-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.customer-table tr:hover {
+    background-color: #ddd;
+}
+
+.edit-btn,
+.lock-btn {
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #f39c12;
+}
+
+.edit-btn:hover {
+    background-color: #e67e22;
+}
+
+.lock-btn {
+    background-color: #e74c3c;
+}
+
+.lock-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Form styles */
+form {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+.customer-add-section h2,
+.customer-edit-section h2 {
+    margin-bottom: 20px;
+}
+
+
+/* ==========================ADMIN Don hang ============================= */
+/* Filter Orders */
+.filter-orders {
+    margin-bottom: 20px;
+}
+
+.filter-orders h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.filter-orders form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-orders label {
+    margin-right: 10px;
+}
+
+.filter-orders input,
+.filter-orders select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filter-orders button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-orders button:hover {
+    background-color: #218838;
+}
+
+.order-table {
+    margin-top: 20px;
+}
+
+.order-table h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.order-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.order-table th {
+    background-color: #f4f4f4;
+}
+
+.order-table .view-btn {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.order-table .view-btn:hover {
+    text-decoration: underline;
+}
+
+.order-table h2 {
+    margin-bottom: 20px;
+}
+
+
+/* ===========================Thống kê =======================  */
+/* Thống kê tình hình kinh doanh */
+.statistics-section {
+    padding: 20px;
+    background-color: #f8f9fa;
+    /* Màu nền sáng cho phần thống kê */
+    border-radius: 5px;
+    /* Bo tròn góc */
+    margin: 20px 0;
+    /* Khoảng cách trên và dưới */
+}
+
+.statistics-section h2 {
+    font-size: 24px;
+    color: #333;
+    /* Màu chữ tối */
+    margin-bottom: 20px;
+    /* Khoảng cách dưới tiêu đề */
+}
+
+.filter-statistics {
+    margin-bottom: 30px;
+    /* Khoảng cách dưới phần lọc */
+}
+
+.filter-statistics label {
+    margin-right: 10px;
+    /* Khoảng cách bên phải cho các nhãn */
+    font-weight: bold;
+    /* In đậm chữ */
+}
+
+.filter-statistics input[type="date"] {
+    padding: 5px;
+    /* Padding cho ô nhập */
+    margin-right: 15px;
+    /* Khoảng cách giữa các ô nhập */
+    border: 1px solid #ccc;
+    /* Viền xám */
+    border-radius: 4px;
+    /* Bo tròn góc */
+}
+
+.filter-statistics button {
+    padding: 5px 10px;
+    /* Padding cho nút */
+    background-color: #007bff;
+    /* Màu nền xanh */
+    color: white;
+    /* Màu chữ trắng */
+    border: none;
+    /* Không viền */
+    border-radius: 4px;
+    /* Bo tròn góc */
+    cursor: pointer;
+    /* Con trỏ chuột khi di chuột qua */
+}
+
+.filter-statistics button:hover {
+    background-color: #0056b3;
+    /* Màu nền khi di chuột qua */
+}
+
+.item-sales-statistics,
+.customer-revenue-statistics {
+    margin-bottom: 40px;
+    /* Khoảng cách dưới cho các phần thống kê */
+}
+
+.item-sales-statistics h3,
+.customer-revenue-statistics h3 {
+    font-size: 20px;
+    /* Kích thước chữ cho tiêu đề phần thống kê */
+    margin-bottom: 15px;
+    /* Khoảng cách dưới tiêu đề */
+    color: #555;
+    /* Màu chữ xám */
+}
+
+table {
+    width: 100%;
+    /* Chiều rộng 100% cho bảng */
+    border-collapse: collapse;
+    /* Gộp viền bảng */
+    text-align: center;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    /* Viền bảng màu xám nhạt */
+    padding: 10px;
+    /* Padding cho ô bảng */
+    text-align: center;
+    /* Căn trái chữ */
+}
+
+table th {
+    background-color: #f2f2f2;
+    /* Màu nền cho tiêu đề bảng */
+    color: #333;
+    /* Màu chữ tối */
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Màu nền cho hàng chẵn */
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+    /* Màu nền khi di chuột qua hàng */
+}
+
+tfoot td {
+    font-weight: bold;
+    /* In đậm cho chân bảng */
+    background-color: #e9ecef;
+    /* Màu nền nhạt cho chân bảng */
+}
+
+.sales-summary,
+.customer-summary,
+.note {
+    margin-top: 15px;
+    /* Khoảng cách trên cho các ghi chú */
+    font-size: 14px;
+    /* Kích thước chữ ghi chú */
+    color: #666;
+    /* Màu chữ ghi chú */
+}
+
+.note h4 {
+    font-weight: bold;
+    /* In đậm tiêu đề ghi chú */
+}
+
+.item-image {
+    width: 50px;
+    /* Chiều rộng của ảnh */
+    height: 50px;
+    /* Chiều cao của ảnh */
+    border-radius: 5px;
+    /* Bo tròn góc */
+    margin-right: 10px;
+    /* Khoảng cách bên phải */
+    vertical-align: middle;
+    /* Căn giữa theo chiều dọc */
+}
