@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD SGU</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/user_home.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Box Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<body>
+
+    <!-- ======================================HEADER====================================== -->
+    <header id="header">
+        <!-- ======================================TOP-HEADER=================================== -->
+        <div class="top-header">
+            <div class="cnt-block">
+                <p>+0123 456 789</p>
+                <ul class="list-unstyled list-inline">
+                    <li class="dropdown dropdown-small">
+                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                            <span class="value">USD </span><i class="fas fa-caret-down"></i>
+                        </a>
+                        <!-- <ul class="dropdown-menu">
+                            <li><a href="#">USD</a></li>
+                            <li><a href="#">INR</a></li>
+                            <li><a href="#">GBP</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="dropdown dropdown-small">
+                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
+                            <span class="value">English </span><i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- <li><a href="#">English</a></li>
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">German</a></li> -->
+                        </ul>
+                    </li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">MyCart</a></li>
+                    <li><a href="#">Checkout</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- ======================================MAIN-HEADER=================================== -->
+        <div class="main-header">
+            <div class="main-header-img">
+                <img src="./assets/imgs/logo2.png" alt="">
+                <h2>DICA <br>FOOD</h2>
+            </div>
+            <div class="main-header-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Tìm kiếm món ăn...">
+                <button class="filter-btn">
+                    Tìm Kiếm
+                </button>
+            </div>
+            <div class="main-header-login">
+                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
+                <a href="user_carts.html" class="login-link">Lập Nguyễn</a>
+                <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
+                <a href="./home.html" class="register-link">Đăng xuất</a>
+                <div class="custom-select-wrapper">
+                    <select class="dropdown-select" id="options-dropdown" onchange="navigateToPage(this)">
+                        <option value="#">Tuỳ chọn</option>
+                        <option value="./user_info.html" style="color: black;">Thông tin cá nhân</option>
+                        <option value="./user_theodoisanpham.html" style="color: black;">Theo dõi sản phẩm</option>
+                        <option value="./user_payment.html" style="color: black;">Thanh toán</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="main-header-cart">
+                <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
+                <a href="#">Giỏ hàng</a>
+            </div>
+
+
+            <!-- <span>Tuỳ chọn</span> -->
+
+
+
+        </div>
+        <!-- ======================================CATEGORY-HEADER=================================== -->
+        <div class="category-header">
+            <a href="user.html" class="category-link">TRANG CHỦ</a>
+            <a href="Monnuoc.html" class="category-link">MÓN CHAY</a>
+            <a href="#" class="category-link">MÓN MẶN</a>
+            <a href="#" class="category-link">MÓN NƯỚC</a>
+            <a href="#" class="category-link">MÓN ĂN NHẸ</a>
+            <a href="#" class="category-link">MÓN LẨU</a>
+            <a href="#" class="category-link">MÓN TRÁNG MIỆNG</a>
+        </div>
+    </header>
+
+
+    <!-- =========================================HOME=========================================  -->
+
+
+
+
+
+    <div class="cart">
+        <div class="cart-info">
+            <h2>Thông tin giỏ hàng</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên sản phẩm</th>
+                        <th>Sản phẩm</th>
+                        <th>Ngày đặt hàng</th>
+                        <th>Đơn giá (VNĐ)</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền (VNĐ)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gỏi cuốn</td>
+                        <td><img src="./assets/imgs/goicuon.jpg" alt=""></td>
+                        <td>01/11/2024</td>
+                        <td>150,000</td>
+                        <td>1</td>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <td>Cá hồi</td>
+                        <td><img src="./assets/imgs/cahoi.jpg" alt=""></td>
+                        <td>01/11/2024</td>
+                        <td>150,000</td>
+                        <td>1</td>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <td>Lẩu bò</td>
+                        <td><img src="./assets/imgs/laubo.jpg" alt=""></td>
+                        <td>01/11/2024</td>
+                        <td>150,000</td>
+                        <td>2</td>
+                        <td>300,000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="total-label">Tổng cộng:</td>
+                        <td class="total-price">600,000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="shipping-info">
+            <h2>Địa chỉ giao hàng</h2>
+            <form>
+                <input type="text" placeholder="Tên người nhận" value="Nguyễn Đăng Khoa">
+                <input type="text" placeholder="Số điện thoại" value="0908643007">
+                <input type="email" placeholder="Email" value="khoand@gmail.com">
+                <textarea placeholder="Địa chỉ giao hàng">214 Tô Hiến Thành, P.5, Q.10, HCM</textarea>
+                <button type="submit">Xác nhận đặt hàng</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content container">
+            <div class="footer-box">
+                <a href="#" class="footer-logo">
+                    <img src="assets/imgs/logo2.png" alt="">
+                </a>
+                <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-tiktok'></i></a>
+                    <a href="#"><i class='bx bxl-pinterest-alt'></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Opening Hours</h3>
+                <p><span>Mon</span>: 9:00 - 20:30</p>
+                <p><span>Tue</span>: 9:00 - 20:30</p>
+                <p><span>Wed</span>: 9:00 - 20:30</p>
+                <p><span>Thu</span>: 9:00 - 20:30</p>
+                <p><span>Fri</span>: 9:00 - 20:30</p>
+                <p><span>Sat</span>: 9:00 - 20:00</p>
+                <p><span>Sun</span>: Closed</p>
+            </div>
+            <div class="footer-box">
+                <h3>Information</h3>
+                <a href="#">About Us</a>
+                <a href="#">Blog</a>
+                <a href="#">Dica Food Gallery</a>
+                <a href="#">Dica Food Talent Chefs</a>
+                <a href="#">Testimonials</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>+9123456789</p>
+                <p>Dicafood@gmail.com</p>
+                <p>Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh </p>
+            </div>
+        </div>
+        <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
+    </div>
+    <script>
+        function navigateToPage(select) {
+            const url = select.value;
+            if (url !== "#") { // Kiểm tra để không chuyển trang khi chọn "Tuỳ chọn"
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>
+
+</html>
