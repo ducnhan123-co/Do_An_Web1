@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOOD-SGU</title>
-    <link rel="stylesheet" href="assets/css/user_home.css">
-    <!-- <link rel="stylesheet" href="assets/css/user.css"> -->
+    <link rel="stylesheet" href="/assets/css/user_home.css">
+    
+    <!-- <link rel="stylesheet" href="/assets/css/user.css"> -->
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
@@ -59,21 +60,21 @@
         <!-- ======================================MAIN-HEADER=================================== -->
         <div class="main-header">
             <div class="main-header-img">
-                <img src="./assets/imgs/logo2.png" alt="">
+                <img src="/assets/imgs/logo2.png" alt="">
                 <h2>DICA <br>FOOD</h2>
             </div>
             <div class="main-header-search" style="padding: 10px 10px;">
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Tìm kiếm món ăn..." style="font-weight: bold;">
                 <button class="filter-btn">
-                    Loc
+                    Tìm kiếm
                 </button>
             </div>
             <div class="main-header-login">
                 <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
-                <a href="user.html" class="login-link">Lập Nguyễn</a>
+                <a href="/html/user.html" class="login-link">Lập Nguyễn</a>
                 <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
-                <a href="./index.html" class="register-link">Đăng xuất</a>
+                <a href="../index.html" class="register-link">Đăng xuất</a>
                 <div class="custom-select-wrapper">
                     <select class="dropdown-select" id="options-dropdown" onchange="navigateToPage(this)">
                         <option value="#"><i class="fas fa-angle-down"></i>Tuỳ chọn</option>
@@ -85,7 +86,7 @@
             </div>
             <div class="main-header-cart">
                 <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
-                <a href="user_carts.html">Giỏ hàng</a>
+                <a href="/html/user_carts.html">Giỏ hàng</a>
             </div>
 
 
@@ -96,13 +97,13 @@
 
         <!-- ======================================CATEGORY-HEADER=================================== -->
         <div class="category-header">
-            <a href="user.html" class="category-link">TRANG CHỦ</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN CHAY</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN MẶN</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
+            <a href="/html/user.html" class="category-link">TRANG CHỦ</a>
+            <a href="/html/user_Monnuoc.html" class="category-link">MÓN CHAY</a>
+            <a href="/html/user_Monnuoc.html" class="category-link">MÓN MẶN</a>
+            <a href="/html/user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
+            <a href="/html/user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
+            <a href="/html/user_Monnuoc.html" class="category-link">MÓN LẨU</a>
+            <a href="/html/user_Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
         </div>
     </header>
 
@@ -120,36 +121,36 @@
                 <a href="#" class="btn">Order Now</a>
             </div>
             <!-- Home Image -->
-            <img src="assets/imgs/home.png" alt="" class="home-img">
+            <img src="/assets/imgs/home.png" alt="" class="home-img">
         </div>
         <!-- Home Mask Image -->
-        <img src="assets/imgs/home-mask.png" alt="" class="home-mask">
+        <img src="/assets/imgs/home-mask.png" alt="" class="home-mask">
     </section>
     <!--  Features -->
     <div class="features container">
         <div class="feature-box">
-            <img src="assets/imgs/feature-1.svg" alt="" class="feature-img">
+            <img src="/assets/imgs/feature-1.svg" alt="" class="feature-img">
             <div class="feature-text">
                 <h3>Premium Material</h3>
                 <p>Made form premium material</p>
             </div>
         </div>
         <div class="feature-box">
-            <img src="assets/imgs/feature-2.svg" alt="" class="feature-img">
+            <img src="/assets/imgs/feature-2.svg" alt="" class="feature-img">
             <div class="feature-text">
                 <h3>Fast Delivery</h3>
                 <p>Recevie goods in 45 mintes</p>
             </div>
         </div>
         <div class="feature-box">
-            <img src="assets/imgs/feature-3.svg" alt="" class="feature-img">
+            <img src="/assets/imgs/feature-3.svg" alt="" class="feature-img">
             <div class="feature-text">
                 <h3>Time Delivery</h3>
                 <p>Professional & Friendly service</p>
             </div>
         </div>
         <div class="feature-box">
-            <img src="assets/imgs/feature-4.svg" alt="" class="feature-img">
+            <img src="/assets/imgs/feature-4.svg" alt="" class="feature-img">
             <div class="feature-text">
                 <h3>Secure Payments</h3>
                 <p>Car Parking</p>
@@ -188,7 +189,7 @@
                 <label for="price-to">đến:</label>
                 <input type="number" id="price-to" placeholder="Max" class="price-input">
             </div> -->
-            <a href="user.html" class="search-button">
+            <a href="/html/user.html" class="search-button">
                 <i class='bx bx-search'></i> <!-- Search icon -->
             </a>
 
@@ -202,83 +203,83 @@
         <div class="item-content container">
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <img src="assets/imgs/Menu4.jpg" alt="">
+                <img src="/assets/imgs/Menu4.jpg" alt="">
                 <h2>Mỳ Udon</h2>
                 <div class="price">
                     <h3>From 65.000VND</h3>
                     <p>79.000VND$</p>
                 </div>
-                <a href="user_product_detail.html" class="item-btn">View Product</a>
+                <a href="/html/user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <img src="assets/imgs/Menu2.webp" alt="">
+                <img src="/assets/imgs/Menu2.webp" alt="">
                 <h2>Phở Tái</h2>
                 <div class="price">
                     <h3>From 35.000VND</h3>
                     <p>45.000VMD</p>
                 </div>
-                <a href="user_product_detail.html" class="item-btn">View Product</a>
+                <a href="/html/user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <img src="assets/imgs/Menu20.jpg" alt="">
+                <img src="/assets/imgs/Menu20.jpg" alt="">
                 <h2>Beef Burger</h2>
                 <div class="price">
                     <h3>From 3.5$</h3>
                     <p>5.0$</p>
                 </div>
-                <a href="user_product_detail.html" class="item-btn">View Product</a>
+                <a href="/html/user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <img src="assets/imgs/Menu8.jpg" alt="">
+                <img src="/assets/imgs/Menu8.jpg" alt="">
                 <h2>Raspberry Juice</h2>
                 <div class="price">
                     <h3>From 75.000VND</h3>
                     <p>85.000VND</p>
                 </div>
-                <a href="user_product_detail.html" class="item-btn">View Product</a>
+                <a href="/html/user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <img src="assets/imgs/Menu11.jpg" alt="">
+                <img src="/assets/imgs/Menu11.jpg" alt="">
                 <h2>BAILEY'S CRÈME BRULEE</h2>
                 <div class="price">
                     <h3>From 119.000VND</h3>
                     <p>149.000VND</p>
                 </div>
-                <a href="user_product_detail.html" class="item-btn">View Product</a>
+                <a href="/html/user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <img src="assets/imgs/Menu9.jpg" alt="">
+                <img src="/assets/imgs/Menu9.jpg" alt="">
                 <h2>Trà Gừng</h2>
                 <div class="price">
                     <h3>From 36.000VND</h3>
                     <p>49.000VND</p>
                 </div>
-                <a href="user_product_detail.html" class="item-btn">View Product</a>
+                <a href="/html/user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <img src="assets/imgs/sushi.jpg" alt="">
+                <img src="/assets/imgs/sushi.jpg" alt="">
                 <h2>Sushi</h2>
                 <div class="price">
                     <h3>From 55.000VND</h3>
                     <p>79.000VND</p>
                 </div>
-                <a href="user_product_detail.html" class="item-btn">View Product</a>
+                <a href="/html/user_product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
                 <span class="sale">Sale</span>
-                <img src="assets/imgs/Omurice.jpg" alt="">
+                <img src="/assets/imgs/Omurice.jpg" alt="">
                 <h2>Omurice</h2>
                 <div class="price">
                     <h3>From 89.000VND</h3>
                     <p>99.000VND</p>
                 </div>
-                <a href="user_product_detail.html" class="item-btn">View Product</a>
+                <a href="/html/user_product_detail.html" class="item-btn">View Product</a>
             </div>
         </div>
         <!-- Phân trang -->
@@ -287,23 +288,23 @@
                 <a href="#" class="pagination_item_link">1</a>
             </li>
             <li class="pagination_item">
-                <a href="user_phantrang.html" class="pagination_item_link">2</a>
+                <a href="/html/user_phantrang.html" class="pagination_item_link">2</a>
             </li>
             <li class="pagination_item">
-                <a href="user_phantrang.html" class="pagination_item_link">3</a>
+                <a href="/html/user_phantrang.html" class="pagination_item_link">3</a>
             </li>
         </ul>
     </section>
     <!-- Best Seller -->
     <section class="menu-container" id="menu-container">
         <h2 class="heading container">Best Seller</h2>
-        <img src="assets/imgs/menu-mask.png" alt="" class="menu-mask">
+        <img src="/assets/imgs/menu-mask.png" alt="" class="menu-mask">
         <div class="menu-content container">
             <div class="menu-box">
                 <!-- <h2>Burger</h2> -->
                 <div class="burgers-content">
                     <div class="m-item-box">
-                        <img src="assets/imgs/Menu11.jpg" alt="">
+                        <img src="/assets/imgs/Menu11.jpg" alt="">
                         <div class="m-item-right">
                             <div class="m-item-des">
                                 <h3>Meta Burger</h3>
@@ -316,7 +317,7 @@
                         </div>
                     </div>
                     <div class="m-item-box">
-                        <img src="assets/imgs/Omurice.jpg" alt="">
+                        <img src="/assets/imgs/Omurice.jpg" alt="">
                         <div class="m-item-right">
                             <div class="m-item-des">
                                 <h3>Spicy Meta Burger</h3>
@@ -329,7 +330,7 @@
                         </div>
                     </div>
                     <div class="m-item-box">
-                        <img src="assets/imgs/Menu20.jpg" alt="">
+                        <img src="/assets/imgs/Menu20.jpg" alt="">
                         <div class="m-item-right">
                             <div class="m-item-des">
                                 <h3>Spicy Burger</h3>
@@ -342,7 +343,7 @@
                         </div>
                     </div>
                     <div class="m-item-box">
-                        <img src="assets/imgs/Menu6.jpg" alt="">
+                        <img src="/assets/imgs/Menu6.jpg" alt="">
                         <div class="m-item-right">
                             <div class="m-item-des">
                                 <h3>Beef Burger</h3>
@@ -360,7 +361,7 @@
                 <!-- <h2>BBQ</h2> -->
                 <div class="bbq-content">
                     <div class="m-item-box">
-                        <img src="assets/imgs/Menu4.jpg" alt="">
+                        <img src="/assets/imgs/Menu4.jpg" alt="">
                         <div class="m-item-right">
                             <div class="m-item-des">
                                 <h3>Mutton BBQ</h3>
@@ -373,7 +374,7 @@
                         </div>
                     </div>
                     <div class="m-item-box">
-                        <img src="assets/imgs/Menu8.jpg" alt="">
+                        <img src="/assets/imgs/Menu8.jpg" alt="">
                         <div class="m-item-right">
                             <div class="m-item-des">
                                 <h3>Chicken BBQ</h3>
@@ -386,7 +387,7 @@
                         </div>
                     </div>
                     <div class="m-item-box">
-                        <img src="assets/imgs/Menu9.jpg" alt="">
+                        <img src="/assets/imgs/Menu9.jpg" alt="">
                         <div class="m-item-right">
                             <div class="m-item-des">
                                 <h3>Beef BBQ</h3>
@@ -399,7 +400,7 @@
                         </div>
                     </div>
                     <div class="m-item-box">
-                        <img src="assets/imgs/Menu10.webp" alt="">
+                        <img src="/assets/imgs/Menu10.webp" alt="">
                         <div class="m-item-right">
                             <div class="m-item-des">
                                 <h3>Kachi BBQ</h3>
@@ -432,7 +433,7 @@
                     extraordinary."
                 </p>
                 <div class="profile">
-                    <img src="assets/imgs/profile-5.jpg" alt="">
+                    <img src="/assets/imgs/profile-5.jpg" alt="">
                     <div class="profile-data">
                         <h3>Kiệt Võ</h3>
                         <span>IT SGU</span>
@@ -453,7 +454,7 @@
                     consciousness of the environment. Everything was delicious."
                 </p>
                 <div class="profile">
-                    <img src="assets/imgs/nguyenlap.jpg" alt="">
+                    <img src="/assets/imgs/nguyenlap.jpg" alt="">
                     <div class="profile-data">
                         <h3>Nguyễn Lập</h3>
                         <span>Art Director</span>
@@ -475,7 +476,7 @@
                     is very tasty."
                 </p>
                 <div class="profile">
-                    <img src="assets/imgs/ducnhanfun.jpg" alt="">
+                    <img src="/assets/imgs/ducnhanfun.jpg" alt="">
                     <div class="profile-data">
                         <h3>Đức Nhân</h3>
                         <span>Hair Stylist</span>
@@ -496,7 +497,7 @@
                     consciousness of the environment. Everything was delicious."
                 </p>
                 <div class="profile">
-                    <img src="assets//imgs/profile-2.png" alt="">
+                    <img src="/assets//imgs/profile-2.png" alt="">
                     <div class="profile-data">
                         <h3>Kewil JR</h3>
                         <span>Hair Stylist</span>
@@ -519,7 +520,7 @@
         <div class="footer-content container">
             <div class="footer-box">
                 <a href="#" class="footer-logo">
-                    <img src="assets/imgs/logo2.png" alt="">
+                    <img src="/assets/imgs/logo2.png" alt="">
                 </a>
                 <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
                 <div class="social">
