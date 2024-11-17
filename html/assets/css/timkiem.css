@@ -1,0 +1,182 @@
+.filter-sort-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: var(--container-color);
+  border-top: none;
+  border-bottom: none;
+  max-width: 1000px; /* Adjust as needed for your page width */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.filter-sort-container label {
+  font-weight: 500;
+  color: #666;
+}
+.select-container, .price-input, .icon-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+.select-container select {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+}
+.price-input {
+  width: 100px; /* Increase width to make the input fields wider */
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 12px; /* Optional: adjust padding for a more spacious feel */
+}
+.search-button {
+  padding: 8px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none; /* Remove underline */
+  display: flex;
+  align-items: center;
+}
+
+.icon-button {
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+}
+
+
+
+
+/* Thiết kề phần thực đơn ở phần món ăn */
+.heading {
+  width: 550px;
+  text-align: center;
+  font-size: 50px;
+  /* border: 5px solid #bd1111; */
+  padding: 20px;
+  padding-inline: 10px;
+  margin: 0 auto;
+  /* background-color: #ffa10a; Màu nền cho tiêu đề */
+  /* border-radius: 10px; */
+}
+
+
+.items {
+  margin-top: 10rem;
+  background: var(--container-color);
+}
+
+.item-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.item-box {
+  position: relative;
+  background: var(--bg-color);
+  padding: 24px 14px;
+  border-radius: 8px;
+  border: 1px solid rgb(75 18 4 / 10%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-box .sale {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  background: var(--text-color);
+  color: var(--bg-color);
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.item-box img {
+  /* max-width: 250px; */
+  height: 85%;
+  width: 100%;
+  object-position: center;
+  margin-bottom: 1.2rem;
+}
+
+
+.item-box h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--brown);
+}
+
+.item-box .price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1.2rem;
+}
+
+.item-box .price h3 {
+  color: var(--brown);
+  font-weight: 500;
+}
+
+.item-box .price p {
+  text-decoration: line-through;
+  font-weight: 500;
+  color: rgb(var(--brown), 0.8);
+}
+
+
+
+
+.item-btn {
+  background: var(--yellow-color);
+  color: var(--brown);
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.item-btn:hover {
+  background: var(--brown);
+  color: var(--bg-color);
+  transition: background 0.4s ease-in-out;
+}
+
+.edit-btn {
+  color: #ff7b00;
+  /* color: #a72e1b; */
+  font-weight: bold;
+  transition: 0.5 ease;
+}
+
+.edit-btn:hover {
+  color: var(--brown);
+  transform: scaleX(1.2);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.delete-btn {
+  color: #ff7b00;
+  font-weight: bold;
+}
+
+
+.delete-btn:hover {
+  color: var(--brown);
+  transform: scaleX(1.2);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+
