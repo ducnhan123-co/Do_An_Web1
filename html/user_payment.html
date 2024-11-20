@@ -60,15 +60,17 @@
         <!-- ======================================MAIN-HEADER=================================== -->
         <div class="main-header">
             <div class="main-header-img">
-                <img src="/assets/imgs/logo2.png" alt="">
+                <img src="assets/imgs/logo2.png" alt="">
                 <h2>DICA <br>FOOD</h2>
             </div>
             <div class="main-header-search">
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Tìm kiếm món ăn...">
-                <button class="filter-btn">
-                    Tìm Kiếm
-                </button>
+                <a href="user_home_search.html">
+                    <button class="filter-btn">
+                        Tìm Kiếm
+                    </button>
+                </a>
             </div>
             <div class="main-header-login">
                 <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
@@ -79,7 +81,7 @@
                     <select class="dropdown-select" id="options-dropdown" onchange="navigateToPage(this)">
                         <option value="#"><i class="fas fa-angle-down"></i>Tùy chọn ▼</option>
                         <option value="./user_info.html" style="color: black;">Thông tin cá nhân</option>
-                        <option value="./user_theodoisanpham.html" style="color: black;">Lịch sử mua hàng</option>
+                        <option value="./user_history.html" style="color: black;">Lịch sử mua hàng</option>
                         <option value="./user_payment.html" style="color: black;">Thanh toán</option>
                     </select>
                 </div>
@@ -110,13 +112,13 @@
     <section class="user-payment" style="background-color: antiquewhite;">
         <div class="payment-title">
             <i class="fas fa-cart-arrow-down"></i>
-            <p>Thanh toan</p>
+            <p>Thanh toán</p>
         </div>
         <hr>
 
         <div class="payment-body">
             <div class="payment-details" style="border: 1px solid #ccc;">
-                <h3>Payment Details</h3>
+                <h3>Chi tiết phương thức thanh toán</h3>
 
                 <div class="payment-details__methods">
                     <div class="payment-details__cards" tabindex="0">
@@ -126,54 +128,58 @@
                     </div>
 
                     <div class="payment-details__paypal" tabindex="0">
-                        <p>Thanh toan khi nhan hang </p>
+                        <p>Thanh toán khi nhận hàng </p>
                     </div>
 
                 </div>
 
 
-                <p class="cardholder_name">Cardholder Name</p>
-                <input type="text" id="cardholderName" placeholder="Enter Cardholder Name" required>
+                <p class="cardholder_name">Tên chủ thẻ</p>
+                <input type="text" id="cardholderName" placeholder="Nhập tên chủ thẻ" required>
 
-                <p class="card_number">Card Number</p>
-                <input type="text" id="cardNumber" placeholder="Enter Card Number" required>
+                <p class="card_number">Số thẻ</p>
+                <input type="text" id="cardNumber" placeholder="Nhập số thẻ" required>
 
-                <p class="expiration_date">Expiration Date</p>
+                <p class="expiration_date">Ngày hết hạn</p>
                 <input type="text" id="expirationDate" placeholder="MM/YY" required>
 
-                <h3>Hinh thuc giao hang </h3>
+                <h3>Hình thức giao hàng </h3>
                 <div class="payment-details__shipping">
                     <div class="payment-details__s1">
-                        <p>Hoa toc</p>
+                        <p>Nhận hàng tại cửa hàng<br>
+                            (In-store Pickup)
+                        </p>
                         <!-- <p>Hoa toc</p> -->
                     </div>
 
                     <div class="payment-details__s1">
-                        <p>Giao hang</p>
+                        <p>Giao hàng tận nơi<br>
+                            (Home Delivery)
+                        </p>
                     </div>
 
                 </div>
-                <h3>Ngay giao hang </h3>
+                <h3>Ngày giao hàng </h3>
                 <div class="payment-orderdates">
                     <div class="payment-orderdate_1" onclick="activateButton(this)">
-                        <button type="button" class="daybefore-button">Hom nay</button>
+                        <button type="button" class="daybefore-button">Hôm nay</button>
                         <p class="daybefore-text">25/10</p>
                     </div>
 
                     <div class="payment-orderdate_1" onclick="activateButton(this)">
-                        <button type="button" class="daybefore-button">Ngay mai</button>
+                        <button type="button" class="daybefore-button">Ngày mai</button>
                         <p class="daybefore-text">26/10</p>
                     </div>
 
                     <div class="payment-orderdate_1" onclick="activateButton(this)">
-                        <button type="button" class="daybefore-button">Ngay kia</button>
+                        <button type="button" class="daybefore-button">Ngày khác</button>
                         <p class="daybefore-text">27/10</p>
                     </div>
                 </div>
 
 
-                <h3>Ghi chu don hang </h3>
-                <textarea name="ghichu" id="">Nhap ghi chu</textarea>
+                <h3>Ghi chú đơn hàng </h3>
+                <textarea name="ghichu" id="">Nhập ghi chú</textarea>
 
                 <h3 class="user-info">Thông tin người nhận</h3>
                 <div class="user-info__methods">
@@ -195,11 +201,11 @@
             </div>
 
             <div class="order-summery" style="border: 1px solid #d84b4b;">
-                <h3 class="order-summery-title">Don Hang</h3>
+                <h3 class="order-summery-title">Đơn Hàng</h3>
                 <div class="order-summery-items">
                     <!-- Sản phẩm đầu tiên -->
                     <div class="order-item">
-                        <img src="./assets/imgs/bbq-3.png" alt="Green Tomatoes" class="order-item-image">
+                        <img src="assets/imgs/bbq-3.png" alt="Green Tomatoes" class="order-item-image">
                         <div class="order-item-details">
                             <p class="order-item-title">Green Tomatoes 1 Kilo</p>
                             <div class="order-item-quantity">
@@ -214,7 +220,7 @@
 
                     <!-- Sản phẩm thứ hai -->
                     <div class="order-item">
-                        <img src="./assets/imgs/bbq-2.png" alt="Cabbage" class="order-item-image">
+                        <img src="assets/imgs/bbq-2.png" alt="Cabbage" class="order-item-image">
                         <div class="order-item-details">
                             <p class="order-item-title">Cabbage 1 Pcs</p>
                             <div class="order-item-quantity">
@@ -228,7 +234,7 @@
                     </div>
 
                     <div class="order-item">
-                        <img src="./assets/imgs/bbq-3.png" alt="Cabbage" class="order-item-image">
+                        <img src="assets/imgs/bbq-3.png" alt="Cabbage" class="order-item-image">
                         <div class="order-item-details">
                             <p class="order-item-title">Cabbage 1 Pcs</p>
                             <div class="order-item-quantity">
@@ -245,14 +251,14 @@
 
                 <!-- Gift card / Discount code -->
                 <div class="order-giftcard">
-                    <input type="text" placeholder="Gift card/Discount code" class="order-giftcard-input">
-                    <button class="order-giftcard-apply">Apply</button>
+                    <input type="text" placeholder="Thẻ quà tặng / Mã giảm giá" class="order-giftcard-input">
+                    <button class="order-giftcard-apply">Áp dụng</button>
                 </div>
 
 
                 <div class="order-summary-final">
                     <div class="order-final-items">
-                        <p class="order-final-label">Tiền hàng <span class="order-items-count">7 món</span></p>
+                        <p class="order-final-label">Tiền hàng <span class="order-items-count">(7 món)</span></p>
                         <p class="order-final-price">1.280.000 đ</p>
                     </div>
                     <div class="order-final-shipping">
@@ -271,19 +277,10 @@
                     <button class="order-final-button">Đặt hàng</button>
                 </div>
 
-
-
-
-
-
-
             </div>
 
-
         </div>
-
-
-
+        
     </section>
 
 
