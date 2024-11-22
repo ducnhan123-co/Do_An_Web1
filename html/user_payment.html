@@ -1,353 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FOOD-SGU</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/payment.css">
-    <link rel="stylesheet" href="/assets/css/user_home.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/payment.css" />
+    <link rel="stylesheet" href="/assets/css/user_home.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
     <!-- Box Icon -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .payment-option {
+        padding: 15px 20px;
+        margin: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #f5f5f5; /* Màu nền mặc định */
+        color: black;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
 
-</head>
+      .payment-option:hover {
+        background-color: #ddd; /* Màu khi hover */
+      }
 
-<body class="user-payment">
+      .payment-option.active {
+        background-color: orange; /* Màu chủ đạo khi chọn */
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body class="user-payment">
     <header>
-        <!-- ======================================TOP-HEADER=================================== -->
-        <div class="top-header">
-            <div class="cnt-block">
-                <p>+0123 456 789</p>
-                <ul class="list-unstyled list-inline">
-                    <li class="dropdown dropdown-small">
-                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-                            <span class="value">USD </span><i class="fas fa-caret-down"></i>
-                        </a>
-                        <!-- <ul class="dropdown-menu">
+      <!-- ======================================TOP-HEADER=================================== -->
+      <div class="top-header">
+        <div class="cnt-block">
+          <p>+0123 456 789</p>
+          <ul class="list-unstyled list-inline">
+            <li class="dropdown dropdown-small">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-hover="dropdown"
+                data-toggle="dropdown"
+              >
+                <span class="value">USD </span><i class="fas fa-caret-down"></i>
+              </a>
+              <!-- <ul class="dropdown-menu">
                             <li><a href="#">USD</a></li>
                             <li><a href="#">INR</a></li>
                             <li><a href="#">GBP</a></li>
                         </ul> -->
-                    </li>
-                    <li class="dropdown dropdown-small">
-                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-                            <span class="value">English </span><i class="fas fa-caret-down"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- <li><a href="#">English</a></li>
+            </li>
+            <li class="dropdown dropdown-small">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-hover="dropdown"
+                data-toggle="dropdown"
+              >
+                <span class="value">English </span
+                ><i class="fas fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- <li><a href="#">English</a></li>
                             <li><a href="#">French</a></li>
                             <li><a href="#">German</a></li> -->
-                        </ul>
-                    </li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Wishlist</a></li>
-                    <li><a href="#">MyCart</a></li>
-                    <li><a href="#">Checkout</a></li>
+              </ul>
+            </li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">MyCart</a></li>
+            <li><a href="#">Checkout</a></li>
+          </ul>
+        </div>
+      </div>
 
-                </ul>
-            </div>
+      <!-- ======================================MAIN-HEADER=================================== -->
+      <div class="main-header">
+        <div class="main-header-img">
+          <img src="assets/imgs/logo2.png" alt="" />
+          <h2>DICA <br />FOOD</h2>
+        </div>
+        <div class="main-header-search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Tìm kiếm món ăn..." />
+          <a href="user_home_search.html">
+            <button class="filter-btn">Tìm Kiếm</button>
+          </a>
+        </div>
+        <div class="main-header-login">
+          <i class="fas fa-user"></i>
+          <!-- Biểu tượng người trước Đăng Nhập -->
+          <a href="user_payment.html" class="login-link">Lập Nguyễn</a>
+          <span>|</span>
+          <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
+          <a href="/index.html" class="register-link">Đăng xuất</a>
+          <div class="custom-select-wrapper-payment">
+            <select
+              class="dropdown-select"
+              id="options-dropdown"
+              onchange="navigateToPage(this)"
+            >
+              <option value="#">
+                <i class="fas fa-angle-down"></i>Tùy chọn ▼
+              </option>
+              <option value="./user_info.html" style="color: black">
+                Thông tin cá nhân
+              </option>
+              <option value="./user_history.html" style="color: black">
+                Lịch sử mua hàng
+              </option>
+              <option value="./user_payment.html" style="color: black">
+                Thanh toán
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="main-header-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <!-- Biểu tượng giỏ hàng -->
+          <a href="user_carts.html">Giỏ hàng</a>
         </div>
 
-        <!-- ======================================MAIN-HEADER=================================== -->
-        <div class="main-header">
-            <div class="main-header-img">
-                <img src="assets/imgs/logo2.png" alt="">
-                <h2>DICA <br>FOOD</h2>
-            </div>
-            <div class="main-header-search">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Tìm kiếm món ăn...">
-                <a href="user_home_search.html">
-                    <button class="filter-btn">
-                        Tìm Kiếm
-                    </button>
-                </a>
-            </div>
-            <div class="main-header-login">
-                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
-                <a href="user_payment.html" class="login-link">Lập Nguyễn</a>
-                <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
-                <a href="/index.html" class="register-link">Đăng xuất</a>
-                <div class="custom-select-wrapper-payment">
-                    <select class="dropdown-select" id="options-dropdown" onchange="navigateToPage(this)">
-                        <option value="#"><i class="fas fa-angle-down"></i>Tùy chọn ▼</option>
-                        <option value="./user_info.html" style="color: black;">Thông tin cá nhân</option>
-                        <option value="./user_history.html" style="color: black;">Lịch sử mua hàng</option>
-                        <option value="./user_payment.html" style="color: black;">Thanh toán</option>
-                    </select>
-                </div>
-            </div>
-            <div class="main-header-cart">
-                <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
-                <a href="user_carts.html">Giỏ hàng</a>
-            </div>
-
-
-            <!-- <span>Tuỳ chọn</span> -->
-
-
-
-        </div>
-        <!-- ======================================CATEGORY-HEADER=================================== -->
-        <div class="category-header">
-            <a href="user.html" class="category-link">TRANG CHỦ</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN CHAY</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN MẶN</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
-        </div>
+        <!-- <span>Tuỳ chọn</span> -->
+      </div>
+      <!-- ======================================CATEGORY-HEADER=================================== -->
+      <div class="category-header">
+        <a href="user.html" class="category-link">TRANG CHỦ</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN CHAY</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN MẶN</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
+      </div>
     </header>
 
-    <section class="user-payment" style="background-color: antiquewhite;">
-        <div class="payment-title">
-            <i class="fas fa-cart-arrow-down"></i>
-            <p>Thanh toán</p>
-        </div>
-        <hr>
+    <section class="user-payment" style="background-color: antiquewhite">
+      <div class="payment-title">
+        <i class="fas fa-cart-arrow-down"></i>
+        <p>Thanh toán</p>
+      </div>
+      <hr />
 
-        <div class="payment-body">
-            <div class="payment-details" style="border: 1px solid #ccc;">
-                <h3>Chi tiết phương thức thanh toán</h3>
+      <div class="payment-body">
+        <div class="payment-details" style="border: 1px solid #ccc">
+          <h3>Chi tiết phương thức thanh toán</h3>
 
-                <div class="payment-details__methods">
-                    <div class="payment-details__cards" tabindex="0">
-                        <p>Chuyển Khoản</p>
-
-
-                    </div>
-
-                    <div class="payment-details__paypal" tabindex="0">
-                        <p>Thanh toán khi nhận hàng </p>
-                    </div>
-
-                </div>
-
-
-                <p class="cardholder_name">Tên chủ thẻ</p>
-                <input type="text" id="cardholderName" placeholder="Nhập tên chủ thẻ" required>
-
-                <p class="card_number">Số thẻ</p>
-                <input type="text" id="cardNumber" placeholder="Nhập số thẻ" required>
-
-                <p class="expiration_date">Ngày hết hạn</p>
-                <input type="text" id="expirationDate" placeholder="MM/YY" required>
-
-                <h3>Hình thức giao hàng </h3>
-                <div class="payment-details__shipping">
-                    <div class="payment-details__s1">
-                        <p>Nhận hàng tại cửa hàng<br>
-                            (In-store Pickup)
-                        </p>
-                        <!-- <p>Hoa toc</p> -->
-                    </div>
-
-                    <div class="payment-details__s1">
-                        <p>Giao hàng tận nơi<br>
-                            (Home Delivery)
-                        </p>
-                    </div>
-
-                </div>
-                <h3>Ngày giao hàng </h3>
-                <div class="payment-orderdates">
-                    <div class="payment-orderdate_1" onclick="activateButton(this)">
-                        <button type="button" class="daybefore-button">Hôm nay</button>
-                        <p class="daybefore-text">25/10</p>
-                    </div>
-
-                    <div class="payment-orderdate_1" onclick="activateButton(this)">
-                        <button type="button" class="daybefore-button">Ngày mai</button>
-                        <p class="daybefore-text">26/10</p>
-                    </div>
-
-                    <div class="payment-orderdate_1" onclick="activateButton(this)">
-                        <button type="button" class="daybefore-button">Ngày khác</button>
-                        <p class="daybefore-text">27/10</p>
-                    </div>
-                </div>
-
-
-                <h3>Ghi chú đơn hàng </h3>
-                <textarea name="ghichu" id="">Nhập ghi chú</textarea>
-
-                <h3 class="user-info">Thông tin người nhận</h3>
-                <div class="user-info__methods">
-                    <div class="input-group">
-                        <label for="recipient-name">Tên người nhận:</label>
-                        <input type="text" id="recipient-name" name="recipient-name" placeholder="Nhập tên người nhận">
-                    </div>
-                    <div class="input-group">
-                        <label for="recipient-phone">Số điện thoại:</label>
-                        <input type="text" id="recipient-phone" name="recipient-phone" placeholder="Nhập số điện thoại">
-                    </div>
-                    <div class="input-group">
-                        <label for="recipient-address">Địa chỉ nhận hàng:</label>
-                        <input type="text" id="recipient-address" name="recipient-address"
-                            placeholder="Nhập địa chỉ nhận hàng">
-                    </div>
-                </div>
-
+          <div class="payment-details__methods">
+            <div class="payment-details__cards" tabindex="0">
+              <p>Chuyển Khoản</p>
             </div>
 
-            <div class="order-summery" style="border: 1px solid #d84b4b;">
-                <h3 class="order-summery-title">Đơn Hàng</h3>
-                <div class="order-summery-items">
-                    <!-- Sản phẩm đầu tiên -->
-                    <div class="order-item">
-                        <img src="assets/imgs/bbq-3.png" alt="Green Tomatoes" class="order-item-image">
-                        <div class="order-item-details">
-                            <p class="order-item-title">Green Tomatoes 1 Kilo</p>
-                            <div class="order-item-quantity">
-                                <button class="order-item-decrease">-</button>
-                                <input type="text" value="6" class="order-item-input">
-                                <button class="order-item-increase">+</button>
-                            </div>
-                            <p class="order-item-price">$ 1.25</p>
-                        </div>
-                        <button class="order-item-remove">X</button>
-                    </div>
+            <div class="payment-details__paypal" tabindex="0">
+              <p>Thanh toán khi nhận hàng</p>
+            </div>
+          </div>
 
-                    <!-- Sản phẩm thứ hai -->
-                    <div class="order-item">
-                        <img src="assets/imgs/bbq-2.png" alt="Cabbage" class="order-item-image">
-                        <div class="order-item-details">
-                            <p class="order-item-title">Cabbage 1 Pcs</p>
-                            <div class="order-item-quantity">
-                                <button class="order-item-decrease">-</button>
-                                <input type="text" value="1" class="order-item-input">
-                                <button class="order-item-increase">+</button>
-                            </div>
-                            <p class="order-item-price">$ 0.80</p>
-                        </div>
-                        <button class="order-item-remove">X</button>
-                    </div>
+          <p class="cardholder_name">Tên chủ thẻ</p>
+          <input
+            type="text"
+            id="cardholderName"
+            placeholder="Nhập tên chủ thẻ"
+            required
+          />
 
-                    <div class="order-item">
-                        <img src="assets/imgs/bbq-3.png" alt="Cabbage" class="order-item-image">
-                        <div class="order-item-details">
-                            <p class="order-item-title">Cabbage 1 Pcs</p>
-                            <div class="order-item-quantity">
-                                <button class="order-item-decrease">-</button>
-                                <input type="text" value="5" class="order-item-input">
-                                <button class="order-item-increase">+</button>
-                            </div>
-                            <p class="order-item-price">$ 0.80</p>
-                        </div>
-                        <button class="order-item-remove">X</button>
-                    </div>
-                </div>
-                <hr class="order-summery-hr">
+          <p class="card_number">Số thẻ</p>
+          <input
+            type="text"
+            id="cardNumber"
+            placeholder="Nhập số thẻ"
+            required
+          />
 
-                <!-- Gift card / Discount code -->
-                <div class="order-giftcard">
-                    <input type="text" placeholder="Thẻ quà tặng / Mã giảm giá" class="order-giftcard-input">
-                    <button class="order-giftcard-apply">Áp dụng</button>
-                </div>
+          <p class="expiration_date">Ngày hết hạn</p>
+          <input type="text" id="expirationDate" placeholder="MM/YY" required />
 
+          <h3>Hình thức giao hàng</h3>
+          <div
+            class="payment-details__shipping"
+            style="margin-left: 40px; margin-right: 40px"
+          >
+            <button
+              class="payment-option"
+              id="inStorePickup"
+              onclick="selectOption('inStorePickup')"
+            >
+              Nhận hàng tại cửa hàng<br />
+              (In-store Pickup)
+            </button>
 
-                <div class="order-summary-final">
-                    <div class="order-final-items">
-                        <p class="order-final-label">Tiền hàng <span class="order-items-count">(7 món)</span></p>
-                        <p class="order-final-price">1.280.000 đ</p>
-                    </div>
-                    <div class="order-final-shipping">
-                        <p class="order-final-label">Phí vận chuyển</p>
-                        <p class="order-final-price">30.000 đ</p>
-                    </div>
-                    <p class="order-final-agreement">
-                        Bằng việc bấm vào nút <strong>“Đặt hàng”</strong>, tôi đồng ý với <a href="#">chính sách hoạt
-                            động</a> của chúng tôi.
-                    </p>
-                    <hr class="order-final-divider">
-                    <div class="order-final-total">
-                        <p class="order-final-total-label">Tổng tiền</p>
-                        <p class="order-final-total-price">1.310.000 đ</p>
-                    </div>
-                    <button class="order-final-button">Đặt hàng</button>
-                </div>
+            <button
+              class="payment-option"
+              id="homeDelivery"
+              onclick="selectOption('homeDelivery')"
+            >
+              Giao hàng tận nơi<br />
+              (Home Delivery)
+            </button>
+          </div>
 
+          <h3>Ngày giao hàng</h3>
+          <div class="payment-orderdates">
+            <div class="payment-orderdate_1" onclick="activateButton(this)">
+              <button type="button" class="daybefore-button">Hôm nay</button>
+              <p class="daybefore-text">25/10</p>
             </div>
 
+            <div class="payment-orderdate_1" onclick="activateButton(this)">
+              <button type="button" class="daybefore-button">Ngày mai</button>
+              <p class="daybefore-text">26/10</p>
+            </div>
+
+            <div class="payment-orderdate_1" onclick="activateButton(this)">
+              <button type="button" class="daybefore-button">Ngày khác</button>
+              <p class="daybefore-text">27/10</p>
+            </div>
+          </div>
+
+          <h3>Ghi chú đơn hàng</h3>
+          <textarea name="ghichu" id="">Nhập ghi chú</textarea>
+
+          <h3 class="user-info">Thông tin người nhận</h3>
+          <div class="user-info__methods">
+            <div class="input-group">
+              <label for="recipient-name">Tên người nhận:</label>
+              <input
+                type="text"
+                id="recipient-name"
+                name="recipient-name"
+                placeholder="Nhập tên người nhận"
+              />
+            </div>
+            <div class="input-group">
+              <label for="recipient-phone">Số điện thoại:</label>
+              <input
+                type="text"
+                id="recipient-phone"
+                name="recipient-phone"
+                placeholder="Nhập số điện thoại"
+              />
+            </div>
+            <div class="input-group">
+              <label for="recipient-address">Địa chỉ nhận hàng:</label>
+              <input
+                type="text"
+                id="recipient-address"
+                name="recipient-address"
+                placeholder="Nhập địa chỉ nhận hàng"
+              />
+            </div>
+          </div>
         </div>
-        
+
+        <div class="order-summery" style="border: 1px solid #d84b4b">
+          <h3 class="order-summery-title">Đơn Hàng</h3>
+          <div class="order-summery-items">
+            <!-- Sản phẩm đầu tiên -->
+            <div class="order-item">
+              <img
+                src="assets/imgs/bbq-3.png"
+                alt="Green Tomatoes"
+                class="order-item-image"
+              />
+              <div class="order-item-details">
+                <p class="order-item-title">Green Tomatoes 1 Kilo</p>
+                <div class="order-item-quantity">
+                  <button class="order-item-decrease">-</button>
+                  <input type="text" value="6" class="order-item-input" />
+                  <button class="order-item-increase">+</button>
+                </div>
+                <p class="order-item-price">$ 1.25</p>
+              </div>
+              <button class="order-item-remove">X</button>
+            </div>
+
+            <!-- Sản phẩm thứ hai -->
+            <div class="order-item">
+              <img
+                src="assets/imgs/bbq-2.png"
+                alt="Cabbage"
+                class="order-item-image"
+              />
+              <div class="order-item-details">
+                <p class="order-item-title">Cabbage 1 Pcs</p>
+                <div class="order-item-quantity">
+                  <button class="order-item-decrease">-</button>
+                  <input type="text" value="1" class="order-item-input" />
+                  <button class="order-item-increase">+</button>
+                </div>
+                <p class="order-item-price">$ 0.80</p>
+              </div>
+              <button class="order-item-remove">X</button>
+            </div>
+
+            <div class="order-item">
+              <img
+                src="assets/imgs/bbq-3.png"
+                alt="Cabbage"
+                class="order-item-image"
+              />
+              <div class="order-item-details">
+                <p class="order-item-title">Cabbage 1 Pcs</p>
+                <div class="order-item-quantity">
+                  <button class="order-item-decrease">-</button>
+                  <input type="text" value="5" class="order-item-input" />
+                  <button class="order-item-increase">+</button>
+                </div>
+                <p class="order-item-price">$ 0.80</p>
+              </div>
+              <button class="order-item-remove">X</button>
+            </div>
+          </div>
+          <hr class="order-summery-hr" />
+
+          <!-- Gift card / Discount code -->
+          <div class="order-giftcard">
+            <input
+              type="text"
+              placeholder="Thẻ quà tặng / Mã giảm giá"
+              class="order-giftcard-input"
+            />
+            <button class="order-giftcard-apply">Áp dụng</button>
+          </div>
+
+          <div class="order-summary-final">
+            <div class="order-final-items">
+              <p class="order-final-label">
+                Tiền hàng <span class="order-items-count">(7 món)</span>
+              </p>
+              <p class="order-final-price">1.280.000 đ</p>
+            </div>
+            <div class="order-final-shipping">
+              <p class="order-final-label">Phí vận chuyển</p>
+              <p class="order-final-price">30.000 đ</p>
+            </div>
+            <p class="order-final-agreement">
+              Bằng việc bấm vào nút <strong>“Đặt hàng”</strong>, tôi đồng ý với
+              <a href="#">chính sách hoạt động</a> của chúng tôi.
+            </p>
+            <hr class="order-final-divider" />
+            <div class="order-final-total">
+              <p class="order-final-total-label">Tổng tiền</p>
+              <p class="order-final-total-price">1.310.000 đ</p>
+            </div>
+            <button class="order-final-button" onclick="handleOrder()">
+              Đặt hàng
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
-
 
     <!-- Footer -->
     <div class="footer">
-        <div class="footer-content container">
-            <div class="footer-box">
-                <a href="#" class="footer-logo">
-                    <img src="assets/imgs/logo2.png" alt="">
-                </a>
-                <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
-                <div class="social">
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-pinterest-alt'></i></a>
-                </div>
-            </div>
-            <div class="footer-box">
-                <h3>Opening Hours</h3>
-                <p><span>Mon</span>: 9:00 - 20:30</p>
-                <p><span>Tue</span>: 9:00 - 20:30</p>
-                <p><span>Wed</span>: 9:00 - 20:30</p>
-                <p><span>Thu</span>: 9:00 - 20:30</p>
-                <p><span>Fri</span>: 9:00 - 20:30</p>
-                <p><span>Sat</span>: 9:00 - 20:00</p>
-                <p><span>Sun</span>: Closed</p>
-            </div>
-            <div class="footer-box">
-                <h3>Information</h3>
-                <a href="#">About Us</a>
-                <a href="#">Blog</a>
-                <a href="#">Dica Food Gallery</a>
-                <a href="#">Dica Food Talent Chefs</a>
-                <a href="#">Testimonials</a>
-            </div>
-            <div class="footer-box">
-                <h3>Contact Us</h3>
-                <p>+9123456789</p>
-                <p>Dicafood@gmail.com</p>
-                <p>Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh </p>
-            </div>
+      <div class="footer-content container">
+        <div class="footer-box">
+          <a href="#" class="footer-logo">
+            <img src="assets/imgs/logo2.png" alt="" />
+          </a>
+          <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
+          <div class="social">
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+            <a href="#"><i class="bx bxl-pinterest-alt"></i></a>
+          </div>
         </div>
-        <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
+        <div class="footer-box">
+          <h3>Opening Hours</h3>
+          <p><span>Mon</span>: 9:00 - 20:30</p>
+          <p><span>Tue</span>: 9:00 - 20:30</p>
+          <p><span>Wed</span>: 9:00 - 20:30</p>
+          <p><span>Thu</span>: 9:00 - 20:30</p>
+          <p><span>Fri</span>: 9:00 - 20:30</p>
+          <p><span>Sat</span>: 9:00 - 20:00</p>
+          <p><span>Sun</span>: Closed</p>
+        </div>
+        <div class="footer-box">
+          <h3>Information</h3>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Dica Food Gallery</a>
+          <a href="#">Dica Food Talent Chefs</a>
+          <a href="#">Testimonials</a>
+        </div>
+        <div class="footer-box">
+          <h3>Contact Us</h3>
+          <p>+9123456789</p>
+          <p>Dicafood@gmail.com</p>
+          <p>
+            Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh
+          </p>
+        </div>
+      </div>
+      <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
 
-
     <script>
-        function activateButton(element) {
-            // Lấy tất cả các phần tử có lớp "payment-orderdate_1"
-            const buttons = document.querySelectorAll('.payment-orderdate_1');
+      function activateButton(element) {
+        // Lấy tất cả các phần tử có lớp "payment-orderdate_1"
+        const buttons = document.querySelectorAll(".payment-orderdate_1");
 
-            // Loại bỏ lớp "active" khỏi tất cả các phần tử
-            buttons.forEach(button => button.classList.remove('active'));
+        // Loại bỏ lớp "active" khỏi tất cả các phần tử
+        buttons.forEach((button) => button.classList.remove("active"));
 
-            // Thêm lớp "active" vào phần tử được nhấn
-            element.classList.add('active');
+        // Thêm lớp "active" vào phần tử được nhấn
+        element.classList.add("active");
+      }
+
+      function navigateToPage(select) {
+        const selectedValue = select.value;
+        if (selectedValue !== "#") {
+          window.location.href = selectedValue; // Điều hướng đến trang đã chọn
         }
+      }
 
-        function navigateToPage(select) {
-            const selectedValue = select.value;
-            if (selectedValue !== "#") {
-                window.location.href = selectedValue; // Điều hướng đến trang đã chọn
-            }
+      function handleOrder() {
+        // Hiển thị thông báo xác nhận đặt hàng
+        const confirmOrder = confirm("Bạn có chắc chắn muốn đặt hàng không?");
+
+        if (confirmOrder) {
+          // Hiển thị thông báo cảm ơn
+          alert("Cảm ơn bạn đã đặt hàng! Bạn sẽ được chuyển về menu chính.");
+
+          // Chuyển hướng về menu chính
+          window.location.href = "/html/user_thank.html"; // Đường dẫn đến menu chính
         }
+      }
+
+      function selectOption(optionId) {
+        // Xóa trạng thái active của tất cả các nút
+        const buttons = document.querySelectorAll(".payment-option");
+        buttons.forEach((button) => button.classList.remove("active"));
+
+        // Thêm trạng thái active vào nút được chọn
+        const selectedButton = document.getElementById(optionId);
+        selectedButton.classList.add("active");
+      }
     </script>
-
-</body>
-
+  </body>
 </html>

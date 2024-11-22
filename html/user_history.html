@@ -1,234 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order-History</title>
     <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
-    <link rel="stylesheet" href="assets/css/user_home.css">
-    <link rel="stylesheet" href="assets/css/user.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/user_home.css" />
+    <link rel="stylesheet" href="assets/css/user.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <!-- Box Icon -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- <a href="./user_info.html">Quay lai trang user_info</a> -->
     <header>
-        <!-- ======================================TOP-HEADER=================================== -->
-        <div class="top-header">
-            <div class="cnt-block">
-                <p>+0123 456 789</p>
-                <ul class="list-unstyled list-inline">
-                    <li class="dropdown dropdown-small">
-                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-                            <span class="value">USD </span><i class="fas fa-caret-down"></i>
-                        </a>
-                        <!-- <ul class="dropdown-menu">
+      <!-- ======================================TOP-HEADER=================================== -->
+      <div class="top-header">
+        <div class="cnt-block">
+          <p>+0123 456 789</p>
+          <ul class="list-unstyled list-inline">
+            <li class="dropdown dropdown-small">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-hover="dropdown"
+                data-toggle="dropdown"
+              >
+                <span class="value">USD </span><i class="fas fa-caret-down"></i>
+              </a>
+              <!-- <ul class="dropdown-menu">
                             <li><a href="#">USD</a></li>
                             <li><a href="#">INR</a></li>
                             <li><a href="#">GBP</a></li>
                         </ul> -->
-                    </li>
-                    <li class="dropdown dropdown-small">
-                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-                            <span class="value">English </span><i class="fas fa-caret-down"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- <li><a href="#">English</a></li>
+            </li>
+            <li class="dropdown dropdown-small">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-hover="dropdown"
+                data-toggle="dropdown"
+              >
+                <span class="value">English </span
+                ><i class="fas fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- <li><a href="#">English</a></li>
                             <li><a href="#">French</a></li>
                             <li><a href="#">German</a></li> -->
-                        </ul>
-                    </li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Wishlist</a></li>
-                    <li><a href="#">MyCart</a></li>
-                    <li><a href="#">Checkout</a></li>
-
-                </ul>
-            </div>
+              </ul>
+            </li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">MyCart</a></li>
+            <li><a href="#">Checkout</a></li>
+          </ul>
         </div>
+      </div>
 
-        <!-- ======================================MAIN-HEADER=================================== -->
-        <div class="main-header">
-            <div class="main-header-img">
-                <img src="assets/imgs/logo2.png" alt="">
-                <h2>DICA <br>FOOD</h2>
-            </div>
-            <div class="main-header-search">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Tìm kiếm món ăn...">
-                <a href="user_home_search.html">
-                    <button class="filter-btn">
-                        Tìm Kiếm
-                    </button>
-                </a>
-            </div>
-            <div class="main-header-login">
-                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
-                <a href="user_theodoisanpham.html" class="login-link">Lập Nguyễn</a>
-                <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
-                <a href="/index.html" class="register-link">Đăng xuất</a>
-                <div class="custom-select-wrapper-user-info">
-                    <select class="dropdown-select-user-info" id="options-dropdown" onchange="navigateToPage(this)">
-                        <option value="#"><i class="fas fa-angle-down"></i>Tuỳ chọn ▼</option>
-                        <option value="./user_info.html" style="color: black;">Thông tin cá nhân</option>
-                        <option value="./user_history.html" style="color: black;">Lịch sử mua hàng</option>
-                        <option value="./user_payment.html" style="color: black;">Thanh toán</option>
-                    </select>
-                </div>
-            </div>
-            <div class="main-header-cart">
-                <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
-                <a href="user_carts.html">Giỏ hàng</a>
-            </div>
-
+      <!-- ======================================MAIN-HEADER=================================== -->
+      <div class="main-header">
+        <div class="main-header-img">
+          <img src="assets/imgs/logo2.png" alt="" />
+          <h2>DICA <br />FOOD</h2>
         </div>
-        <!-- ======================================CATEGORY-HEADER=================================== -->
-        <div class="category-header">
-            <a href="user.html" class="category-link">TRANG CHỦ</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN CHAY</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN MẶN</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
+        <div class="main-header-search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Tìm kiếm món ăn..." />
+          <a href="user_home_search.html">
+            <button class="filter-btn">Tìm Kiếm</button>
+          </a>
         </div>
+        <div class="main-header-login">
+          <i class="fas fa-user"></i>
+          <!-- Biểu tượng người trước Đăng Nhập -->
+          <a href="user_theodoisanpham.html" class="login-link">Lập Nguyễn</a>
+          <span>|</span>
+          <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
+          <a href="/index.html" class="register-link">Đăng xuất</a>
+          <div class="custom-select-wrapper-user-info">
+            <select
+              class="dropdown-select-user-info"
+              id="options-dropdown"
+              onchange="navigateToPage(this)"
+            >
+              <option value="#">
+                <i class="fas fa-angle-down"></i>Tuỳ chọn ▼
+              </option>
+              <option value="./user_info.html" style="color: black">
+                Thông tin cá nhân
+              </option>
+              <option value="./user_history.html" style="color: black">
+                Lịch sử mua hàng
+              </option>
+              <option value="./user_payment.html" style="color: black">
+                Thanh toán
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="main-header-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <!-- Biểu tượng giỏ hàng -->
+          <a href="user_carts.html">Giỏ hàng</a>
+        </div>
+      </div>
+      <!-- ======================================CATEGORY-HEADER=================================== -->
+      <div class="category-header">
+        <a href="user.html" class="category-link">TRANG CHỦ</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN CHAY</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN MẶN</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
+      </div>
     </header>
 
     <!-- ======================================SECTION TRACKING=================================== -->
     <section class="order-history">
-        <div class="order-history-container">
-            <h2>Lịch sử mua hàng</h2>
-            <table class="history-table">
-                <div class="filters">
-                    <div class="filter-group">
-                        <label for="filter-search">Tìm kiếm đơn hàng: </label>
-                        <input class="search-input" type="search" id="filter-search">
-                        <button class="table-btn" onclick="searchOrder()">Tìm kiếm</button> <!-- Nút tìm kiếm -->
-                    </div>
-                    <span>|</span>
-                    <div class="filter-group">
-                        <label for="filter-date">Lọc theo ngày: </label>
-                        <input class="date-input" type="date" id="filter-date" onchange="filterTable()">
-                        <button class="table-btn" onclick="filterTable()">Lọc</button> <!-- Nút lọc theo ngày -->
-                    </div>
-                    <span>|</span>
-                    <div class="filter-group">
-                        <label for="filter-product">Lọc theo mã đơn hàng: </label>
-                        <input class="product-input" type="text" id="filter-product" onkeyup="filterTable()">
-                        <button class="table-btn" onclick="filterTable()">Lọc</button> <!-- Nút lọc theo mã đơn hàng -->
-                    </div>
-                </div>
+      <div class="order-history-container">
+        <h2>Lịch sử mua hàng</h2>
+        <table class="history-table">
+          <div class="filters">
+            <div class="filter-group">
+              <label for="filter-search">Tìm kiếm đơn hàng: </label>
+              <input class="search-input" type="search" id="filter-search" />
+              <button class="table-btn" onclick="searchOrder()">
+                Tìm kiếm
+              </button>
+              <!-- Nút tìm kiếm -->
+            </div>
+            <span>|</span>
+            <div class="filter-group">
+              <label for="filter-date">Lọc theo ngày: </label>
+              <input
+                class="date-input"
+                type="date"
+                id="filter-date"
+                onchange="filterTable()"
+              />
+              <button class="table-btn" onclick="filterTable()">Lọc</button>
+              <!-- Nút lọc theo ngày -->
+            </div>
+            <span>|</span>
+            <div class="filter-group">
+              <label for="filter-product">Lọc theo mã đơn hàng: </label>
+              <input
+                class="product-input"
+                type="text"
+                id="filter-product"
+                onkeyup="filterTable()"
+              />
+              <button class="table-btn" onclick="filterTable()">Lọc</button>
+              <!-- Nút lọc theo mã đơn hàng -->
+            </div>
+          </div>
 
-                <thead>
-                    <tr>
-                        <th>Mã đơn hàng</th>
-                        <th>Ngày đặt hàng</th>
-                        <th>Tình trạng giao hàng</th>
-                        <th>Ngày giao hàng</th>
-                        <th>Xem chi tiết</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>DCF312456</td>
-                        <td>2024-25-10</td>
-                        <td>Đang giao</td>
-                        <td>...</td>
-                        <td><a href="user_carts.html" class="view-detail-link">View</a></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>DCF312016</td>
-                        <td>2024-01-01</td>
-                        <td>Đã giao</td>
-                        <td>2024-01-03</td>
-                        <td><a href="user_carts.html" class="view-detail-link">View</a></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>DCF312555</td>
-                        <td>2024-01-10</td>
-                        <td>Đã giao </td>
-                        <td>2024-02-10</td>
-                        <td><a href="user_carts.html" class="view-detail-link">View</a></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>DCF312416</td>
-                        <td>2024-09-09</td>
-                        <td>Đã hủy giao hàng</td>
-                        <td>X</td>
-                        <td><a href="user_carts.html" class="view-detail-link">View</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+          <thead>
+            <tr>
+              <th>Mã đơn hàng</th>
+              <th>Ngày đặt hàng</th>
+              <th>Tình trạng giao hàng</th>
+              <th>Ngày giao hàng</th>
+              <th>Xem chi tiết</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DCF312456</td>
+              <td>2024-25-10</td>
+              <td>Đang giao</td>
+              <td>...</td>
+              <td>
+                <a href="user_carts.html" class="view-detail-link">View</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>DCF312016</td>
+              <td>2024-01-01</td>
+              <td>Đã giao</td>
+              <td>2024-01-03</td>
+              <td>
+                <a href="user_carts.html" class="view-detail-link">View</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>DCF312555</td>
+              <td>2024-01-10</td>
+              <td>Đã giao</td>
+              <td>2024-02-10</td>
+              <td>
+                <a href="user_carts.html" class="view-detail-link">View</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>DCF312416</td>
+              <td>2024-09-09</td>
+              <td>Đang giao</td>
+              <td>2024-25-10</td>
+              <td>
+                <a href="user_carts.html" class="view-detail-link">View</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>DCF312416</td>
+              <td>2024-09-09</td>
+              <td>Đang giao</td>
+              <td>X</td>
+              <td>
+                <a href="user_carts.html" class="view-detail-link">View</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>DCF312416</td>
+              <td>2024-09-09</td>
+              <td>Đã hủy giao hàng</td>
+              <td>X</td>
+              <td>
+                <a href="user_carts.html" class="view-detail-link">View</a>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>DCF312416</td>
+              <td>2024-09-09</td>
+              <td>Đã hủy giao hàng</td>
+              <td>X</td>
+              <td>
+                <a href="user_carts.html" class="view-detail-link">View</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <!-- Footer -->
     <div class="footer">
-        <div class="footer-content container">
-            <div class="footer-box">
-                <a href="#" class="footer-logo">
-                    <img src="/assets/imgs/logo2.png" alt="">
-                </a>
-                <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
-                <div class="social">
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-pinterest-alt'></i></a>
-                </div>
-            </div>
-            <div class="footer-box">
-                <h3>Opening Hours</h3>
-                <p><span>Mon</span>: 9:00 - 20:30</p>
-                <p><span>Tue</span>: 9:00 - 20:30</p>
-                <p><span>Wed</span>: 9:00 - 20:30</p>
-                <p><span>Thu</span>: 9:00 - 20:30</p>
-                <p><span>Fri</span>: 9:00 - 20:30</p>
-                <p><span>Sat</span>: 9:00 - 20:00</p>
-                <p><span>Sun</span>: Closed</p>
-            </div>
-            <div class="footer-box">
-                <h3>Information</h3>
-                <a href="#">About Us</a>
-                <a href="#">Blog</a>
-                <a href="#">Dica Food Gallery</a>
-                <a href="#">Dica Food Talent Chefs</a>
-                <a href="#">Testimonials</a>
-            </div>
-            <div class="footer-box">
-                <h3>Contact Us</h3>
-                <p>+9123456789</p>
-                <p>Dicafood@gmail.com</p>
-                <p>Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh </p>
-            </div>
+      <div class="footer-content container">
+        <div class="footer-box">
+          <a href="#" class="footer-logo">
+            <img src="/assets/imgs/logo2.png" alt="" />
+          </a>
+          <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
+          <div class="social">
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+            <a href="#"><i class="bx bxl-pinterest-alt"></i></a>
+          </div>
         </div>
-        <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
+        <div class="footer-box">
+          <h3>Opening Hours</h3>
+          <p><span>Mon</span>: 9:00 - 20:30</p>
+          <p><span>Tue</span>: 9:00 - 20:30</p>
+          <p><span>Wed</span>: 9:00 - 20:30</p>
+          <p><span>Thu</span>: 9:00 - 20:30</p>
+          <p><span>Fri</span>: 9:00 - 20:30</p>
+          <p><span>Sat</span>: 9:00 - 20:00</p>
+          <p><span>Sun</span>: Closed</p>
+        </div>
+        <div class="footer-box">
+          <h3>Information</h3>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Dica Food Gallery</a>
+          <a href="#">Dica Food Talent Chefs</a>
+          <a href="#">Testimonials</a>
+        </div>
+        <div class="footer-box">
+          <h3>Contact Us</h3>
+          <p>+9123456789</p>
+          <p>Dicafood@gmail.com</p>
+          <p>
+            Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh
+          </p>
+        </div>
+      </div>
+      <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
 
     <script>
-        function navigateToPage(select) {
-            const selectedValue = select.value;
-            if (selectedValue !== "#") {
-                window.location.href = selectedValue; // Điều hướng đến trang đã chọn
-            }
+      function navigateToPage(select) {
+        const selectedValue = select.value;
+        if (selectedValue !== "#") {
+          window.location.href = selectedValue; // Điều hướng đến trang đã chọn
         }
+      }
     </script>
-</body>
-
+  </body>
 </html>
