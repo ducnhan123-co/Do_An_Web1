@@ -469,6 +469,18 @@
     </div>
 
     <script>
+      function navigateToPage(select) {
+        const selectedValue = select.value;
+        if (selectedValue !== "#") {
+          window.location.href = selectedValue; // Điều hướng đến trang đã chọn
+        }
+      }
+
+      let filterbtn = document.querySelector(".filter-btn");
+      filterbtn.addEventListener("click", function (e) {
+        e.preventDefault(); // Ngăn chặn hành động mặc định
+        window.location.href = "user_home_search.html"; // Chuyển hướng đúng cách
+      });
       // Lấy tất cả các liên kết phân trang
       const paginationLinks = document.querySelectorAll(
         ".pagination_item_link"
