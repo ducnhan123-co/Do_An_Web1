@@ -19,6 +19,7 @@
 
     <!-- Box Icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ 
 
 <body>
 
@@ -172,7 +173,7 @@
                 <input type="text" placeholder="Số điện thoại" value="0908643007">
                 <input type="email" placeholder="Email" value="khoand@gmail.com">
                 <textarea placeholder="Địa chỉ giao hàng">214 Tô Hiến Thành, P.5, Q.10, HCM</textarea>
-                <!-- <button type="submit">Xác nhận đặt hàng</button> -->
+                <button type="button" onclick="handleConfirm()"   >Xác nhận đặt hàng</button>
             </form>
         </div>
     </div>
@@ -226,6 +227,12 @@
                 window.location.href = url;
             }
         }
+        function handleConfirm() {
+  // Chuyển hướng trực tiếp đến trang thanh toán
+  window.location.href = './user_payment.html'; // Thay đường dẫn bằng trang bạn muốn
+}
+
+
     </script>
 </body>
 

@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MÓN NƯỚC</title>
+    <title>MÓN MẶN</title>
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/assets/css/home_phantrang.css" />
     <link rel="stylesheet" href="/assets/css/user_home.css" />
-
 
     <!-- Box Icon -->
     <link
@@ -109,7 +108,7 @@
 
     <!-- Items -->
     <section class="items" id="items" style="margin-top: 110px">
-      <h2 class="heading container">MÓN NƯỚC</h2>
+      <h2 class="heading container">MÓN MẶN</h2>
       <div class="item-content container">
         <div class="item-box">
           <span class="sale">Sale</span>
@@ -134,13 +133,13 @@
       </div>
       <ul class="pagination">
         <li class="pagination_item">
-          <a href="Monnuoc.html" class="pagination_item_link">1</a>
+          <a href="./Monnuoc.html" class="pagination_item_link">1</a>
         </li>
         <li class="pagination_item">
-          <a href="./Monman.html" class="pagination_item_link">2</a>
+          <a href="#" class="pagination_item_link pagination_item_active">2</a>
         </li>
         <li class="pagination_item">
-          <a href="./Monman.html?page=3" class="pagination_item_link">3</a>
+          <a href="./Montrangmieng.html" class="pagination_item_link">3</a>
         </li>
       </ul>
     </section>
@@ -415,7 +414,6 @@
       </div>
       <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
-
     <script>
       // Lấy tất cả các liên kết phân trang
       const paginationLinks = document.querySelectorAll(
@@ -427,13 +425,13 @@
 
       // Duyệt qua từng liên kết phân trang
       paginationLinks.forEach((link) => {
-        // Kiểm tra nếu URL hiện tại bao gồm href của liên kết
-        if (currentUrl.includes(link.getAttribute("href"))) {
+        // Kiểm tra nếu URL hiện tại trùng với href của liên kết
+        if (link.href === currentUrl) {
           // Thêm class "pagination_item_active" vào phần tử cha
-          link.classList.add("pagination_item_active");
+          link.parentElement.classList.add("pagination_item_active");
         } else {
           // Loại bỏ class "pagination_item_active" nếu không khớp
-          link.classList.remove("pagination_item_active");
+          link.parentElement.classList.remove("pagination_item_active");
         }
       });
     </script>

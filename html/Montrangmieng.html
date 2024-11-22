@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MÓN NƯỚC</title>
+    <title>MÓN TRÁNG MIỆNG</title>
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="/assets/css/home_phantrang.css" />
     <link rel="stylesheet" href="/assets/css/user_home.css" />
-
 
     <!-- Box Icon -->
     <link
@@ -19,6 +18,7 @@
         background-color: #ffab24cb;
         font-weight: bold;
         box-shadow: 0 0 2px white;
+        color: #a72e1b !important;
       }
     </style>
   </head>
@@ -96,20 +96,18 @@
       <!-- ======================================CATEGORY-HEADER=================================== -->
       <div class="category-header">
         <a href="/index.html" class="category-link">TRANG CHỦ</a>
-        <a href="/html/Monman.html" class="category-link">MÓN MẶN</a>
+        <a href="Monnuoc.html" class="category-link">MÓN MẶN</a>
         <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
         <a href="Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
         <a href="Monnuoc.html" class="category-link">MÓN LẨU</a>
-        <a href="/html/Montrangmieng.html" class="category-link"
-          >MÓN TRÁNG MIỆNG</a
-        >
+        <a href="Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
         <a href="Monnuoc.html" class="category-link">MÓN MỚI</a>
       </div>
     </header>
 
     <!-- Items -->
     <section class="items" id="items" style="margin-top: 110px">
-      <h2 class="heading container">MÓN NƯỚC</h2>
+      <h2 class="heading container">MÓN TRÁNG MIỆNG</h2>
       <div class="item-content container">
         <div class="item-box">
           <span class="sale">Sale</span>
@@ -134,13 +132,13 @@
       </div>
       <ul class="pagination">
         <li class="pagination_item">
-          <a href="Monnuoc.html" class="pagination_item_link">1</a>
+          <a href="./Monnuoc.html" class="pagination_item_link">1</a>
         </li>
         <li class="pagination_item">
           <a href="./Monman.html" class="pagination_item_link">2</a>
         </li>
-        <li class="pagination_item">
-          <a href="./Monman.html?page=3" class="pagination_item_link">3</a>
+        <li class="pagination_item pagination_item_active">
+          <a href="#" class="pagination_item_link" style="color: #a72e1b">3</a>
         </li>
       </ul>
     </section>
@@ -415,27 +413,5 @@
       </div>
       <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
-
-    <script>
-      // Lấy tất cả các liên kết phân trang
-      const paginationLinks = document.querySelectorAll(
-        ".pagination_item_link"
-      );
-
-      // Lấy URL hiện tại
-      const currentUrl = window.location.href;
-
-      // Duyệt qua từng liên kết phân trang
-      paginationLinks.forEach((link) => {
-        // Kiểm tra nếu URL hiện tại bao gồm href của liên kết
-        if (currentUrl.includes(link.getAttribute("href"))) {
-          // Thêm class "pagination_item_active" vào phần tử cha
-          link.classList.add("pagination_item_active");
-        } else {
-          // Loại bỏ class "pagination_item_active" nếu không khớp
-          link.classList.remove("pagination_item_active");
-        }
-      });
-    </script>
   </body>
 </html>

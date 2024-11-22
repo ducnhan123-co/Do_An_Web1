@@ -3,17 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MÓN NƯỚC</title>
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="/assets/css/home_phantrang.css" />
-    <link rel="stylesheet" href="/assets/css/user_home.css" />
-
+    <title>MÓN MẶn</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/home_phantrang.css" />
+    <link rel="stylesheet" href="assets/css/user_home.css" />
 
     <!-- Box Icon -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Box Icon -->
     <style>
       .pagination_item_active {
         background-color: #ffab24cb;
@@ -76,40 +101,67 @@
           <h2>DICA <br />FOOD</h2>
         </div>
         <div class="main-header-search">
-          <i class="bx bx-search"></i>
+          <i class="fas fa-search"></i>
           <input type="text" placeholder="Tìm kiếm món ăn..." />
-          <a href="home_search.html" class="filter-btn">Lọc</a>
+          <a href="user_home_search.html">
+            <button class="filter-btn">Tìm Kiếm</button>
+          </a>
         </div>
-
         <div class="main-header-login">
-          <i class="bx bxs-user"></i>
-          <a href="home_login.html" class="login-link">Đăng Nhập</a>
+          <i class="fas fa-user"></i>
+          <!-- Biểu tượng người trước Đăng Nhập -->
+          <a href="user.html" class="login-link">Lập Nguyễn</a>
           <span>|</span>
-          <a href="home_dangky.html" class="register-link">Đăng Kí</a>
+          <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
+          <a href="/index.html" class="register-link">Đăng xuất</a>
+          <div class="custom-select-wrapper">
+            <select
+              class="dropdown-select"
+              id="options-dropdown"
+              onchange="navigateToPage(this)"
+            >
+              <option value="#">
+                <i class="fas fa-angle-down"></i>Tuỳ chọn
+              </option>
+              <option value="./user_info.html" style="color: black">
+                Thông tin cá nhân
+              </option>
+              <!-- Thông tin cá nhân -->
+              <option value="./user_history.html" style="color: black">
+                Lịch sử mua hàng
+              </option>
+              <option value="./user_payment.html" style="color: black">
+                Thanh toán
+              </option>
+            </select>
+          </div>
         </div>
         <div class="main-header-cart">
-          <i class="bx bxs-shopping-bag"></i>
-          <a href="">Giỏ Hàng</a>
+          <i class="fas fa-shopping-cart"></i>
+          <!-- Biểu tượng giỏ hàng -->
+          <a href="user_carts.html">Giỏ hàng</a>
         </div>
+
+        <!-- <span>Tuỳ chọn</span> -->
       </div>
 
       <!-- ======================================CATEGORY-HEADER=================================== -->
       <div class="category-header">
-        <a href="/index.html" class="category-link">TRANG CHỦ</a>
-        <a href="/html/Monman.html" class="category-link">MÓN MẶN</a>
-        <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
-        <a href="Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
-        <a href="Monnuoc.html" class="category-link">MÓN LẨU</a>
-        <a href="/html/Montrangmieng.html" class="category-link"
+        <a href="user.html" class="category-link">TRANG CHỦ</a>
+        <a href="user_Monman.html" class="category-link">MÓN MẶN</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
+        <a href="user_Montrangmieng.html" class="category-link"
           >MÓN TRÁNG MIỆNG</a
         >
-        <a href="Monnuoc.html" class="category-link">MÓN MỚI</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN MỚI</a>
       </div>
     </header>
 
     <!-- Items -->
     <section class="items" id="items" style="margin-top: 110px">
-      <h2 class="heading container">MÓN NƯỚC</h2>
+      <h2 class="heading container">MÓN MẶN</h2>
       <div class="item-content container">
         <div class="item-box">
           <span class="sale">Sale</span>
@@ -119,7 +171,7 @@
             <h3>259.000VND</h3>
             <p>299.000VND</p>
           </div>
-          <a href="product_detail.html" class="item-btn">View Product</a>
+          <a href="user_product_detail.html" class="item-btn">View Product</a>
         </div>
         <div class="item-box">
           <span class="sale">Sale</span>
@@ -129,18 +181,18 @@
             <h3>319.000VND</h3>
             <p>359.000VND</p>
           </div>
-          <a href="product_detail.html" class="item-btn">View Product</a>
+          <a href="user_product_detail.html" class="item-btn">View Product</a>
         </div>
       </div>
       <ul class="pagination">
         <li class="pagination_item">
-          <a href="Monnuoc.html" class="pagination_item_link">1</a>
+          <a href="user_Monman.html?page=1" class="pagination_item_link">1</a>
         </li>
         <li class="pagination_item">
-          <a href="./Monman.html" class="pagination_item_link">2</a>
+          <a href="user_Monman.html?page=2" class="pagination_item_link">2</a>
         </li>
         <li class="pagination_item">
-          <a href="./Monman.html?page=3" class="pagination_item_link">3</a>
+          <a href="user_Monman.html?page=3" class="pagination_item_link">3</a>
         </li>
       </ul>
     </section>
@@ -427,13 +479,13 @@
 
       // Duyệt qua từng liên kết phân trang
       paginationLinks.forEach((link) => {
-        // Kiểm tra nếu URL hiện tại bao gồm href của liên kết
+        // Kiểm tra nếu URL hiện tại trùng với href của liên kết
         if (currentUrl.includes(link.getAttribute("href"))) {
           // Thêm class "pagination_item_active" vào phần tử cha
-          link.classList.add("pagination_item_active");
+          link.parentElement.classList.add("pagination_item_active");
         } else {
           // Loại bỏ class "pagination_item_active" nếu không khớp
-          link.classList.remove("pagination_item_active");
+          link.parentElement.classList.remove("pagination_item_active");
         }
       });
     </script>

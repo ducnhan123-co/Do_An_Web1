@@ -1,278 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FOOD-SGU</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/user_home.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/user_home.css" />
     <!-- Box Icon -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <!-- Box Icon -->
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-        <!-- ======================================MAIN-HEADER=================================== -->
-        <div class="main-header">
-            <div class="main-header-img">
-                <img src="assets/imgs/logo2.png" alt="">
-                <h2>DICA <br>FOOD</h2>
-            </div>
-            <div class="main-header-search">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Tìm kiếm món ăn...">
-                <a href="user_home_search.html">
-                    <button class="filter-btn">
-                        Tìm Kiếm
-                    </button>
-                </a>
-            </div>
-            <div class="main-header-login">
-                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
-                <a href="user.html" class="login-link">Lập Nguyễn</a>
-                <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
-                <a href="/index.html" class="register-link">Đăng xuất</a>
-                <div class="custom-select-wrapper">
-                    <select class="dropdown-select" id="options-dropdown" onchange="navigateToPage(this)">
-                        <option value="#"><i class="fas fa-angle-down"></i>Tuỳ chọn</option>
-                        <option value="./user_info.html" style="color: black;">Thông tin cá nhân</option>
-                        <option value="./user_history.html" style="color: black;">Lịch sử mua hàng</option>
-                        <option value="./user_payment.html" style="color: black;">Thanh toán</option>
-                    </select>
-                </div>
-            </div>
-            <div class="main-header-cart">
-                <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
-                <a href="user_carts.html">Giỏ hàng</a>
-            </div>
-
-
-            <!-- <span>Tuỳ chọn</span> -->
-
-
+      <!-- ======================================MAIN-HEADER=================================== -->
+      <div class="main-header">
+        <div class="main-header-img">
+          <img src="assets/imgs/logo2.png" alt="" />
+          <h2>DICA <br />FOOD</h2>
         </div>
-        <!-- ======================================CATEGORY-HEADER=================================== -->
-        <div class="category-header">
-            <a href="user.html" class="category-link">TRANG CHỦ</a>
-            <a href="Monnuoc.html" class="category-link">MÓN MẶN</a>
-            <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
-            <a href="Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
-            <a href="Monnuoc.html" class="category-link">MÓN LẨU</a>
-            <a href="Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
-            <a href="Monnuoc.html" class="category-link">MÓN MỚI</a>
+        <div class="main-header-search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Tìm kiếm món ăn..." />
+          <a href="user_home_search.html">
+            <button class="filter-btn">Tìm Kiếm</button>
+          </a>
         </div>
+        <div class="main-header-login">
+          <i class="fas fa-user"></i>
+          <!-- Biểu tượng người trước Đăng Nhập -->
+          <a href="user.html" class="login-link">Lập Nguyễn</a>
+          <span>|</span>
+          <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
+          <a href="/index.html" class="register-link">Đăng xuất</a>
+          <div class="custom-select-wrapper">
+            <select
+              class="dropdown-select"
+              id="options-dropdown"
+              onchange="navigateToPage(this)"
+            >
+              <option value="#">
+                <i class="fas fa-angle-down"></i>Tuỳ chọn
+              </option>
+              <option value="./user_info.html" style="color: black">
+                Thông tin cá nhân
+              </option>
+              <option value="./user_history.html" style="color: black">
+                Lịch sử mua hàng
+              </option>
+              <option value="./user_payment.html" style="color: black">
+                Thanh toán
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="main-header-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <!-- Biểu tượng giỏ hàng -->
+          <a href="user_carts.html">Giỏ hàng</a>
+        </div>
+
+        <!-- <span>Tuỳ chọn</span> -->
+      </div>
+      <!-- ======================================CATEGORY-HEADER=================================== -->
+      <div class="category-header">
+        <a href="user.html" class="category-link">TRANG CHỦ</a>
+        <a href="Monnuoc.html" class="category-link">MÓN MẶN</a>
+        <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
+        <a href="Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
+        <a href="Monnuoc.html" class="category-link">MÓN LẨU</a>
+        <a href="Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
+        <a href="Monnuoc.html" class="category-link">MÓN MỚI</a>
+      </div>
     </header>
 
-
     <div class="backgroud-detail">
-        <div class="detail">
-            <div class="img_detail">
-                <div class="img_detail_main">
-                    <img src="assets/imgs/Menu20.jpg" alt="" id="main-img">
-                    <div class="img_detail_extra">
-                        <img src="assets/imgs/item-3.png" alt="">
-                        <img src="assets/imgs/burger-2.png" alt="">
-                    </div>
+      <div class="detail">
+        <div class="img_detail">
+          <div class="img_detail_main">
+            <img src="assets/imgs/Menu20.jpg" alt="" id="main-img" />
+            <div class="img_detail_extra">
+              <img src="assets/imgs/item-3.png" alt="" />
+              <img src="assets/imgs/burger-2.png" alt="" />
+            </div>
+          </div>
+          <div class="paragraph">
+            <div class="category">
+              <label for="category">Danh mục: </label>
+              <div class="category-control">
+                <a href="Monnuoc.html" style="color: rgb(255, 72, 0)"
+                  >Món nước</a
+                >
+              </div>
+            </div>
+            <h2 style="color: rgb(226, 63, 63)">Hamburger</h2>
+            <hr />
+            <div class="wc-tabs-wrapper">
+              <ul class="wc-tabs">
+                <li class="active" onclick="showTab('description')">
+                  <a><strong>Mô tả</strong></a>
+                </li>
+              </ul>
+
+              <div class="wc-tab active" id="description">
+                <div id="describe">
+                  <li>
+                    <b>HamBurger</b> là món ăn truyền thống nổi tiếng trên thế
+                    giới, người ta thường ăn bánh Hambuger vào bữa sáng hoặc
+                    những bữa ăn nhẹ. <b>HamBurger</b> được làm từ nguồn nguyên
+                    liệu tự nhiên, an toàn, nên bạn hoàn toàn yên tâm khi sử
+                    dụng.
+                  </li>
+                  <li>
+                    Sản phẩm là sự kết hợp hoàn hảo giữa các thành phần như: Bột
+                    mì, trứng, nước, men nở, mè, xúc xích, phô mai… cho ra hương
+                    vị bánh vô cùng thơm ngon, hấp dẫn.
+                    <br />
+                    Sản phẩm của <b>DICA FOOD</b> sử dụng nguyên liệu sạch, có
+                    nguồn gốc rõ ràng, đảm bảo vệ sinh an toàn thực phẩm.
+                  </li>
                 </div>
-                <div class="paragraph">
-                    <div class="category">
-                        <label for="category">Danh mục: </label>
-                        <div class="category-control">
-                            <a href="Monnuoc.html" style="color: rgb(255, 72, 0);">Món nước</a>
-                        </div>
-                    </div>
-                    <h2 style="color: rgb(226, 63, 63);">Hamburger</h2>
-                    <hr>
-                    <div class="wc-tabs-wrapper">
-                        <ul class="wc-tabs">
-                            <li class="active" onclick="showTab('description')">
-                                <a><strong>Mô tả</strong></a>
-                            </li>
+              </div>
 
-                        </ul>
-
-                        <div class="wc-tab active" id="description">
-                            <div id="describe">
-                                <li><b>HamBurger</b> là món ăn truyền thống nổi tiếng trên thế giới,
-                                    người ta thường ăn bánh Hambuger vào bữa sáng hoặc những bữa ăn nhẹ.
-                                    <b>HamBurger</b> được làm từ nguồn nguyên liệu tự
-                                    nhiên, an toàn, nên bạn hoàn toàn yên tâm khi sử dụng.
-                                </li>
-                                <li>Sản phẩm là sự kết hợp hoàn hảo giữa các thành phần như:
-                                    Bột mì, trứng, nước, men nở, mè, xúc xích, phô mai… cho ra
-                                    hương vị bánh vô cùng thơm ngon, hấp dẫn.
-                                    <br>
-                                    Sản phẩm của <b>DICA FOOD</b> sử dụng nguyên liệu sạch, có nguồn gốc rõ ràng, đảm
-                                    bảo vệ sinh an toàn thực phẩm.
-                                </li>
-                            </div>
-                        </div>
-
-                        <div class="wc-tab" id="additional_information">
-                            <table>
-                                <tr>
-                                    <th>Size</th>
-                                    <td>Small (100 gr), Medium (150 gr), Large (200 gr)</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <strong>Giá: 5$ to 3.5$</strong>
-                    <div class="order-section">
-                        <label for="quantity"><b>Số lượng: </b></label>
-                        <div class="quantity-control">
-                            <button type="button">-</button>
-                            <input type="number" name="quantity" min="1" max="100" value="1">
-                            <button type="button">+</button>
-                        </div>
-                        <button class="add-to-cart" type="button">Thêm vào giỏ</button>
-                    </div>
-                </div>
+              <div class="wc-tab" id="additional_information">
+                <table>
+                  <tr>
+                    <th>Size</th>
+                    <td>Small (100 gr), Medium (150 gr), Large (200 gr)</td>
+                  </tr>
+                </table>
+              </div>
             </div>
-            <div class="dash">
-                <hr>
+            <strong>Giá: 5$ to 3.5$</strong>
+            <div class="order-section">
+              <label for="quantity"><b>Số lượng: </b></label>
+              <div class="quantity-control">
+                <button type="button">-</button>
+                <input
+                  type="number"
+                  name="quantity"
+                  min="1"
+                  max="100"
+                  value="1"
+                />
+                <button type="button">+</button>
+              </div>
+              <button class="add-to-cart" type="button">Thêm vào giỏ</button>
             </div>
-
-            <div class="list-products" style="margin-bottom: 30px;">
-                <h3 class="similar">
-                    <span style=" font-size: 25px;">Sản phẩm tương tự</span>
-                </h3>
-                <div class="item-content container">
-                    <div class="item-box">
-                        <span class="sale">Sale</span>
-                        <img src="/assets/imgs/Menu4.jpg" alt="">
-                        <h2>Spicy Burger</h2>
-                        <div class="price">
-                            <h3>3.5$</h3>
-                            <p>5.0$</p>
-                        </div>
-                        <a href="user_product_detail.html" class="item-btn">View Product</a>
-                    </div>
-                    <div class="item-box">
-                        <span class="sale">Sale</span>
-                        <img src="/assets/imgs/Menu2.webp" alt="">
-                        <h2>Mutton BBQ</h2>
-                        <div class="price">
-                            <h3>3.5$</h3>
-                            <p>5.0$</p>
-                        </div>
-                        <a href="user_product_detail.html" class="item-btn">View Product</a>
-                    </div>
-                    <div class="item-box">
-                        <span class="sale">Sale</span>
-                        <img src="/assets/imgs/Menu11.jpg" alt="">
-                        <h2>Tiny Quies Fish</h2>
-                        <div class="price">
-                            <h3>3.5$</h3>
-                            <p>5.0$</p>
-                        </div>
-                        <a href="user_product_detail.html" class="item-btn">View Product</a>
-                    </div>
-                    <div class="item-box">
-                        <span class="sale">Sale</span>
-                        <img src="/assets/imgs/Menu8.jpg" alt="">
-                        <h2>Chicken With Bacon</h2>
-                        <div class="price">
-                            <h3>3.5$</h3>
-                            <p>5.0$</p>
-                        </div>
-                        <a href="user_product_detail.html" class="item-btn">View Product</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product_detail_phantrang">
-                <button class="product_detail_phantrang--left"> > </button>
-                <a href="user_product_detail.html" style="color: rgb(255, 72, 0);">1</a>
-                <a href="user_product_detail.html" style="color: rgb(255, 72, 0);">2</a>
-                <a href="user_product_detail.html" style="color: rgb(255, 72, 0);">3</a>
-                <a href="user_product_detail.html" style="color: rgb(255, 72, 0);">4</a>
-                <button class="product_detail_phantrang--right"> > </button>
-            </div>
-
-
-
+          </div>
         </div>
+        <div class="dash">
+          <hr />
+        </div>
+
+        <div class="list-products" style="margin-bottom: 30px">
+          <h3 class="similar">
+            <span style="font-size: 25px">Sản phẩm tương tự</span>
+          </h3>
+          <div class="item-content container">
+            <div class="item-box">
+              <span class="sale">Sale</span>
+              <img src="/assets/imgs/Menu4.jpg" alt="" />
+              <h2>Spicy Burger</h2>
+              <div class="price">
+                <h3>3.5$</h3>
+                <p>5.0$</p>
+              </div>
+              <a href="user_product_detail.html" class="item-btn"
+                >View Product</a
+              >
+            </div>
+            <div class="item-box">
+              <span class="sale">Sale</span>
+              <img src="/assets/imgs/Menu2.webp" alt="" />
+              <h2>Mutton BBQ</h2>
+              <div class="price">
+                <h3>3.5$</h3>
+                <p>5.0$</p>
+              </div>
+              <a href="user_product_detail.html" class="item-btn"
+                >View Product</a
+              >
+            </div>
+            <div class="item-box">
+              <span class="sale">Sale</span>
+              <img src="/assets/imgs/Menu11.jpg" alt="" />
+              <h2>Tiny Quies Fish</h2>
+              <div class="price">
+                <h3>3.5$</h3>
+                <p>5.0$</p>
+              </div>
+              <a href="user_product_detail.html" class="item-btn"
+                >View Product</a
+              >
+            </div>
+            <div class="item-box">
+              <span class="sale">Sale</span>
+              <img src="/assets/imgs/Menu8.jpg" alt="" />
+              <h2>Chicken With Bacon</h2>
+              <div class="price">
+                <h3>3.5$</h3>
+                <p>5.0$</p>
+              </div>
+              <a href="user_product_detail.html" class="item-btn"
+                >View Product</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="product_detail_phantrang">
+          <button class="product_detail_phantrang--left">></button>
+          <a href="user_product_detail.html" style="color: rgb(255, 72, 0)"
+            >1</a
+          >
+          <a href="user_product_detail.html" style="color: rgb(255, 72, 0)"
+            >2</a
+          >
+          <a href="user_product_detail.html" style="color: rgb(255, 72, 0)"
+            >3</a
+          >
+          <a href="user_product_detail.html" style="color: rgb(255, 72, 0)"
+            >4</a
+          >
+          <button class="product_detail_phantrang--right">></button>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-        <div class="footer-content container">
-            <div class="footer-box">
-                <a href="#" class="footer-logo">
-                    <img src="/assets/imgs/logo2.png" alt="">
-                </a>
-                <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
-                <div class="social">
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-pinterest-alt'></i></a>
-                </div>
-            </div>
-            <div class="footer-box">
-                <h3>Opening Hours</h3>
-                <p><span>Mon</span>: 9:00 - 20:30</p>
-                <p><span>Tue</span>: 9:00 - 20:30</p>
-                <p><span>Wed</span>: 9:00 - 20:30</p>
-                <p><span>Thu</span>: 9:00 - 20:30</p>
-                <p><span>Fri</span>: 9:00 - 20:30</p>
-                <p><span>Sat</span>: 9:00 - 20:00</p>
-                <p><span>Sun</span>: Closed</p>
-            </div>
-            <div class="footer-box">
-                <h3>Information</h3>
-                <a href="#">About Us</a>
-                <a href="#">Blog</a>
-                <a href="#">Dica Food Gallery</a>
-                <a href="#">Dica Food Talent Chefs</a>
-                <a href="#">Testimonials</a>
-            </div>
-            <div class="footer-box">
-                <h3>Contact Us</h3>
-                <p>+9123456789</p>
-                <p>Dicafood@gmail.com</p>
-                <p>Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh </p>
-            </div>
+      <div class="footer-content container">
+        <div class="footer-box">
+          <a href="#" class="footer-logo">
+            <img src="/assets/imgs/logo2.png" alt="" />
+          </a>
+          <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
+          <div class="social">
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+            <a href="#"><i class="bx bxl-pinterest-alt"></i></a>
+          </div>
         </div>
-        <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
+        <div class="footer-box">
+          <h3>Opening Hours</h3>
+          <p><span>Mon</span>: 9:00 - 20:30</p>
+          <p><span>Tue</span>: 9:00 - 20:30</p>
+          <p><span>Wed</span>: 9:00 - 20:30</p>
+          <p><span>Thu</span>: 9:00 - 20:30</p>
+          <p><span>Fri</span>: 9:00 - 20:30</p>
+          <p><span>Sat</span>: 9:00 - 20:00</p>
+          <p><span>Sun</span>: Closed</p>
+        </div>
+        <div class="footer-box">
+          <h3>Information</h3>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Dica Food Gallery</a>
+          <a href="#">Dica Food Talent Chefs</a>
+          <a href="#">Testimonials</a>
+        </div>
+        <div class="footer-box">
+          <h3>Contact Us</h3>
+          <p>+9123456789</p>
+          <p>Dicafood@gmail.com</p>
+          <p>
+            Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh
+          </p>
+        </div>
+      </div>
+      <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
     <script>
-        function showTab(tab) {
-            document.querySelectorAll('.wc-tab, .wc-tabs li').forEach(el => el.classList.remove('active'));
-            document.getElementById(tab).classList.add('active');
-            document.querySelector(`[onclick="showTab('${tab}')"]`).classList.add('active');
+      function showTab(tab) {
+        document
+          .querySelectorAll(".wc-tab, .wc-tabs li")
+          .forEach((el) => el.classList.remove("active"));
+        document.getElementById(tab).classList.add("active");
+        document
+          .querySelector(`[onclick="showTab('${tab}')"]`)
+          .classList.add("active");
+      }
+
+      let btnClick = document.querySelector(".product_detail_phantrang--left");
+      btnClick.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = "user_product_detail.html";
+      });
+
+      let btnClick2 = document.querySelector(
+        ".product_detail_phantrang--right"
+      );
+      btnClick2.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = "user_product_detail.html";
+      });
+
+      function navigateToPage(selectElement) {
+        const selectedValue = selectElement.value;
+        if (selectedValue !== "#") {
+          // Kiểm tra để đảm bảo rằng giá trị không phải là #
+          window.location.href = selectedValue; // Chuyển hướng đến URL được chọn
         }
-
-        let btnClick = document.querySelector(".product_detail_phantrang--left");
-        btnClick.addEventListener("click", function (e) {
-            e.preventDefault();
-            window.location.href = "user_product_detail.html";
-        });
-
-        let btnClick2 = document.querySelector(".product_detail_phantrang--right");
-        btnClick2.addEventListener("click", function (e) {
-            e.preventDefault();
-            window.location.href = "user_product_detail.html";
-        });
-
-        function navigateToPage(selectElement) {
-            const selectedValue = selectElement.value;
-            if (selectedValue !== "#") { // Kiểm tra để đảm bảo rằng giá trị không phải là #
-                window.location.href = selectedValue; // Chuyển hướng đến URL được chọn
-            }
-        }
+      }
     </script>
-</body>
-
+  </body>
 </html>

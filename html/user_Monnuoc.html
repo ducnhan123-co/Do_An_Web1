@@ -1,426 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MÓN NƯỚC</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/home_phantrang.css">
-    <link rel="stylesheet" href="assets/css/user_home.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/home_phantrang.css" />
+    <link rel="stylesheet" href="assets/css/user_home.css" />
 
     <!-- Box Icon -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css"
+    />
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <!-- Box Icon -->
-</head>
+    <style>
+      .pagination_item_active {
+        background-color: #ffab24cb;
+        font-weight: bold;
+        box-shadow: 0 0 2px white;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
     <header>
-        <!-- ======================================TOP-HEADER=================================== -->
-        <div class="top-header">
-            <div class="cnt-block">
-                <p>+0123 456 789</p>
-                <ul class="list-unstyled list-inline">
-                    <li class="dropdown dropdown-small">
-                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-                            <span class="value">USD </span><i class="fas fa-caret-down"></i>
-                        </a>
-                        <!-- <ul class="dropdown-menu">
+      <!-- ======================================TOP-HEADER=================================== -->
+      <div class="top-header">
+        <div class="cnt-block">
+          <p>+0123 456 789</p>
+          <ul class="list-unstyled list-inline">
+            <li class="dropdown dropdown-small">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-hover="dropdown"
+                data-toggle="dropdown"
+              >
+                <span class="value">USD </span><i class="fas fa-caret-down"></i>
+              </a>
+              <!-- <ul class="dropdown-menu">
                             <li><a href="#">USD</a></li>
                             <li><a href="#">INR</a></li>
                             <li><a href="#">GBP</a></li>
                         </ul> -->
-                    </li>
-                    <li class="dropdown dropdown-small">
-                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-                            <span class="value">English </span><i class="fas fa-caret-down"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- <li><a href="#">English</a></li>
+            </li>
+            <li class="dropdown dropdown-small">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-hover="dropdown"
+                data-toggle="dropdown"
+              >
+                <span class="value">English </span
+                ><i class="fas fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- <li><a href="#">English</a></li>
                             <li><a href="#">French</a></li>
                             <li><a href="#">German</a></li> -->
-                        </ul>
-                    </li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Wishlist</a></li>
-                    <li><a href="#">MyCart</a></li>
-                    <li><a href="#">Checkout</a></li>
+              </ul>
+            </li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">MyCart</a></li>
+            <li><a href="#">Checkout</a></li>
+          </ul>
+        </div>
+      </div>
 
-                </ul>
-            </div>
+      <!-- ======================================MAIN-HEADER=================================== -->
+      <div class="main-header">
+        <div class="main-header-img">
+          <img src="assets/imgs/logo2.png" alt="" />
+          <h2>DICA <br />FOOD</h2>
+        </div>
+        <div class="main-header-search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Tìm kiếm món ăn..." />
+          <a href="user_home_search.html">
+            <button class="filter-btn">Tìm Kiếm</button>
+          </a>
+        </div>
+        <div class="main-header-login">
+          <i class="fas fa-user"></i>
+          <!-- Biểu tượng người trước Đăng Nhập -->
+          <a href="user.html" class="login-link">Lập Nguyễn</a>
+          <span>|</span>
+          <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
+          <a href="/index.html" class="register-link">Đăng xuất</a>
+          <div class="custom-select-wrapper">
+            <select
+              class="dropdown-select"
+              id="options-dropdown"
+              onchange="navigateToPage(this)"
+            >
+              <option value="#">
+                <i class="fas fa-angle-down"></i>Tuỳ chọn
+              </option>
+              <option value="./user_info.html" style="color: black">
+                Thông tin cá nhân
+              </option>
+              <!-- Thông tin cá nhân -->
+              <option value="./user_history.html" style="color: black">
+                Lịch sử mua hàng
+              </option>
+              <option value="./user_payment.html" style="color: black">
+                Thanh toán
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="main-header-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <!-- Biểu tượng giỏ hàng -->
+          <a href="user_carts.html">Giỏ hàng</a>
         </div>
 
-        <!-- ======================================MAIN-HEADER=================================== -->
-        <div class="main-header">
-            <div class="main-header-img">
-                <img src="assets/imgs/logo2.png" alt="">
-                <h2>DICA <br>FOOD</h2>
-            </div>
-            <div class="main-header-search">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Tìm kiếm món ăn...">
-                <a href="user_home_search.html">
-                    <button class="filter-btn">
-                        Tìm Kiếm
-                    </button>
-                </a>
-            </div>
-            <div class="main-header-login">
-                <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
-                <a href="user.html" class="login-link">Lập Nguyễn</a>
-                <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
-                <a href="/index.html" class="register-link">Đăng xuất</a>
-                <div class="custom-select-wrapper">
-                    <select class="dropdown-select" id="options-dropdown" onchange="navigateToPage(this)">
-                        <option value="#"><i class="fas fa-angle-down"></i>Tuỳ chọn</option>
-                        <option value="./user_info.html" style="color: black;">Thông tin cá nhân</option>
-                        <!-- Thông tin cá nhân -->
-                        <option value="./user_history.html" style="color: black;">Lịch sử mua hàng</option>
-                        <option value="./user_payment.html" style="color: black;">Thanh toán</option>
-                    </select>
-                </div>
-            </div>
-            <div class="main-header-cart">
-                <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
-                <a href="user_carts.html">Giỏ hàng</a>
-            </div>
+        <!-- <span>Tuỳ chọn</span> -->
+      </div>
 
-
-            <!-- <span>Tuỳ chọn</span> -->
-
-
-        </div>
-
-
-        <!-- ======================================CATEGORY-HEADER=================================== -->
-        <div class="category-header">
-            <a href="user.html" class="category-link">TRANG CHỦ</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN MẶN</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN MỚI</a>
-        </div>
+      <!-- ======================================CATEGORY-HEADER=================================== -->
+      <div class="category-header">
+        <a href="user.html" class="category-link">TRANG CHỦ</a>
+        <a href="user_Monman.html" class="category-link">MÓN MẶN</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
+        <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
+        <a href="user_Montrangmieng.html" class="category-link"
+          >MÓN TRÁNG MIỆNG</a
+        >
+        <a href="user_Monnuoc.html" class="category-link">MÓN MỚI</a>
+      </div>
     </header>
 
-
-
     <!-- Items -->
-    <section class="items" id="items" style="margin-top: 110px;">
-        <h2 class="heading container">MÓN NƯỚC</h2>
-        <div class="item-content container">
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <img src="assets/imgs/lautrungkhanh.jpg" alt="">
-                <h2>Lẩu Trùng Khánh</h2>
-                <div class="price">
-                    <h3>259.000VND</h3>
-                    <p>299.000VND</p>
-                </div>
-                <a href="user_product_detail.html" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <img src="assets/imgs/laubo.jpg" alt="">
-                <h2>Lẩu Bò</h2>
-                <div class="price">
-                    <h3>319.000VND</h3>
-                    <p>359.000VND</p>
-                </div>
-                <a href="user_product_detail.html" class="item-btn">View Product</a>
-            </div>
+    <section class="items" id="items" style="margin-top: 110px">
+      <h2 class="heading container">MÓN NƯỚC</h2>
+      <div class="item-content container">
+        <div class="item-box">
+          <span class="sale">Sale</span>
+          <img src="assets/imgs/lautrungkhanh.jpg" alt="" />
+          <h2>Lẩu Trùng Khánh</h2>
+          <div class="price">
+            <h3>259.000VND</h3>
+            <p>299.000VND</p>
+          </div>
+          <a href="user_product_detail.html" class="item-btn">View Product</a>
         </div>
-        <ul class="pagination">
-            <li class="pagination_item pagination_item_active">
-                <a href="#" class="pagination_item_link">1</a>
-            </li>
-            <li class="pagination_item">
-                <a href="user_Monnuoc.html" class="pagination_item_link">2</a>
-            </li>
-            <li class="pagination_item">
-                <a href="user_Monnuoc.html" class="pagination_item_link">3</a>
-            </li>
-        </ul>
+        <div class="item-box">
+          <span class="sale">Sale</span>
+          <img src="assets/imgs/laubo.jpg" alt="" />
+          <h2>Lẩu Bò</h2>
+          <div class="price">
+            <h3>319.000VND</h3>
+            <p>359.000VND</p>
+          </div>
+          <a href="user_product_detail.html" class="item-btn">View Product</a>
+        </div>
+      </div>
+      <ul class="pagination">
+        <li class="pagination_item">
+          <a href="user_Monnuoc.html?page=1" class="pagination_item_link">1</a>
+        </li>
+        <li class="pagination_item">
+          <a href="user_Monnuoc.html?page=2" class="pagination_item_link">2</a>
+        </li>
+        <li class="pagination_item">
+          <a href="user_Monnuoc.html?page=3" class="pagination_item_link">3</a>
+        </li>
+      </ul>
     </section>
     <!-- Best Seller -->
     <section class="menu-container" id="menu-container">
-        <h2 class="heading container">Best Seller</h2>
-        <img src="assets/imgs/menu-mask.png" alt="" class="menu-mask">
-        <div class="menu-content container">
-            <div class="menu-box">
-                <!-- <h2>Burger</h2> -->
-                <div class="burgers-content">
-                    <div class="m-item-box">
-                        <img src="assets/imgs/Menu11.jpg" alt="">
-                        <div class="m-item-right">
-                            <div class="m-item-des">
-                                <h3>Meta Burger</h3>
-                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
-                            </div>
-                            <div class="m-item-price">
-                                <h3>3.5$</h3>
-                                <p>5.0$</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-item-box">
-                        <img src="assets/imgs/Omurice.jpg" alt="">
-                        <div class="m-item-right">
-                            <div class="m-item-des">
-                                <h3>Spicy Meta Burger</h3>
-                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
-                            </div>
-                            <div class="m-item-price">
-                                <h3>3.5$</h3>
-                                <p>5.0$</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-item-box">
-                        <img src="assets/imgs/Menu20.jpg" alt="">
-                        <div class="m-item-right">
-                            <div class="m-item-des">
-                                <h3>Spicy Burger</h3>
-                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
-                            </div>
-                            <div class="m-item-price">
-                                <h3>3.5$</h3>
-                                <p>5.0$</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-item-box">
-                        <img src="assets/imgs/Menu6.jpg" alt="">
-                        <div class="m-item-right">
-                            <div class="m-item-des">
-                                <h3>Beef Burger</h3>
-                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
-                            </div>
-                            <div class="m-item-price">
-                                <h3>3.5$</h3>
-                                <p>5.0$</p>
-                            </div>
-                        </div>
-                    </div>
+      <h2 class="heading container">Best Seller</h2>
+      <img src="assets/imgs/menu-mask.png" alt="" class="menu-mask" />
+      <div class="menu-content container">
+        <div class="menu-box">
+          <!-- <h2>Burger</h2> -->
+          <div class="burgers-content">
+            <div class="m-item-box">
+              <img src="assets/imgs/Menu11.jpg" alt="" />
+              <div class="m-item-right">
+                <div class="m-item-des">
+                  <h3>Meta Burger</h3>
+                  <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
                 </div>
-            </div>
-            <div class="menu-box">
-                <!-- <h2>BBQ</h2> -->
-                <div class="bbq-content">
-                    <div class="m-item-box">
-                        <img src="assets/imgs/Menu4.jpg" alt="">
-                        <div class="m-item-right">
-                            <div class="m-item-des">
-                                <h3>Mutton BBQ</h3>
-                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
-                            </div>
-                            <div class="m-item-price">
-                                <h3>3.5$</h3>
-                                <p>5.0$</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-item-box">
-                        <img src="assets/imgs/Menu8.jpg" alt="">
-                        <div class="m-item-right">
-                            <div class="m-item-des">
-                                <h3>Chicken BBQ</h3>
-                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
-                            </div>
-                            <div class="m-item-price">
-                                <h3>3.5$</h3>
-                                <p>5.0$</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-item-box">
-                        <img src="assets/imgs/Menu9.jpg" alt="">
-                        <div class="m-item-right">
-                            <div class="m-item-des">
-                                <h3>Beef BBQ</h3>
-                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
-                            </div>
-                            <div class="m-item-price">
-                                <h3>3.5$</h3>
-                                <p>5.0$</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-item-box">
-                        <img src="assets/imgs/Menu10.webp" alt="">
-                        <div class="m-item-right">
-                            <div class="m-item-des">
-                                <h3>Kachi BBQ</h3>
-                                <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
-                            </div>
-                            <div class="m-item-price">
-                                <h3>3.5$</h3>
-                                <p>5.0$</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="m-item-price">
+                  <h3>3.5$</h3>
+                  <p>5.0$</p>
                 </div>
+              </div>
             </div>
+            <div class="m-item-box">
+              <img src="assets/imgs/Omurice.jpg" alt="" />
+              <div class="m-item-right">
+                <div class="m-item-des">
+                  <h3>Spicy Meta Burger</h3>
+                  <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                </div>
+                <div class="m-item-price">
+                  <h3>3.5$</h3>
+                  <p>5.0$</p>
+                </div>
+              </div>
+            </div>
+            <div class="m-item-box">
+              <img src="assets/imgs/Menu20.jpg" alt="" />
+              <div class="m-item-right">
+                <div class="m-item-des">
+                  <h3>Spicy Burger</h3>
+                  <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                </div>
+                <div class="m-item-price">
+                  <h3>3.5$</h3>
+                  <p>5.0$</p>
+                </div>
+              </div>
+            </div>
+            <div class="m-item-box">
+              <img src="assets/imgs/Menu6.jpg" alt="" />
+              <div class="m-item-right">
+                <div class="m-item-des">
+                  <h3>Beef Burger</h3>
+                  <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                </div>
+                <div class="m-item-price">
+                  <h3>3.5$</h3>
+                  <p>5.0$</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="menu-box">
+          <!-- <h2>BBQ</h2> -->
+          <div class="bbq-content">
+            <div class="m-item-box">
+              <img src="assets/imgs/Menu4.jpg" alt="" />
+              <div class="m-item-right">
+                <div class="m-item-des">
+                  <h3>Mutton BBQ</h3>
+                  <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                </div>
+                <div class="m-item-price">
+                  <h3>3.5$</h3>
+                  <p>5.0$</p>
+                </div>
+              </div>
+            </div>
+            <div class="m-item-box">
+              <img src="assets/imgs/Menu8.jpg" alt="" />
+              <div class="m-item-right">
+                <div class="m-item-des">
+                  <h3>Chicken BBQ</h3>
+                  <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                </div>
+                <div class="m-item-price">
+                  <h3>3.5$</h3>
+                  <p>5.0$</p>
+                </div>
+              </div>
+            </div>
+            <div class="m-item-box">
+              <img src="assets/imgs/Menu9.jpg" alt="" />
+              <div class="m-item-right">
+                <div class="m-item-des">
+                  <h3>Beef BBQ</h3>
+                  <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                </div>
+                <div class="m-item-price">
+                  <h3>3.5$</h3>
+                  <p>5.0$</p>
+                </div>
+              </div>
+            </div>
+            <div class="m-item-box">
+              <img src="assets/imgs/Menu10.webp" alt="" />
+              <div class="m-item-right">
+                <div class="m-item-des">
+                  <h3>Kachi BBQ</h3>
+                  <p>Size: Medium Small Large Spices: Regular Spicy Medium</p>
+                </div>
+                <div class="m-item-price">
+                  <h3>3.5$</h3>
+                  <p>5.0$</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Testimonials -->
     <section class="testimonials" id="testimonials">
-        <h2 class="heading container">Testimonials</h2>
-        <div class="testimonials-content container">
-            <div class="t-box">
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                </div>
-                <p>
-                    "I wanted to thank you for inviting me down for that amazing dinner the other night. The food was
-                    extraordinary."
-                </p>
-                <div class="profile">
-                    <img src="assets/imgs/profile-5.jpg" alt="">
-                    <div class="profile-data">
-                        <h3>Kiệt Võ</h3>
-                        <span>IT SGU</span>
-                    </div>
-                </div>
+      <h2 class="heading container">Testimonials</h2>
+      <div class="testimonials-content container">
+        <div class="t-box">
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          <p>
+            "I wanted to thank you for inviting me down for that amazing dinner
+            the other night. The food was extraordinary."
+          </p>
+          <div class="profile">
+            <img src="assets/imgs/profile-5.jpg" alt="" />
+            <div class="profile-data">
+              <h3>Kiệt Võ</h3>
+              <span>IT SGU</span>
             </div>
-            <div class="t-box">
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                </div>
-                <p>
-                    "They make my favorite burgers. I can't find a better one. I pretty
-                    much love BIG King XXL, the best in the world! Healthy choices and
-                    consciousness of the environment. Everything was delicious."
-                </p>
-                <div class="profile">
-                    <img src="assets/imgs/nguyenlap.jpg" alt="">
-                    <div class="profile-data">
-                        <h3>Nguyễn Lập</h3>
-                        <span>Art Director</span>
-                    </div>
-                </div>
-            </div>
-            <div class="t-box">
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                </div>
-                <p>
-                    "Truly one of the amazing burger chains we have eaten at! Customer
-                    service is also good. Beautiful presentation, amazing taste, and
-                    good staff, awesome. Their mac mince cheeseburger with olive sauce
-                    is very tasty."
-                </p>
-                <div class="profile">
-                    <img src="assets/imgs/ducnhanfun.jpg" alt="">
-                    <div class="profile-data">
-                        <h3>Đức Nhân</h3>
-                        <span>Hair Stylist</span>
-                    </div>
-                </div>
-            </div>
-            <div class="t-box">
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                </div>
-                <p>
-                    "They make my favorite burgers. I can't find a better one. I pretty
-                    much love BIG King XXL, the best in the world! Healthy choices and
-                    consciousness of the environment. Everything was delicious."
-                </p>
-                <div class="profile">
-                    <img src="assets/imgs/profile-2.png" alt="">
-                    <div class="profile-data">
-                        <h3>Kewil JR</h3>
-                        <span>Hair Stylist</span>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="t-box">
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          <p>
+            "They make my favorite burgers. I can't find a better one. I pretty
+            much love BIG King XXL, the best in the world! Healthy choices and
+            consciousness of the environment. Everything was delicious."
+          </p>
+          <div class="profile">
+            <img src="assets/imgs/nguyenlap.jpg" alt="" />
+            <div class="profile-data">
+              <h3>Nguyễn Lập</h3>
+              <span>Art Director</span>
+            </div>
+          </div>
+        </div>
+        <div class="t-box">
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          <p>
+            "Truly one of the amazing burger chains we have eaten at! Customer
+            service is also good. Beautiful presentation, amazing taste, and
+            good staff, awesome. Their mac mince cheeseburger with olive sauce
+            is very tasty."
+          </p>
+          <div class="profile">
+            <img src="assets/imgs/ducnhanfun.jpg" alt="" />
+            <div class="profile-data">
+              <h3>Đức Nhân</h3>
+              <span>Hair Stylist</span>
+            </div>
+          </div>
+        </div>
+        <div class="t-box">
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          <p>
+            "They make my favorite burgers. I can't find a better one. I pretty
+            much love BIG King XXL, the best in the world! Healthy choices and
+            consciousness of the environment. Everything was delicious."
+          </p>
+          <div class="profile">
+            <img src="assets/imgs/profile-2.png" alt="" />
+            <div class="profile-data">
+              <h3>Kewil JR</h3>
+              <span>Hair Stylist</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Newsletter -->
     <section class="newsletter container" id="newsletter">
-        <h2>Subscribe and Get 10% Discount</h2>
-        <p>Be the first to get the latest news, promotions and much more.</p>
-        <form action="">
-            <input type="email" name="" id="" class="Email" placeholder="Email" required>
-            <input type="submit" value="Subscribe" class="s-btn">
-        </form>
+      <h2>Subscribe and Get 10% Discount</h2>
+      <p>Be the first to get the latest news, promotions and much more.</p>
+      <form action="">
+        <input
+          type="email"
+          name=""
+          id=""
+          class="Email"
+          placeholder="Email"
+          required
+        />
+        <input type="submit" value="Subscribe" class="s-btn" />
+      </form>
     </section>
     <!-- Footer -->
     <div class="footer">
-        <div class="footer-content container">
-            <div class="footer-box">
-                <a href="#" class="footer-logo">
-                    <img src="assets/imgs/logo2.png" alt="">
-                </a>
-                <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
-                <div class="social">
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-pinterest-alt'></i></a>
-                </div>
-            </div>
-            <div class="footer-box">
-                <h3>Opening Hours</h3>
-                <p><span>Mon</span>: 9:00 - 20:30</p>
-                <p><span>Tue</span>: 9:00 - 20:30</p>
-                <p><span>Wed</span>: 9:00 - 20:30</p>
-                <p><span>Thu</span>: 9:00 - 20:30</p>
-                <p><span>Fri</span>: 9:00 - 20:30</p>
-                <p><span>Sat</span>: 9:00 - 20:00</p>
-                <p><span>Sun</span>: Closed</p>
-            </div>
-            <div class="footer-box">
-                <h3>Information</h3>
-                <a href="#">About Us</a>
-                <a href="#">Blog</a>
-                <a href="#">Dica Food Gallery</a>
-                <a href="#">Dica Food Talent Chefs</a>
-                <a href="#">Testimonials</a>
-            </div>
-            <div class="footer-box">
-                <h3>Contact Us</h3>
-                <p>+9123456789</p>
-                <p>Dicafood@gmail.com</p>
-                <p>Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh </p>
-            </div>
+      <div class="footer-content container">
+        <div class="footer-box">
+          <a href="#" class="footer-logo">
+            <img src="assets/imgs/logo2.png" alt="" />
+          </a>
+          <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
+          <div class="social">
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+            <a href="#"><i class="bx bxl-pinterest-alt"></i></a>
+          </div>
         </div>
-        <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
+        <div class="footer-box">
+          <h3>Opening Hours</h3>
+          <p><span>Mon</span>: 9:00 - 20:30</p>
+          <p><span>Tue</span>: 9:00 - 20:30</p>
+          <p><span>Wed</span>: 9:00 - 20:30</p>
+          <p><span>Thu</span>: 9:00 - 20:30</p>
+          <p><span>Fri</span>: 9:00 - 20:30</p>
+          <p><span>Sat</span>: 9:00 - 20:00</p>
+          <p><span>Sun</span>: Closed</p>
+        </div>
+        <div class="footer-box">
+          <h3>Information</h3>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Dica Food Gallery</a>
+          <a href="#">Dica Food Talent Chefs</a>
+          <a href="#">Testimonials</a>
+        </div>
+        <div class="footer-box">
+          <h3>Contact Us</h3>
+          <p>+9123456789</p>
+          <p>Dicafood@gmail.com</p>
+          <p>
+            Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh
+          </p>
+        </div>
+      </div>
+      <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
 
     <script>
-        function navigateToPage(selectElement) {
-            const selectedValue = selectElement.value;
-            if (selectedValue !== "#") { // Kiểm tra để đảm bảo rằng giá trị không phải là #
-                window.location.href = selectedValue; // Chuyển hướng đến URL được chọn
-            }
-        }
-    </script>
-</body>
+      // Lấy tất cả các liên kết phân trang
+      const paginationLinks = document.querySelectorAll(
+        ".pagination_item_link"
+      );
 
+      // Lấy URL hiện tại
+      const currentUrl = window.location.href;
+
+      // Duyệt qua từng liên kết phân trang
+      paginationLinks.forEach((link) => {
+        // Kiểm tra nếu URL hiện tại trùng với href của liên kết
+        if (currentUrl.includes(link.getAttribute("href"))) {
+          // Thêm class "pagination_item_active" vào phần tử cha
+          link.parentElement.classList.add("pagination_item_active");
+        } else {
+          // Loại bỏ class "pagination_item_active" nếu không khớp
+          link.parentElement.classList.remove("pagination_item_active");
+        }
+      });
+    </script>
+  </body>
 </html>

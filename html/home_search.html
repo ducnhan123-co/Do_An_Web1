@@ -1,255 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FOOD-SGU</title>
-    <link rel="stylesheet" href="assets/css/timkiem.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/timkiem.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <!-- <link rel="stylesheet" href="assets/css/home.css"> -->
 
     <!-- Box Icon -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .filter-sort-container {
+        display: flex;
+        align-items: center;
+        /* Cho phép dòng xuống nếu không đủ chỗ */
+        gap: 10px;
+      }
 
-</head>
+      .select-container,
+      .price-input,
+      .name-input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
 
-<body>
+      .name-input {
+        width: 150px; /* Chiều rộng phù hợp */
+      }
+    </style>
+  </head>
 
+  <body>
     <header>
-        <!-- ======================================TOP-HEADER=================================== -->
-        <div class="top-header">
-            <div class="cnt-block">
-                <p>+0123 456 789</p>
-                <ul class="list-unstyled list-inline">
-                    <li class="dropdown dropdown-small">
-                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-                            <span class="value">USD </span><i class="fas fa-caret-down"></i>
-                        </a>
-                        <!-- <ul class="dropdown-menu">
+      <!-- ======================================TOP-HEADER=================================== -->
+      <div class="top-header">
+        <div class="cnt-block">
+          <p>+0123 456 789</p>
+          <ul class="list-unstyled list-inline">
+            <li class="dropdown dropdown-small">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-hover="dropdown"
+                data-toggle="dropdown"
+              >
+                <span class="value">USD </span><i class="fas fa-caret-down"></i>
+              </a>
+              <!-- <ul class="dropdown-menu">
                             <li><a href="#">USD</a></li>
                             <li><a href="#">INR</a></li>
                             <li><a href="#">GBP</a></li>
                         </ul> -->
-                    </li>
-                    <li class="dropdown dropdown-small">
-                        <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-                            <span class="value">English </span><i class="fas fa-caret-down"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- <li><a href="#">English</a></li>
+            </li>
+            <li class="dropdown dropdown-small">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-hover="dropdown"
+                data-toggle="dropdown"
+              >
+                <span class="value">English </span
+                ><i class="fas fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- <li><a href="#">English</a></li>
                             <li><a href="#">French</a></li>
                             <li><a href="#">German</a></li> -->
-                        </ul>
-                    </li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Wishlist</a></li>
-                    <li><a href="#">MyCart</a></li>
-                    <li><a href="#">Checkout</a></li>
-
-                </ul>
-            </div>
+              </ul>
+            </li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">MyCart</a></li>
+            <li><a href="#">Checkout</a></li>
+          </ul>
         </div>
+      </div>
 
-        <!-- ======================================MAIN-HEADER=================================== -->
-        <div class="main-header">
-            <div class="main-header-img">
-                <img src="assets/imgs/logo2.png" alt="">
-                <h2>DICA <br>FOOD</h2>
-            </div>
-            <div class="main-header-search">
-                <i class='bx bx-search'></i>
-                <input type="text" placeholder="Tìm kiếm món ăn...">
-                <a href="home_search.html" class="filter-btn">Lọc</a>
-            </div>
-            <div class="main-header-login">
-                <i class='bx bxs-user'></i>
-                <a href="home_login.html" class="login-link">Đăng Nhập</a>
-                <span>|</span>
-                <a href="home_dangky.html" class="register-link">Đăng Kí</a>
-            </div>
-            <div class="main-header-cart">
-                <i class='bx bxs-shopping-bag'></i>
-                <a href="home_login.html">Giỏ Hàng</a>
-            </div>
+      <!-- ======================================MAIN-HEADER=================================== -->
+      <div class="main-header">
+        <div class="main-header-img">
+          <img src="assets/imgs/logo2.png" alt="" />
+          <h2>DICA <br />FOOD</h2>
         </div>
-
-
-        <!-- ======================================CATEGORY-HEADER=================================== -->
-        <div class="category-header">
-            <a href="/index.html" class="category-link">TRANG CHỦ</a>
-            <a href="Monnuoc.html" class="category-link">MÓN MẶN</a>
-            <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
-            <a href="Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
-            <a href="Monnuoc.html" class="category-link">MÓN LẨU</a>
-            <a href="Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
-            <a href="Monnuoc.html" class="category-link">MÓN MỚI</a>
+        <div class="main-header-search">
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Tìm kiếm món ăn..." />
+          <a href="home_search.html" class="filter-btn">Lọc</a>
         </div>
+        <div class="main-header-login">
+          <i class="bx bxs-user"></i>
+          <a href="home_login.html" class="login-link">Đăng Nhập</a>
+          <span>|</span>
+          <a href="home_dangky.html" class="register-link">Đăng Kí</a>
+        </div>
+        <div class="main-header-cart">
+          <i class="bx bxs-shopping-bag"></i>
+          <a href="home_login.html">Giỏ Hàng</a>
+        </div>
+      </div>
+
+      <!-- ======================================CATEGORY-HEADER=================================== -->
+      <div class="category-header">
+        <a href="/index.html" class="category-link">TRANG CHỦ</a>
+        <a href="Monnuoc.html" class="category-link">MÓN MẶN</a>
+        <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
+        <a href="Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
+        <a href="Monnuoc.html" class="category-link">MÓN LẨU</a>
+        <a href="Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
+        <a href="Monnuoc.html" class="category-link">MÓN MỚI</a>
+      </div>
     </header>
 
     <!-- Items -->
     <section class="items" id="items">
-        <!-- Sort section -->
-        <div class="filter-sort-container">
-            <label for="sort-options">Phân loại</label>
-            <div class="select-container">
-                <select id="sort-options">
-                    <option value="all">Tất cả</option>
-                    <option value="drinks">Món Nước</option>
-                    <option value="main-dish">Món Mặn</option>
-                    <option value="snacks">Món Ăn Nhẹ</option>
-                    <option value="hotpot">Món Lẩu</option>
-                    <option value="dessert">Món Tráng Miệng</option>
-                    <option value="new">Món Mới</option>
-                </select>
-            </div>
-
-            <label for="price-from">Giá từ:</label>
-            <input type="number" id="price-from" placeholder="Tối thiểu" class="price-input" min="0">
-            <label for="price-to">đến:</label>
-            <input type="number" id="price-to" placeholder="Tối đa" class="price-input" min="0">
-            <!-- Add an anchor tag around the search button -->
-            <a href="home_search.html" class="search-button">
-                <i class='bx bx-search'></i> <!-- Search icon -->
-            </a>
-
-            <div class="icon-button"><i class='bx bx-sort-up'></i></div>
-            <div class="icon-button"><i class='bx bx-sort-down'></i></div>
-            <div class="icon-button"><i class='bx bx-refresh'></i></div>
-            <div class="icon-button"><i class='bx bx-x'></i></div>
+      <!-- Sort section -->
+      <div class="filter-sort-container">
+        <!-- Phân loại -->
+        <label for="sort-options">Phân loại</label>
+        <div class="select-container">
+          <select id="sort-options">
+            <option value="all">Tất cả</option>
+            <option value="drinks">Món Nước</option>
+            <option value="main-dish">Món Mặn</option>
+            <option value="snacks">Món Ăn Nhẹ</option>
+            <option value="hotpot">Món Lẩu</option>
+            <option value="dessert">Món Tráng Miệng</option>
+            <option value="new">Món Mới</option>
+          </select>
         </div>
 
+        <!-- Lọc theo tên -->
+        <label for="name-filter">Tên món</label>
+        <input
+          type="text"
+          id="name-filter"
+          placeholder="Nhập tên món ăn"
+          class="name-input"
+        />
 
+        <!-- Giá từ -->
+        <label for="price-from">Giá từ:</label>
+        <input
+          type="number"
+          id="price-from"
+          placeholder="Tối thiểu"
+          class="price-input"
+          min="0"
+        />
 
+        <label for="price-to">đến:</label>
+        <input
+          type="number"
+          id="price-to"
+          placeholder="Tối đa"
+          class="price-input"
+          min="0"
+        />
 
-        <h2 class="heading container">Kết Quả Tìm Thấy</h2>
-        <div class="item-content container">
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <img src="assets/imgs/Menu2.webp" alt="">
-                <h2>Phở Tái</h2>
-                <div class="price">
-                    <h3>35.000VND</h3>
-                    <p>45.000VMD</p>
-                </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <img src="assets/imgs/Menu20.jpg" alt="">
-                <h2>Beef Burger</h2>
-                <div class="price">
-                    <h3>3.5$</h3>
-                    <p>5.0$</p>
-                </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <img src="assets/imgs/Menu8.jpg" alt="">
-                <h2>Raspberry Juice</h2>
-                <div class="price">
-                    <h3>75.000VND</h3>
-                    <p>85.000VND</p>
-                </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <img src="assets/imgs/Menu11.jpg" alt="">
-                <h2>BAILEY'S CRÈME BRULEE</h2>
-                <div class="price">
-                    <h3>119.000VND</h3>
-                    <p>149.000VND</p>
-                </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <img src="assets/imgs/Menu9.jpg" alt="">
-                <h2>Trà Gừng</h2>
-                <div class="price">
-                    <h3>36.000VND</h3>
-                    <p>49.000VND</p>
-                </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <img src="assets/imgs/sushi.jpg" alt="">
-                <h2>Sushi</h2>
-                <div class="price">
-                    <h3>55.000VND</h3>
-                    <p>79.000VND</p>
-                </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
-            </div>
-            <div class="item-box">
-                <span class="sale">Sale</span>
-                <img src="assets/imgs/Omurice.jpg" alt="">
-                <h2>Omurice</h2>
-                <div class="price">
-                    <h3>89.000VND</h3>
-                    <p>99.000VND</p>
-                </div>
-                <a href="product_detail.html" class="item-btn">View Product</a>
-            </div>
+        <!-- Nút tìm kiếm -->
+        <a href="home_search.html" class="search-button">
+          <i class="bx bx-search"></i>
+          <!-- Search icon -->
+        </a>
+
+        <!-- Các nút khác -->
+        <div class="icon-button"><i class="bx bx-sort-up"></i></div>
+        <div class="icon-button"><i class="bx bx-sort-down"></i></div>
+        <div class="icon-button"><i class="bx bx-refresh"></i></div>
+        <div class="icon-button"><i class="bx bx-x"></i></div>
+      </div>
+
+      <h2 class="heading container">Kết Quả Tìm Thấy</h2>
+      <div class="item-content container">
+        <div class="item-box">
+          <span class="sale">Sale</span>
+          <img src="assets/imgs/Menu2.webp" alt="" />
+          <h2>Phở Tái</h2>
+          <div class="price">
+            <h3>35.000VND</h3>
+            <p>45.000VMD</p>
+          </div>
+          <a href="product_detail.html" class="item-btn">View Product</a>
         </div>
-
-        <div class="product_detail_phantrang" style="margin-top: 40px;">
-            <button class="product_detail_phantrang--left"> > </button>
-            <a href="home_search.html" style="color: rgb(255, 72, 0);">1</a>
-            <a href="home_search.html" style="color: rgb(255, 72, 0);">2</a>
-            <a href="home_search.html" style=" color: rgb(255, 72, 0);">3</a>
-            <a href="home_search.html" style="color: rgb(255, 72, 0);">4</a>
-            <button class="product_detail_phantrang--right"> > </button>
+        <div class="item-box">
+          <span class="sale">Sale</span>
+          <img src="assets/imgs/Menu20.jpg" alt="" />
+          <h2>Beef Burger</h2>
+          <div class="price">
+            <h3>3.5$</h3>
+            <p>5.0$</p>
+          </div>
+          <a href="product_detail.html" class="item-btn">View Product</a>
         </div>
+        <div class="item-box">
+          <span class="sale">Sale</span>
+          <img src="assets/imgs/Menu8.jpg" alt="" />
+          <h2>Raspberry Juice</h2>
+          <div class="price">
+            <h3>75.000VND</h3>
+            <p>85.000VND</p>
+          </div>
+          <a href="product_detail.html" class="item-btn">View Product</a>
+        </div>
+        <div class="item-box">
+          <span class="sale">Sale</span>
+          <img src="assets/imgs/Menu11.jpg" alt="" />
+          <h2>BAILEY'S CRÈME BRULEE</h2>
+          <div class="price">
+            <h3>119.000VND</h3>
+            <p>149.000VND</p>
+          </div>
+          <a href="product_detail.html" class="item-btn">View Product</a>
+        </div>
+        <div class="item-box">
+          <span class="sale">Sale</span>
+          <img src="assets/imgs/Menu9.jpg" alt="" />
+          <h2>Trà Gừng</h2>
+          <div class="price">
+            <h3>36.000VND</h3>
+            <p>49.000VND</p>
+          </div>
+          <a href="product_detail.html" class="item-btn">View Product</a>
+        </div>
+        <div class="item-box">
+          <span class="sale">Sale</span>
+          <img src="assets/imgs/sushi.jpg" alt="" />
+          <h2>Sushi</h2>
+          <div class="price">
+            <h3>55.000VND</h3>
+            <p>79.000VND</p>
+          </div>
+          <a href="product_detail.html" class="item-btn">View Product</a>
+        </div>
+        <div class="item-box">
+          <span class="sale">Sale</span>
+          <img src="assets/imgs/Omurice.jpg" alt="" />
+          <h2>Omurice</h2>
+          <div class="price">
+            <h3>89.000VND</h3>
+            <p>99.000VND</p>
+          </div>
+          <a href="product_detail.html" class="item-btn">View Product</a>
+        </div>
+      </div>
+
+      <div class="product_detail_phantrang" style="margin-top: 40px">
+        <button class="product_detail_phantrang--left">></button>
+        <a href="home_search.html" style="color: rgb(255, 72, 0)">1</a>
+        <a href="home_search.html" style="color: rgb(255, 72, 0)">2</a>
+        <a href="home_search.html" style="color: rgb(255, 72, 0)">3</a>
+        <a href="home_search.html" style="color: rgb(255, 72, 0)">4</a>
+        <button class="product_detail_phantrang--right">></button>
+      </div>
     </section>
-
 
     <!-- Footer -->
     <div class="footer">
-        <div class="footer-content container">
-            <div class="footer-box">
-                <a href="#" class="footer-logo">
-                    <img src="assets/imgs/logo2.png" alt="">
-                </a>
-                <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
-                <div class="social">
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-pinterest-alt'></i></a>
-                </div>
-            </div>
-            <div class="footer-box">
-                <h3>Opening Hours</h3>
-                <p><span>Mon</span>: 9:00 - 20:30</p>
-                <p><span>Tue</span>: 9:00 - 20:30</p>
-                <p><span>Wed</span>: 9:00 - 20:30</p>
-                <p><span>Thu</span>: 9:00 - 20:30</p>
-                <p><span>Fri</span>: 9:00 - 20:30</p>
-                <p><span>Sat</span>: 9:00 - 20:00</p>
-                <p><span>Sun</span>: Closed</p>
-            </div>
-            <div class="footer-box">
-                <h3>Information</h3>
-                <a href="#">About Us</a>
-                <a href="#">Blog</a>
-                <a href="#">Dica Food Gallery</a>
-                <a href="#">Dica Food Talent Chefs</a>
-                <a href="#">Testimonials</a>
-            </div>
-            <div class="footer-box">
-                <h3>Contact Us</h3>
-                <p>+9123456789</p>
-                <p>Dicafood@gmail.com</p>
-                <p>Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh </p>
-            </div>
+      <div class="footer-content container">
+        <div class="footer-box">
+          <a href="#" class="footer-logo">
+            <img src="assets/imgs/logo2.png" alt="" />
+          </a>
+          <p>273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh</p>
+          <div class="social">
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+            <a href="#"><i class="bx bxl-pinterest-alt"></i></a>
+          </div>
         </div>
-        <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
+        <div class="footer-box">
+          <h3>Opening Hours</h3>
+          <p><span>Mon</span>: 9:00 - 20:30</p>
+          <p><span>Tue</span>: 9:00 - 20:30</p>
+          <p><span>Wed</span>: 9:00 - 20:30</p>
+          <p><span>Thu</span>: 9:00 - 20:30</p>
+          <p><span>Fri</span>: 9:00 - 20:30</p>
+          <p><span>Sat</span>: 9:00 - 20:00</p>
+          <p><span>Sun</span>: Closed</p>
+        </div>
+        <div class="footer-box">
+          <h3>Information</h3>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Dica Food Gallery</a>
+          <a href="#">Dica Food Talent Chefs</a>
+          <a href="#">Testimonials</a>
+        </div>
+        <div class="footer-box">
+          <h3>Contact Us</h3>
+          <p>+9123456789</p>
+          <p>Dicafood@gmail.com</p>
+          <p>
+            Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh
+          </p>
+        </div>
+      </div>
+      <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
-
-</body>
-
+  </body>
 </html>
