@@ -7,19 +7,23 @@
 
 .cart {
     padding-bottom: 2rem;
-    width: 90%;
+    width: 100%;
     padding-top: 12rem;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    /* background-color: #b89f91; */
 }
 
 .cart-info {
-    width: 57%;
+    padding: 0px 10px;
+    width: 55%;
+    /* background-color: #b89f91; */
 }
 
 .shipping-info {
-    width: 40%;
+    width:  40%;
+    /* background-color: #b89f91; */
 }
 
 h2 {
