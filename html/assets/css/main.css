@@ -1417,7 +1417,8 @@ td {
 
 .backgroud-detail {
   width: 100%;
-  background-image: url(../imgs/banner01.png);
+  background-color: #b89f91;
+  /* background-image: url(../imgs/banner01.png); */
   padding-bottom: 15px;
 }
 
