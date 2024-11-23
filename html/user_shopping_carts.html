@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User_info</title>
-    <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
-    <!-- <link rel="stylesheet" href="/assets/css/base.css"> -->
+    <title>FOOD SGU</title>
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/user_home.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css">
@@ -15,11 +16,10 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <!-- Box Icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  
-    <!-- User_info -->
-    <link rel="stylesheet" href="assets/css/user.css">
+ 
 
 <body>
 
@@ -58,7 +58,6 @@
                 </ul>
             </div>
         </div>
-
         <!-- ======================================MAIN-HEADER=================================== -->
         <div class="main-header">
             <div class="main-header-img">
@@ -76,21 +75,22 @@
             </div>
             <div class="main-header-login">
                 <i class="fas fa-user"></i> <!-- Biểu tượng người trước Đăng Nhập -->
-                <a href="user_info.html" class="login-link">Lập Nguyễn</a>
+                <a href="user_carts.html" class="login-link">Lập Nguyễn</a>
                 <span>|</span> <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
                 <a href="../index.html" class="register-link">Đăng xuất</a>
-                <div class="custom-select-wrapper-user-info">
-                    <select class="dropdown-select-user-info" id="options-dropdown" onchange="navigateToPage(this)">
-                        <option value="#"><i class="fas fa-angle-down"></i>Tuỳ chọn ▼</option>
+                <div class="custom-select-wrapper">
+                    <select class="dropdown-select" id="options-dropdown" onchange="navigateToPage(this)">
+                        <option value="#">Tuỳ chọn</option>
                         <option value="./user_info.html" style="color: black;">Thông tin cá nhân</option>
                         <option value="./user_history.html" style="color: black;">Lịch sử mua hàng</option>
                         <option value="./user_payment.html" style="color: black;">Thanh toán</option>
                     </select>
+
                 </div>
             </div>
             <div class="main-header-cart">
                 <i class="fas fa-shopping-cart"></i> <!-- Biểu tượng giỏ hàng -->
-                <a href="user_shopping_carts.html">Giỏ hàng</a>
+                <a href="#">Giỏ hàng</a>
             </div>
 
 
@@ -102,88 +102,76 @@
         <!-- ======================================CATEGORY-HEADER=================================== -->
         <div class="category-header">
             <a href="user.html" class="category-link">TRANG CHỦ</a>
-            <a href="user_Monman.html" class="category-link">MÓN MẶN</a>
+            <a href="user_Monnuoc.html" class="category-link">MÓN CHAY</a>
+            <a href="user_Monnuoc.html" class="category-link">MÓN MẶN</a>
             <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
             <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
             <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
-            <a href="user_Montrangmieng.html" class="category-link">MÓN TRÁNG MIỆNG</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN MỚI</a>
+            <a href="user_Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
         </div>
     </header>
 
-    <!-- =========================================CUSTOMER INFO=========================================  -->
-    <section class="section-user-info">
-        <div class="container-user-info">
-            <div class="main-account-header">
-                <div>
-                    <h3>Thông tin tài khoản của bạn</h3>
-                </div>
-                <div>
-                    <h3>Quản lý thông tin để bảo mật tài khoản</h3>
-                </div>
-                <!-- <hr> -->
-            </div>
-            <div class="main-account-body">
-                <div class="main-account-body-col">
-                    <form action="" class="info-user">
-                        <div class="form-group">
-                            <label for="infoname" class="form-label">Họ và tên</label>
-                            <span class="form-control">Nguyễn Hoàng Lập</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="infophone" class="form-label">Số điện thoại</label>
-                            <span class="form-control">0902752693</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="infoemail" class="form-label">Email</label>
-                            <span class="form-control">lapnguyen26@gmail.com</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="infoaddress" class="form-label">Địa chỉ</label>
-                            <span class="form-control">290B/33/7 Dương Bá Trạc, Phường 1, Quận 8</span>
-                        </div>
-                    </form>
-                </div>
-                <div class="main-account-body-col">
-                    <form action="" class="change-password">
-                        <div class="form-group">
-                            <label for="" class="form-label w60">Mật khẩu hiện tại</label>
-                            <input class="form-control" type="password" name="" id="password-cur-info"
-                                placeholder="Nhập mật khẩu hiện tại">
-                            <input class="show-pass-info" type="checkbox" onclick="togglePassword('password-cur-info')">
-                            Hiển thị mật khẩu
-                            <!-- <span class="password-cur-info-error form-message"></span> -->
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="form-label w60">Mật khẩu mới </label>
-                            <input class="form-control" type="password" name="" id="password-after-info"
-                                placeholder="Nhập mật khẩu mới">
-                            <input class="show-pass-info" type="checkbox"
-                                onclick="togglePassword('password-after-info')"> Hiển thị mật khẩu
-                            <!-- <span class="password-after-info-error form-message"></span> -->
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="form-label w60">Xác nhận mật khẩu mới</label>
-                            <input class="form-control" type="password" name="" id="password-comfirm-info"
-                                placeholder="Nhập lại mật khẩu mới">
-                            <input class="show-pass-info" type="checkbox"
-                                onclick="togglePassword('password-comfirm-info')"> Hiển thị mật khẩu
-                            <!-- <span class="password-after-comfirm-error form-message"></span> -->
-                        </div>
-                    </form>
-                </div>
-                <div class="main-account-body-row">
-                    <div>
-                        <button class="button" onclick="saveChanges()">Lưu thay đổi</button>
-                    </div>
-                    <div>
-                        <button class="button" onclick="changePassword()">Đổi mật khẩu</button>
-                    </div>
-                </div>
-
-            </div>
+    <!-- =========================================HOME=========================================  -->
+    <div class="cart">
+        <div class="cart-info">
+            <h2>Thông tin giỏ hàng</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tên sản phẩm</th>
+                        <th>Sản phẩm</th>
+                        <th>Ngày đặt hàng</th>
+                        <th>Đơn giá (VNĐ)</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền (VNĐ)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gỏi cuốn</td>
+                        <td><img src="assets/imgs/goicuon.jpg" alt=""></td>
+                        <td>01/11/2024</td>
+                        <td>150,000</td>
+                        <td>1</td>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <td>Cá hồi</td>
+                        <td><img src="assets/imgs/cahoi.jpg" alt=""></td>
+                        <td>01/11/2024</td>
+                        <td>150,000</td>
+                        <td>1</td>
+                        <td>150,000</td>
+                    </tr>
+                    <tr>
+                        <td>Lẩu bò</td>
+                        <td><img src="assets/imgs/laubo.jpg" alt=""></td>
+                        <td>01/11/2024</td>
+                        <td>150,000</td>
+                        <td>2</td>
+                        <td>300,000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="total-label">Tổng cộng:</td>
+                        <td class="total-price">600,000</td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
-    </section>
+        <div class="shipping-info">
+            <h2>Địa chỉ giao hàng</h2>
+            <form>
+                <input type="text" placeholder="Tên người nhận" value="Nguyễn Đăng Khoa">
+                <input type="text" placeholder="Số điện thoại" value="0908643007">
+                <input type="email" placeholder="Email" value="khoand@gmail.com">
+                <textarea placeholder="Địa chỉ giao hàng">214 Tô Hiến Thành, P.5, Q.10, HCM</textarea>
+                <button type="button" onclick="handleConfirm()"   >Xác nhận đặt hàng</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Footer -->
     <div class="footer">
         <div class="footer-content container">
@@ -221,12 +209,24 @@
                 <h3>Contact Us</h3>
                 <p>+9123456789</p>
                 <p>Dicafood@gmail.com</p>
-                <p>Address: 273 An Duong     Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh </p>
+                <p>Address: 273 An Duong Vuong, Phuong 3, Quan 5, Thanh Pho Ho Chi Minh </p>
             </div>
         </div>
         <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
-    <script src="assets/js/user.js">
+    <script>
+        function navigateToPage(select) {
+            const url = select.value;
+            if (url !== "#") { // Kiểm tra để không chuyển trang khi chọn "Tuỳ chọn"
+                window.location.href = url;
+            }
+        }
+        function handleConfirm() {
+  // Chuyển hướng trực tiếp đến trang thanh toán
+  window.location.href = './user_payment.html'; // Thay đường dẫn bằng trang bạn muốn
+}
+
+
     </script>
 </body>
 
