@@ -211,6 +211,7 @@ header {
   text-align: center;
   text-decoration: none;
   /* Loại bỏ gạch chân */
+  border: none;
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
