@@ -90,95 +90,6 @@
         </h1>
       </header>
 
-      <div class="product-detail-container">
-        <!-- Chi tiết sản phẩm -->
-        <div class="product-detail-card">
-          <h2 style="color: #ff8800; margin-bottom: 20px; text-align: center">
-            Xem trước sản phẩm
-          </h2>
-          <div class="product-images-section">
-            <img
-              src="./assets/imgs/Menu20.jpg"
-              alt="Main Product Image"
-              class="product-main-image"
-            />
-          </div>
-          <div class="product-info-section">
-            <p><strong>Danh mục:</strong> Món chính</p>
-            <h2 class="product-title">Hamburger</h2>
-            <hr />
-            <p><strong>Mô tả:</strong></p>
-            <ul style="list-style: none">
-              <li>Hamburger là món ăn truyền thống nổi tiếng trên thế giới.</li>
-              <li>
-                Sản phẩm kết hợp hoàn hảo giữa các thành phần như bột mì, trứng,
-                xúc xích, phô mai...
-              </li>
-            </ul>
-            <p><strong>Giá:</strong> 5$ - 3.5$</p>
-            <div class="product-quantity-section">
-              <label for="quantity-input"><strong>Số lượng:</strong></label>
-              <input type="number" id="quantity-input" value="1" min="1" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Form sửa sản phẩm -->
-        <div class="product-edit-card">
-          <h2 style="color: #ff8800; margin-bottom: 20px">Thay đổi sản phẩm</h2>
-          <form>
-            <label for="edit-product-name">Tên sản phẩm:</label>
-            <input
-              type="text"
-              id="edit-product-name"
-              value="Hamburger"
-              required
-            />
-
-            <label for="edit-product-category">Danh mục:</label>
-            <select id="edit-product-category" required>
-              <option value="mon-chinh" selected>Món chính</option>
-              <option value="do-uong">Đồ uống</option>
-              <option value="trang-mieng">Tráng miệng</option>
-              <option value="an-nhanh">Ăn nhanh</option>
-            </select>
-
-            <label for="edit-product-price">Giá:</label>
-            <input type="number" id="edit-product-price" value="5" required />
-
-            <label for="edit-product-description">Mô tả:</label>
-            <textarea
-              id="edit-product-description"
-              required
-              style="height: 100px"
-            >
-      Hamburger là món ăn truyền thống nổi tiếng trên thế giới.
-            </textarea>
-
-            <label for="edit-product-quantity">Số lượng:</label>
-            <input
-              type="number"
-              id="edit-product-quantity"
-              value="10"
-              required
-            />
-
-            <label for="edit-product-status">Trạng thái:</label>
-            <select id="edit-product-status">
-              <option value="in-stock" selected>Còn hàng</option>
-              <option value="out-of-stock">Hết hàng</option>
-            </select>
-
-            <label for="edit-product-image">Hình ảnh sản phẩm:</label>
-            <input type="file" id="edit-product-image" accept="image/*" />
-
-            <button type="submit" class="update-button">
-              Cập nhật sản phẩm
-            </button>
-          </form>
-        </div>
-      </div>
-
       <!-- Tìm Kiếm Sản Phẩm -->
       <div class="product-search">
         <h2>Tìm Kiếm Sản Phẩm</h2>
@@ -194,7 +105,7 @@
 
       <!-- Danh sách Sản Phẩm -->
       <div class="product-list">
-        <h2 style="text-align: left">Danh sách Sản Phẩm</h2>
+        <h2 style="float: left">Danh sách Sản Phẩm</h2>
         <table>
           <thead>
             <tr>
@@ -266,14 +177,14 @@
                 </button>
               </td>
             </tr>
-            <!-- San pham 3  -->
+            <!-- San pham 4  -->
             <tr>
               <td>
-                <img src="./assets/imgs/item-3.png" alt="Product Image" />
+                <img src="./assets/imgs/item-1.png" alt="Product Image" />
               </td>
               <td>Tên sản phẩm</td>
               <td>Giá sản phẩm</td>
-              <td>Gà ủ muối</td>
+              <td>Gà không lối thoát</td>
               <td>Số lượng</td>
               <td>Còn hàng</td>
               <td>
@@ -285,52 +196,14 @@
                 </button>
               </td>
             </tr>
-            <!-- San pham 3  -->
+            <!-- San pham 5  -->
             <tr>
               <td>
-                <img src="./assets/imgs/item-3.png" alt="Product Image" />
+                <img src="./assets/imgs/item-5.png" alt="Product Image" />
               </td>
               <td>Tên sản phẩm</td>
               <td>Giá sản phẩm</td>
-              <td>Gà ủ muối</td>
-              <td>Số lượng</td>
-              <td>Còn hàng</td>
-              <td>
-                <button class="edit-button" onclick="addNew()">
-                  <i class="fas fa-edit"></i> Sửa
-                </button>
-                <button class="delete-button">
-                  <i class="fas fa-trash-alt"></i> Xóa
-                </button>
-              </td>
-            </tr>
-            <!-- San pham 3  -->
-            <tr>
-              <td>
-                <img src="./assets/imgs/item-3.png" alt="Product Image" />
-              </td>
-              <td>Tên sản phẩm</td>
-              <td>Giá sản phẩm</td>
-              <td>Gà ủ muối</td>
-              <td>Số lượng</td>
-              <td>Còn hàng</td>
-              <td>
-                <button class="edit-button" onclick="addNew()">
-                  <i class="fas fa-edit"></i> Sửa
-                </button>
-                <button class="delete-button">
-                  <i class="fas fa-trash-alt"></i> Xóa
-                </button>
-              </td>
-            </tr>
-            <!-- San pham 3  -->
-            <tr>
-              <td>
-                <img src="./assets/imgs/item-3.png" alt="Product Image" />
-              </td>
-              <td>Tên sản phẩm</td>
-              <td>Giá sản phẩm</td>
-              <td>Gà ủ muối</td>
+              <td>Gà siêu ngon</td>
               <td>Số lượng</td>
               <td>Còn hàng</td>
               <td>
@@ -348,58 +221,37 @@
 
       <!-- Phân trang -->
       <div class="pagination">
-        <a href="admin_products_phantrang.html">&laquo;</a>
+        <a href="admin_products.html">&laquo;</a>
         <!-- Mũi tên trái -->
-        <a href="admin_products_phantrang.html">1</a>
+        <a href="admin_products.html">1</a>
         <a href="admin_home_phantrang2.html">2</a>
         <a href="admin_home_phantrang2.html">3</a>
         <a href="admin_home_phantrang2.html">4</a>
-        <a href="admin_home_phantrang2.html">&raquo;</a>
         <!-- Mũi tên phải -->
-        <a href="admin_products_phantrang.html">&raquo;</a>
+        <a href="#">&raquo;</a>
       </div>
     </div>
+    <script>
+      function addNew() {
+        // Điều hướng đến trang thêm sản phẩm mới
+        window.location.href = "admin_product-details.html";
+      }
+
+      // Lấy phần tử nút "Thêm sản phẩm" và phần tử hiển thị thông báo
+      const submitButton = document.querySelector(".btn-submit");
+      const successMessage = document.getElementById("success-message");
+
+      // Thêm sự kiện click vào nút
+      submitButton.addEventListener("click", (event) => {
+        event.preventDefault(); // Ngăn hành động submit form mặc định
+        successMessage.classList.remove("hidden"); // Hiển thị thông báo
+        successMessage.style.display = "block";
+
+        // Ẩn thông báo sau 3 giây
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 3000);
+      });
+    </script>
   </body>
-
-  <script>
-    document
-      .querySelector(".update-product-button")
-      .addEventListener("click", () => {
-        const quantityInput = document.getElementById("quantity-input").value;
-
-        // Kiểm tra số lượng có thay đổi hay không
-        if (quantityInput) {
-          alert(`Sản phẩm đã được cập nhật với số lượng: ${quantityInput}`);
-        } else {
-          alert("Không có thay đổi nào được lưu!");
-        }
-      });
-
-    function addNew() {
-      // Điều hướng đến trang thêm sản phẩm mới
-      window.location.href = "admin_products_phantrang.html";
-    }
-
-    // Lấy nút xóa
-    const deleteButtons = document.querySelectorAll(".delete-button");
-
-    // Thêm sự kiện click vào mỗi nút xóa
-    deleteButtons.forEach((button) => {
-      button.addEventListener("click", (event) => {
-        // Hiển thị thông báo xác nhận
-        const confirmDelete = confirm(
-          "Bạn có chắc chắn muốn xóa sản phẩm này không?"
-        );
-
-        if (confirmDelete) {
-          alert("Sản phẩm đã được xóa!");
-          // Thực hiện hành động xóa sản phẩm (nếu có API hoặc xử lý khác)
-          const productRow = event.target.closest("tr"); // Lấy hàng sản phẩm
-          if (productRow) productRow.remove(); // Xóa hàng sản phẩm khỏi bảng
-        } else {
-          alert("Hành động xóa đã bị hủy!");
-        }
-      });
-    });
-  </script>
 </html>
