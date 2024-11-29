@@ -1,179 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin - Quản lý khách hàng</title>
-    <link rel="stylesheet" href="./assets/css/admin.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/css/admin.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* Ẩn section sửa khách hàng ban đầu */
+      .customer-edit-section {
+        display: block;
+        margin-top: 20px;
+      }
 
-<body>
+      /* Hiển thị section sửa khi cần */
+      .customer-edit-section.active {
+        display: block;
+      }
+
+      /* Làm tối hàng khi bị khóa */
+      .table-row-locked {
+        background-color: rgba(0, 0, 0, 0.1);
+        pointer-events: none;
+        opacity: 0.6;
+      }
+
+      /* Làm tối hàng khi bị khóa */
+      .table-row-locked {
+        background-color: rgba(0, 0, 0, 0.1);
+        opacity: 0.6;
+      }
+
+      /* Cho phép bấm vào nút trong hàng bị khóa */
+      .table-row-locked .lock-btn {
+        pointer-events: auto; /* Kích hoạt sự kiện chuột */
+        opacity: 1; /* Hiển thị đầy đủ */
+      }
+    </style>
+  </head>
+
+  <body>
     <!-- Sidebar -->
     <aside class="sidebar">
-        <div class="logo">
-            <img src="assets/imgs/logo2.png" alt="Logo">
-            <h2>DICA FOOD</h2>
-        </div>
-        <nav>
-            <ul class="sidebar-menu">
-                <li class="tong_quan_first"><a href="admin_tongquan.html"><i class="fas fa-home"></i> Trang tổng
-                        quan</a></li>
-                <li><a href="admin_products.html"><i class="fas fa-utensils"></i> Sản phẩm</a></li>
-                <li><a href="admin_khachhang.html"><i class="fas fa-users"></i> Khách hàng</a></li>
-                <li><a href="admin_donhang.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li>
-                <li><a href="admin_thongke.html"><i class="fas fa-chart-line"></i> Thống kê</a></li>
-                <div class="sidebar-group">
-                    <li class="sidebar-02"><a href=""><i class="fas fa-calculator"></i> Máy tính</a></li>
-                    <li class="sidebar-02"><a href="admin.html"><i class="fas fa-arrow-alt-circle-left"></i> Trang
-                            chủ</a></li>
-                    <li class="sidebar-02"><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
-                </div>
-            </ul>
-        </nav>
+      <div class="logo">
+        <img src="assets/imgs/logo2.png" alt="Logo" />
+        <h2>DICA FOOD</h2>
+      </div>
+      <nav>
+        <ul class="sidebar-menu">
+          <li class="tong_quan_first">
+            <a href="admin_tongquan.html"
+              ><i class="fas fa-home"></i> Trang tổng quan</a
+            >
+          </li>
+          <li>
+            <a href="admin_products.html"
+              ><i class="fas fa-utensils"></i> Sản phẩm</a
+            >
+          </li>
+          <li>
+            <a href="admin_khachhang.html"
+              ><i class="fas fa-users"></i> Khách hàng</a
+            >
+          </li>
+          <li>
+            <a href="admin_donhang.html"
+              ><i class="fas fa-shopping-cart"></i> Đơn hàng</a
+            >
+          </li>
+          <li>
+            <a href="admin_thongke.html"
+              ><i class="fas fa-chart-line"></i> Thống kê</a
+            >
+          </li>
+          <div class="sidebar-group">
+            <li class="sidebar-02">
+              <a href=""><i class="fas fa-calculator"></i> Máy tính</a>
+            </li>
+            <li class="sidebar-02">
+              <a href="admin.html"
+                ><i class="fas fa-arrow-alt-circle-left"></i> Trang chủ</a
+              >
+            </li>
+            <li class="sidebar-02">
+              <a href="../index.html"
+                ><i class="fas fa-sign-out-alt"></i> Đăng xuất</a
+              >
+            </li>
+          </div>
+        </ul>
+      </nav>
     </aside>
 
     <!-- Main Content -->
     <div class="main-content">
-        <header>
-            <h1>Chào mừng bạn đến với trang khách hàng của cửa hàng <span class="main-content-title">DICA FOOD</span>
-            </h1>
-        </header>
+      <header>
+        <h1>
+          Chào mừng bạn đến với trang khách hàng của cửa hàng
+          <span class="main-content-title">DICA FOOD</span>
+        </h1>
+      </header>
 
-        <!-- Search bar -->
-        <div class="search-bar">
-            <h2 class="search-bar-title">Tìm kiếm khách hàng</h2>
-            <input type="text" id="search" placeholder="Tìm kiếm khách hàng...">
-            <button><i class="fas fa-search"></i></button>
-        </div>
+      <!-- Search bar -->
+      <div class="search-bar">
+        <h2 class="search-bar-title">Tìm kiếm khách hàng</h2>
+        <input type="text" id="search" placeholder="Tìm kiếm khách hàng..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
 
-        <!-- User table -->
-        <table class="customer-table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Tên khách hàng</th>
-                    <th>Email</th>
-                    <th>Trạng thái</th>
-                    <th>Hành động</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>nguyenvana@gmail.com</td>
-                    <td>Hoạt động</td>
-                    <td>
-                        <button class="edit-btn"><i class="fas fa-edit"></i> Sửa</button>
-                        <button class="lock-btn"><i class="fas fa-lock"></i> Khoá</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>nguyenvana@gmail.com</td>
-                    <td>Hoạt động</td>
-                    <td>
-                        <button class="edit-btn"><i class="fas fa-edit"></i> Sửa</button>
-                        <button class="lock-btn"><i class="fas fa-lock"></i> Khoá</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Nguyễn Văn B</td>
-                    <td>nguyenvana@gmail.com</td>
-                    <td>Hoạt động</td>
-                    <td>
-                        <button class="edit-btn"><i class="fas fa-edit"></i> Sửa</button>
-                        <button class="lock-btn"><i class="fas fa-lock"></i> Khoá</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Nguyễn Văn C</td>
-                    <td>nguyenvana@gmail.com</td>
-                    <td>Hoạt động</td>
-                    <td>
-                        <button class="edit-btn"><i class="fas fa-edit"></i> Sửa</button>
-                        <button class="lock-btn"><i class="fas fa-lock"></i> Khoá</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Nguyễn Văn D</td>
-                    <td>nguyenvana@gmail.com</td>
-                    <td>Hoạt động</td>
-                    <td>
-                        <button class="edit-btn"><i class="fas fa-edit"></i> Sửa</button>
-                        <button class="lock-btn"><i class="fas fa-lock"></i> Khoá</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Nguyễn Văn E</td>
-                    <td>nguyenvana@gmail.com</td>
-                    <td>Hoạt động</td>
-                    <td>
-                        <button class="edit-btn"><i class="fas fa-edit"></i> Sửa</button>
-                        <button class="lock-btn"><i class="fas fa-lock"></i> Khoá</button>
-                    </td>
-                </tr>
-                <!-- Các dòng dữ liệu khác -->
-            </tbody>
-        </table>
+      <!-- User table -->
+      <table class="customer-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tên khách hàng</th>
+            <th>Email</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Nguyễn Văn A</td>
+            <td>nguyenvana@gmail.com</td>
+            <td>Hoạt động</td>
+            <td>
+              <button class="edit-btn"><i class="fas fa-edit"></i> Sửa</button>
+              <button class="lock-btn"><i class="fas fa-lock"></i> Khoá</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Nguyễn Văn A</td>
+            <td>nguyenvana@gmail.com</td>
+            <td>Hoạt động</td>
+            <td>
+              <button class="edit-btn"><i class="fas fa-edit"></i> Sửa</button>
+              <button class="lock-btn"><i class="fas fa-lock"></i> Khoá</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Nguyễn Văn B</td>
+            <td>nguyenvana@gmail.com</td>
+            <td>Hoạt động</td>
+            <td>
+              <button class="edit-btn"><i class="fas fa-edit"></i> Sửa</button>
+              <button class="lock-btn"><i class="fas fa-lock"></i> Khoá</button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Nguyễn Văn C</td>
+            <td>nguyenvana@gmail.com</td>
+            <td>Hoạt động</td>
+            <td>
+              <button class="edit-btn"><i class="fas fa-edit"></i> Sửa</button>
+              <button class="lock-btn"><i class="fas fa-lock"></i> Khoá</button>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Nguyễn Văn D</td>
+            <td>nguyenvana@gmail.com</td>
+            <td>Hoạt động</td>
+            <td>
+              <button class="edit-btn"><i class="fas fa-edit"></i> Sửa</button>
+              <button class="lock-btn"><i class="fas fa-lock"></i> Khoá</button>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Nguyễn Văn E</td>
+            <td>nguyenvana@gmail.com</td>
+            <td>Hoạt động</td>
+            <td>
+              <button class="edit-btn"><i class="fas fa-edit"></i> Sửa</button>
+              <button class="lock-btn"><i class="fas fa-lock"></i> Khoá</button>
+            </td>
+          </tr>
+          <!-- Các dòng dữ liệu khác -->
+        </tbody>
+      </table>
 
-        <!-- Thêm khách hàng -->
-        <section class="customer-add-section">
-            <h2>Thêm khách hàng</h2>
-            <form class="add-customer-form">
-                <label for="customer-name">Tên khách hàng:</label>
-                <input type="text" id="customer-name" placeholder="Nhập tên khách hàng..." required>
+      <!-- Thêm khách hàng -->
+      <section class="customer-add-section">
+        <h2>Thêm khách hàng</h2>
+        <form class="add-customer-form">
+          <label for="customer-name">Tên khách hàng:</label>
+          <input
+            type="text"
+            id="customer-name"
+            placeholder="Nhập tên khách hàng..."
+            required
+          />
 
-                <label for="customer-email">Email:</label>
-                <input type="email" id="customer-email" placeholder="Nhập email..." required>
+          <label for="customer-email">Email:</label>
+          <input
+            type="email"
+            id="customer-email"
+            placeholder="Nhập email..."
+            required
+          />
 
-                <label for="customer-status">Trạng thái:</label>
-                <select id="customer-status">
-                    <option value="active">Hoạt động</option>
-                    <option value="inactive">Ngừng hoạt động</option>
-                </select>
+          <label for="customer-status">Trạng thái:</label>
+          <select id="customer-status">
+            <option value="active">Hoạt động</option>
+            <option value="inactive">Ngừng hoạt động</option>
+          </select>
 
-                <button type="submit">Thêm khách hàng</button>
-            </form>
-        </section>
+          <button type="submit" class="btnaddcustomer">Thêm khách hàng</button>
+        </form>
+      </section>
 
-        <!-- Sửa khách hàng -->
-        <section class="customer-edit-section">
-            <h2>Sửa thông tin khách hàng</h2>
-            <form class="edit-customer-form">
-                <label for="edit-customer-name">Tên khách hàng:</label>
-                <input type="text" id="edit-customer-name" value="Nguyễn Văn A" required>
+      <!-- Sửa khách hàng -->
+      <section class="customer-edit-section">
+        <h2>Sửa thông tin khách hàng</h2>
+        <form class="edit-customer-form">
+          <label for="edit-customer-name">Tên khách hàng:</label>
+          <input
+            type="text"
+            id="edit-customer-name"
+            value="Nguyễn Văn A"
+            required
+          />
 
-                <label for="edit-customer-email">Email:</label>
-                <input type="email" id="edit-customer-email" value="nguyenvana@gmail.com" required>
+          <label for="edit-customer-email">Email:</label>
+          <input
+            type="email"
+            id="edit-customer-email"
+            value="nguyenvana@gmail.com"
+            required
+          />
 
-                <label for="edit-customer-status">Trạng thái:</label>
-                <select id="edit-customer-status">
-                    <option value="active" selected>Hoạt động</option>
-                    <option value="inactive">Ngừng hoạt động</option>
-                </select>
+          <label for="edit-customer-status">Trạng thái:</label>
+          <select id="edit-customer-status">
+            <option value="active" selected>Hoạt động</option>
+            <option value="inactive">Ngừng hoạt động</option>
+          </select>
 
-                <button type="submit">Lưu thay đổi</button>
-            </form>
-        </section>
+          <button type="submit">Lưu thay đổi</button>
+        </form>
+      </section>
     </div>
-</body>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const editSection = document.querySelector(".customer-edit-section");
+      const editForm = document.querySelector(".edit-customer-form");
+      const editName = document.getElementById("edit-customer-name");
+      const editEmail = document.getElementById("edit-customer-email");
+      const editStatus = document.getElementById("edit-customer-status");
+      const tableRows = document.querySelectorAll(".customer-table tbody tr");
 
+      // Sự kiện bấm nút sửa
+      tableRows.forEach((row) => {
+        const editButton = row.querySelector(".edit-btn");
+
+        editButton.addEventListener("click", function () {
+          const name = row.cells[1].textContent;
+          const email = row.cells[2].textContent;
+          const status = row.cells[3].textContent;
+
+          // Đưa thông tin khách hàng vào form sửa
+          editName.value = name;
+          editEmail.value = email;
+          editStatus.value =
+            status.toLowerCase() === "hoạt động" ? "active" : "inactive";
+
+          // Hiển thị section sửa khách hàng
+          editSection.classList.add("active");
+
+          // Cuộn đến phần sửa khách hàng
+          editSection.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+
+      // Sự kiện bấm nút khóa
+      // Sự kiện bấm nút khóa hoặc mở khóa
+      tableRows.forEach((row) => {
+        const lockButton = row.querySelector(".lock-btn");
+
+        lockButton.addEventListener("click", function () {
+          const customerName = row.cells[1].textContent;
+
+          if (row.classList.contains("table-row-locked")) {
+            // Nếu khách hàng đang bị khóa, mở khóa
+            if (
+              confirm(
+                `Bạn có chắc muốn mở khóa khách hàng "${customerName}" không?`
+              )
+            ) {
+              row.classList.remove("table-row-locked");
+              lockButton.innerHTML = '<i class="fas fa-lock"></i> Khóa'; // Chuyển lại nút thành "Khóa"
+              alert(`Khách hàng "${customerName}" đã được mở khóa.`);
+            }
+          } else {
+            // Nếu khách hàng chưa bị khóa, tiến hành khóa
+            if (
+              confirm(
+                `Bạn có chắc muốn khóa khách hàng "${customerName}" không?`
+              )
+            ) {
+              row.classList.add("table-row-locked");
+              lockButton.innerHTML = '<i class="fas fa-lock-open"></i> Mở khóa'; // Chuyển nút thành "Mở khóa"
+              alert(`Khách hàng "${customerName}" đã bị khóa.`);
+            }
+          }
+        });
+      });
+
+      // Sự kiện lưu thay đổi
+      editForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        alert("Thông tin khách hàng đã được cập nhật!");
+        editSection.classList.remove("active");
+      });
+    });
+
+    const addCustomer = document.querySelector(".btnaddcustomer");
+    addCustomer.addEventListener("click", function () {
+      alert("Đã thêm khách hàng thành công");
+      location.reload();
+    });
+  </script>
 </html>
