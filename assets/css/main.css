@@ -1,6 +1,5 @@
-
 /* Google Fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Righteous&display=swap");
 
 * {
   margin: 0;
@@ -8,7 +7,7 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
   scroll-padding-top: 3rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Variables */
@@ -33,7 +32,6 @@ html::-webkit-scrollbar {
 html::-webkit-scrollbar-thumb {
   background: var(--red);
 }
-
 
 /* Header */
 
@@ -69,8 +67,6 @@ header {
   border-bottom: 1px solid rgb(255 255 255 / 10%);
   z-index: 100;
 }
-
-
 
 /* =============================================TOP-HEADER=================================== */
 /* Tạo chiều cao nhỏ gọn cho phần top-header */
@@ -140,7 +136,6 @@ header {
   color: #007bff;
 }
 
-
 /* ======================================MAIN-HEADER=================================== */
 .main-header {
   display: flex;
@@ -159,7 +154,6 @@ header {
 .main-header-img img {
   width: 100px;
   height: auto;
-
 }
 
 .main-header-img h2 {
@@ -313,8 +307,6 @@ header {
   }
 }
 
-
-
 /* Home Background  */
 .home {
   min-height: 650px;
@@ -456,7 +448,6 @@ header {
   opacity: 0.7;
 }
 
-
 /* Thiết kề phần thực đơn ở phần món ăn */
 .items {
   background: var(--container-color);
@@ -479,7 +470,9 @@ header {
   font-weight: 500;
   color: #666;
 }
-.select-container, .price-input, .icon-button {
+.select-container,
+.price-input,
+.icon-button {
   display: inline-flex;
   align-items: center;
   padding: 8px 12px;
@@ -556,7 +549,6 @@ header {
   margin-bottom: 1.2rem;
 }
 
-
 .item-box h2 {
   font-size: 1.4rem;
   font-weight: 600;
@@ -581,9 +573,6 @@ header {
   color: rgb(var(--brown), 0.8);
 }
 
-
-
-
 .item-btn {
   background: var(--yellow-color);
   color: var(--brown);
@@ -598,29 +587,41 @@ header {
   transition: background 0.4s ease-in-out;
 }
 
-.edit-btn {
-  color: #ff7b00;
-  /* color: #a72e1b; */
+.edit-btn,
+.delete-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
   font-weight: bold;
-  transition: 0.5 ease;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.edit-btn:hover {
-  color: var(--brown);
-  transform: scaleX(1.2);
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+.edit-btn:hover,
+.delete-btn:hover {
+  background-color: var(--yellow-color);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.edit-btn {
+  margin-right: 20px;
+  background-color: rgb(196, 195, 195);
 }
 
 .delete-btn {
-  color: #ff7b00;
-  font-weight: bold;
+  background-color: #e74c3c; /* Màu đỏ nổi bật */
 }
 
-
 .delete-btn:hover {
-  color: var(--brown);
-  transform: scaleX(1.2);
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: #c0392b; /* Màu đỏ khi hover */
 }
 
 /* Phân trang  */
@@ -658,8 +659,6 @@ header {
   text-align: center;
   border-radius: 2px;
 }
-
-
 
 /* ============================== BEST SELLER ============================== */
 
@@ -717,8 +716,6 @@ header {
   /* Hiệu ứng hover */
 }
 
-
-
 .close-icon {
   position: absolute;
   top: 0;
@@ -749,10 +746,6 @@ header {
   background-color: #f8d7da;
   /* Nền khi hover */
 }
-
-
-
-
 
 .burgers-content:last-child,
 .bbq-content:last-child {
@@ -944,7 +937,6 @@ header {
 .footer-box {
   display: flex;
   flex-direction: column;
-
 }
 
 .social {
@@ -1006,7 +998,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* Making Responsive */
-@media (max-width:1410px) {
+@media (max-width: 1410px) {
   .conatiner {
     width: 90%;
     margin: 0 auto;
@@ -1022,7 +1014,7 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-@media (max-width:1195px) {
+@media (max-width: 1195px) {
   .home-text h1 {
     font-size: 4.2rem;
     line-height: 4.8rem;
@@ -1035,7 +1027,7 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-@media (max-width:975px) {
+@media (max-width: 975px) {
   .heading {
     font-size: 2.8rem;
   }
@@ -1062,7 +1054,7 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-@media (max-width:820px) {
+@media (max-width: 820px) {
   section {
     padding: 2rem 0;
   }
@@ -1140,7 +1132,7 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-@media (max-width:670px) {
+@media (max-width: 670px) {
   .home-text h1 {
     font-size: 2.7rem;
     line-height: 3.2rem;
@@ -1160,7 +1152,7 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-@media (max-width:390px) {
+@media (max-width: 390px) {
   .navbar {
     width: 100%;
   }
@@ -1273,7 +1265,6 @@ hr {
   padding: 0;
   list-style: none;
   background-color: #dbdada;
-
 }
 
 .wc-tabs li {
@@ -1421,7 +1412,6 @@ td {
   padding-bottom: 15px;
 }
 
-
 /* .footer_get_email {
   padding: 15px;
   font-size: 10px;
@@ -1458,15 +1448,6 @@ td {
   font-size: 40px;
   right: 0px;
 } */
-
-
-
-
-
-
-
-
-
 
 /* @import "bourbon"; */
 

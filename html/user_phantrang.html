@@ -36,6 +36,60 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <style>
+      .pagination_item_active {
+        background-color: #ffab24cb;
+        font-weight: bold;
+        box-shadow: 0 0 2px white;
+      }
+
+      .product_detail_phantrang {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .product_detail_phantrang a {
+        text-decoration: none;
+        padding: 8px 15px;
+        font-size: 20px;
+        font-weight: bold;
+        /* border: 2px solid #ffffff; */
+        color: #ffffff;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .product_detail_phantrang a:hover {
+        background-color: #ffe203;
+        color: #ffffff;
+        transform: translateY(-2px);
+      }
+
+      .product_detail_phantrang a.active {
+        background-color: #ffe203;
+        color: #ffffff;
+      }
+
+      .product_detail_phantrang button {
+        padding: 8px 12px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #ffe203;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .product_detail_phantrang button:hover {
+        background-color: #ffe203;
+        transform: scale(1.1);
+      }
+    </style>
   </head>
 
   <body>
@@ -233,17 +287,13 @@
         </div>
       </div>
       <!-- Phân trang -->
-      <ul class="pagination">
-        <li class="pagination_item">
-          <a href="user.html" class="pagination_item_link">1</a>
-        </li>
-        <li class="pagination_item pagination_item_active">
-          <a href="#" class="pagination_item_link">2</a>
-        </li>
-        <li class="pagination_item">
-          <a href="user_phantrang.html" class="pagination_item_link">3</a>
-        </li>
-      </ul>
+      <div class="product_detail_phantrang" style="margin-top: 20px">
+        <button class="product_detail_phantrang--left">&laquo;</button>
+        <a href="/html/user.html">1</a>
+        <a href="/html/user_phantrang.html" class="active">2</a>
+        <a href="/html/user_phantrang2.html">3</a>
+        <button class="product_detail_phantrang--right">&raquo;</button>
+      </div>
     </section>
     <!-- Best Seller -->
     <section class="menu-container" id="menu-container">
