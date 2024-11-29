@@ -1,138 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin - Quản lý đơn hàng</title>
-    <link rel="stylesheet" href="./assets/css/admin.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/css/admin.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* CSS cho modal */
+      /* CSS cho modal */
+      .modal {
+        display: none; /* Ẩn modal mặc định */
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4); /* Làm tối nền */
+      }
 
-<body>
+      .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%; /* Chiều rộng modal */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .close-btn {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close-btn:hover,
+      .close-btn:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
     <!-- Sidebar -->
     <aside class="sidebar">
-        <div class="logo">
-            <img src="assets/imgs/logo2.png" alt="Logo">
-            <h2>DICA FOOD</h2>
-        </div>
-        <nav>
-            <ul class="sidebar-menu">
-                <li class="tong_quan_first"><a href="admin_tongquan.html"><i class="fas fa-home"></i> Trang tổng
-                        quan</a></li>
-                <li><a href="admin_products.html"><i class="fas fa-utensils"></i> Sản phẩm</a></li>
-                <li><a href="admin_khachhang.html"><i class="fas fa-users"></i> Khách hàng</a></li>
-                <li><a href="admin_donhang.html"><i class="fas fa-shopping-cart"></i> Đơn hàng</a></li>
-                <li><a href="admin_thongke.html"><i class="fas fa-chart-line"></i> Thống kê</a></li>
-                <div class="sidebar-group">
-                    <li class="sidebar-02"><a href="#"><i class="fas fa-calculator"></i> Máy tính</a></li>
-                    <li class="sidebar-02"><a href="admin.html"><i class="fas fa-arrow-alt-circle-left"></i> Trang
-                            chủ</a></li>
-                    <li class="sidebar-02"><a href="../index.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
-                </div>
-            </ul>
-        </nav>
+      <div class="logo">
+        <img src="assets/imgs/logo2.png" alt="Logo" />
+        <h2>DICA FOOD</h2>
+      </div>
+      <nav>
+        <ul class="sidebar-menu">
+          <li class="tong_quan_first">
+            <a href="admin_tongquan.html"
+              ><i class="fas fa-home"></i> Trang tổng quan</a
+            >
+          </li>
+          <li>
+            <a href="admin_products.html"
+              ><i class="fas fa-utensils"></i> Sản phẩm</a
+            >
+          </li>
+          <li>
+            <a href="admin_khachhang.html"
+              ><i class="fas fa-users"></i> Khách hàng</a
+            >
+          </li>
+          <li>
+            <a href="admin_donhang.html"
+              ><i class="fas fa-shopping-cart"></i> Đơn hàng</a
+            >
+          </li>
+          <li>
+            <a href="admin_thongke.html"
+              ><i class="fas fa-chart-line"></i> Thống kê</a
+            >
+          </li>
+          <div class="sidebar-group">
+            <li class="sidebar-02">
+              <a href="#"><i class="fas fa-calculator"></i> Máy tính</a>
+            </li>
+            <li class="sidebar-02">
+              <a href="admin.html"
+                ><i class="fas fa-arrow-alt-circle-left"></i> Trang chủ</a
+              >
+            </li>
+            <li class="sidebar-02">
+              <a href="../index.html"
+                ><i class="fas fa-sign-out-alt"></i> Đăng xuất</a
+              >
+            </li>
+          </div>
+        </ul>
+      </nav>
     </aside>
 
     <!-- Main Content -->
     <div class="main-content">
-        <header>
-            <h1>Chào mừng bạn đến với trang đơn hàng của cửa hàng <span class="main-content-title">DICA FOOD</span></h1>
-        </header>
+      <header>
+        <h1>
+          Chào mừng bạn đến với trang đơn hàng của cửa hàng
+          <span class="main-content-title">DICA FOOD</span>
+        </h1>
+      </header>
 
-        <!-- Filter Orders -->
-        <section class="filter-orders">
-            <h2>Lọc đơn hàng</h2>
-            <form action="#" method="GET">
-                <label for="start-date">Từ ngày:</label>
-                <input type="date" id="start-date" name="start-date">
+      <!-- Filter Orders -->
+      <section class="filter-orders">
+        <h2>Lọc đơn hàng</h2>
+        <form action="#" method="GET">
+          <label for="start-date">Từ ngày:</label>
+          <input type="date" id="start-date" name="start-date" />
 
-                <label for="end-date">Đến ngày:</label>
-                <input type="date" id="end-date" name="end-date">
+          <label for="end-date">Đến ngày:</label>
+          <input type="date" id="end-date" name="end-date" />
 
-                <label for="status">Tình trạng đơn hàng:</label>
-                <select id="status" name="status">
-                    <option value="all">Tất cả</option>
-                    <option value="pending">Chưa xử lý</option>
-                    <option value="confirmed">Đã xác nhận</option>
-                    <option value="delivered">Đã giao</option>
-                    <option value="cancelled">Đã hủy</option>
+          <label for="status">Tình trạng đơn hàng:</label>
+          <select id="status" name="status">
+            <option value="all">Tất cả</option>
+            <option value="pending">Chưa xử lý</option>
+            <option value="confirmed">Đã xác nhận</option>
+            <option value="delivered">Đã giao</option>
+            <option value="cancelled">Đã hủy</option>
+          </select>
+
+          <label for="district">Địa chỉ giao hàng (Quận):</label>
+          <input
+            type="text"
+            id="district"
+            name="district"
+            placeholder="Nhập tên quận..."
+          />
+
+          <button type="submit"><i class="fas fa-filter"></i> Lọc</button>
+        </form>
+      </section>
+
+      <!-- Order Table -->
+      <section class="order-table">
+        <h2>Danh sách đơn hàng</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Khách hàng</th>
+              <th>Ngày đặt</th>
+              <th>Trạng thái</th>
+              <th>Địa chỉ giao hàng</th>
+              <th>Hình thức thanh toán</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>Nguyễn Văn A</td>
+              <td>2024-11-12</td>
+              <td>
+                <select name="status" class="order-status" data-order-id="001">
+                  <option value="pending" selected>Chưa xử lý</option>
+                  <option value="confirmed">Đã xác nhận</option>
+                  <option value="delivered">Đã giao</option>
+                  <option value="cancelled">Đã hủy</option>
                 </select>
+              </td>
+              <td>Quận 1</td>
+              <td>Chuyển khoản ngân hàng</td>
+              <td>
+                <button
+                  class="view-btn"
+                  data-order-id="001"
+                  style="outline: none; border: none"
+                >
+                  <i class="fas fa-eye"></i> Xem chi tiết
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Nguyễn Văn B</td>
+              <td>2024-9-12</td>
+              <td>
+                <select name="status" class="order-status" data-order-id="002">
+                  <option value="pending" selected>Đã xác nhận</option>
+                  <option value="confirmed">Đã xác nhận</option>
+                  <option value="delivered">Đã giao</option>
+                  <option value="cancelled">Đã hủy</option>
+                </select>
+              </td>
+              <td>Quận 4</td>
+              <td>Tiền mặt</td>
+              <td>
+                <button
+                  class="view-btn"
+                  data-order-id="002"
+                  style="outline: none; border: none"
+                >
+                  <i class="fas fa-eye"></i> Xem chi tiết
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Nguyễn Văn B</td>
+              <td>2024-9-12</td>
+              <td>
+                <select name="status" class="order-status" data-order-id="002">
+                  <option value="pending" selected>Đã xác nhận</option>
+                  <option value="confirmed">Đã xác nhận</option>
+                  <option value="delivered">Đã giao</option>
+                  <option value="cancelled">Đã hủy</option>
+                </select>
+              </td>
+              <td>Quận 4</td>
+              <td>Tiền mặt</td>
+              <td>
+                <button
+                  class="view-btn"
+                  data-order-id="002"
+                  style="outline: none; border: none"
+                >
+                  <i class="fas fa-eye"></i> Xem chi tiết
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>004</td>
+              <td>Nguyễn Văn B</td>
+              <td>2024-9-12</td>
+              <td>
+                <select name="status" class="order-status" data-order-id="002">
+                  <option value="pending" selected>Đã xác nhận</option>
+                  <option value="confirmed">Đã xác nhận</option>
+                  <option value="delivered">Đã giao</option>
+                  <option value="cancelled">Đã hủy</option>
+                </select>
+              </td>
+              <td>Quận 4</td>
+              <td>Tiền mặt</td>
+              <td>
+                <button
+                  class="view-btn"
+                  data-order-id="002"
+                  style="outline: none; border: none"
+                >
+                  <i class="fas fa-eye"></i> Xem chi tiết
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>005</td>
+              <td>Nguyễn Văn B</td>
+              <td>2024-9-12</td>
+              <td>
+                <select name="status" class="order-status" data-order-id="002">
+                  <option value="pending" selected>Đã xác nhận</option>
+                  <option value="confirmed">Đã xác nhận</option>
+                  <option value="delivered">Đã giao</option>
+                  <option value="cancelled">Đã hủy</option>
+                </select>
+              </td>
+              <td>Quận 4</td>
+              <td>Tiền mặt</td>
+              <td>
+                <button
+                  class="view-btn"
+                  data-order-id="002"
+                  style="outline: none; border: none"
+                >
+                  <i class="fas fa-eye"></i> Xem chi tiết
+                </button>
+              </td>
+            </tr>
+            <!-- Thêm các dòng đơn hàng khác -->
+          </tbody>
+        </table>
+      </section>
 
-                <label for="district">Địa chỉ giao hàng (Quận):</label>
-                <input type="text" id="district" name="district" placeholder="Nhập tên quận...">
-
-                <button type="submit"><i class="fas fa-filter"></i> Lọc</button>
-            </form>
-        </section>
-
-        <!-- Order Table -->
-        <section class="order-table">
-            <h2>Danh sách đơn hàng</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Khách hàng</th>
-                        <th>Ngày đặt</th>
-                        <th>Trạng thái</th>
-                        <th>Địa chỉ giao hàng</th>
-                        <th>Hành động</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>001</td>
-                        <td>Nguyễn Văn A</td>
-                        <td>2024-10-12</td>
-                        <td>
-                            <select name="status" class="order-status" data-order-id="001">
-                                <option value="pending" selected>Chưa xử lý</option>
-                                <option value="confirmed">Đã xác nhận</option>
-                                <option value="delivered">Đã giao</option>
-                                <option value="cancelled">Đã hủy</option>
-                            </select>
-                        </td>
-                        <td>Quận 1</td>
-                        <td>
-                            <a href="order_detail.html?orderId=001" class="view-btn"><i class="fas fa-eye"></i> Xem chi
-                                tiết</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>002</td>
-                        <td>Trần Thị B</td>
-                        <td>2024-10-14</td>
-                        <td>
-                            <select name="status" class="order-status" data-order-id="002">
-                                <option value="pending">Chưa xử lý</option>
-                                <option value="confirmed" selected>Đã xác nhận</option>
-                                <option value="delivered">Đã giao</option>
-                                <option value="cancelled">Đã hủy</option>
-                            </select>
-                        </td>
-                        <td>Quận 3</td>
-                        <td>
-                            <a href="order_detail.html?orderId=002" class="view-btn"><i class="fas fa-eye"></i> Xem chi
-                                tiết</a>
-                        </td>
-                    </tr>
-                    <!-- Thêm các dòng đơn hàng khác -->
-                </tbody>
-
-            </table>
-        </section>
+      <!-- Modal hiển thị chi tiết đơn hàng -->
+      <!-- Modal hiển thị chi tiết đơn hàng -->
+      <div id="order-detail-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <p><strong>ID Đơn hàng:</strong> <span id="order-id"></span></p>
+          <p><strong>Khách hàng:</strong> <span id="customer-name"></span></p>
+          <p><strong>Ngày đặt:</strong> <span id="order-date"></span></p>
+          <p><strong>Trạng thái:</strong> <span id="order-status"></span></p>
+          <p>
+            <strong>Địa chỉ giao hàng:</strong>
+            <span id="delivery-address"></span>
+          </p>
+          <p>
+            <strong>Hình thức thanh toán:</strong>
+            <span id="payment-method"></span>
+          </p>
+          <h4>Danh sách sản phẩm</h4>
+          <table id="product-list">
+            <thead>
+              <tr>
+                <th>Tên sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th>Thành tiền</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Dòng sản phẩm sẽ được thêm ở đây -->
+            </tbody>
+          </table>
+          <p><strong>Tổng tiền:</strong> <span id="total-amount"></span></p>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
+  <script>
+    // Lắng nghe sự kiện bấm vào nút "Xem chi tiết"
+    document.querySelectorAll(".view-btn").forEach((button) => {
+      button.addEventListener("click", function () {
+        const orderId = this.getAttribute("data-order-id");
+        const orderDetails = getOrderDetails(orderId);
 
+        // Hiển thị thông tin chi tiết đơn hàng
+        document.getElementById("order-id").innerText = orderDetails.id;
+        document.getElementById("customer-name").innerText =
+          orderDetails.customer;
+        document.getElementById("order-date").innerText = orderDetails.date;
+        document.getElementById("order-status").innerText = orderDetails.status;
+        document.getElementById("delivery-address").innerText =
+          orderDetails.address;
+        document.getElementById("payment-method").innerText =
+          orderDetails.payment;
+
+        // Hiển thị danh sách sản phẩm
+        const productList = document.querySelector("#product-list tbody");
+        productList.innerHTML = ""; // Xóa dữ liệu cũ
+        let totalAmount = 0;
+
+        orderDetails.products.forEach((product) => {
+          const totalPrice = product.quantity * product.unitPrice;
+          totalAmount += totalPrice;
+
+          const row = `
+        <tr>
+          <td>${product.name}</td>
+          <td>${product.quantity}</td>
+          <td>${product.unitPrice.toLocaleString()} VND</td>
+          <td>${totalPrice.toLocaleString()} VND</td>
+        </tr>
+      `;
+          productList.innerHTML += row;
+        });
+
+        // Hiển thị tổng tiền
+        document.getElementById(
+          "total-amount"
+        ).innerText = `${totalAmount.toLocaleString()} VND`;
+
+        // Hiển thị modal
+        const modal = document.getElementById("order-detail-modal");
+        modal.style.display = "block";
+      });
+    });
+
+    // Hàm lấy chi tiết đơn hàng (thêm thông tin sản phẩm)
+    // Hàm lấy chi tiết đơn hàng (thêm thông tin sản phẩm)
+    function getOrderDetails(orderId) {
+      const orders = {
+        "001": {
+          id: "001",
+          customer: "Nguyễn Văn A",
+          date: "2024-10-12",
+          status: "Chưa xử lý",
+          address: "Quận 1",
+          payment: "Chuyển khoản ngân hàng",
+          products: [
+            { name: "Sản phẩm A", quantity: 2, unitPrice: 50000 },
+            { name: "Sản phẩm B", quantity: 1, unitPrice: 100000 },
+            { name: "Sản phẩm C", quantity: 3, unitPrice: 30000 },
+          ],
+        },
+        "002": {
+          id: "002",
+          customer: "Trần Thị B",
+          date: "2024-10-14",
+          status: "Đã xác nhận",
+          address: "Quận 3",
+          payment: "Thanh toán COD",
+          products: [
+            { name: "Sản phẩm X", quantity: 1, unitPrice: 200000 },
+            { name: "Sản phẩm Y", quantity: 4, unitPrice: 150000 },
+          ],
+        },
+        "003": {
+          id: "003",
+          customer: "Lê Minh C",
+          date: "2024-10-20",
+          status: "Đã giao",
+          address: "Quận 5",
+          payment: "Chuyển khoản ngân hàng",
+          products: [
+            { name: "Sản phẩm Z", quantity: 3, unitPrice: 70000 },
+            { name: "Sản phẩm W", quantity: 2, unitPrice: 120000 },
+          ],
+        },
+        "004": {
+          id: "004",
+          customer: "Phan Thi D",
+          date: "2024-10-25",
+          status: "Đã hủy",
+          address: "Quận 7",
+          payment: "Thanh toán COD",
+          products: [
+            { name: "Sản phẩm P", quantity: 5, unitPrice: 80000 },
+            { name: "Sản phẩm Q", quantity: 1, unitPrice: 100000 },
+          ],
+        },
+        "005": {
+          id: "005",
+          customer: "Nguyễn Minh E",
+          date: "2024-11-01",
+          status: "Chưa xử lý",
+          address: "Quận 8",
+          payment: "Chuyển khoản ngân hàng",
+          products: [
+            { name: "Sản phẩm R", quantity: 3, unitPrice: 50000 },
+            { name: "Sản phẩm S", quantity: 2, unitPrice: 90000 },
+          ],
+        },
+      };
+      return orders[orderId] || {};
+    }
+
+    // Đóng modal khi nhấn nút đóng
+    document.querySelector(".close-btn").addEventListener("click", function () {
+      const modal = document.getElementById("order-detail-modal");
+      modal.style.display = "none";
+    });
+
+    // Đóng modal khi click ngoài vùng modal
+    window.onclick = function (event) {
+      const modal = document.getElementById("order-detail-modal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
 </html>

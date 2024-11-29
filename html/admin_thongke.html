@@ -27,6 +27,60 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(
+        0,
+        0,
+        0,
+        0.4
+      ); /* Fallback color for dark background */
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #invoiceDetails {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #invoiceDetails th,
+    #invoiceDetails td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
 
   <body>
     <!-- Sidebar -->
@@ -112,7 +166,6 @@
                 <th>Số lượng bán ra</th>
                 <th>Tổng tiền thu được</th>
                 <th>Mô tả</th>
-                <th>Xem hóa đơn</th>
               </tr>
             </thead>
             <tbody>
@@ -128,7 +181,7 @@
                 <td>150</td>
                 <td>3,000,000 VNĐ</td>
                 <td>Thức ăn nhanh, phổ biến và ngon miệng.</td>
-                <td><a href="invoice_banh_mi.html">Xem</a></td>
+                <!-- <td><a href="invoice_banh_mi.html">Xem</a></td> -->
               </tr>
               <tr>
                 <td>
@@ -142,7 +195,7 @@
                 <td>50</td>
                 <td>2,500,000 VNĐ</td>
                 <td>Pizza phô mai với các loại nhân hấp dẫn.</td>
-                <td><a href="invoice_pizza.html">Xem</a></td>
+                <!-- <td><a href="invoice_pizza.html">Xem</a></td> -->
               </tr>
               <tr>
                 <td>
@@ -156,7 +209,7 @@
                 <td>30</td>
                 <td>1,500,000 VNĐ</td>
                 <td>Thịt nướng thơm ngon, đậm đà hương vị.</td>
-                <td><a href="invoice_thit_nuong.html">Xem</a></td>
+                <!-- <td><a href="invoice_thit_nuong.html">Xem</a></td> -->
               </tr>
               <tr>
                 <td>
@@ -170,7 +223,7 @@
                 <td>200</td>
                 <td>1,200,000 VNĐ</td>
                 <td>Bánh mì tươi ngon, ăn kèm với nhiều loại nước chấm.</td>
-                <td><a href="invoice_ca_phe.html">Xem</a></td>
+                <!-- <td><a href="invoice_ca_phe.html">Xem</a></td> -->
               </tr>
             </tbody>
           </table>
@@ -199,25 +252,33 @@
                 <td>Nguyễn Văn A</td>
                 <td>10,000,000 VNĐ</td>
                 <td>Khách hàng thân thiết, thường xuyên mua hàng.</td>
-                <td><a href="invoice_kh_nguyen_van_a.html">Xem</a></td>
+                <td>
+                  <button onclick="openInvoice('kh_nguyen_van_a')">Xem</button>
+                </td>
               </tr>
               <tr>
                 <td>Trần Thị B</td>
                 <td>8,000,000 VNĐ</td>
                 <td>Khách hàng VIP, hay tổ chức tiệc tại cửa hàng.</td>
-                <td><a href="invoice_kh_tran_thi_b.html">Xem</a></td>
+                <td>
+                  <button onclick="openInvoice('kh_tran_thi_b')">Xem</button>
+                </td>
               </tr>
               <tr>
-                <td>Phạm Văn C</td>
-                <td>5,500,000 VNĐ</td>
-                <td>Khách hàng mới, đang khám phá thực đơn của chúng tôi.</td>
-                <td><a href="invoice_kh_pham_van_c.html">Xem</a></td>
+                <td>Nguyễn Văn A</td>
+                <td>10,000,000 VNĐ</td>
+                <td>Khách hàng thân thiết, thường xuyên mua hàng.</td>
+                <td>
+                  <button onclick="openInvoice('kh_nguyen_van_a')">Xem</button>
+                </td>
               </tr>
               <tr>
-                <td>Nguyễn Thị D</td>
-                <td>3,000,000 VNĐ</td>
-                <td>Khách hàng lâu năm, thích món ăn truyền thống.</td>
-                <td><a href="invoice_kh_nguyen_thi_d.html">Xem</a></td>
+                <td>Trần Thị B</td>
+                <td>8,000,000 VNĐ</td>
+                <td>Khách hàng VIP, hay tổ chức tiệc tại cửa hàng.</td>
+                <td>
+                  <button onclick="openInvoice('kh_tran_thi_b')">Xem</button>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -237,6 +298,90 @@
           </p>
         </div>
       </section>
+
+      <!-- Modal for Invoice -->
+      <div id="invoiceModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Chi tiết hóa đơn</h2>
+          <table id="invoiceDetails">
+            <!-- Dynamic invoice details will appear here -->
+          </table>
+        </div>
+      </div>
     </div>
   </body>
+  <script>
+    // Get modal element
+    var modal = document.getElementById("invoiceModal");
+
+    // Get close button
+    var closeBtn = document.getElementsByClassName("close")[0];
+
+    // Function to open modal and load invoice data
+    function openInvoice(invoiceId) {
+      // This is where you could fetch data from your backend or use hardcoded data
+      var invoiceData = {
+        kh_nguyen_van_a: {
+          items: [
+            { name: "Bánh mì", quantity: 150, price: "20,000" },
+            { name: "Pizza", quantity: 50, price: "50,000" },
+          ],
+          total: "10,000,000 VNĐ",
+        },
+        kh_tran_thi_b: {
+          items: [
+            { name: "Bánh mì", quantity: 100, price: "20,000" },
+            { name: "Thịt nướng", quantity: 30, price: "100,000" },
+          ],
+          total: "8,000,000 VNĐ",
+        },
+        // Add similar structures for other customers as needed
+      };
+
+      // Get the invoice data for the selected customer
+      var data = invoiceData[invoiceId];
+
+      // Populate the table with data
+      var table = document.getElementById("invoiceDetails");
+      table.innerHTML = `
+        <tr>
+          <th>Mặt hàng</th>
+          <th>Số lượng</th>
+          <th>Đơn giá</th>
+        </tr>
+      `;
+
+      data.items.forEach(function (item) {
+        var row = table.insertRow();
+        row.innerHTML = `
+          <td>${item.name}</td>
+          <td>${item.quantity}</td>
+          <td>${item.price}</td>
+        `;
+      });
+
+      // Add total
+      var totalRow = table.insertRow();
+      totalRow.innerHTML = `
+        <td colspan="2"><strong>Tổng tiền</strong></td>
+        <td><strong>${data.total}</strong></td>
+      `;
+
+      // Show modal
+      modal.style.display = "block";
+    }
+
+    // Close the modal when the user clicks on the close button
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    // Close the modal when the user clicks anywhere outside of the modal content
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
 </html>
