@@ -27,6 +27,49 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
+  <style>
+    /* Ẩn submenu mặc định */
+    /* Ẩn submenu mặc định */
+    /* Hiển thị submenu mặc định */
+    .submenu {
+      display: block; /* Hiển thị submenu mà không cần hover */
+      list-style-type: none;
+      padding-left: 40px;
+      margin: 0;
+    }
+
+    /* Định dạng submenu item */
+    .submenu-item {
+      color: #555;
+      text-decoration: none;
+      position: relative;
+      padding-left: 10px; /* Cung cấp không gian cho biểu tượng */
+      line-height: 1.8; /* Giảm chiều cao dòng để mục con nhỏ gọn */
+      font-size: 16px !important; /* Kích thước chữ nhỏ hơn */
+    }
+
+    /* Tạo hình tròn đẹp cho mục con (bằng cách sử dụng pseudo-element) */
+    .submenu-item::before {
+      content: "";
+      position: absolute;
+      left: 3px; /* Đặt biểu tượng cách từ bên trái */
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #ff6600; /* Màu của hình tròn */
+    }
+
+    /* Thay đổi màu sắc khi hover vào mục con */
+    .submenu-item:hover {
+      color: #ff6600;
+    }
+
+    .submenu-item:hover::before {
+      background-color: #ff9933; /* Thay đổi màu của biểu tượng khi hover */
+    }
+  </style>
 
   <body>
     <!-- Sidebar -->
@@ -42,10 +85,17 @@
               ><i class="fas fa-home"></i> Trang tổng quan</a
             >
           </li>
-          <li>
+          <li class="menu-item">
             <a href="admin_products.html"
               ><i class="fas fa-utensils"></i> Sản phẩm</a
             >
+            <ul class="submenu">
+              <li>
+                <a href="admin_products.html" class="submenu-item"
+                  >Thêm sản phẩm mới</a
+                >
+              </li>
+            </ul>
           </li>
           <li>
             <a href="admin_khachhang.html"
