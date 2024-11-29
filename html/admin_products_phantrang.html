@@ -67,7 +67,7 @@
               <a href=""><i class="fas fa-calculator"></i> Máy tính</a>
             </li>
             <li class="sidebar-02">
-              <a href="/admin.html"
+              <a href="../admin.html"
                 ><i class="fas fa-arrow-alt-circle-left"></i> Trang chủ</a
               >
             </li>
@@ -137,10 +137,12 @@
 
             <label for="edit-product-category">Danh mục:</label>
             <select id="edit-product-category" required>
-              <option value="mon-chinh" selected>Món chính</option>
-              <option value="do-uong">Đồ uống</option>
-              <option value="trang-mieng">Tráng miệng</option>
-              <option value="an-nhanh">Ăn nhanh</option>
+              <option value="mon-chinh">Món mặn</option>
+              <option value="mon-chinh">Món nước</option>
+              <option value="mon-chinh">Món ăn nhẹ</option>
+              <option value="mon-chinh">Món lẩu</option>
+              <option value="trang-mieng">Món tráng miệng</option>
+              <option value="an-nhanh">Món mới</option>
             </select>
 
             <label for="edit-product-price">Giá:</label>
@@ -379,27 +381,6 @@
       // Điều hướng đến trang thêm sản phẩm mới
       window.location.href = "admin_products_phantrang.html";
     }
-
-    // Lấy nút xóa
-    const deleteButtons = document.querySelectorAll(".delete-button");
-
-    // Thêm sự kiện click vào mỗi nút xóa
-    deleteButtons.forEach((button) => {
-      button.addEventListener("click", (event) => {
-        // Hiển thị thông báo xác nhận
-        const confirmDelete = confirm(
-          "Bạn có chắc chắn muốn xóa sản phẩm này không?"
-        );
-
-        if (confirmDelete) {
-          alert("Sản phẩm đã được xóa!");
-          // Thực hiện hành động xóa sản phẩm (nếu có API hoặc xử lý khác)
-          const productRow = event.target.closest("tr"); // Lấy hàng sản phẩm
-          if (productRow) productRow.remove(); // Xóa hàng sản phẩm khỏi bảng
-        } else {
-          alert("Hành động xóa đã bị hủy!");
-        }
-      });
-    });
   </script>
+  <script src="./assets/js/admin.js"></script>
 </html>
