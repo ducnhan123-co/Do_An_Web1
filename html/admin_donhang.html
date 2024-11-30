@@ -188,6 +188,7 @@
                   <option value="delivered">Đã giao</option>
                   <option value="cancelled">Đã hủy</option>
                 </select>
+                <button class="save-status" data-order-id="002">Lưu</button>
               </td>
               <td>Quận 1</td>
               <td>Chuyển khoản ngân hàng</td>
@@ -212,6 +213,7 @@
                   <option value="delivered">Đã giao</option>
                   <option value="cancelled">Đã hủy</option>
                 </select>
+                <button class="save-status" data-order-id="002">Lưu</button>
               </td>
               <td>Quận 4</td>
               <td>Tiền mặt</td>
@@ -236,6 +238,7 @@
                   <option value="delivered">Đã giao</option>
                   <option value="cancelled">Đã hủy</option>
                 </select>
+                <button class="save-status" data-order-id="002">Lưu</button>  
               </td>
               <td>Quận 4</td>
               <td>Tiền mặt</td>
@@ -260,6 +263,7 @@
                   <option value="delivered">Đã giao</option>
                   <option value="cancelled">Đã hủy</option>
                 </select>
+                <button class="save-status" data-order-id="002">Lưu</button>
               </td>
               <td>Quận 4</td>
               <td>Tiền mặt</td>
@@ -284,6 +288,7 @@
                   <option value="delivered">Đã giao</option>
                   <option value="cancelled">Đã hủy</option>
                 </select>
+                <button class="save-status" data-order-id="002">Lưu</button>
               </td>
               <td>Quận 4</td>
               <td>Tiền mặt</td>
@@ -469,5 +474,15 @@
         modal.style.display = "none";
       }
     };
+
+
+  document.querySelectorAll('.save-status').forEach((button) => {
+  button.addEventListener('click', () => {
+    alert('Trạng thái đã được lưu thành công!');
+  });
+});
+
+
+
   </script>
 </html>
