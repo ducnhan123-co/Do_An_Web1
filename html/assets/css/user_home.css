@@ -248,6 +248,7 @@ header {
 .filter-btn {
   display: inline-block;
   padding: 8px 16px;
+  transition: background-color 0.3s;
   background-color: #f8b400;
   /* Màu nền cho nút */
   color: white;
