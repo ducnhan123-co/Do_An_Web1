@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FOOD-SGU</title>
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
     <!-- Thêm Font Awesome vào trong <head> -->
     <link
       rel="stylesheet"
@@ -196,35 +196,20 @@
       </div>
       <!-- ======================================CATEGORY-HEADER=================================== -->
       <div class="category-header">
-        <a href="admin.html" class="category-link">TRANG CHỦ</a>
-        <a href="html/admin_monnuoc.html" class="category-link">MÓN MẶN</a>
-        <a href="html/admin_monnuoc.html" class="category-link">MÓN NƯỚC</a>
-        <a href="html/admin_monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
-        <a href="html/admin_monnuoc.html" class="category-link">MÓN LẨU</a>
-        <a href="html/admin_monnuoc.html" class="category-link"
-          >MÓN TRÁNG MIỆNG</a
-        >
-        <a href="html/admin_monnuoc.html" class="category-link">MÓN MỚI</a>
+        <a href="../admin.html" class="category-link">TRANG CHỦ</a>
+        <a href="admin_monnuoc.html" class="category-link">MÓN MẶN</a>
+        <a href="admin_monnuoc.html" class="category-link">MÓN NƯỚC</a>
+        <a href="admin_monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
+        <a href="admin_monnuoc.html" class="category-link">MÓN LẨU</a>
+        <a href="admin_monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
+        <a href="admin_monnuoc.html" class="category-link">MÓN MỚI</a>
       </div>
     </header>
 
     <!-- Home -->
-    <section class="home" id="home">
-      <div class="home-content container">
-        <div class="home-text">
-          <h1>New Grilled BeefBuger</h1>
-          <p>Bùng nổ hương vị chỉ có tại DICA FOOD</p>
-          <h3>Buy 1 Get ONE FREE</h3>
-          <a href="#" class="btn">Order Now</a>
-        </div>
-        <!-- Home Image -->
-        <img src="assets/imgs/home.png" alt="" class="home-img" />
-      </div>
-      <!-- Home Mask Image -->
-      <img src="assets/imgs/home-mask.png" alt="" class="home-mask" />
-    </section>
+
     <!--  Features -->
-    <div class="features container">
+    <div class="features container" style="margin-bottom: 50px">
       <div class="feature-box">
         <img src="assets/imgs/feature-1.svg" alt="" class="feature-img" />
         <div class="feature-text">
@@ -310,7 +295,7 @@
           class="price-input"
           min="0"
         />
-        <a href="./html/admin_home_search.html" class="search-button">
+        <a href="#" class="search-button">
           <i class="bx bx-search"></i>
         </a>
 
@@ -320,7 +305,9 @@
         <div class="icon-button"><i class="bx bx-x"></i></div>
       </div>
 
-      <h2 class="heading container" style="margin-top: -50px">Menu</h2>
+      <h2 class="heading container" style="margin-top: -50px">
+        Kết quả tìm thấy
+      </h2>
 
       <div class="item-content container">
         <div class="item-box">
@@ -502,9 +489,9 @@
       <!-- Phân trang -->
       <div class="product_detail_phantrang" style="margin-top: 20px">
         <button class="product_detail_phantrang--left">&laquo;</button>
-        <a href="../admin.html" class="active">1</a>
-        <a href="./html/admin2.html">2</a>
-        <a href="./html/admin3.html">3</a>
+        <a href="#" class="active">1</a>
+        <a href="admin_home_search2.html">2</a>
+        <a href="admin_home_search2.html">3</a>
         <button class="product_detail_phantrang--right">&raquo;</button>
       </div>
     </section>
@@ -575,7 +562,6 @@
         // Điều hướng đến trang thêm sản phẩm mới
         window.location.href = "admin_products_phantrang.html";
       }
-
       const dishes = [
         "Mỳ Udon",
         "Phở Tái",
