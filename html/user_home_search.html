@@ -45,7 +45,41 @@
       rel="stylesheet"
     />
   </head>
+  <style>
+    .autocomplete-container {
+      position: relative;
+    }
 
+    .suggestions-list {
+      position: absolute;
+      background: white;
+      border: 1px solid #ccc;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-height: 150px;
+      overflow-y: auto;
+      z-index: 100;
+    }
+
+    .suggestions-list li {
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .suggestions-list li:hover {
+      background: #f0f0f0;
+    }
+    .dish-input {
+      background-color: #f0f0f0;
+      padding: 5px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      border-bottom: none;
+    }
+  </style>
   <body>
     <header>
       <!-- ======================================TOP-HEADER=================================== -->
@@ -159,8 +193,17 @@
     <!-- Items -->
     <section class="items" id="items">
       <!-- Sort section -->
-      <div class="filter-sort-container">
-        <label for="sort-options">Phân loại</label>
+      <div
+        class="filter-sort-container"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          margin-top: -50px;
+        "
+      >
+        <label for="sort-options">Phân loại:</label>
         <div class="select-container">
           <select id="sort-options">
             <option value="all">Tất cả</option>
@@ -171,6 +214,18 @@
             <option value="dessert">Món Tráng Miệng</option>
             <option value="new">Món Mới</option>
           </select>
+        </div>
+
+        <!-- Add autocomplete search box -->
+        <label for="search-dishes">Tìm món ăn:</label>
+        <div class="autocomplete-container">
+          <input
+            type="text"
+            id="search-dishes"
+            placeholder="Nhập tên món"
+            class="dish-input"
+          />
+          <ul id="suggestions" class="suggestions-list"></ul>
         </div>
 
         <label for="price-from">Giá từ:</label>
@@ -189,10 +244,8 @@
           class="price-input"
           min="0"
         />
-        <!-- Add an anchor tag around the search button -->
-        <a href="home_search.html" class="search-button">
+        <a href="#" class="search-button">
           <i class="bx bx-search"></i>
-          <!-- Search icon -->
         </a>
 
         <div class="icon-button"><i class="bx bx-sort-up"></i></div>
@@ -340,6 +393,51 @@
       btnClick2.addEventListener("click", function (e) {
         e.preventDefault();
         window.location.href = "user_home_search.html";
+      });
+      const dishes = [
+        "Mỳ Udon",
+        "Phở Tái",
+        "Beef Burger",
+        "Raspberry Juice",
+        "BAILEY'S CRÈME BRULEE",
+        "Trà Gừng",
+        "Sushi",
+        "Bánh Xèo",
+        "Omurice",
+        "Chuoi",
+        "Banana",
+        "Sữa Chua Nếp Cẩm",
+      ];
+
+      const searchDishesInput = document.getElementById("search-dishes");
+      const suggestionsList = document.getElementById("suggestions");
+
+      searchDishesInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+        suggestionsList.innerHTML = ""; // Clear previous suggestions
+
+        if (query) {
+          const filteredDishes = dishes.filter((dish) =>
+            dish.toLowerCase().includes(query)
+          );
+
+          filteredDishes.forEach((dish) => {
+            const li = document.createElement("li");
+            li.textContent = dish;
+            li.addEventListener("click", function () {
+              searchDishesInput.value = dish; // Set input value to selected suggestion
+              suggestionsList.innerHTML = ""; // Clear suggestions
+            });
+            suggestionsList.appendChild(li);
+          });
+        }
+      });
+
+      // Hide suggestions list when clicking outside
+      document.addEventListener("click", function (e) {
+        if (!searchDishesInput.contains(e.target)) {
+          suggestionsList.innerHTML = "";
+        }
       });
     </script>
     <script src="assets/js/user.js"></script>

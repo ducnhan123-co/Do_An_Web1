@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FOOD-SGU</title>
     <link rel="stylesheet" href="assets/css/user_home.css" />
+    <!-- <link rel="stylesheet" href="assets/css/timkiem.css" /> -->
     <!-- <link rel="stylesheet" href="assets/css/user.css"> -->
     <link
       rel="stylesheet"
@@ -203,6 +204,66 @@
     <div style="padding-top: 140px"></div>
     <!-- Items -->
     <section class="items" id="items">
+      <div
+        class="filter-sort-container"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        "
+      >
+        <label for="sort-options">Phân loại:</label>
+        <div class="select-container">
+          <select id="sort-options">
+            <option value="all">Tất cả</option>
+            <option value="drinks">Món Nước</option>
+            <option value="main-dish">Món Mặn</option>
+            <option value="snacks">Món Ăn Nhẹ</option>
+            <option value="hotpot">Món Lẩu</option>
+            <option value="dessert">Món Tráng Miệng</option>
+            <option value="new">Món Mới</option>
+          </select>
+        </div>
+
+        <!-- Add autocomplete search box -->
+        <label for="search-dishes">Tìm món ăn:</label>
+        <div class="autocomplete-container">
+          <input
+            type="text"
+            id="search-dishes"
+            placeholder="Nhập tên món"
+            class="dish-input"
+          />
+          <ul id="suggestions" class="suggestions-list"></ul>
+        </div>
+
+        <label for="price-from">Giá từ:</label>
+        <input
+          type="number"
+          id="price-from"
+          placeholder="Tối thiểu"
+          class="price-input"
+          min="0"
+        />
+        <label for="price-to">đến:</label>
+        <input
+          type="number"
+          id="price-to"
+          placeholder="Tối đa"
+          class="price-input"
+          min="0"
+        />
+        <a href="./html/home_search.html" class="search-button">
+          <i class="bx bx-search"></i>
+        </a>
+
+        <div class="icon-button"><i class="bx bx-sort-up"></i></div>
+        <div class="icon-button"><i class="bx bx-sort-down"></i></div>
+        <div class="icon-button"><i class="bx bx-refresh"></i></div>
+        <div class="icon-button"><i class="bx bx-x"></i></div>
+      </div>
+
       <h2 class="heading container">Menu</h2>
       <div class="item-content container">
         <div class="item-box">

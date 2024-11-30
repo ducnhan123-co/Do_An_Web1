@@ -212,47 +212,58 @@
 
     <!-- Items -->
     <section class="items" id="items">
-      <div class="sort-container">
+      <div
+        class="filter-sort-container"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        "
+      >
         <label for="sort-options">Phân loại:</label>
         <div class="select-container">
-          <select id="sort-options" class="sort-options">
-            <option value="all">Tất Cả</option>
-            <option value="price">Món Nước</option>
-            <option value="rating">Món Mặn</option>
-            <option value="newest">Món Ăn Nhẹ</option>
-            <option value="newest">Món Lẩu</option>
-            <option value="newest">Món Tráng Miệng</option>
-            <option value="newest">Món Mới</option>
+          <select id="sort-options">
+            <option value="all">Tất cả</option>
+            <option value="drinks">Món Nước</option>
+            <option value="main-dish">Món Mặn</option>
+            <option value="snacks">Món Ăn Nhẹ</option>
+            <option value="hotpot">Món Lẩu</option>
+            <option value="dessert">Món Tráng Miệng</option>
+            <option value="new">Món Mới</option>
           </select>
         </div>
-        <div class="sort-icon-container">
-          <a href="#" class="sort-icon"><i class="bx bx-sort"></i></a>
+
+        <!-- Add autocomplete search box -->
+        <label for="search-dishes">Tìm món ăn:</label>
+        <div class="autocomplete-container">
+          <input
+            type="text"
+            id="search-dishes"
+            placeholder="Nhập tên món"
+            class="dish-input"
+          />
+          <ul id="suggestions" class="suggestions-list"></ul>
         </div>
 
         <label for="price-from">Giá từ:</label>
         <input
           type="number"
           id="price-from"
-          placeholder="Min"
+          placeholder="Tối thiểu"
           class="price-input"
+          min="0"
         />
         <label for="price-to">đến:</label>
         <input
           type="number"
           id="price-to"
-          placeholder="Max"
+          placeholder="Tối đa"
           class="price-input"
+          min="0"
         />
-        <!-- Price range filter -->
-        <!-- <div class="price-range">
-                <label for="price-from">Giá từ:</label>
-                <input type="number" id="price-from" placeholder="Min" class="price-input">
-                <label for="price-to">đến:</label>
-                <input type="number" id="price-to" placeholder="Max" class="price-input">
-            </div> -->
-        <a href="user.html" class="search-button">
+        <a href="./html/home_search.html" class="search-button">
           <i class="bx bx-search"></i>
-          <!-- Search icon -->
         </a>
 
         <div class="icon-button"><i class="bx bx-sort-up"></i></div>
