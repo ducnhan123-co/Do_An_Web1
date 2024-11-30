@@ -7,7 +7,7 @@
 
 .cart {
     padding-bottom: 2rem;
-    width: 100%;
+    width: 90%;
     padding-top: 12rem;
     display: flex;
     justify-content: space-between;
@@ -17,12 +17,12 @@
 
 .cart-info {
     padding: 0px 10px;
-    width: 55%;
+    width: 60%;
     /* background-color: #b89f91; */
 }
 
 .shipping-info {
-    width:  40%;
+    width:  35%;
     /* background-color: #b89f91; */
 }
 
@@ -84,6 +84,26 @@ button {
 
 button:hover {
     background-color: #ec971f;
+}
+
+.note a{
+    color: #000;
+}
+.note a:hover{
+    color: #d9534f;
+}
+
+#td {
+    font-size: 32px; /* Kích thước mặc định */
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+/* Hiệu ứng khi rê chuột */
+#td:hover {
+    font-size: 40px; /* Tăng kích thước */
+    color: #d9534f; /* Đổi màu thành đỏ */
+    transform: scale(1.2); /* Phóng to một chút */
 }
 
 /* Media Query cho màn hình nhỏ (Tablet và điện thoại) */

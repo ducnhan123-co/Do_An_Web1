@@ -94,49 +94,49 @@
     </header>
     <!-- Form -->
     <div class="wrapper">
-        <h1 class="form-title">Register</h1>
-        <form action="user_info.html">
+        <h1 class="form-title">Đăng ký</h1>
+        <form action="home_login.html">
             <div class="main-user-info">
                 <div class="user-input-box">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" />
+                    <label for="fullName">Họ và tên</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Nhập họ tên" />
                 </div>
                 <div class="user-input-box">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Enter Username" />
+                    <label for="username">Tên tài khoản</label>
+                    <input type="text" id="username" name="username" placeholder="Nhập tên tài khoản" />
                 </div>
                 <div class="user-input-box">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter Email" />
+                    <input type="email" id="email" name="email" placeholder="Nhập Email" />
                 </div>
                 <div class="user-input-box">
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number" />
+                    <label for="phoneNumber">Số điện thoại</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Nhập số điện thoại" />
                 </div>
                 <div class="user-input-box">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter Password" />
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" />
                 </div>
                 <div class="user-input-box">
                     <label for="confirmPassword">Confirm Password</label>
                     <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" />
                 </div>
                 <div class="user-input-box address-box">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address" placeholder="Address" />
+                    <label for="address">Địa chỉ</label>
+                    <input type="text" id="address" name="address" placeholder="Địa chỉ" />
                 </div>
             </div>
             <div class="gender-details-box">
-                <span class="gender-title">Gender</span>
+                <span class="gender-title">Giới tính</span>
                 <div class="gender-category">
                     <input type="radio" name="gender" id="male">
-                    <label for="male">Male</label>
+                    <label for="male">Nam</label>
                     <input type="radio" name="gender" id="female">
-                    <label for="female">Female</label>
+                    <label for="female">Nữ</label>
                 </div>
             </div>
 
-            <button type="submit" class="btn">Register</button>
+            <button id="register" type="submit" class="btn">Đăng ký</button>
         </form>
     </div>
 
@@ -183,7 +183,13 @@
         </div>
         <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
-
+    <script>
+        const addToCartButton = document.querySelector("#register");
+        addToCartButton.addEventListener("click", function () 
+        {
+          alert("Đã đăng ký tài khoản thành công!");
+        });
+    </script>
 </body>
 
 </html>
