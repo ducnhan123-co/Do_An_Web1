@@ -649,6 +649,22 @@ form button:hover {
   border-collapse: collapse;
 }
 
+.order-table .save-status {
+  background-color: #dc3545; /* Màu đỏ */
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  float: right; /* Căn nút về phía lề phải */
+}
+
+.order-table .save-status:hover {
+  background-color: #ffc107; /* Màu vàng khi chạm vào */
+}
+
+
 .order-table th,
 .order-table td {
   padding: 10px;
@@ -678,150 +694,125 @@ form button:hover {
 .statistics-section {
   padding: 20px;
   background-color: #f8f9fa;
-  /* Màu nền sáng cho phần thống kê */
   border-radius: 5px;
-  /* Bo tròn góc */
   margin: 20px 0;
-  /* Khoảng cách trên và dưới */
 }
 
 .statistics-section h2 {
   font-size: 24px;
   color: #333;
-  /* Màu chữ tối */
   margin-bottom: 20px;
-  /* Khoảng cách dưới tiêu đề */
 }
 
 .filter-statistics {
   margin-bottom: 30px;
-  /* Khoảng cách dưới phần lọc */
 }
 
 .filter-statistics label {
   margin-right: 10px;
-  /* Khoảng cách bên phải cho các nhãn */
   font-weight: bold;
-  /* In đậm chữ */
 }
 
 .filter-statistics input[type="date"] {
   padding: 5px;
-  /* Padding cho ô nhập */
   margin-right: 15px;
-  /* Khoảng cách giữa các ô nhập */
   border: 1px solid #ccc;
-  /* Viền xám */
   border-radius: 4px;
-  /* Bo tròn góc */
 }
 
 .filter-statistics button {
   padding: 5px 10px;
-  /* Padding cho nút */
   background-color: #007bff;
-  /* Màu nền xanh */
   color: white;
-  /* Màu chữ trắng */
   border: none;
-  /* Không viền */
   border-radius: 4px;
-  /* Bo tròn góc */
   cursor: pointer;
-  /* Con trỏ chuột khi di chuột qua */
 }
 
 .filter-statistics button:hover {
   background-color: #0056b3;
-  /* Màu nền khi di chuột qua */
 }
 
 .item-sales-statistics,
 .customer-revenue-statistics {
   margin-bottom: 40px;
-  /* Khoảng cách dưới cho các phần thống kê */
 }
 
 .item-sales-statistics h3,
 .customer-revenue-statistics h3 {
   font-size: 20px;
-  /* Kích thước chữ cho tiêu đề phần thống kê */
   margin-bottom: 15px;
-  /* Khoảng cách dưới tiêu đề */
   color: #555;
-  /* Màu chữ xám */
 }
 
+/* Bảng thống kê */
 table {
   width: 100%;
-  /* Chiều rộng 100% cho bảng */
   border-collapse: collapse;
-  /* Gộp viền bảng */
-  text-align: center;
+  text-align: center; /* Căn giữa nội dung của bảng */
 }
 
 table th,
 table td {
   border: 1px solid #ddd;
-  /* Viền bảng màu xám nhạt */
   padding: 10px;
-  /* Padding cho ô bảng */
-  text-align: center;
-  /* Căn trái chữ */
+  text-align: left; /* Căn trái cho các ô dữ liệu */
 }
 
 table th {
   background-color: #f2f2f2;
-  /* Màu nền cho tiêu đề bảng */
   color: #333;
-  /* Màu chữ tối */
+  text-align: center; /* Căn giữa cho tiêu đề cột */
 }
 
 table tr:nth-child(even) {
   background-color: #f9f9f9;
-  /* Màu nền cho hàng chẵn */
 }
 
 table tr:hover {
   background-color: #f1f1f1;
-  /* Màu nền khi di chuột qua hàng */
 }
 
 tfoot td {
   font-weight: bold;
-  /* In đậm cho chân bảng */
   background-color: #e9ecef;
-  /* Màu nền nhạt cho chân bảng */
 }
 
+/* Phần thống kê */
 .sales-summary,
 .customer-summary,
 .note {
   margin-top: 15px;
-  /* Khoảng cách trên cho các ghi chú */
   font-size: 14px;
-  /* Kích thước chữ ghi chú */
   color: #666;
-  /* Màu chữ ghi chú */
 }
 
-.note h4 {
-  font-weight: bold;
-  /* In đậm tiêu đề ghi chú */
+/* Cột Mặt hàng và ảnh */
+.item-column {
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
 .item-image {
   width: 50px;
-  /* Chiều rộng của ảnh */
   height: 50px;
-  /* Chiều cao của ảnh */
   border-radius: 5px;
-  /* Bo tròn góc */
   margin-right: 10px;
-  /* Khoảng cách bên phải */
   vertical-align: middle;
-  /* Căn giữa theo chiều dọc */
 }
+
+/* Căn chỉnh các cột "Số lượng bán" và "Mô tả" */
+td:nth-child(2), td:nth-child(4) {
+  text-align: left; /* Căn trái nội dung trong các cột "Số lượng bán" và "Mô tả" */
+  padding-left: 20px; /* Đảm bảo có khoảng cách bên trái để căn lề */
+}
+
+/* Ghi chú */
+.note h4 {
+  font-weight: bold;
+}
+
 
 .product-form {
   background: #ffffff;
