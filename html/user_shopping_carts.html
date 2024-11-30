@@ -21,6 +21,21 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
  
 
+    <style>
+        /* Kiểu mặc định cho dấu "-" */
+        #td {
+            font-size: 32px; /* Kích thước mặc định */
+            cursor: pointer;
+            transition: transform 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi mượt mà */
+        }
+    
+        /* Hiệu ứng khi rê chuột */
+        #td:hover {
+            font-size: 40px; /* Tăng kích thước */
+            color: red; /* Đổi màu thành đỏ */
+            transform: scale(1.2); /* Phóng to một chút */
+        }
+    </style>
 <body>
 
     <!-- ======================================HEADER====================================== -->
@@ -124,6 +139,7 @@
                         <th>Đơn giá (VNĐ)</th>
                         <th>Số lượng</th>
                         <th>Thành tiền (VNĐ)</th>
+                        <th>Xóa món ăn</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -134,6 +150,7 @@
                         <td>150,000</td>
                         <td>1</td>
                         <td>150,000</td>
+                        <td id="td"> - </td>
                     </tr>
                     <tr>
                         <td>Cá hồi</td>
@@ -142,6 +159,7 @@
                         <td>150,000</td>
                         <td>1</td>
                         <td>150,000</td>
+                        <td id="td"> - </td>
                     </tr>
                     <tr>
                         <td>Lẩu bò</td>
@@ -150,11 +168,15 @@
                         <td>150,000</td>
                         <td>2</td>
                         <td>300,000</td>
+                        <td id="td"> - </td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="5" class="total-label">Tổng cộng:</td>
+                        <td colspan="7" class="note"> <a href="user_home_search.html">Thêm sản phẩm</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="total-label">Tổng cộng:</td>
                         <td class="total-price">600,000</td>
                     </tr>
                 </tfoot>
