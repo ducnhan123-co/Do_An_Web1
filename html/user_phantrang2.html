@@ -90,6 +90,40 @@
         background-color: #ffe203;
         transform: scale(1.1);
       }
+
+      .autocomplete-container {
+        position: relative;
+      }
+
+      .suggestions-list {
+        position: absolute;
+        background: white;
+        border: 1px solid #ccc;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 150px;
+        overflow-y: auto;
+        z-index: 100;
+      }
+
+      .suggestions-list li {
+        padding: 8px;
+        cursor: pointer;
+      }
+
+      .suggestions-list li:hover {
+        background: #f0f0f0;
+      }
+      .dish-input {
+        background-color: #f0f0f0;
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        border-bottom: none;
+      }
     </style>
   </head>
 
@@ -262,7 +296,7 @@
           class="price-input"
           min="0"
         />
-        <a href="./html/home_search.html" class="search-button">
+        <a href="user_home_search.html" class="search-button">
           <i class="bx bx-search"></i>
         </a>
 
@@ -299,8 +333,8 @@
           <img src="assets/imgs/Menu20.jpg" alt="" />
           <h2>Beef Burger</h2>
           <div class="price">
-            <h3>3.5$</h3>
-            <p>5.0$</p>
+            <h3>35.000VND</h3>
+            <p>45.000VND</p>
           </div>
           <a href="user_product_detail.html" class="item-btn">View Product</a>
         </div>
