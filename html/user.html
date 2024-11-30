@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FOOD-SGU</title>
     <link rel="stylesheet" href="assets/css/user_home.css" />
+    <link rel="stylesheet" href="assets/css/timkiem.css" />
 
     <!-- <link rel="stylesheet" href="/assets/css/user.css"> -->
     <link
@@ -90,10 +91,44 @@
         background-color: #ffe203;
         transform: scale(1.1);
       }
+
+      .autocomplete-container {
+        position: relative;
+      }
+
+      .suggestions-list {
+        position: absolute;
+        background: white;
+        border: 1px solid #ccc;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 150px;
+        overflow-y: auto;
+        z-index: 100;
+      }
+
+      .suggestions-list li {
+        padding: 8px;
+        cursor: pointer;
+      }
+
+      .suggestions-list li:hover {
+        background: #f0f0f0;
+      }
+      .dish-input {
+        background-color: #f0f0f0;
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        border-bottom: none;
+      }
     </style>
   </head>
 
-  <body>
+  <body style="display: flex; flex-direction: column">
     <header id="header">
       <!-- ======================================TOP-HEADER=================================== -->
       <div class="top-header">
@@ -223,7 +258,7 @@
       <img src="assets/imgs/home-mask.png" alt="" class="home-mask" />
     </section>
     <!--  Features -->
-    <div class="features container">
+    <div class="features container" style="margin-bottom: -170px">
       <div class="feature-box">
         <img src="assets/imgs/feature-1.svg" alt="" class="feature-img" />
         <div class="feature-text">
@@ -256,47 +291,54 @@
 
     <!-- Items -->
     <section class="items" id="items">
-      <div class="sort-container">
+      <!-- Sort section -->
+      <div
+        class="filter-sort-container"
+        style="display: flex; justify-content: center; align-items: center"
+      >
         <label for="sort-options">Phân loại:</label>
         <div class="select-container">
-          <select id="sort-options" class="sort-options">
-            <option value="all">Tất Cả</option>
-            <option value="price">Món Nước</option>
-            <option value="rating">Món Mặn</option>
-            <option value="newest">Món Ăn Nhẹ</option>
-            <option value="newest">Món Lẩu</option>
-            <option value="newest">Món Tráng Miệng</option>
-            <option value="newest">Món Mới</option>
+          <select id="sort-options">
+            <option value="all">Tất cả</option>
+            <option value="drinks">Món Nước</option>
+            <option value="main-dish">Món Mặn</option>
+            <option value="snacks">Món Ăn Nhẹ</option>
+            <option value="hotpot">Món Lẩu</option>
+            <option value="dessert">Món Tráng Miệng</option>
+            <option value="new">Món Mới</option>
           </select>
         </div>
-        <div class="sort-icon-container">
-          <a href="#" class="sort-icon"><i class="bx bx-sort"></i></a>
+
+        <!-- Add autocomplete search box -->
+        <label for="search-dishes">Tìm món ăn:</label>
+        <div class="autocomplete-container">
+          <input
+            type="text"
+            id="search-dishes"
+            placeholder="Nhập tên món"
+            class="dish-input"
+          />
+          <ul id="suggestions" class="suggestions-list"></ul>
         </div>
 
         <label for="price-from">Giá từ:</label>
         <input
           type="number"
           id="price-from"
-          placeholder="Min"
+          placeholder="Tối thiểu"
           class="price-input"
+          min="0"
         />
         <label for="price-to">đến:</label>
         <input
           type="number"
           id="price-to"
-          placeholder="Max"
+          placeholder="Tối đa"
           class="price-input"
+          min="0"
         />
-        <!-- Price range filter -->
-        <!-- <div class="price-range">
-                <label for="price-from">Giá từ:</label>
-                <input type="number" id="price-from" placeholder="Min" class="price-input">
-                <label for="price-to">đến:</label>
-                <input type="number" id="price-to" placeholder="Max" class="price-input">
-            </div> -->
-        <a href="user.html" class="search-button">
+        <a href="./html/home_search.html" class="search-button">
           <i class="bx bx-search"></i>
-          <!-- Search icon -->
         </a>
 
         <div class="icon-button"><i class="bx bx-sort-up"></i></div>
@@ -304,7 +346,6 @@
         <div class="icon-button"><i class="bx bx-refresh"></i></div>
         <div class="icon-button"><i class="bx bx-x"></i></div>
       </div>
-
       <h2 class="heading container">Menu</h2>
       <div class="item-content container">
         <div class="item-box">
@@ -700,6 +741,52 @@
         } else {
           // Loại bỏ class "pagination_item_active" nếu không khớp
           link.parentElement.classList.remove("pagination_item_active");
+        }
+      });
+
+      const dishes = [
+        "Mỳ Udon",
+        "Phở Tái",
+        "Beef Burger",
+        "Raspberry Juice",
+        "BAILEY'S CRÈME BRULEE",
+        "Trà Gừng",
+        "Sushi",
+        "Bánh Xèo",
+        "Omurice",
+        "Chuoi",
+        "Banana",
+        "Sữa Chua Nếp Cẩm",
+      ];
+
+      const searchDishesInput = document.getElementById("search-dishes");
+      const suggestionsList = document.getElementById("suggestions");
+
+      searchDishesInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+        suggestionsList.innerHTML = ""; // Clear previous suggestions
+
+        if (query) {
+          const filteredDishes = dishes.filter((dish) =>
+            dish.toLowerCase().includes(query)
+          );
+
+          filteredDishes.forEach((dish) => {
+            const li = document.createElement("li");
+            li.textContent = dish;
+            li.addEventListener("click", function () {
+              searchDishesInput.value = dish; // Set input value to selected suggestion
+              suggestionsList.innerHTML = ""; // Clear suggestions
+            });
+            suggestionsList.appendChild(li);
+          });
+        }
+      });
+
+      // Hide suggestions list when clicking outside
+      document.addEventListener("click", function (e) {
+        if (!searchDishesInput.contains(e.target)) {
+          suggestionsList.innerHTML = "";
         }
       });
     </script>
