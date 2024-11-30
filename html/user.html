@@ -203,15 +203,14 @@
           <img src="assets/imgs/logo2.png" alt="" />
           <h2>DICA <br />FOOD</h2>
         </div>
-        <div class="main-header-search" style="padding: 10px 10px">
-          <i class="fas fa-search"></i>
+        <div class="main-header-search">
           <input
             type="text"
             placeholder="Tìm kiếm món ăn..."
             style="font-weight: bold"
           />
           <a href="user_home_search.html">
-            <button class="filter-btn">Tìm Kiếm</button>
+            <button class="filter-btn"><i class="bx bx-search"></i></button>
           </a>
         </div>
         <div class="main-header-login">
@@ -254,14 +253,14 @@
       <!-- ======================================CATEGORY-HEADER=================================== -->
       <div class="category-header">
         <a href="user.html" class="category-link">TRANG CHỦ</a>
-        <a href="user_Monnuoc.html" class="category-link">MÓN MẶN</a>
+        <a href="user_Monman.html" class="category-link">MÓN MẶN</a>
         <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
         <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
         <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
-        <a href="user_Monnuoc.html" class="category-link">MÓN MỚI</a>
         <a href="user_Montrangmieng.html" class="category-link"
           >MÓN TRÁNG MIỆNG</a
         >
+        <!-- <a href="user_Montrangmieng.html" class="category-link">MÓN MỚI</a> -->
       </div>
     </header>
 
@@ -317,7 +316,12 @@
       <!-- Sort section -->
       <div
         class="filter-sort-container"
-        style="display: flex; justify-content: center; align-items: center"
+        style="display: flex; 
+        flex-wrap: wrap;
+        justify-content: center; 
+        align-items: center; 
+        gap: 20px;
+        margin-top: -10px;"
       >
         <label for="sort-options">Phân loại:</label>
         <div class="select-container">

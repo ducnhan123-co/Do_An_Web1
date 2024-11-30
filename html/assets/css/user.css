@@ -433,7 +433,7 @@ input[type=number] {
     width: 99%;
     background-color: #b43232;
     padding: 20px 0px;
-    margin: 350px;
+    margin: 320px;
     margin-bottom: 80px;
     border: 10px solid  #ff0000;
     border-radius: 20px;
@@ -539,21 +539,24 @@ input[type=number] {
 }
 
 .filter-btn {
-    padding: 6px 15px;
-    font-size: 14px;
-    color: white;
-    transition: background-color 0.3s;
     display: inline-block;
+    padding: 8px 16px;
+    /* font-size: 14px; */
+    transition: background-color 0.3s;
     background-color: #f8b400;
     /* Màu nền cho nút */
     color: white;
     text-align: center;
     text-decoration: none;
-    border: none;
     /* Loại bỏ gạch chân */
+    border: none;
     border-radius: 25px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.filter-btn i {
+  font-size: 16px; /* Kích thước nhỏ hơn */
 }
 
 .filter-btn:hover {
