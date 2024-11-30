@@ -168,7 +168,7 @@
                 />
                 <button type="button">+</button>
               </div>
-              <button class="add-to-cart" type="button">Thêm vào giỏ</button>
+              <button id="add" class="add-to-cart" type="button">Thêm vào giỏ</button>
             </div>
           </div>
         </div>
@@ -310,6 +310,13 @@
           window.location.href = selectedValue; // Chuyển hướng đến URL được chọn
         }
       }
+    </script>
+    <script>
+      const addToCartButton = document.querySelector("#add");
+      addToCartButton.addEventListener("click", function () 
+      {
+        alert("Sản phẩm đã được thêm vào giỏ hàng!");
+      });
     </script>
   </body>
 </html>
