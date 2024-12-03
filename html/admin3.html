@@ -68,6 +68,32 @@
         border: 1px solid #ccc;
         border-bottom: none;
       }
+      
+      .product_detail_phantrang {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        gap: 20px;
+      }
+
+      .product_detail_phantrang a {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .product_detail_phantrang--left,
+      .product_detail_phantrang--right {
+        background-color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        color: #333;
+        cursor: pointer;
+      }
+
+      /* Container styling for pagination */
       .product_detail_phantrang {
         display: flex;
         justify-content: center;
@@ -82,28 +108,26 @@
         font-size: 20px;
         font-weight: bold;
         /* border: 2px solid #ffffff; */
-        color: #ffffff;
+        color: #000;
         border-radius: 5px;
         transition: all 0.3s ease;
       }
 
       .product_detail_phantrang a:hover {
-        background-color: #ffe203;
-        color: #ffffff;
+        background-color: #c9c6c6;
         transform: translateY(-2px);
       }
 
       .product_detail_phantrang a.active {
-        background-color: #ffe203;
-        color: #ffffff;
+        background-color: #fff;
       }
 
       .product_detail_phantrang button {
         padding: 8px 12px;
         font-size: 16px;
         font-weight: bold;
-        color: #ffffff;
-        background-color: #ffe203;
+        color: #000;
+        background-color: #c9c6c6;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -111,7 +135,7 @@
       }
 
       .product_detail_phantrang button:hover {
-        background-color: #ffe203;
+        background-color: #fff;
         transform: scale(1.1);
       }
     </style>
@@ -217,6 +241,7 @@
           gap: 10px;
           margin-top: -50px;
           margin-bottom: 50px;
+          max-width: 1500px;
         "
       >
         <label for="sort-options">Phân loại:</label>
