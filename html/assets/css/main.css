@@ -463,13 +463,13 @@ header {
   background: var(--container-color);
   border-top: none;
   border-bottom: none;
-  max-width: 1000px; /* Adjust as needed for your page width */
+  max-width: 2000px; /* Adjust as needed for your page width */
   margin: 0 auto; /* Center horizontally */
 }
 
 .filter-sort-container label {
-  font-weight: 500;
-  color: #666;
+  font-weight: 500px;
+  color: #000;
 }
 .select-container,
 .price-input,
