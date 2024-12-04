@@ -199,6 +199,7 @@ header {
 .filter-btn {
   display: inline-block;
   padding: 8px 16px;
+  transition: background-color 0.3s;
   background-color: #f8b400;
   /* Màu nền cho nút */
   color: white;
@@ -458,17 +459,17 @@ header {
 .filter-sort-container {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   padding: 10px;
   background: var(--container-color);
   border-top: none;
   border-bottom: none;
-  max-width: 2000px; /* Adjust as needed for your page width */
+  max-width: 1500px; /* Adjust as needed for your page width */
   margin: 0 auto; /* Center horizontally */
 }
 
 .filter-sort-container label {
-  font-weight: 500px;
+  font-weight: 500;
   color: #000;
 }
 .select-container,
