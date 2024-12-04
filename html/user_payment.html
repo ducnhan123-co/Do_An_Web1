@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -165,7 +164,9 @@
         <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
         <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
         <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
-        <a href="user_Montrangmieng.html" class="category-link">MÓN TRÁNG MIỆNG</a>
+        <a href="user_Montrangmieng.html" class="category-link"
+          >MÓN TRÁNG MIỆNG</a
+        >
         <!-- <a href="user_Monnuoc.html" class="category-link">MÓN MỚI</a> -->
       </div>
     </header>
@@ -472,6 +473,29 @@
         const selectedButton = document.getElementById(optionId);
         selectedButton.classList.add("active");
       }
+
+      // Lấy tất cả các phần tử
+      const decreaseBtns = document.querySelectorAll(".order-item-decrease");
+      const increaseBtns = document.querySelectorAll(".order-item-increase");
+      const inputFields = document.querySelectorAll(".order-item-input");
+
+      // Xử lý sự kiện cho nút "-"
+      decreaseBtns.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          let currentValue = parseInt(inputFields[index].value) || 0; // Lấy giá trị hiện tại từ input tương ứng
+          if (currentValue > 0) {
+            inputFields[index].value = currentValue - 1; // Giảm giá trị
+          }
+        });
+      });
+
+      // Xử lý sự kiện cho nút "+"
+      increaseBtns.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          let currentValue = parseInt(inputFields[index].value) || 0; // Lấy giá trị hiện tại từ input tương ứng
+          inputFields[index].value = currentValue + 1; // Tăng giá trị
+        });
+      });
     </script>
   </body>
 </html>

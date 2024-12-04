@@ -19,7 +19,60 @@
 
     <!-- Box Icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
- 
+ <style>
+    .cart-info table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info th,
+.cart-info td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.cart-info img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.quantity-wrapper button {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.quantity-wrapper .quantity-input {
+  width: 40px;
+  text-align: center;
+}
+
+.btn-delete {
+  padding: 5px 10px;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+ </style>
 
 <body>
 
@@ -112,60 +165,75 @@
 
     <!-- =========================================HOME=========================================  -->
     <div class="cart">
-        <div class="cart-info">
-            <h2>Thông tin giỏ hàng</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tên sản phẩm</th>
-                        <th>Sản phẩm</th>
-                        <th>Ngày đặt hàng</th>
-                        <th>Đơn giá (VNĐ)</th>
-                        <th>Số lượng</th>
-                        <th>Thành tiền (VNĐ)</th>
-                        <th>Xóa món ăn</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Gỏi cuốn</td>
-                        <td><img src="assets/imgs/goicuon.jpg" alt=""></td>
-                        <td>01/11/2024</td>
-                        <td>150,000</td>
-                        <td>1</td>
-                        <td>150,000</td>
-                        <td id="td"> - </td>
-                    </tr>
-                    <tr>
-                        <td>Cá hồi</td>
-                        <td><img src="assets/imgs/cahoi.jpg" alt=""></td>
-                        <td>01/11/2024</td>
-                        <td>150,000</td>
-                        <td>1</td>
-                        <td>150,000</td>
-                        <td id="td"> - </td>
-                    </tr>
-                    <tr>
-                        <td>Lẩu bò</td>
-                        <td><img src="assets/imgs/laubo.jpg" alt=""></td>
-                        <td>01/11/2024</td>
-                        <td>150,000</td>
-                        <td>2</td>
-                        <td>300,000</td>
-                        <td id="td"> - </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="7" class="note"> <a href="user_home_search.html">Thêm sản phẩm</a></td>
-                    </tr>
-                    <tr>
-                        <td colspan="6" class="total-label">Tổng cộng:</td>
-                        <td class="total-price">600,000</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
+       <div class="cart-info">
+  <h2>Thông tin giỏ hàng</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tên sản phẩm</th>
+        <th>Sản phẩm</th>
+        <th>Ngày đặt hàng</th>
+        <th>Đơn giá (VNĐ)</th>
+        <th>Số lượng</th>
+        <th>Thành tiền (VNĐ)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Gỏi cuốn</td>
+        <td><img src="assets/imgs/goicuon.jpg" alt=""></td>
+        <td>01/11/2024</td>
+        <td>150,000</td>
+        <td>
+          <div class="quantity-wrapper">
+            <button class="btn-decrease" style="background-color: #f0ad4e;">-</button>
+            <input type="text" value="1" class="quantity-input" />
+            <button class="btn-increase" style="background-color: #f0ad4e;"  >+</button>
+          </div>
+          <button class="btn-delete">Xóa</button>
+        </td>
+        <td class="item-total">150,000</td>
+      </tr>
+      <tr>
+        <td>Cá hồi</td>
+        <td><img src="assets/imgs/cahoi.jpg" alt=""></td>
+        <td>01/11/2024</td>
+        <td>150,000</td>
+        <td>
+          <div class="quantity-wrapper">
+                <button class="btn-decrease" style="background-color: #f0ad4e;">-</button>
+            <input type="text" value="1" class="quantity-input" />
+            <button class="btn-increase" style="background-color: #f0ad4e;"  >+</button>
+          </div>
+          <button class="btn-delete">Xóa</button>
+        </td>
+        <td class="item-total">150,000</td>
+      </tr>
+      <tr>
+        <td>Lẩu bò</td>
+        <td><img src="assets/imgs/laubo.jpg" alt=""></td>
+        <td>01/11/2024</td>
+        <td>150,000</td>
+        <td>
+          <div class="quantity-wrapper">
+                <button class="btn-decrease" style="background-color: #f0ad4e;">-</button>
+            <input type="text" value="1" class="quantity-input" />
+            <button class="btn-increase" style="background-color: #f0ad4e;"  >+</button>
+          </div>
+          <button class="btn-delete">Xóa</button>
+        </td>
+        <td class="item-total">300,000</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5" class="total-label">Tổng cộng:</td>
+        <td class="total-price">600,000</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
         <div class="shipping-info">
             <h2>Địa chỉ giao hàng</h2>
             <form>
@@ -232,6 +300,58 @@
   window.location.href = './user_payment.html'; // Thay đường dẫn bằng trang bạn muốn
 }
 
+// Lấy các nút và input
+const decreaseBtns = document.querySelectorAll('.btn-decrease');
+const increaseBtns = document.querySelectorAll('.btn-increase');
+const deleteBtns = document.querySelectorAll('.btn-delete');
+const quantityInputs = document.querySelectorAll('.quantity-input');
+const itemTotals = document.querySelectorAll('.item-total');
+const totalPrice = document.querySelector('.total-price');
+
+// Hàm cập nhật tổng tiền
+function updateTotal() {
+  let total = 0;
+  itemTotals.forEach((item, index) => {
+    const quantity = parseInt(quantityInputs[index].value) || 0;
+    const price = parseInt(item.dataset.price) || 0;
+    const itemTotal = price * quantity;
+    item.textContent = itemTotal.toLocaleString('vi-VN');
+    total += itemTotal;
+  });
+  totalPrice.textContent = total.toLocaleString('vi-VN');
+}
+
+// Xử lý tăng/giảm số lượng
+decreaseBtns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    let quantity = parseInt(quantityInputs[index].value) || 0;
+    if (quantity > 1) {
+      quantityInputs[index].value = quantity - 1;
+      updateTotal();
+    }
+  });
+});
+
+increaseBtns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    let quantity = parseInt(quantityInputs[index].value) || 0;
+    quantityInputs[index].value = quantity + 1;
+    updateTotal();
+  });
+});
+
+// Xử lý xóa sản phẩm
+deleteBtns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    btn.closest('tr').remove();
+    updateTotal();
+  });
+});
+
+// Gán giá trị giá sản phẩm vào dataset
+itemTotals.forEach((item, index) => {
+  item.dataset.price = item.textContent.replace(/,/g, '');
+});
 
     </script>
 </body>
