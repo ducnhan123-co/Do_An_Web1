@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MÓN TRÁNG MIỆNG</title>
+    <title>MÓN LẨU</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/home_phantrang.css" />
     <link rel="stylesheet" href="assets/css/user_home.css" />
@@ -13,32 +13,6 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/fonts/fontawesome-free-6.6.0-web/css/fontawesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css"
-    />
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <!-- Box Icon -->
     <style>
       .pagination_item_active {
         background-color: #ffab24cb;
@@ -102,97 +76,43 @@
         </div>
         <div class="main-header-search">
           <input type="text" placeholder="Tìm kiếm món ăn..." />
-          <a href="user_home_search.html">
-            <button class="filter-btn"><i class="bx bx-search"></i></button>
-          </a>
-        </div>
-        <div class="main-header-login">
-          <i class="fas fa-user"></i>
-          <!-- Biểu tượng người trước Đăng Nhập -->
-          <a href="user.html" class="login-link">Lập Nguyễn</a>
-          <span>|</span>
-          <!-- Dấu phân cách giữa Đăng Nhập và Đăng Kí -->
-          <a href="../index.html" class="register-link">Đăng xuất</a>
-          <div class="custom-select-wrapper">
-            <select
-              class="dropdown-select"
-              id="options-dropdown"
-              onchange="navigateToPage(this)"
-            >
-              <option value="#">
-                <i class="fas fa-angle-down"></i>Tuỳ chọn
-              </option>
-              <option value="./user_info.html" style="color: black">
-                Thông tin cá nhân
-              </option>
-              <!-- Thông tin cá nhân -->
-              <option value="./user_history.html" style="color: black">
-                Lịch sử mua hàng
-              </option>
-              <option value="./user_payment.html" style="color: black">
-                Thanh toán
-              </option>
-            </select>
-          </div>
-        </div>
-        <div class="main-header-cart">
-          <i class="fas fa-shopping-cart"></i>
-          <!-- Biểu tượng giỏ hàng -->
-          <a href="user_shopping_carts.html">Giỏ hàng</a>
+          <a href="home_search.html" class="filter-btn"
+            ><i class="bx bx-search"></i
+          ></a>
         </div>
 
-        <!-- <span>Tuỳ chọn</span> -->
+        <div class="main-header-login">
+          <i class="bx bxs-user"></i>
+          <a href="home_login.html" class="login-link">Đăng Nhập</a>
+          <span>|</span>
+          <a href="home_dangky.html" class="register-link">Đăng Kí</a>
+        </div>
+        <div class="main-header-cart">
+          <i class="bx bxs-shopping-bag"></i>
+          <a href="">Giỏ Hàng</a>
+        </div>
       </div>
 
       <!-- ======================================CATEGORY-HEADER=================================== -->
       <div class="category-header">
-        <a href="user.html" class="category-link">TRANG CHỦ</a>
-        <a href="user_Monman.html" class="category-link">MÓN MẶN</a>
-        <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
-        <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
-        <a href="user_Monlau.html" class="category-link">MÓN LẨU</a>
-        <a href="user_Montrangmieng.html" class="category-link"
-          >MÓN TRÁNG MIỆNG</a
-        >
-        <!-- <a href="user_Monnuoc.html" class="category-link">MÓN MỚI</a> -->
+        <a href="../index.html" class="category-link">TRANG CHỦ</a>
+        <a href="Monman.html" class="category-link">MÓN MẶN</a>
+        <a href="Monnuoc.html" class="category-link">MÓN NƯỚC</a>
+        <a href="Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
+        <a href="Monlau.html" class="category-link">MÓN LẨU</a>
+        <a href="Montrangmieng.html" class="category-link">MÓN TRÁNG MIỆNG</a>
+        <!-- <a href="Monnuoc.html" class="category-link">MÓN MỚI</a> -->
       </div>
     </header>
 
     <!-- Items -->
     <section class="items" id="items" style="margin-top: 110px">
-      <h2 class="heading container">MÓN TRÁNG MIỆNG</h2>
+      <h2 class="heading container">MÓN LẨU</h2>
       <div class="item-content container">
         <div class="item-box">
           <span class="sale">Sale</span>
           <img
-            src="https://cdn.pixabay.com/photo/2016/12/26/16/09/bowl-1932375_1280.jpg"
-            alt=""
-          />
-          <h2>Kem capachino</h2>
-          <div class="price">
-            <h3>259.000VND</h3>
-            <p>299.000VND</p>
-          </div>
-          <a href="user_product_detail.html" class="item-btn">View Product</a>
-        </div>
-        <div class="item-box">
-          <span class="sale">Sale</span>
-          <img
-            src="https://cdn.pixabay.com/photo/2017/08/06/04/16/cupcake-2588646_1280.jpg"
-            alt=""
-          />
-          <h2>Cupcake muffin</h2>
-          <div class="price">
-            <h3>319.000VND</h3>
-            <p>359.000VND</p>
-          </div>
-          <a href="user_product_detail.html" class="item-btn">View Product</a>
-        </div>
-        <div class="item-box">
-          <span class="sale">Sale</span>
-          <img
-            src="https://cdn.pixabay.com/photo/2017/07/28/22/13/strawberries-2550024_1280.jpg"
-            alt=""
+            src="https://cdn.pixabay.com/photo/2020/03/28/14/53/fried-chicken-4977368_1280.jpg"
             style="
               object-fit: cover; /* Hoặc dùng contain nếu muốn hiển thị toàn bộ hình ảnh */
               width: 300px; /* Giới hạn kích thước chiều ngang */
@@ -201,12 +121,62 @@
               display: block; /* Loại bỏ khoảng trống dưới ảnh */
             "
           />
-          <h2>Dâu tây kem sữa</h2>
+          <h2>Đùi gà nướng tẩm muối</h2>
+          <div class="price">
+            <h3>259.000VND</h3>
+            <p>299.000VND</p>
+          </div>
+          <a href="product_detail.html" class="item-btn">View Product</a>
+        </div>
+        <div class="item-box">
+          <span class="sale">Sale</span>
+          <img src="assets/imgs/laubo.jpg" alt="" />
+          <h2>Thịt ướp chảo</h2>
           <div class="price">
             <h3>319.000VND</h3>
             <p>359.000VND</p>
           </div>
-          <a href="user_product_detail.html" class="item-btn">View Product</a>
+          <a href="product_detail.html" class="item-btn">View Product</a>
+        </div>
+        <div class="item-box">
+          <span class="sale">Sale</span>
+          <img
+            src="https://cdn.pixabay.com/photo/2020/03/28/14/51/french-fries-4977353_1280.jpg"
+            style="
+              object-fit: cover; /* Hoặc dùng contain nếu muốn hiển thị toàn bộ hình ảnh */
+              width: 300px; /* Giới hạn kích thước chiều ngang */
+              height: 200px; /* Giới hạn kích thước chiều cao */
+              overflow: hidden; /* Ẩn phần dư nếu có */
+              display: block; /* Loại bỏ khoảng trống dưới ảnh */
+            "
+          />
+
+          <h2>Khoai tây chiên</h2>
+          <div class="price">
+            <h3>50.000VND</h3>
+            <p>359.000VND</p>
+          </div>
+          <a href="product_detail.html" class="item-btn">View Product</a>
+        </div>
+        <div class="item-box">
+          <span class="sale">Sale</span>
+          <img
+            src="https://media.istockphoto.com/id/687749694/vi/anh/th%E1%BB%8Bt-b%C3%B2-n%C6%B0%E1%BB%9Bng-shishkabab-xi%C3%AAn.jpg?s=612x612&w=0&k=20&c=coqhVBKUZZsfQQf9zwlmq_2nfIZmx-yJCbn-p6ZwZlc="
+            style="
+              object-fit: cover; /* Hoặc dùng contain nếu muốn hiển thị toàn bộ hình ảnh */
+              width: 300px; /* Giới hạn kích thước chiều ngang */
+              height: 200px; /* Giới hạn kích thước chiều cao */
+              overflow: hidden; /* Ẩn phần dư nếu có */
+              display: block; /* Loại bỏ khoảng trống dưới ảnh */
+            "
+          />
+
+          <h2>Siên cừu nướng</h2>
+          <div class="price">
+            <h3>50.000VND</h3>
+            <p>359.000VND</p>
+          </div>
+          <a href="product_detail.html" class="item-btn">View Product</a>
         </div>
       </div>
       <div class="product_detail_phantrang" style="margin-top: 20px">
@@ -488,19 +458,7 @@
       </div>
       <p class="copyright">&#169; 2024, Dica Food Restaurant</p>
     </div>
-
     <script>
-      function navigateToPage(select) {
-        const selectedValue = select.value;
-        if (selectedValue !== "#") {
-          window.location.href = selectedValue; // Điều hướng đến trang đã chọn
-        }
-      }
-      let filterbtn = document.querySelector(".filter-btn");
-      filterbtn.addEventListener("click", function (e) {
-        e.preventDefault(); // Ngăn chặn hành động mặc định
-        window.location.href = "user_home_search.html"; // Chuyển hướng đúng cách
-      });
       // Lấy tất cả các liên kết phân trang
       const paginationLinks = document.querySelectorAll(
         ".pagination_item_link"
@@ -512,7 +470,7 @@
       // Duyệt qua từng liên kết phân trang
       paginationLinks.forEach((link) => {
         // Kiểm tra nếu URL hiện tại trùng với href của liên kết
-        if (currentUrl.includes(link.getAttribute("href"))) {
+        if (link.href === currentUrl) {
           // Thêm class "pagination_item_active" vào phần tử cha
           link.parentElement.classList.add("pagination_item_active");
         } else {
