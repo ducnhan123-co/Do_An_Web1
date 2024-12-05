@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Quản lý đơn hàng</title>
+    <link rel="stylesheet" href="./assets/css/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="assets/imgs/logo2.png" alt="Logo" />
+        <h2>DICA FOOD</h2>
+      </div>
+      <nav>
+        <ul class="sidebar-menu">
+          <li class="tong_quan_first">
+            <a href="admin_tongquan.html"
+              ><i class="fas fa-home"></i> Trang tổng quan</a
+            >
+          </li>
+          <li>
+            <a href="admin_products.html"
+              ><i class="fas fa-utensils"></i> Sản phẩm</a
+            >
+          </li>
+          <li>
+            <a href="admin_khachhang.html"
+              ><i class="fas fa-users"></i> Khách hàng</a
+            >
+          </li>
+          <li>
+            <a href="admin_donhang.html"
+              ><i class="fas fa-shopping-cart"></i> Đơn hàng</a
+            >
+          </li>
+          <li>
+            <a href="admin_thongke.html"
+              ><i class="fas fa-chart-line"></i> Thống kê</a
+            >
+          </li>
+          <div class="sidebar-group">
+            <li class="sidebar-02">
+              <a href="#"><i class="fas fa-calculator"></i> Máy tính</a>
+            </li>
+            <li class="sidebar-02">
+              <a href="../admin.html"
+                ><i class="fas fa-arrow-alt-circle-left"></i> Trang chủ</a
+              >
+            </li>
+            <li class="sidebar-02">
+              <a href="../index.html"
+                ><i class="fas fa-sign-out-alt"></i> Đăng xuất</a
+              >
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <h1>
+          Chào mừng bạn đến với trang đơn hàng của cửa hàng
+          <span class="main-content-title">DICA FOOD</span>
+        </h1>
+      </header>
+
+      <!-- Theo doi don hang  -->
+      <section class="order-details">
+        <h2 class="section-title" style="color: black">Chi tiết đơn hàng</h2>
+        <h3 class="order-id">Đơn hàng với ID: 001</h3>
+        <p class="order-date">Ngày mua hàng: 1/12/2024</p>
+        <p class="estimated-delivery">Ước lượng ngày giao: 4/12/2024</p>
+      </section>
+
+      <section class="product-list-section">
+        <h2 class="section-title" style="color: black">Danh sách sản phẩm</h2>
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Nhập tên sản phẩm cần tìm..."
+          />
+          <button class="search-btn">Tìm kiếm</button>
+        </div>
+        <div class="product-list">
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th>Ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Mô tả</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img src="./assets/imgs/item-1.png" alt="Product Image" />
+                </td>
+                <td>Gà kho</td>
+                <td>Gà ta kho tiêu</td>
+                <td>100,000 VND</td>
+                <td>1</td>
+                <td>100,000 VND</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./assets/imgs/item-2.png" alt="Product Image" />
+                </td>
+                <td>Gà chiên</td>
+                <td>Gà chiên giòn</td>
+                <td>120,000 VND</td>
+                <td>2</td>
+                <td>240,000 VND</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./assets/imgs/item-3.png" alt="Product Image" />
+                </td>
+                <td>Gà ủ muối</td>
+                <td>Gà ủ muối thảo mộc</td>
+                <td>150,000 VND</td>
+                <td>1</td>
+                <td>150,000 VND</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="./assets/imgs/item-3.png" alt="Product Image" />
+                </td>
+                <td>Gà ủ muối</td>
+                <td>Gà ủ muối thảo mộc</td>
+                <td>150,000 VND</td>
+                <td>1</td>
+                <td>150,000 VND</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="order-info">
+        <h2 class="section-title" style="color: black">Thông tin đơn hàng</h2>
+        <hr style="border: 2px solid rgb(231, 216, 17); margin-bottom: 20px" />
+        <label for="customer-name">Họ tên</label>
+        <input
+          type="text"
+          id="customer-name"
+          class="order-input"
+          placeholder="Phan Đức Nhân"
+        />
+        <label for="customer-email">Email</label>
+        <input
+          type="text"
+          id="customer-email"
+          class="order-input"
+          placeholder="pducnhan70@gmail.com"
+        />
+        <label for="customer-phone">Điện thoại</label>
+        <input
+          type="text"
+          id="customer-phone"
+          class="order-input"
+          placeholder="01234"
+        />
+        <label for="customer-address">Địa chỉ</label>
+        <input
+          type="text"
+          id="customer-address"
+          class="order-input"
+          placeholder="Quảng Trị"
+        />
+        <label for="payment-method">Hình thức thanh toán</label>
+        <input
+          type="text"
+          id="payment-method"
+          class="order-input"
+          placeholder="Thanh toán khi nhận hàng"
+        />
+        <label for="purchase-date">Ngày mua</label>
+        <input
+          type="text"
+          id="purchase-date"
+          class="order-input"
+          placeholder="1/12/2024"
+        />
+        <label for="order-status">Trạng thái</label>
+        <select id="order-status" class="order-input">
+          <option value="pending">Chưa xử lý</option>
+          <option value="processed">Đã xử lý</option>
+          <option value="delivered">Giao thành công</option>
+          <option value="cancelled">Đã hủy</option>
+        </select>
+        <p class="shipping-fee">Tiền ship: 40,000 VND</p>
+        <p class="total-price">Tổng tiền: 410,000 VND</p>
+        <div class="button-group">
+          <button class="order-btn close-btn">Đóng</button>
+          <button class="order-btn save-btn">Lưu</button>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script>
+    const btnClose = document.querySelector(".order-btn.close-btn");
+    btnClose.addEventListener("click", function () {
+      window.location.href = "admin_donhang.html"; // Thay đổi URL nếu cần
+    });
+    const saveBtn = document.querySelector(".order-btn.save-btn");
+    saveBtn.addEventListener("click", function () {
+      alert("Đã lưu chi tiết đơn hàng.");
+    });
+  </script>
+</html>

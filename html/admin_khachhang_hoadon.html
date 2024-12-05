@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Quản lý đơn hàng</title>
+    <link rel="stylesheet" href="./assets/css/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* CSS cho modal */
+      /* CSS cho modal */
+      .modal {
+        display: none; /* Ẩn modal mặc định */
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4); /* Làm tối nền */
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%; /* Chiều rộng modal */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .close-btn {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close-btn:hover,
+      .close-btn:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="assets/imgs/logo2.png" alt="Logo" />
+        <h2>DICA FOOD</h2>
+      </div>
+      <nav>
+        <ul class="sidebar-menu">
+          <li class="tong_quan_first">
+            <a href="admin_tongquan.html"
+              ><i class="fas fa-home"></i> Trang tổng quan</a
+            >
+          </li>
+          <li>
+            <a href="admin_products.html"
+              ><i class="fas fa-utensils"></i> Sản phẩm</a
+            >
+          </li>
+          <li>
+            <a href="admin_khachhang.html"
+              ><i class="fas fa-users"></i> Khách hàng</a
+            >
+          </li>
+          <li>
+            <a href="admin_donhang.html"
+              ><i class="fas fa-shopping-cart"></i> Đơn hàng</a
+            >
+          </li>
+          <li>
+            <a href="admin_thongke.html"
+              ><i class="fas fa-chart-line"></i> Thống kê</a
+            >
+          </li>
+          <div class="sidebar-group">
+            <li class="sidebar-02">
+              <a href="#"><i class="fas fa-calculator"></i> Máy tính</a>
+            </li>
+            <li class="sidebar-02">
+              <a href="../admin.html"
+                ><i class="fas fa-arrow-alt-circle-left"></i> Trang chủ</a
+              >
+            </li>
+            <li class="sidebar-02">
+              <a href="../index.html"
+                ><i class="fas fa-sign-out-alt"></i> Đăng xuất</a
+              >
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <h1>
+          Chào mừng bạn đến với trang đơn hàng của cửa hàng
+          <span class="main-content-title">DICA FOOD</span>
+        </h1>
+      </header>
+    </div>
+  </body>
+  <script></script>
+</html>

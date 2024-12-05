@@ -664,7 +664,6 @@ form button:hover {
   background-color: #ffc107; /* Màu vàng khi chạm vào */
 }
 
-
 .order-table th,
 .order-table td {
   padding: 10px;
@@ -679,6 +678,8 @@ form button:hover {
 .order-table .view-btn {
   color: #007bff;
   text-decoration: none;
+  outline: none;
+  border: none;
 }
 
 .order-table .view-btn:hover {
@@ -803,7 +804,8 @@ tfoot td {
 }
 
 /* Căn chỉnh các cột "Số lượng bán" và "Mô tả" */
-td:nth-child(2), td:nth-child(4) {
+td:nth-child(2),
+td:nth-child(4) {
   text-align: left; /* Căn trái nội dung trong các cột "Số lượng bán" và "Mô tả" */
   padding-left: 20px; /* Đảm bảo có khoảng cách bên trái để căn lề */
 }
@@ -812,7 +814,6 @@ td:nth-child(2), td:nth-child(4) {
 .note h4 {
   font-weight: bold;
 }
-
 
 .product-form {
   background: #ffffff;
@@ -1207,4 +1208,206 @@ td:nth-child(2), td:nth-child(4) {
 
 .hidden {
   display: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fef6e4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #f57c00;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.order-details,
+.product-list-section,
+.order-info {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-table th {
+  background-color: #f57c00;
+  color: white;
+}
+
+.product-table img {
+  max-width: 60px;
+  border-radius: 4px;
+}
+
+.order-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.order-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-btn {
+  background-color: #e74c3c;
+}
+
+.save-btn {
+  background-color: #27ae60;
+}
+
+.find-product-btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: #f57c00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.shipping-fee,
+.total-price {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.product-list-section {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background-color: #ffcc4d;
+  color: black;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-table th {
+  background-color: #ffcc4d;
+  color: rgb(0, 0, 0);
+}
+
+.product-table img {
+  max-width: 60px;
+  border-radius: 4px;
+}
+.table-wrapper {
+  overflow-x: auto; /* Cho phép cuộn ngang */
+  white-space: nowrap; /* Không xuống dòng */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+/* CSS cho phần trạng thái */
+td.status-column {
+  display: flex;
+  align-items: center; /* Căn giữa dọc */
+  gap: 8px; /* Tạo khoảng cách giữa nút và dropdown */
+}
+
+td.status-column select {
+  height: 36px; /* Chiều cao đồng đều cho dropdown */
+  padding: 4px;
+  margin-left: -10px;
+  border: none;
+  outline: none;
+  background-color: rgb(228, 225, 225);
+  /* Khoảng cách bên trong */
+}
+
+td.status-column button.save-status {
+  height: 36px; /* Đồng bộ chiều cao */
+  padding: 0 12px; /* Khoảng cách ngang */
+  background-color: #e74c3c; /* Màu nút đỏ */
+  color: white; /* Màu chữ */
+  border: none; /* Bỏ viền */
+  border-radius: 4px; /* Bo góc */
+  cursor: pointer; /* Con trỏ dạng click */
+}
+
+td.status-column button.save-status:hover {
+  background-color: #c0392b; /* Màu khi hover */
 }
