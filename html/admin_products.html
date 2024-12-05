@@ -69,6 +69,35 @@
     .submenu-item:hover::before {
       background-color: #ff9933; /* Thay đổi màu của biểu tượng khi hover */
     }
+
+        .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .pagination-btn {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #9b9b9b;
+      font-weight: bold;
+    }
+
+    .pagination-btn.active {
+      background-color: #ffcc4d;
+      color: white;
+      font-weight: bold;
+    }
+
+    .pagination-btn:hover {
+      background-color: #ffcc4d;
+    }
   </style>
 
   <body>
@@ -355,15 +384,16 @@
       </div>
 
       <!-- Phân trang -->
-      <div class="pagination">
-        <a href="#">&laquo;</a>
-        <!-- Mũi tên trái -->
-        <a href="#">1</a>
-        <a href="admin_home_phantrang2.html">2</a>
-        <a href="admin_home_phantrang2.html">3</a>
-        <a href="admin_home_phantrang2.html">4</a>
-        <a href="admin_home_phantrang2.html">&raquo;</a>
-        <!-- Mũi tên phải -->
+      <div class="pagination" style="margin-top: 30px">
+            <button class="pagination-btn" id="prev">«</button>
+            <button class="pagination-btn active" id="btnPage1">1</button>
+            <button class="pagination-btn" id="btnPage2">2</button>
+            <button class="pagination-btn" id="btnPage3">3</button>
+            <button class="pagination-btn" id="btnPage4">4</button>
+            <button class="pagination-btn" id="btnPage5">5</button>
+            <button class="pagination-btn" id="next">»</button>
+          </div>
+        </div>
       </div>
     </div>
     <script>
@@ -387,6 +417,36 @@
           successMessage.style.display = "none";
         }, 3000);
       });
+       const paginationBtns = document.querySelectorAll(".pagination-btn");
+
+    // Lấy số trang từ URL query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentPage = urlParams.get("page") || "1"; // Mặc định là trang 1 nếu không có page
+
+    // Kích hoạt nút tương ứng
+    paginationBtns.forEach((btn) => {
+      // Xóa tất cả các trạng thái active trước khi thêm
+      btn.classList.remove("active");
+
+      // So sánh nội dung nút với currentPage
+      if (btn.textContent.trim() === currentPage) {
+        btn.classList.add("active");
+      }
+    });
+
+    // Hàm để thay đổi trạng thái active và điều hướng trang
+    function handlePaginationClick(event) {
+      // Lấy số trang từ nút được bấm
+      const pageId = event.target.textContent.trim();
+
+      // Reload trang và truyền số trang qua URL
+      window.location.href = `?page=${pageId}`;
+    }
+
+    // Gắn sự kiện click cho tất cả các nút
+    paginationBtns.forEach((btn) => {
+      btn.addEventListener("click", handlePaginationClick);
+    });
     </script>
     <script src="assets/js/admin.js"></script>
   </body>

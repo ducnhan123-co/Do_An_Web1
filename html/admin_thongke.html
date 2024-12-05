@@ -28,6 +28,35 @@
     />
   </head>
   <style>
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .pagination-btn {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #9b9b9b;
+      font-weight: bold;
+    }
+
+    .pagination-btn.active {
+      background-color: #ffcc4d;
+      color: white;
+      font-weight: bold;
+    }
+
+    .pagination-btn:hover {
+      background-color: #ffcc4d;
+    }
+
     /* Modal styles */
     .modal {
       display: none; /* Hidden by default */
@@ -79,6 +108,40 @@
       padding: 10px;
       text-align: left;
       border-bottom: 1px solid #ddd;
+    }
+
+    .customer-revenue-statistics table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .customer-revenue-statistics th,
+    .customer-revenue-statistics td {
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .customer-revenue-statistics th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+    }
+
+    .customer-status {
+      padding: 4px;
+      font-size: 14px;
+    }
+
+    .view-invoice-btn {
+      background-color: #ffcc4d;
+      /* color: rgb(89, 88, 88); */
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 7px 10px;
+      border-radius: 5px;
+      cursor: pointer;
     }
   </style>
 
@@ -160,70 +223,182 @@
           <table>
             <thead>
               <tr>
-                <th>Mặt hàng</th>
-                <th>Số lượng bán ra</th>
-                <th>Tổng tiền thu được</th>
-                <th>Mô tả</th>
+                <th>Số thứ tự</th>
+                <th>Tên mặt hàng</th>
+                <th>Ảnh</th>
+                <th>Giá</th>
+                <th>Số lượng bán</th>
+                <th>Lợi nhuận</th>
+                <th>Chi tiết hóa đơn</th>
               </tr>
             </thead>
             <tbody>
               <tr>
+                <td>1</td>
+                <td>Bánh mì</td>
                 <td class="item-column">
                   <img
                     src="./assets/imgs/burger-1.png"
                     alt="Bánh mì"
                     class="item-image"
                   />
-                  <span>Bánh mì</span>
                 </td>
+                <td>20,000 VNĐ</td>
                 <td>150</td>
-                <td>3,000,000 VNĐ</td>
-                <td>Thức ăn nhanh, phổ biến và ngon miệng.</td>
+                <td>500,000 VNĐ</td>
+                <td>
+                  <button
+                    class="view-detail-btn"
+                    onclick="window.location.href='./admin_mathang_chitiet.html'"
+                  >
+                    Xem chi tiết
+                  </button>
+                </td>
               </tr>
               <tr>
+                <td>2</td>
+                <td>Pizza</td>
                 <td class="item-column">
                   <img
                     src="./assets/imgs/burger-3.png"
                     alt="Pizza"
                     class="item-image"
                   />
-                  <span>Pizza</span>
                 </td>
+                <td>50,000 VNĐ</td>
                 <td>50</td>
-                <td>2,500,000 VNĐ</td>
-                <td>Pizza phô mai với các loại nhân hấp dẫn.</td>
+                <td>1,000,000 VNĐ</td>
+                <td>
+                  <button
+                    class="view-detail-btn"
+                    onclick="window.location.href='./admin_mathang_chitiet.html'"
+                  >
+                    Xem chi tiết
+                  </button>
+                </td>
               </tr>
               <tr>
+                <td>3</td>
+                <td>Thịt nướng</td>
                 <td class="item-column">
                   <img
                     src="./assets/imgs/burger-4.png"
                     alt="Thịt nướng"
                     class="item-image"
                   />
-                  <span>Thịt nướng</span>
                 </td>
+                <td>70,000 VNĐ</td>
                 <td>30</td>
-                <td>1,500,000 VNĐ</td>
-                <td>Thịt nướng thơm ngon, đậm đà hương vị.</td>
+                <td>600,000 VNĐ</td>
+                <td>
+                  <button
+                    class="view-detail-btn"
+                    onclick="window.location.href='./admin_mathang_chitiet.html'"
+                  >
+                    Xem chi tiết
+                  </button>
+                </td>
               </tr>
               <tr>
+                <td>4</td>
+                <td>Bánh mì</td>
                 <td class="item-column">
                   <img
                     src="./assets/imgs/burger-2.png"
                     alt="Bánh mì"
                     class="item-image"
                   />
-                  <span>Bánh mì</span>
                 </td>
+                <td>15,000 VNĐ</td>
                 <td>200</td>
-                <td>1,200,000 VNĐ</td>
-                <td>Bánh mì tươi ngon, ăn kèm với nhiều loại nước chấm.</td>
+                <td>800,000 VNĐ</td>
+                <td>
+                  <button
+                    class="view-detail-btn"
+                    onclick="window.location.href='./admin_mathang_chitiet.html'"
+                  >
+                    Xem chi tiết
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Bánh mì</td>
+                <td class="item-column">
+                  <img
+                    src="./assets/imgs/burger-2.png"
+                    alt="Bánh mì"
+                    class="item-image"
+                  />
+                </td>
+                <td>15,000 VNĐ</td>
+                <td>200</td>
+                <td>800,000 VNĐ</td>
+                <td>
+                  <button
+                    class="view-detail-btn"
+                    onclick="window.location.href='./admin_mathang_chitiet.html'"
+                  >
+                    Xem chi tiết
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Bánh mì</td>
+                <td class="item-column">
+                  <img
+                    src="./assets/imgs/burger-2.png"
+                    alt="Bánh mì"
+                    class="item-image"
+                  />
+                </td>
+                <td>15,000 VNĐ</td>
+                <td>200</td>
+                <td>800,000 VNĐ</td>
+                <td>
+                  <button
+                    class="view-detail-btn"
+                    onclick="window.location.href='./admin_mathang_chitiet.html'"
+                  >
+                    Xem chi tiết
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Bánh mì</td>
+                <td class="item-column">
+                  <img
+                    src="./assets/imgs/burger-2.png"
+                    alt="Bánh mì"
+                    class="item-image"
+                  />
+                </td>
+                <td>15,000 VNĐ</td>
+                <td>200</td>
+                <td>800,000 VNĐ</td>
+                <td>
+                  <button
+                    class="view-detail-btn"
+                    onclick="window.location.href='./admin_mathang_chitiet.html'"
+                  >
+                    Xem chi tiết
+                  </button>
+                </td>
               </tr>
             </tbody>
           </table>
-          <div class="sales-summary">
-            <p><strong>Bán chạy nhất:</strong> Bánh mì</p>
-            <p><strong>Ế nhất:</strong> Thịt nướng</p>
+
+          <!-- Phân trang -->
+          <div class="pagination" style="margin-top: 30px">
+            <button class="pagination-btn" id="prev">«</button>
+            <button class="pagination-btn active" id="btnPage1">1</button>
+            <button class="pagination-btn" id="btnPage2">2</button>
+            <button class="pagination-btn" id="btnPage3">3</button>
+            <button class="pagination-btn" id="btnPage4">4</button>
+            <button class="pagination-btn" id="btnPage5">5</button>
+            <button class="pagination-btn" id="next">»</button>
           </div>
         </div>
 
@@ -235,43 +410,88 @@
           <table>
             <thead>
               <tr>
+                <th>Số thứ tự</th>
                 <th>Khách hàng</th>
-                <th>Tổng doanh thu</th>
+                <th>Số đơn</th>
+                <th>Tổng cộng</th>
                 <th>Mô tả</th>
-                <th>Xem hóa đơn</th>
+                <th>Xem chi tiết hóa đơn</th>
               </tr>
             </thead>
             <tbody>
               <tr>
+                <td>1</td>
                 <td>Nguyễn Văn A</td>
+                <td>5</td>
                 <td>10,000,000 VNĐ</td>
                 <td>Khách hàng thân thiết, thường xuyên mua hàng.</td>
                 <td>
-                  <button onclick="openInvoice('kh_nguyen_van_a')">Xem</button>
+                  <button
+                    class="view-invoice-btn"
+                    onclick="window.location.href='./admin_khachhang_hoadon.html'"
+                  >
+                    Xem chi tiết
+                  </button>
                 </td>
               </tr>
               <tr>
+                <td>2</td>
                 <td>Trần Thị B</td>
+                <td>3</td>
                 <td>8,000,000 VNĐ</td>
                 <td>Khách hàng VIP, hay tổ chức tiệc tại cửa hàng.</td>
                 <td>
-                  <button onclick="openInvoice('kh_tran_thi_b')">Xem</button>
+                  <button
+                    class="view-invoice-btn"
+                    onclick="window.location.href='./admin_khachhang_hoadon.html'"
+                  >
+                    Xem chi tiết
+                  </button>
                 </td>
               </tr>
               <tr>
-                <td>Nguyễn Văn A</td>
-                <td>10,000,000 VNĐ</td>
-                <td>Khách hàng thân thiết, thường xuyên mua hàng.</td>
+                <td>3</td>
+                <td>Lê Văn C</td>
+                <td>2</td>
+                <td>6,500,000 VNĐ</td>
+                <td>Khách hàng VIP với nhiều giao dịch lớn.</td>
                 <td>
-                  <button onclick="openInvoice('kh_nguyen_van_a')">Xem</button>
+                  <button
+                    class="view-invoice-btn"
+                    onclick="window.location.href='./admin_khachhang_hoadon.html'"
+                  >
+                    Xem chi tiết
+                  </button>
                 </td>
               </tr>
               <tr>
-                <td>Trần Thị B</td>
-                <td>8,000,000 VNĐ</td>
-                <td>Khách hàng VIP, hay tổ chức tiệc tại cửa hàng.</td>
+                <td>4</td>
+                <td>Lê Văn C</td>
+                <td>2</td>
+                <td>6,500,000 VNĐ</td>
+                <td>Khách hàng VIP với nhiều giao dịch lớn.</td>
                 <td>
-                  <button onclick="openInvoice('kh_tran_thi_b')">Xem</button>
+                  <button
+                    class="view-invoice-btn"
+                    onclick="window.location.href='./admin_khachhang_hoadon.html'"
+                  >
+                    Xem chi tiết
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Lê Văn C</td>
+                <td>2</td>
+                <td>6,500,000 VNĐ</td>
+                <td>Khách hàng VIP với nhiều giao dịch lớn.</td>
+                <td>
+                  <button
+                    class="view-invoice-btn"
+                    onclick="window.location.href='./admin_khachhang_hoadon.html'"
+                  >
+                    Xem chi tiết
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -306,76 +526,36 @@
     </div>
   </body>
   <script>
-    // Get modal element
-    var modal = document.getElementById("invoiceModal");
+    // Lấy tất cả các nút phân trang
+    const paginationBtns = document.querySelectorAll(".pagination-btn");
 
-    // Get close button
-    var closeBtn = document.getElementsByClassName("close")[0];
+    // Lấy số trang từ URL query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentPage = urlParams.get("page") || "1"; // Mặc định là trang 1 nếu không có page
 
-    // Function to open modal and load invoice data
-    function openInvoice(invoiceId) {
-      // This is where you could fetch data from your backend or use hardcoded data
-      var invoiceData = {
-        kh_nguyen_van_a: {
-          items: [
-            { name: "Bánh mì", quantity: 150, price: "20,000" },
-            { name: "Pizza", quantity: 50, price: "50,000" },
-          ],
-          total: "10,000,000 VNĐ",
-        },
-        kh_tran_thi_b: {
-          items: [
-            { name: "Bánh mì", quantity: 100, price: "20,000" },
-            { name: "Thịt nướng", quantity: 30, price: "100,000" },
-          ],
-          total: "8,000,000 VNĐ",
-        },
-        // Add similar structures for other customers as needed
-      };
+    // Kích hoạt nút tương ứng
+    paginationBtns.forEach((btn) => {
+      // Xóa tất cả các trạng thái active trước khi thêm
+      btn.classList.remove("active");
 
-      // Get the invoice data for the selected customer
-      var data = invoiceData[invoiceId];
+      // So sánh nội dung nút với currentPage
+      if (btn.textContent.trim() === currentPage) {
+        btn.classList.add("active");
+      }
+    });
 
-      // Populate the table with data
-      var table = document.getElementById("invoiceDetails");
-      table.innerHTML = `
-        <tr>
-          <th>Mặt hàng</th>
-          <th>Số lượng</th>
-          <th>Đơn giá</th>
-        </tr>
-      `;
+    // Hàm để thay đổi trạng thái active và điều hướng trang
+    function handlePaginationClick(event) {
+      // Lấy số trang từ nút được bấm
+      const pageId = event.target.textContent.trim();
 
-      data.items.forEach(function (item) {
-        var row = table.insertRow();
-        row.innerHTML = `
-          <td>${item.name}</td>
-          <td>${item.quantity}</td>
-          <td>${item.price}</td>
-        `;
-      });
-
-      // Add total
-      var totalRow = table.insertRow();
-      totalRow.innerHTML = `
-        <td colspan="2"><strong>Tổng tiền</strong></td>
-        <td><strong>${data.total}</strong></td>
-      `;
-
-      // Show modal
-      modal.style.display = "block";
+      // Reload trang và truyền số trang qua URL
+      window.location.href = `?page=${pageId}`;
     }
 
-    // Close the modal when the user clicks on the close button
-    closeBtn.onclick = function () {
-      modal.style.display = "none";
-    };
-
-    // Close the modal when the user clicks anywhere outside of the modal content
-    window.onclick = function (event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    };
+    // Gắn sự kiện click cho tất cả các nút
+    paginationBtns.forEach((btn) => {
+      btn.addEventListener("click", handlePaginationClick);
+    });
   </script>
 </html>
