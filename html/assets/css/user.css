@@ -41,8 +41,7 @@
 }
 */
 .section-user-info {
-    margin-top: 150px;
-    margin-bottom: -50px;
+    padding-top: 200px;
 }
 
 body {
@@ -71,7 +70,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 150px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     /* width: 70%; */
     height: 20%px;
     background: var(--red);
@@ -234,7 +233,6 @@ body {
     padding-left: 20px;
     padding-bottom: 20px;
 }
-
 
 .main-header-options {
     position: absolute;
@@ -435,7 +433,7 @@ input[type=number] {
     padding: 20px 0px;
     margin: 320px;
     margin-bottom: 80px;
-    border: 10px solid  #ff0000;
+    border: 5px solid  #ff0000;
     border-radius: 20px;
     box-shadow: #c0392b 0px 0px 10px;
     
