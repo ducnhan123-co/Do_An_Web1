@@ -360,17 +360,11 @@ function updateTotal() {
     const price = parseInt(row.querySelector('.item-total').dataset.price) || 0;
     const quantity = parseInt(quantityInput.value) || 0;
 
-    // Cập nhật giá trị thành tiền cho từng sản phẩm
-    const itemTotal = price * quantity;
-    row.querySelector('.item-total').textContent = itemTotal.toLocaleString('vi-VN');
-
-    // Cộng vào tổng tiền
-    total += itemTotal;
+   
   });
 
   // Cập nhật tổng cộng
-  const totalPrice = document.querySelector('.total-price');
-  totalPrice.textContent = total.toLocaleString('vi-VN');
+  
 }
 
 function handleConfirm() {
