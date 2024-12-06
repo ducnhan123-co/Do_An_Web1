@@ -357,6 +357,7 @@
             </tr>
           </tbody>
         </table>
+        <button class="btnReturn">Quay về trang thống kê</button>
         <div class="pagination" style="margin-top: 30px; margin-bottom: -20px">
           <button class="pagination-btn" id="prev">«</button>
           <button class="pagination-btn active" id="btnPage1">1</button>
@@ -370,6 +371,10 @@
     </div>
   </body>
   <script>
+    const btnReturn = document.querySelector(".btnReturn");
+    btnReturn.addEventListener("click", function () {
+      window.location.href = "./admin_thongke.html";
+    });
     // Lấy tất cả các nút phân trang
     const paginationBtns = document.querySelectorAll(".pagination-btn");
 

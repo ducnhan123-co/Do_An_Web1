@@ -1511,3 +1511,22 @@ td.status-column button.save-status:hover {
 .filter-btn:hover {
   background-color: #ff5500;
 }
+.btnReturn {
+  font-size: 14px;
+  position: relative;
+  top: 80px;
+  background-color: #ffcc4d;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #858585;
+  font-weight: bold;
+  transition: all ease-in 0.2s;
+}
+
+.btnReturn:hover {
+  color: white;
+  background-color: #f3ac11;
+}
