@@ -376,8 +376,8 @@ function updateTotal() {
 function handleConfirm() {
   const confirmOrder = confirm("Bạn có chắc chắn muốn đặt hàng không?");
   if(confirmOrder) {
-    alert("Đơn hàng đã được đặt.");
-    window,location.href = "../html/user_thank.html";
+    alert("Đơn hàng đã được đặt.Bạn sẽ được chuyển đến trang thanh toán.");
+    window.location.href = './user_payment.html';
   }
 }
 

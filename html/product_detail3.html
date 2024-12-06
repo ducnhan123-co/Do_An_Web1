@@ -58,7 +58,11 @@
       <div class="detail">
         <div class="img_detail">
           <div class="img_detail_main">
-            <img src="assets/imgs/Menu20.jpg" alt="" id="main-img" />
+            <img
+              src="https://cdn.pixabay.com/photo/2017/06/21/10/59/chafing-dish-2426887_1280.jpg"
+              alt=""
+              id="main-img"
+            />
           </div>
           <div class="paragraph">
             <div class="category">
@@ -69,7 +73,7 @@
                 >
               </div>
             </div>
-            <h2 style="color: rgb(226, 63, 63)">Chuoi banana haaha</h2>
+            <h2 style="color: rgb(226, 63, 63)">Lẩu bò tươi</h2>
             <hr />
             <div class="wc-tabs-wrapper">
               <ul class="wc-tabs">
@@ -81,15 +85,17 @@
               <div class="wc-tab active" id="description">
                 <div id="describe">
                   <li>
-                    <b>CHuoi</b> là món ăn truyền thống nổi tiếng trên thế giới,
-                    người ta thường ăn bánh Hambuger vào bữa sáng hoặc những bữa
-                    ăn nhẹ. <b>Chuoi</b> được làm từ nguồn nguyên liệu tự nhiên,
-                    an toàn, nên bạn hoàn toàn yên tâm khi sử dụng.
+                    <b>Lẩu bò</b> là một món ăn truyền thống và đặc sắc trong ẩm
+                    thực Việt Nam, thường được dùng trong các bữa tiệc hoặc
+                    những buổi sum họp gia đình. <b>Lẩu bò</b> với hương vị đậm
+                    đà từ nước dùng và thịt bò mềm thơm, mang lại cảm giác ấm
+                    cúng, bổ dưỡng.
                   </li>
                   <li>
-                    Sản phẩm là sự kết hợp hoàn hảo giữa các thành phần như: Bột
-                    mì, trứng, nước, men nở, mè, xúc xích, phô mai… cho ra hương
-                    vị bánh vô cùng thơm ngon, hấp dẫn.
+                    Sản phẩm là sự kết hợp hoàn hảo giữa các thành phần như:
+                    Thịt bò tươi, xương bò, nấm, rau xanh, đậu hũ, cùng các gia
+                    vị đặc trưng như sả, ớt, gừng... Tạo nên món ăn vừa ngon
+                    miệng vừa tốt cho sức khỏe.
                     <br />
                     Sản phẩm của <b>DICA FOOD</b> sử dụng nguyên liệu sạch, có
                     nguồn gốc rõ ràng, đảm bảo vệ sinh an toàn thực phẩm.
@@ -109,17 +115,34 @@
             <div class="order-section">
               <label for="quantity"><b>Số lượng: </b></label>
               <div class="quantity-control">
-                <button type="button">-</button>
+                <button type="button" id="decrease">-</button>
                 <input
                   type="number"
+                  id="quantity"
                   name="quantity"
                   min="1"
                   max="100"
                   value="1"
                 />
-                <button type="button">+</button>
+                <button type="button" id="increase">+</button>
               </div>
-              <button class="add-to-cart" type="button">Thêm vào giỏ</button>
+              <button
+                class="addtocart"
+                id="addToCart"
+                type="button"
+                style="
+                  background-color: #ffae00;
+                  padding: 8px 10px;
+                  cursor: pointer;
+                  outline: none;
+                  border: none;
+                  font-size: 18px;
+                  border-radius: 7px;
+                  transition: all ease-in 0.4s;
+                "
+              >
+                Thêm vào giỏ
+              </button>
             </div>
           </div>
         </div>
@@ -134,8 +157,11 @@
           <div class="item-content container">
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu8.jpg" alt="" />
-              <h2>Raspberry Juice</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2021/11/03/08/07/chongqing-6764965_1280.jpg"
+                alt=""
+              />
+              <h2>Lẩu trùng khánh</h2>
               <div class="price">
                 <h3>75.000VND</h3>
                 <p>85.000VND</p>
@@ -144,8 +170,11 @@
             </div>
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu8.jpg" alt="" />
-              <h2>Raspberry Juice</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2016/05/31/15/02/lamb-1427091_1280.jpg"
+                alt=""
+              />
+              <h2>Lẩu thịt cừu</h2>
               <div class="price">
                 <h3>75.000VND</h3>
                 <p>85.000VND</p>
@@ -154,8 +183,11 @@
             </div>
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu20.jpg" alt="" />
-              <h2>Beef Burger</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2020/05/26/10/28/beef-balls-5222598_1280.jpg"
+                alt=""
+              />
+              <h2>Lẩu Nhật Bản</h2>
               <div class="price">
                 <h3>65.000VND</h3>
                 <p>75.000VND</p>
@@ -164,13 +196,16 @@
             </div>
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu8.jpg" alt="" />
-              <h2>Raspberry Juice</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2019/03/19/18/39/orange-4066535_1280.jpg"
+                alt=""
+              />
+              <h2>Nước ép cam</h2>
               <div class="price">
                 <h3>75.000VND</h3>
                 <p>85.000VND</p>
               </div>
-              <a href="product_detail3.html" class="item-btn">View Product</a>
+              <a href="product_detail4.html" class="item-btn">View Product</a>
             </div>
           </div>
         </div>
@@ -253,6 +288,32 @@
       btnClick2.addEventListener("click", function (e) {
         e.preventDefault();
         window.location.href = "product_detail4.html";
+      });
+
+      const decreaseButton = document.getElementById("decrease");
+      const increaseButton = document.getElementById("increase");
+      const quantityInput = document.getElementById("quantity");
+      const addToCartButton = document.getElementById("addToCart");
+
+      // Xử lý sự kiện nhấn nút giảm
+      decreaseButton.addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value, 10);
+        if (currentValue > 1) {
+          quantityInput.value = currentValue - 1;
+        }
+      });
+
+      // Xử lý sự kiện nhấn nút tăng
+      increaseButton.addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value, 10);
+        if (currentValue < 100) {
+          quantityInput.value = currentValue + 1;
+        }
+      });
+
+      // Xử lý sự kiện nhấn nút "Thêm vào giỏ"
+      addToCartButton.addEventListener("click", () => {
+        alert("Bạn phải đăng nhập mới vào giỏ hàng được.");
       });
     </script>
   </body>

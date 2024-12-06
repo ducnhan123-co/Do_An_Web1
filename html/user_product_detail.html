@@ -107,18 +107,23 @@
       <div class="detail">
         <div class="img_detail">
           <div class="img_detail_main">
-            <img src="assets/imgs/Menu20.jpg" alt="" id="main-img" />
+            <img
+              src="assets/imgs/Menu20.jpg"
+              alt=""
+              id="main-img"
+              style="border-radius: 10px"
+            />
           </div>
-          <div class="paragraph">
+          <div class="paragraph" style="border-radius: 5px">
             <div class="category">
               <label for="category">Danh mục: </label>
               <div class="category-control">
-                <a href="Monnuoc.html" style="color: rgb(255, 72, 0)"
-                  >Món nước</a
+                <a href="user_Monman.html" style="color: rgb(255, 72, 0)"
+                  >Món mặn</a
                 >
               </div>
             </div>
-            <h2 style="color: rgb(226, 63, 63)">Món Chè</h2>
+            <h2 style="color: rgb(226, 63, 63)">Hamburger Đức</h2>
             <hr />
             <div class="wc-tabs-wrapper">
               <ul class="wc-tabs">
@@ -159,17 +164,18 @@
             <div class="order-section">
               <label for="quantity"><b>Số lượng: </b></label>
               <div class="quantity-control">
-                <button type="button">-</button>
+                <button type="button" id="decrease">-</button>
                 <input
                   type="number"
+                  id="quantity"
                   name="quantity"
                   min="1"
                   max="100"
                   value="1"
                 />
-                <button type="button">+</button>
+                <button type="button" id="increase">+</button>
               </div>
-              <button id="add" class="add-to-cart" type="button">
+              <button class="add-to-cart" id="addToCart" type="button">
                 Thêm vào giỏ
               </button>
             </div>
@@ -186,8 +192,11 @@
           <div class="item-content container">
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/goicuon.jpg" alt="" />
-              <h2>Gỏi Cuốn</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2021/09/20/20/47/hamburger-6641821_1280.jpg"
+                alt=""
+              />
+              <h2>Hamburger tôm chiên</h2>
               <div class="price">
                 <h3>45.000VND</h3>
                 <p>69.000VND</p>
@@ -204,7 +213,7 @@
                 <h3>259.000VND</h3>
                 <p>299.000VND</p>
               </div>
-              <a href="user_product_detail3.html" class="item-btn"
+              <a href="user_product_detail2.html" class="item-btn"
                 >View Product</a
               >
             </div>
@@ -216,14 +225,17 @@
                 <h3>319.000VND</h3>
                 <p>359.000VND</p>
               </div>
-              <a href="user_product_detail.html" class="item-btn"
+              <a href="user_product_detail2.html" class="item-btn"
                 >View Product</a
               >
             </div>
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Omurice.jpg" alt="" />
-              <h2>Chicken Tiny</h2>
+              <img
+                src="https://media.istockphoto.com/id/912401686/vi/anh/sukiyaki.jpg?s=612x612&w=0&k=20&c=1Fo5iKSHubaEXKLkXmDErQdOaM3bHQw-SwQLCW5uWls="
+                alt=""
+              />
+              <h2>Lẩu bò nhúng mẻ</h2>
               <div class="price">
                 <h3>15.000VND</h3>
                 <p>35.000VND</p>
@@ -323,9 +335,30 @@
       }
     </script>
     <script>
-      const addToCartButton = document.querySelector("#add");
-      addToCartButton.addEventListener("click", function () {
-        alert("Sản phẩm đã được thêm vào giỏ hàng!");
+      const decreaseButton = document.getElementById("decrease");
+      const increaseButton = document.getElementById("increase");
+      const quantityInput = document.getElementById("quantity");
+      const addToCartButton = document.getElementById("addToCart");
+
+      // Xử lý sự kiện nhấn nút giảm
+      decreaseButton.addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value, 10);
+        if (currentValue > 1) {
+          quantityInput.value = currentValue - 1;
+        }
+      });
+
+      // Xử lý sự kiện nhấn nút tăng
+      increaseButton.addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value, 10);
+        if (currentValue < 100) {
+          quantityInput.value = currentValue + 1;
+        }
+      });
+
+      // Xử lý sự kiện nhấn nút "Thêm vào giỏ"
+      addToCartButton.addEventListener("click", () => {
+        alert("Đã thêm vào giỏ thành công!");
       });
     </script>
   </body>

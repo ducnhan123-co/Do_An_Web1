@@ -58,18 +58,22 @@
       <div class="detail">
         <div class="img_detail">
           <div class="img_detail_main">
-            <img src="assets/imgs/Menu20.jpg" alt="" id="main-img" />
+            <img
+              src="https://cdn.pixabay.com/photo/2019/03/19/18/25/orange-4066509_1280.jpg"
+              alt=""
+              id="main-img"
+            />
           </div>
           <div class="paragraph">
             <div class="category">
               <label for="category">Danh mục: </label>
               <div class="category-control">
-                <a href="Monnuoc.html" style="color: rgb(255, 72, 0)"
+                <a href="Montrangmieng.html" style="color: rgb(255, 72, 0)"
                   >Món nước</a
                 >
               </div>
             </div>
-            <h2 style="color: rgb(226, 63, 63)">Chuoi banana haaha</h2>
+            <h2 style="color: rgb(226, 63, 63)">Nước ép cam</h2>
             <hr />
             <div class="wc-tabs-wrapper">
               <ul class="wc-tabs">
@@ -81,15 +85,18 @@
               <div class="wc-tab active" id="description">
                 <div id="describe">
                   <li>
-                    <b>CHuoi</b> là món ăn truyền thống nổi tiếng trên thế giới,
-                    người ta thường ăn bánh Hambuger vào bữa sáng hoặc những bữa
-                    ăn nhẹ. <b>Chuoi</b> được làm từ nguồn nguyên liệu tự nhiên,
-                    an toàn, nên bạn hoàn toàn yên tâm khi sử dụng.
+                    <b>Nước ép cam</b> là một loại thức uống quen thuộc và được
+                    yêu thích trên toàn thế giới, thường được dùng trong các bữa
+                    sáng hoặc những lúc cần giải khát. <b>Nước ép cam</b> được
+                    làm từ những trái cam tươi ngon, giàu vitamin C, mang lại
+                    cảm giác sảng khoái và bổ dưỡng.
                   </li>
                   <li>
-                    Sản phẩm là sự kết hợp hoàn hảo giữa các thành phần như: Bột
-                    mì, trứng, nước, men nở, mè, xúc xích, phô mai… cho ra hương
-                    vị bánh vô cùng thơm ngon, hấp dẫn.
+                    Sản phẩm là sự kết hợp hoàn hảo giữa cam tươi nguyên chất,
+                    không thêm đường hóa học hay chất bảo quản, giữ nguyên vị
+                    ngọt tự nhiên và hương thơm mát đặc trưng của cam. Đây là
+                    thức uống tuyệt vời để cung cấp năng lượng và tăng cường sức
+                    đề kháng.
                     <br />
                     Sản phẩm của <b>DICA FOOD</b> sử dụng nguyên liệu sạch, có
                     nguồn gốc rõ ràng, đảm bảo vệ sinh an toàn thực phẩm.
@@ -109,17 +116,34 @@
             <div class="order-section">
               <label for="quantity"><b>Số lượng: </b></label>
               <div class="quantity-control">
-                <button type="button">-</button>
+                <button type="button" id="decrease">-</button>
                 <input
                   type="number"
+                  id="quantity"
                   name="quantity"
                   min="1"
                   max="100"
                   value="1"
                 />
-                <button type="button">+</button>
+                <button type="button" id="increase">+</button>
               </div>
-              <button class="add-to-cart" type="button">Thêm vào giỏ</button>
+              <button
+                class="addtocart"
+                id="addToCart"
+                type="button"
+                style="
+                  background-color: #ffae00;
+                  padding: 8px 10px;
+                  cursor: pointer;
+                  outline: none;
+                  border: none;
+                  font-size: 18px;
+                  border-radius: 7px;
+                  transition: all ease-in 0.4s;
+                "
+              >
+                Thêm vào giỏ
+              </button>
             </div>
           </div>
         </div>
@@ -144,8 +168,11 @@
             </div>
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu8.jpg" alt="" />
-              <h2>Raspberry Juice</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2021/02/08/20/24/juice-5996425_1280.jpg"
+                alt=""
+              />
+              <h2>Nước ép trà xanh</h2>
               <div class="price">
                 <h3>75.000VND</h3>
                 <p>85.000VND</p>
@@ -155,17 +182,20 @@
             <div class="item-box">
               <span class="sale">Sale</span>
               <img src="assets/imgs/Menu20.jpg" alt="" />
-              <h2>Beef Burger</h2>
+              <h2>HamBurger Đức</h2>
               <div class="price">
                 <h3>65.000VND</h3>
                 <p>75.000VND</p>
               </div>
-              <a href="product_detail4.html" class="item-btn">View Product</a>
+              <a href="product_detail.html" class="item-btn">View Product</a>
             </div>
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu8.jpg" alt="" />
-              <h2>Raspberry Juice</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2018/11/11/19/29/smoothies-3809517_1280.jpg"
+                alt=""
+              />
+              <h2>Sinh tố thập cẩm</h2>
               <div class="price">
                 <h3>75.000VND</h3>
                 <p>85.000VND</p>
@@ -253,6 +283,32 @@
       btnClick2.addEventListener("click", function (e) {
         e.preventDefault();
         window.location.href = "product_detail.html";
+      });
+
+      const decreaseButton = document.getElementById("decrease");
+      const increaseButton = document.getElementById("increase");
+      const quantityInput = document.getElementById("quantity");
+      const addToCartButton = document.getElementById("addToCart");
+
+      // Xử lý sự kiện nhấn nút giảm
+      decreaseButton.addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value, 10);
+        if (currentValue > 1) {
+          quantityInput.value = currentValue - 1;
+        }
+      });
+
+      // Xử lý sự kiện nhấn nút tăng
+      increaseButton.addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value, 10);
+        if (currentValue < 100) {
+          quantityInput.value = currentValue + 1;
+        }
+      });
+
+      // Xử lý sự kiện nhấn nút "Thêm vào giỏ"
+      addToCartButton.addEventListener("click", () => {
+        alert("Bạn phải đăng nhập mới vào giỏ hàng được.");
       });
     </script>
   </body>
