@@ -154,12 +154,11 @@
         <!-- ======================================CATEGORY-HEADER=================================== -->
         <div class="category-header">
             <a href="user.html" class="category-link">TRANG CHỦ</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN CHAY</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN MẶN</a>
+            <a href="user_Monman.html" class="category-link">MÓN MẶN</a>
             <a href="user_Monnuoc.html" class="category-link">MÓN NƯỚC</a>
             <a href="user_Monnuoc.html" class="category-link">MÓN ĂN NHẸ</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN LẨU</a>
-            <a href="user_Monnuoc.html" class="category-link">MÓN TRÁNG MIỆNG</a>
+            <a href="user_Monlau.html" class="category-link">MÓN LẨU</a>
+            <a href="user_Montrangmieng.html" class="category-link">MÓN TRÁNG MIỆNG</a>
         </div>
     </header>
 
@@ -352,6 +351,35 @@ deleteBtns.forEach((btn, index) => {
 itemTotals.forEach((item, index) => {
   item.dataset.price = item.textContent.replace(/,/g, '');
 });
+
+// Hàm cập nhật tổng tiền
+function updateTotal() {
+  let total = 0;
+  document.querySelectorAll('tbody tr').forEach((row) => {
+    const quantityInput = row.querySelector('.quantity-input');
+    const price = parseInt(row.querySelector('.item-total').dataset.price) || 0;
+    const quantity = parseInt(quantityInput.value) || 0;
+
+    // Cập nhật giá trị thành tiền cho từng sản phẩm
+    const itemTotal = price * quantity;
+    row.querySelector('.item-total').textContent = itemTotal.toLocaleString('vi-VN');
+
+    // Cộng vào tổng tiền
+    total += itemTotal;
+  });
+
+  // Cập nhật tổng cộng
+  const totalPrice = document.querySelector('.total-price');
+  totalPrice.textContent = total.toLocaleString('vi-VN');
+}
+
+function handleConfirm() {
+  const confirmOrder = confirm("Bạn có chắc chắn muốn đặt hàng không?");
+  if(confirmOrder) {
+    alert("Đơn hàng đã được đặt.");
+    window,location.href = "../html/user_thank.html";
+  }
+}
 
     </script>
 </body>
