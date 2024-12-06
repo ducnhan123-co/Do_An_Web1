@@ -1490,3 +1490,24 @@ td.status-column button.save-status:hover {
   background-color: #ffae00;
   color: white;
 }
+
+.stat-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.filter-btn {
+  padding: 8px 16px;
+  background-color: #ffcc4d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #ff5500;
+}
