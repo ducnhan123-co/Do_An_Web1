@@ -123,7 +123,7 @@
       <div class="search-bar">
         <h2 class="search-bar-title">Tìm kiếm khách hàng</h2>
         <input type="text" id="search" placeholder="Tìm kiếm khách hàng..." />
-        <button style="background-color: #ffcc4d">
+        <button style="background-color: #ffcc4d" class="btnSearch">
           <i class="fas fa-search"></i>
         </button>
       </div>
@@ -362,6 +362,11 @@
       });
     });
 
+    const btnSearch = document.querySelector(".btnSearch");
+    btnSearch.addEventListener("click", function () {
+      alert("Đã tìm thấy khách hàng với tên Nguyễn Văn A ");
+      window.location.href = "./admin_khachhang.html";
+    });
     const addCustomer = document.querySelector(".btnaddcustomer");
     addCustomer.addEventListener("click", function () {
       alert("Đã thêm khách hàng thành công");

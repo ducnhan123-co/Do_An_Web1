@@ -215,7 +215,7 @@
           <input type="date" id="start-date" />
           <label for="end-date">Đến ngày:</label>
           <input type="date" id="end-date" />
-          <button type="button">Thống kê</button>
+          <button type="button" class="thongkeBTN">Thống kê</button>
         </div>
 
         <div class="item-sales-statistics">
@@ -241,6 +241,7 @@
                     src="./assets/imgs/burger-1.png"
                     alt="Bánh mì"
                     class="item-image"
+                    style="text-align: center; margin: 0 auto"
                   />
                 </td>
                 <td>20,000 VNĐ</td>
@@ -263,6 +264,7 @@
                     src="./assets/imgs/burger-3.png"
                     alt="Pizza"
                     class="item-image"
+                    style="text-align: center; margin: 0 auto"
                   />
                 </td>
                 <td>50,000 VNĐ</td>
@@ -285,6 +287,7 @@
                     src="./assets/imgs/burger-4.png"
                     alt="Thịt nướng"
                     class="item-image"
+                    style="text-align: center; margin: 0 auto"
                   />
                 </td>
                 <td>70,000 VNĐ</td>
@@ -301,12 +304,17 @@
               </tr>
               <tr>
                 <td>4</td>
-                <td>Bánh mì</td>
+                <td>Bánh chuối</td>
                 <td class="item-column">
                   <img
-                    src="./assets/imgs/burger-2.png"
+                    src="https://cdn.pixabay.com/photo/2020/03/25/02/31/rolls-4965915_1280.jpg"
                     alt="Bánh mì"
                     class="item-image"
+                    style="
+                      text-align: center;
+                      margin: 0 auto;
+                      border-radius: 50%;
+                    "
                   />
                 </td>
                 <td>15,000 VNĐ</td>
@@ -323,12 +331,17 @@
               </tr>
               <tr>
                 <td>5</td>
-                <td>Bánh mì</td>
+                <td>Lẩu bò</td>
                 <td class="item-column">
                   <img
-                    src="./assets/imgs/burger-2.png"
+                    src="https://cdn.pixabay.com/photo/2020/03/25/02/29/bread-4965907_1280.jpg"
                     alt="Bánh mì"
                     class="item-image"
+                    style="
+                      text-align: center;
+                      margin: 0 auto;
+                      border-radius: 50%;
+                    "
                   />
                 </td>
                 <td>15,000 VNĐ</td>
@@ -345,12 +358,17 @@
               </tr>
               <tr>
                 <td>6</td>
-                <td>Bánh mì</td>
+                <td>Nước cam</td>
                 <td class="item-column">
                   <img
-                    src="./assets/imgs/burger-2.png"
+                    src="https://cdn.pixabay.com/photo/2020/03/02/15/22/porridge-4896002_1280.jpg"
                     alt="Bánh mì"
                     class="item-image"
+                    style="
+                      text-align: center;
+                      margin: 0 auto;
+                      border-radius: 50%;
+                    "
                   />
                 </td>
                 <td>15,000 VNĐ</td>
@@ -367,12 +385,17 @@
               </tr>
               <tr>
                 <td>7</td>
-                <td>Bánh mì</td>
+                <td>Bún bò Huế</td>
                 <td class="item-column">
                   <img
-                    src="./assets/imgs/burger-2.png"
+                    src="https://cdn.pixabay.com/photo/2022/11/17/08/38/grilled-spring-rolls-7597590_1280.jpg"
                     alt="Bánh mì"
                     class="item-image"
+                    style="
+                      text-align: center;
+                      margin: 0 auto;
+                      border-radius: 50%;
+                    "
                   />
                 </td>
                 <td>15,000 VNĐ</td>
@@ -407,6 +430,38 @@
             Khách hàng phát sinh doanh thu nhiều nhất trong khoảng thời gian
             trên
           </h3>
+          <div class="stat-buttons">
+            <!-- Chọn tháng -->
+            <select id="month-select" class="filter-select">
+              <option value="" disabled selected>Chọn tháng</option>
+              <option value="1">Tháng 1</option>
+              <option value="2">Tháng 2</option>
+              <option value="3">Tháng 3</option>
+              <option value="4">Tháng 4</option>
+              <option value="5">Tháng 5</option>
+              <option value="6">Tháng 6</option>
+              <option value="7">Tháng 7</option>
+              <option value="8">Tháng 8</option>
+              <option value="9">Tháng 9</option>
+              <option value="10">Tháng 10</option>
+              <option value="11">Tháng 11</option>
+              <option value="12">Tháng 12</option>
+            </select>
+            <!-- Nhập năm -->
+            <input
+              id="year-input"
+              class="filter-input"
+              type="number"
+              placeholder="Nhập năm"
+              min="2000"
+              max="2100"
+              style="width: 80px"
+            />
+            <!-- Nút Thống kê -->
+            <button class="filter-btn" onclick="generateReport()">
+              Thống kê
+            </button>
+          </div>
           <table>
             <thead>
               <tr>
@@ -422,7 +477,7 @@
               <tr>
                 <td>1</td>
                 <td>Nguyễn Văn A</td>
-                <td>5</td>
+                <td>79</td>
                 <td>10,000,000 VNĐ</td>
                 <td>Khách hàng thân thiết, thường xuyên mua hàng.</td>
                 <td>
@@ -437,9 +492,9 @@
               <tr>
                 <td>2</td>
                 <td>Trần Thị B</td>
-                <td>3</td>
+                <td>108</td>
                 <td>8,000,000 VNĐ</td>
-                <td>Khách hàng VIP, hay tổ chức tiệc tại cửa hàng.</td>
+                <td>Khách hàng Vip, hay tổ chức tiệc tại cửa hàng.</td>
                 <td>
                   <button
                     class="view-invoice-btn"
@@ -452,7 +507,7 @@
               <tr>
                 <td>3</td>
                 <td>Lê Văn C</td>
-                <td>2</td>
+                <td>58</td>
                 <td>6,500,000 VNĐ</td>
                 <td>Khách hàng VIP với nhiều giao dịch lớn.</td>
                 <td>
@@ -466,9 +521,9 @@
               </tr>
               <tr>
                 <td>4</td>
-                <td>Lê Văn C</td>
-                <td>2</td>
-                <td>6,500,000 VNĐ</td>
+                <td>Hoàng Văn Kiếm</td>
+                <td>90</td>
+                <td>8,589,000 VNĐ</td>
                 <td>Khách hàng VIP với nhiều giao dịch lớn.</td>
                 <td>
                   <button
@@ -481,9 +536,9 @@
               </tr>
               <tr>
                 <td>5</td>
-                <td>Lê Văn C</td>
-                <td>2</td>
-                <td>6,500,000 VNĐ</td>
+                <td>Phan Đức Nhân</td>
+                <td>148</td>
+                <td>16,500,000 VNĐ</td>
                 <td>Khách hàng VIP với nhiều giao dịch lớn.</td>
                 <td>
                   <button
@@ -557,5 +612,32 @@
     paginationBtns.forEach((btn) => {
       btn.addEventListener("click", handlePaginationClick);
     });
+
+    function loadByMonth() {
+      // Chỉ reload lại trang khi nhấn vào nút "Thống kê theo tháng"
+      window.location.href = "./admin_thongke.html";
+    }
+    const thongkeBTN = document.querySelector(".thongkeBTN");
+    thongkeBTN.addEventListener("click", function () {
+      window.location.href = "./admin_thongke.html";
+    });
+
+    function loadByYear() {
+      // Chỉ reload lại trang khi nhấn vào nút "Thống kê theo năm"
+      window.location.href = "./admin_thongke.html";
+    }
+    function generateReport() {
+      const month = document.getElementById("month-select").value;
+      const year = document.getElementById("year-input").value;
+
+      if (!month || !year) {
+        alert("Vui lòng chọn tháng và nhập năm!");
+        return;
+      }
+
+      // Reload lại trang hoặc thực hiện xử lý thống kê
+      alert(`Thống kê doanh thu cho Tháng ${month}, Năm ${year}`);
+      window.location.reload();
+    }
   </script>
 </html>
