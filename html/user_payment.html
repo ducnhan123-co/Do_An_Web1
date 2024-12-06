@@ -56,7 +56,7 @@
       }
 
       .payment-option.active {
-        background-color: orange; /* Màu chủ đạo khi chọn */
+        background-color: rgb(255, 109, 87); /* Màu chủ đạo khi chọn */
         color: white;
         font-weight: bold;
       }
@@ -239,17 +239,17 @@
           <div class="payment-orderdates">
             <div class="payment-orderdate_1" onclick="activateButton(this)">
               <button type="button" class="daybefore-button">Hôm nay</button>
-              <p class="daybefore-text">25/10</p>
+              <p class="daybefore-text">6/12</p>
             </div>
 
             <div class="payment-orderdate_1" onclick="activateButton(this)">
               <button type="button" class="daybefore-button">Ngày mai</button>
-              <p class="daybefore-text">26/10</p>
+              <p class="daybefore-text">7/12</p>
             </div>
 
             <div class="payment-orderdate_1" onclick="activateButton(this)">
               <button type="button" class="daybefore-button">Ngày khác</button>
-              <p class="daybefore-text">27/10</p>
+              <p class="daybefore-text">8/12</p>
             </div>
           </div>
 
@@ -288,7 +288,10 @@
           </div>
         </div>
 
-        <div class="order-summery" style="border: 1px solid #d84b4b">
+        <div
+          class="order-summery"
+          style="border: 1px solid #d84b4b; background: #ededed"
+        >
           <h3 class="order-summery-title">Đơn Hàng</h3>
           <div class="order-summery-items">
             <!-- Sản phẩm đầu tiên -->
@@ -305,7 +308,7 @@
                   <input type="text" value="6" class="order-item-input" />
                   <button class="order-item-increase">+</button>
                 </div>
-                <p class="order-item-price">$ 1.25</p>
+                <p class="order-item-price">315.000 VNĐ</p>
               </div>
               <button class="order-item-remove">X</button>
             </div>
@@ -324,7 +327,7 @@
                   <input type="text" value="1" class="order-item-input" />
                   <button class="order-item-increase">+</button>
                 </div>
-                <p class="order-item-price">$ 0.80</p>
+                <p class="order-item-price">500.000 VNĐ</p>
               </div>
               <button class="order-item-remove">X</button>
             </div>
@@ -342,7 +345,7 @@
                   <input type="text" value="5" class="order-item-input" />
                   <button class="order-item-increase">+</button>
                 </div>
-                <p class="order-item-price">$ 0.80</p>
+                <p class="order-item-price">$ 203.000 VNĐ</p>
               </div>
               <button class="order-item-remove">X</button>
             </div>

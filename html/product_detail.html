@@ -39,6 +39,12 @@
           opacity: 0;
         }
       }
+      .addtocart:hover {
+        color: white;
+        /* font-weight: bold; */
+        background-color: #745f03;
+        transition: 0.4s all;
+      }
     </style>
   </head>
 
@@ -92,9 +98,7 @@
             <div class="category">
               <label for="category">Danh mục: </label>
               <div class="category-control">
-                <a href="Monnuoc.html" style="color: rgb(255, 72, 0)"
-                  >Món nước</a
-                >
+                <a href="Monman.html" style="color: rgb(255, 72, 0)">Món mặn</a>
               </div>
             </div>
             <h2 style="color: rgb(226, 63, 63)">Hamburger</h2>
@@ -138,26 +142,34 @@
             <div class="order-section">
               <label for="quantity"><b>Số lượng: </b></label>
               <div class="quantity-control">
-                <button type="button">-</button>
+                <button type="button" id="decrease">-</button>
                 <input
                   type="number"
+                  id="quantity"
                   name="quantity"
                   min="1"
                   max="100"
                   value="1"
                 />
-                <button type="button">+</button>
+                <button type="button" id="increase">+</button>
               </div>
-              <button class="add-to-cart" type="button" onclick="addToCart()">
+              <button
+                class="addtocart"
+                type="button"
+                onclick="addToCart()"
+                style="
+                  background-color: #ffae00;
+                  padding: 8px 10px;
+                  cursor: pointer;
+                  outline: none;
+                  border: none;
+                  font-size: 18px;
+                  border-radius: 7px;
+                  transition: all ease-in 0.4s;
+                "
+              >
                 Thêm vào giỏ
               </button>
-              <div
-                id="cart-notification"
-                class="cart-notification"
-                style="display: none"
-              >
-                Sản phẩm đã được thêm vào giỏ hàng!
-              </div>
             </div>
           </div>
         </div>
@@ -172,8 +184,11 @@
           <div class="item-content container">
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu8.jpg" alt="" />
-              <h2>Raspberry Juice</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2021/09/20/20/47/hamburger-6641821_1280.jpg"
+                alt=""
+              />
+              <h2>Hamburger tôm</h2>
               <div class="price">
                 <h3>75.000VND</h3>
                 <p>85.000VND</p>
@@ -182,8 +197,11 @@
             </div>
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu8.jpg" alt="" />
-              <h2>Raspberry Juice</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2019/05/20/18/31/burger-4217255_1280.jpg"
+                alt=""
+              />
+              <h2>HamBurger gà xé</h2>
               <div class="price">
                 <h3>75.000VND</h3>
                 <p>85.000VND</p>
@@ -192,8 +210,17 @@
             </div>
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu20.jpg" alt="" />
-              <h2>Beef Burger</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2017/03/10/13/49/fast-food-2132863_1280.jpg"
+                alt="Burger"
+                style="
+                  object-fit: cover;
+                  object-position: center;
+                  border: 1px solid #ddd; /* Tuỳ chọn: thêm viền nếu cần */
+                "
+              />
+
+              <h2>HamBurger thịt</h2>
               <div class="price">
                 <h3>65.000VND</h3>
                 <p>75.000VND</p>
@@ -202,13 +229,16 @@
             </div>
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu8.jpg" alt="" />
-              <h2>Raspberry Juice</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2018/05/01/18/21/eclair-3366430_1280.jpg"
+                alt=""
+              />
+              <h2>Bánh kem dâu</h2>
               <div class="price">
                 <h3>75.000VND</h3>
                 <p>85.000VND</p>
               </div>
-              <a href="product_detail.html" class="item-btn">View Product</a>
+              <a href="product_detail2.html" class="item-btn">View Product</a>
             </div>
           </div>
         </div>
@@ -294,20 +324,41 @@
       });
 
       function addToCart() {
-        const notification = document.getElementById("cart-notification");
-
-        // Hiển thị thông báo
-        notification.style.display = "block";
-
-        // Tự động ẩn thông báo sau 3 giây
-        setTimeout(() => {
-          notification.style.display = "none";
-        }, 3000);
+        const notification = document.querySelector(".addtocart");
+        notification.addEventListener("click", function () {
+          alert("Bạn phải đăng nhập mới vào giỏ hàng được.");
+        });
       }
 
       let cartCF = document.querySelector(".cartConform");
       cartCF.addEventListener("click", function () {
         alert("Bạn phải đăng nhập mới vào giỏ hàng được.");
+      });
+
+      const decreaseButton = document.getElementById("decrease");
+      const increaseButton = document.getElementById("increase");
+      const quantityInput = document.getElementById("quantity");
+      const addToCartButton = document.getElementById("addToCart");
+
+      // Xử lý sự kiện nhấn nút giảm
+      decreaseButton.addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value, 10);
+        if (currentValue > 1) {
+          quantityInput.value = currentValue - 1;
+        }
+      });
+
+      // Xử lý sự kiện nhấn nút tăng
+      increaseButton.addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value, 10);
+        if (currentValue < 100) {
+          quantityInput.value = currentValue + 1;
+        }
+      });
+
+      // Xử lý sự kiện nhấn nút "Thêm vào giỏ"
+      addToCartButton.addEventListener("click", () => {
+        alert("Đã thêm vào giỏ thành công!");
       });
     </script>
   </body>

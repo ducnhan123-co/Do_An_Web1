@@ -58,18 +58,22 @@
       <div class="detail">
         <div class="img_detail">
           <div class="img_detail_main">
-            <img src="assets/imgs/Menu20.jpg" alt="" id="main-img" />
+            <img
+              src="https://cdn.pixabay.com/photo/2018/05/01/18/21/eclair-3366430_1280.jpg"
+              alt=""
+              id="main-img"
+            />
           </div>
           <div class="paragraph">
             <div class="category">
               <label for="category">Danh mục: </label>
               <div class="category-control">
-                <a href="Monnuoc.html" style="color: rgb(255, 72, 0)"
-                  >Món nước</a
+                <a href="Montrangmieng.html" style="color: rgb(255, 72, 0)"
+                  >Món tráng miệng</a
                 >
               </div>
             </div>
-            <h2 style="color: rgb(226, 63, 63)">Chuoi banana haaha</h2>
+            <h2 style="color: rgb(226, 63, 63)">Bánh kem dâu</h2>
             <hr />
             <div class="wc-tabs-wrapper">
               <ul class="wc-tabs">
@@ -81,15 +85,17 @@
               <div class="wc-tab active" id="description">
                 <div id="describe">
                   <li>
-                    <b>CHuoi</b> là món ăn truyền thống nổi tiếng trên thế giới,
-                    người ta thường ăn bánh Hambuger vào bữa sáng hoặc những bữa
-                    ăn nhẹ. <b>Chuoi</b> được làm từ nguồn nguyên liệu tự nhiên,
-                    an toàn, nên bạn hoàn toàn yên tâm khi sử dụng.
+                    <b>Bánh kem dâu</b> là món ăn ngọt truyền thống nổi tiếng,
+                    thường xuất hiện trong các dịp lễ, sinh nhật, hoặc những
+                    buổi tiệc nhỏ. <b>Bánh kem dâu</b> được làm từ nguồn nguyên
+                    liệu tự nhiên, an toàn, mang lại hương vị tuyệt vời mà bạn
+                    hoàn toàn có thể yên tâm sử dụng.
                   </li>
                   <li>
                     Sản phẩm là sự kết hợp hoàn hảo giữa các thành phần như: Bột
-                    mì, trứng, nước, men nở, mè, xúc xích, phô mai… cho ra hương
-                    vị bánh vô cùng thơm ngon, hấp dẫn.
+                    mì, trứng, đường, kem tươi, dâu tươi... Tạo nên một chiếc
+                    bánh với lớp kem mịn màng, hòa quyện cùng vị chua ngọt tự
+                    nhiên của dâu, mang lại cảm giác thơm ngon, hấp dẫn.
                     <br />
                     Sản phẩm của <b>DICA FOOD</b> sử dụng nguyên liệu sạch, có
                     nguồn gốc rõ ràng, đảm bảo vệ sinh an toàn thực phẩm.
@@ -109,15 +115,16 @@
             <div class="order-section">
               <label for="quantity"><b>Số lượng: </b></label>
               <div class="quantity-control">
-                <button type="button">-</button>
+                <button type="button" id="decrease">-</button>
                 <input
                   type="number"
+                  id="quantity"
                   name="quantity"
                   min="1"
                   max="100"
                   value="1"
                 />
-                <button type="button">+</button>
+                <button type="button" id="increase">+</button>
               </div>
               <button class="add-to-cart" type="button">Thêm vào giỏ</button>
             </div>
@@ -134,8 +141,12 @@
           <div class="item-content container">
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu8.jpg" alt="" />
-              <h2>Raspberry Juice</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2016/01/11/07/18/cupcakes-1133146_1280.jpg"
+                alt=""
+              />
+              <div></div>
+              <h2 style="padding-top: -10px">Bánh kem Matcha Latte</h2>
               <div class="price">
                 <h3>75.000VND</h3>
                 <p>85.000VND</p>
@@ -144,8 +155,11 @@
             </div>
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu8.jpg" alt="" />
-              <h2>Raspberry Juice</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2019/11/07/13/05/waffle-4608843_1280.jpg"
+                alt=""
+              />
+              <h2>Bánh kem quế</h2>
               <div class="price">
                 <h3>75.000VND</h3>
                 <p>85.000VND</p>
@@ -154,8 +168,11 @@
             </div>
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu20.jpg" alt="" />
-              <h2>Beef Burger</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2016/03/27/22/38/cake-1284548_1280.jpg"
+                alt=""
+              />
+              <h2>Bánh Torte</h2>
               <div class="price">
                 <h3>65.000VND</h3>
                 <p>75.000VND</p>
@@ -164,13 +181,16 @@
             </div>
             <div class="item-box">
               <span class="sale">Sale</span>
-              <img src="assets/imgs/Menu8.jpg" alt="" />
-              <h2>Raspberry Juice</h2>
+              <img
+                src="https://cdn.pixabay.com/photo/2017/06/21/10/59/chafing-dish-2426887_1280.jpg"
+                alt=""
+              />
+              <h2>Lẩu bò tươi</h2>
               <div class="price">
                 <h3>75.000VND</h3>
                 <p>85.000VND</p>
               </div>
-              <a href="product_detail2.html" class="item-btn">View Product</a>
+              <a href="product_detail3.html" class="item-btn">View Product</a>
             </div>
           </div>
         </div>
@@ -253,6 +273,32 @@
       btnClick2.addEventListener("click", function (e) {
         e.preventDefault();
         window.location.href = "product_detail3.html";
+      });
+
+      const decreaseButton = document.getElementById("decrease");
+      const increaseButton = document.getElementById("increase");
+      const quantityInput = document.getElementById("quantity");
+      const addToCartButton = document.getElementById("addToCart");
+
+      // Xử lý sự kiện nhấn nút giảm
+      decreaseButton.addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value, 10);
+        if (currentValue > 1) {
+          quantityInput.value = currentValue - 1;
+        }
+      });
+
+      // Xử lý sự kiện nhấn nút tăng
+      increaseButton.addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value, 10);
+        if (currentValue < 100) {
+          quantityInput.value = currentValue + 1;
+        }
+      });
+
+      // Xử lý sự kiện nhấn nút "Thêm vào giỏ"
+      addToCartButton.addEventListener("click", () => {
+        alert("Đã thêm vào giỏ thành công!");
       });
     </script>
   </body>
