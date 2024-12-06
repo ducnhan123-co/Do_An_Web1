@@ -4,7 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html,
+body {
+  scroll-behavior: smooth; /* Thiết lập cuộn mượt mặc định */
+}
 /* Style for body and layout */
 body {
   display: flex;
@@ -162,6 +165,7 @@ body {
   margin-top: 30px;
   display: block;
   box-shadow: 0 2px 5px rgba(255, 136, 0, 0.5);
+
   /* Hiệu ứng nổi */
   border-radius: 5px;
   padding: 10px 20px;
@@ -197,7 +201,8 @@ body {
   justify-content: space-between;
   /* Để các phần tử phân bố đều hơn */
   align-items: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.5);
+
   /* Thêm bóng đổ để tạo chiều sâu */
   border-radius: 15px;
   /* Làm bo tròn góc nhiều hơn */
@@ -223,9 +228,10 @@ body {
 }
 
 .main-content__features-img {
-  width: 40%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .main-content__features-content {
@@ -552,7 +558,7 @@ body {
 
 /* Form styles */
 form {
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0 auto 40px auto;
   background-color: white;
   padding: 20px;
@@ -664,7 +670,6 @@ form button:hover {
   background-color: #ffc107; /* Màu vàng khi chạm vào */
 }
 
-
 .order-table th,
 .order-table td {
   padding: 10px;
@@ -679,6 +684,8 @@ form button:hover {
 .order-table .view-btn {
   color: #007bff;
   text-decoration: none;
+  outline: none;
+  border: none;
 }
 
 .order-table .view-btn:hover {
@@ -721,16 +728,18 @@ form button:hover {
 }
 
 .filter-statistics button {
-  padding: 5px 10px;
-  background-color: #007bff;
+  padding: 10px 15px;
+  background-color: #ffcc4d;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .filter-statistics button:hover {
-  background-color: #0056b3;
+  background-color: #ff8800;
 }
 
 .item-sales-statistics,
@@ -803,7 +812,8 @@ tfoot td {
 }
 
 /* Căn chỉnh các cột "Số lượng bán" và "Mô tả" */
-td:nth-child(2), td:nth-child(4) {
+td:nth-child(2),
+td:nth-child(4) {
   text-align: left; /* Căn trái nội dung trong các cột "Số lượng bán" và "Mô tả" */
   padding-left: 20px; /* Đảm bảo có khoảng cách bên trái để căn lề */
 }
@@ -813,11 +823,10 @@ td:nth-child(2), td:nth-child(4) {
   font-weight: bold;
 }
 
-
 .product-form {
-  background: #ffffff;
+  background: #ffecb3;
   width: 100%;
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0 auto; /* Giữ form căn giữa */
   padding: 20px;
   border-radius: 12px;
@@ -1196,15 +1205,288 @@ td:nth-child(2), td:nth-child(4) {
   margin-top: 20px;
   padding: 10px 15px;
   /* background-color: #ffee00; Light green background */
-  background-color: #7e7e7e;
-  color: #ffbb00; /* Dark green text */
+  background-color: #ffcc4d;
+  color: rgb(255, 255, 255); /* Dark green text */
   border: 1px solid #c3e6cb;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
+  text-align: center;
   display: none; /* Hidden by default */
 }
 
 .hidden {
   display: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fef6e4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #f57c00;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.order-details,
+.product-list-section,
+.order-info {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-table th {
+  background-color: #f57c00;
+  color: white;
+}
+
+.product-table img {
+  max-width: 60px;
+  border-radius: 4px;
+}
+
+.order-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.order-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-btn {
+  background-color: #e74c3c;
+}
+
+.save-btn {
+  background-color: #27ae60;
+}
+
+.find-product-btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: #f57c00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.shipping-fee,
+.total-price {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.product-list-section {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background-color: #ffcc4d;
+  color: black;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-table th {
+  background-color: #ffcc4d;
+  color: rgb(0, 0, 0);
+}
+
+.product-table img {
+  max-width: 60px;
+  border-radius: 4px;
+}
+.table-wrapper {
+  overflow-x: auto; /* Cho phép cuộn ngang */
+  white-space: nowrap; /* Không xuống dòng */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+/* CSS cho phần trạng thái */
+td.status-column {
+  display: flex;
+  align-items: center; /* Căn giữa dọc */
+  gap: 8px; /* Tạo khoảng cách giữa nút và dropdown */
+}
+
+td.status-column select {
+  height: 36px; /* Chiều cao đồng đều cho dropdown */
+  padding: 4px;
+  margin-left: -10px;
+  border: none;
+  outline: none;
+  background-color: rgb(228, 225, 225);
+  /* Khoảng cách bên trong */
+}
+
+td.status-column button.save-status {
+  height: 36px; /* Đồng bộ chiều cao */
+  padding: 0 12px; /* Khoảng cách ngang */
+  background-color: #e74c3c; /* Màu nút đỏ */
+  color: white; /* Màu chữ */
+  border: none; /* Bỏ viền */
+  border-radius: 4px; /* Bo góc */
+  cursor: pointer; /* Con trỏ dạng click */
+}
+
+td.status-column button.save-status:hover {
+  background-color: #c0392b; /* Màu khi hover */
+}
+
+.item-sales-statistics table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.item-sales-statistics th,
+.item-sales-statistics td {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.item-sales-statistics th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.item-sales-statistics .item-column img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.view-detail-btn {
+  background-color: #ffcc4d;
+  /* color: rgb(89, 88, 88); */
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.view-detail-btn:hover {
+  background-color: #ff8000;
+  color: white;
+}
+.customer-revenue-statistics table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.customer-revenue-statistics th,
+.customer-revenue-statistics td {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.customer-revenue-statistics th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.view-invoice-btn {
+  background-color: #ffcc4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-invoice-btn:hover {
+  background-color: #ffae00;
+  color: white;
 }

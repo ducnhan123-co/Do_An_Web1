@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Quản lý đơn hàng</title>
+    <link rel="stylesheet" href="./assets/css/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <style>
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .pagination-btn {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #9b9b9b;
+      font-weight: bold;
+    }
+
+    .pagination-btn.active {
+      background-color: #ffcc4d;
+      color: white;
+      font-weight: bold;
+    }
+
+    .pagination-btn:hover {
+      background-color: #ffcc4d;
+    }
+    .order-table-container {
+      margin: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .order-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .order-table thead {
+      background-color: #f4f4f4;
+    }
+
+    .order-table th,
+    .order-table td {
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .order-table th {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .order-table .status {
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: white;
+      font-size: 14px;
+    }
+
+    .order-table .status.paid {
+      background-color: #28a745;
+    }
+
+    .order-table .status.pending {
+      background-color: #ffc107;
+    }
+
+    .order-table .status.cancelled {
+      background-color: #dc3545;
+    }
+
+    .view-btn {
+      background-color: #ffcc4d;
+      color: white !important;
+      border: none;
+      font-weight: bold;
+      padding: 7px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .view-btn:hover {
+      background-color: #b37d00;
+    }
+  </style>
+
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="assets/imgs/logo2.png" alt="Logo" />
+        <h2>DICA FOOD</h2>
+      </div>
+      <nav>
+        <ul class="sidebar-menu">
+          <li class="tong_quan_first">
+            <a href="admin_tongquan.html"
+              ><i class="fas fa-home"></i> Trang tổng quan</a
+            >
+          </li>
+          <li>
+            <a href="../admin.html"><i class="fas fa-utensils"></i> Sản phẩm</a>
+          </li>
+          <li>
+            <a href="admin_khachhang.html"
+              ><i class="fas fa-users"></i> Khách hàng</a
+            >
+          </li>
+          <li>
+            <a href="admin_donhang.html"
+              ><i class="fas fa-shopping-cart"></i> Đơn hàng</a
+            >
+          </li>
+          <li>
+            <a href="admin_thongke.html"
+              ><i class="fas fa-chart-line"></i> Thống kê</a
+            >
+          </li>
+          <div class="sidebar-group">
+            <li class="sidebar-02">
+              <a href="#"><i class="fas fa-calculator"></i> Máy tính</a>
+            </li>
+            <li class="sidebar-02">
+              <a href="../admin.html"
+                ><i class="fas fa-arrow-alt-circle-left"></i> Trang chủ</a
+              >
+            </li>
+            <li class="sidebar-02">
+              <a href="../index.html"
+                ><i class="fas fa-sign-out-alt"></i> Đăng xuất</a
+              >
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <h1>
+          Chào mừng bạn đến với trang thống kê của cửa hàng
+          <span class="main-content-title">DICA FOOD</span>
+        </h1>
+      </header>
+      <div class="order-table-container">
+        <h3>Danh sách hóa đơn liên quan tới mặt hàng : Bánh Mì</h3>
+        <table class="order-table">
+          <thead>
+            <tr>
+              <th>Hóa đơn</th>
+              <th>Ngày</th>
+              <th>Số sản phẩm</th>
+              <th>Tổng tiền</th>
+              <th>Tình trạng</th>
+              <th>Xem chi tiết</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HD-001</td>
+              <td>2024-03-15</td>
+              <td>5</td>
+              <td>1,500,000 VNĐ</td>
+              <td><span class="status paid">Đã thanh toán</span></td>
+              <td>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href='admin_mathang_chitiet2.html'"
+                >
+                  Xem
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>HD-002</td>
+              <td>2024-03-20</td>
+              <td>3</td>
+              <td>750,000 VNĐ</td>
+              <td><span class="status cancelled">Đã hủy</span></td>
+              <td>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href='admin_mathang_chitiet2.html'"
+                >
+                  Xem
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>HD-003</td>
+              <td>2024-03-25</td>
+              <td>10</td>
+              <td>2,000,000 VNĐ</td>
+              <td><span class="status paid">Đã thanh toán</span></td>
+              <td>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href='admin_mathang_chitiet2.html'"
+                >
+                  Xem
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>HD-004</td>
+              <td>2024-04-01</td>
+              <td>7</td>
+              <td>1,200,000 VNĐ</td>
+              <td><span class="status cancelled">Đã hủy</span></td>
+              <td>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href='admin_mathang_chitiet2.html'"
+                >
+                  Xem
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>HD-004</td>
+              <td>2024-04-01</td>
+              <td>7</td>
+              <td>1,200,000 VNĐ</td>
+              <td><span class="status paid">Đã thanh toán</span></td>
+              <td>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href='admin_mathang_chitiet2.html'"
+                >
+                  Xem
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>HD-004</td>
+              <td>2024-04-01</td>
+              <td>7</td>
+              <td>1,200,000 VNĐ</td>
+              <td><span class="status paid">Đã thanh toán</span></td>
+              <td>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href='admin_mathang_chitiet2.html'"
+                >
+                  Xem
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>HD-004</td>
+              <td>2024-04-01</td>
+              <td>7</td>
+              <td>1,200,000 VNĐ</td>
+              <td><span class="status paid">Đã thanh toán</span></td>
+              <td>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href='admin_mathang_chitiet2.html'"
+                >
+                  Xem
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>HD-004</td>
+              <td>2024-04-01</td>
+              <td>7</td>
+              <td>1,200,000 VNĐ</td>
+              <td><span class="status paid">Đã thanh toán</span></td>
+              <td>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href='admin_mathang_chitiet2.html'"
+                >
+                  Xem
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>HD-004</td>
+              <td>2024-04-01</td>
+              <td>7</td>
+              <td>1,200,000 VNĐ</td>
+              <td><span class="status cancelled">Đã hủy</span></td>
+              <td>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href='admin_mathang_chitiet2.html'"
+                >
+                  Xem
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>HD-004</td>
+              <td>2024-04-01</td>
+              <td>7</td>
+              <td>1,200,000 VNĐ</td>
+              <td><span class="status paid">Đã thanh toán</span></td>
+              <td>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href='admin_mathang_chitiet2.html'"
+                >
+                  Xem
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>HD-004</td>
+              <td>2024-04-01</td>
+              <td>7</td>
+              <td>1,200,000 VNĐ</td>
+              <td><span class="status paid">Đã thanh toán</span></td>
+              <td>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href='admin_mathang_chitiet2.html'"
+                >
+                  Xem
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pagination" style="margin-top: 30px; margin-bottom: -20px">
+          <button class="pagination-btn" id="prev">«</button>
+          <button class="pagination-btn active" id="btnPage1">1</button>
+          <button class="pagination-btn" id="btnPage2">2</button>
+          <button class="pagination-btn" id="btnPage3">3</button>
+          <button class="pagination-btn" id="btnPage4">4</button>
+          <button class="pagination-btn" id="btnPage5">5</button>
+          <button class="pagination-btn" id="next">»</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Lấy tất cả các nút phân trang
+    const paginationBtns = document.querySelectorAll(".pagination-btn");
+
+    // Lấy số trang từ URL query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentPage = urlParams.get("page") || "1"; // Mặc định là trang 1 nếu không có page
+
+    // Kích hoạt nút tương ứng
+    paginationBtns.forEach((btn) => {
+      // Xóa tất cả các trạng thái active trước khi thêm
+      btn.classList.remove("active");
+
+      // So sánh nội dung nút với currentPage
+      if (btn.textContent.trim() === currentPage) {
+        btn.classList.add("active");
+      }
+    });
+
+    // Hàm để thay đổi trạng thái active và điều hướng trang
+    function handlePaginationClick(event) {
+      // Lấy số trang từ nút được bấm
+      const pageId = event.target.textContent.trim();
+
+      // Reload trang và truyền số trang qua URL
+      window.location.href = `?page=${pageId}`;
+    }
+
+    // Gắn sự kiện click cho tất cả các nút
+    paginationBtns.forEach((btn) => {
+      btn.addEventListener("click", handlePaginationClick);
+    });
+  </script>
+</html>

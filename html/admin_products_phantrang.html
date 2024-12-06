@@ -68,6 +68,35 @@
       .submenu-item:hover::before {
         background-color: #ff9933; /* Thay đổi màu của biểu tượng khi hover */
       }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .pagination-btn {
+        background-color: white;
+        border: 1px solid #ddd;
+        padding: 10px 15px;
+        margin: 0 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #9b9b9b;
+        font-weight: bold;
+      }
+
+      .pagination-btn.active {
+        background-color: #ffcc4d;
+        color: white;
+        font-weight: bold;
+      }
+
+      .pagination-btn:hover {
+        background-color: #ffcc4d;
+      }
     </style>
   </head>
 
@@ -86,9 +115,7 @@
             >
           </li>
           <li class="menu-item">
-            <a href="admin_products.html"
-              ><i class="fas fa-utensils"></i> Sản phẩm</a
-            >
+            <a href="../admin.html"><i class="fas fa-utensils"></i> Sản phẩm</a>
             <ul class="submenu">
               <li>
                 <a href="admin_products.html" class="submenu-item"
@@ -216,12 +243,6 @@
               required
             />
 
-            <label for="edit-product-status">Trạng thái:</label>
-            <select id="edit-product-status">
-              <option value="in-stock" selected>Còn hàng</option>
-              <option value="out-of-stock">Hết hàng</option>
-            </select>
-
             <label for="edit-product-image">Hình ảnh sản phẩm:</label>
             <input type="file" id="edit-product-image" accept="image/*" />
 
@@ -272,7 +293,7 @@
               <td>Số lượng</td>
               <td>Còn hàng</td>
               <td>
-                <button class="edit-button" onclick="addNew()">
+                <button class="edit-button" onclick="scrollToTop()">
                   <i class="fas fa-edit"></i> Sửa
                 </button>
                 <button class="delete-button">
@@ -292,7 +313,7 @@
               <td>Số lượng</td>
               <td>Còn hàng</td>
               <td>
-                <button class="edit-button" onclick="addNew()">
+                <button class="edit-button" onclick="scrollToTop()">
                   <i class="fas fa-edit"></i> Sửa
                 </button>
                 <button class="delete-button">
@@ -311,7 +332,7 @@
               <td>Số lượng</td>
               <td>Còn hàng</td>
               <td>
-                <button class="edit-button" onclick="addNew()">
+                <button class="edit-button" onclick="scrollToTop()">
                   <i class="fas fa-edit"></i> Sửa
                 </button>
                 <button class="delete-button">
@@ -330,7 +351,7 @@
               <td>Số lượng</td>
               <td>Còn hàng</td>
               <td>
-                <button class="edit-button" onclick="addNew()">
+                <button class="edit-button" onclick="scrollToTop()">
                   <i class="fas fa-edit"></i> Sửa
                 </button>
                 <button class="delete-button">
@@ -349,7 +370,7 @@
               <td>Số lượng</td>
               <td>Còn hàng</td>
               <td>
-                <button class="edit-button" onclick="addNew()">
+                <button class="edit-button" onclick="scrollToTop()">
                   <i class="fas fa-edit"></i> Sửa
                 </button>
                 <button class="delete-button">
@@ -368,7 +389,7 @@
               <td>Số lượng</td>
               <td>Còn hàng</td>
               <td>
-                <button class="edit-button" onclick="addNew()">
+                <button class="edit-button" onclick="scrollToTop()">
                   <i class="fas fa-edit"></i> Sửa
                 </button>
                 <button class="delete-button">
@@ -387,7 +408,7 @@
               <td>Số lượng</td>
               <td>Còn hàng</td>
               <td>
-                <button class="edit-button" onclick="addNew()">
+                <button class="edit-button" onclick="scrollToTop()">
                   <i class="fas fa-edit"></i> Sửa
                 </button>
                 <button class="delete-button">
@@ -400,38 +421,56 @@
       </div>
 
       <!-- Phân trang -->
-      <div class="pagination">
-        <a href="admin_products_phantrang.html">&laquo;</a>
-        <!-- Mũi tên trái -->
-        <a href="admin_products_phantrang.html">1</a>
-        <a href="admin_home_phantrang2.html">2</a>
-        <a href="admin_home_phantrang2.html">3</a>
-        <a href="admin_home_phantrang2.html">4</a>
-        <a href="admin_home_phantrang2.html">&raquo;</a>
-        <!-- Mũi tên phải -->
-        <a href="admin_products_phantrang.html">&raquo;</a>
+      <div class="pagination" style="margin-top: 30px">
+        <button class="pagination-btn" id="prev">«</button>
+        <button class="pagination-btn active" id="btnPage1">1</button>
+        <button class="pagination-btn" id="btnPage2">2</button>
+        <button class="pagination-btn" id="btnPage3">3</button>
+        <button class="pagination-btn" id="btnPage4">4</button>
+        <button class="pagination-btn" id="btnPage5">5</button>
+        <button class="pagination-btn" id="next">»</button>
       </div>
     </div>
   </body>
 
   <script>
-    document
-      .querySelector(".update-product-button")
-      .addEventListener("click", () => {
-        const quantityInput = document.getElementById("quantity-input").value;
-
-        // Kiểm tra số lượng có thay đổi hay không
-        if (quantityInput) {
-          alert(`Sản phẩm đã được cập nhật với số lượng: ${quantityInput}`);
-        } else {
-          alert("Không có thay đổi nào được lưu!");
-        }
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Cuộn mượt mà
       });
-
-    function addNew() {
-      // Điều hướng đến trang thêm sản phẩm mới
-      window.location.href = "admin_products_phantrang.html";
     }
+
+    const paginationBtns = document.querySelectorAll(".pagination-btn");
+
+    // Lấy số trang từ URL query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentPage = urlParams.get("page") || "1"; // Mặc định là trang 1 nếu không có page
+
+    // Kích hoạt nút tương ứng
+    paginationBtns.forEach((btn) => {
+      // Xóa tất cả các trạng thái active trước khi thêm
+      btn.classList.remove("active");
+
+      // So sánh nội dung nút với currentPage
+      if (btn.textContent.trim() === currentPage) {
+        btn.classList.add("active");
+      }
+    });
+
+    // Hàm để thay đổi trạng thái active và điều hướng trang
+    function handlePaginationClick(event) {
+      // Lấy số trang từ nút được bấm
+      const pageId = event.target.textContent.trim();
+
+      // Reload trang và truyền số trang qua URL
+      window.location.href = `?page=${pageId}`;
+    }
+
+    // Gắn sự kiện click cho tất cả các nút
+    paginationBtns.forEach((btn) => {
+      btn.addEventListener("click", handlePaginationClick);
+    });
   </script>
   <script src="./assets/js/admin.js"></script>
 </html>
