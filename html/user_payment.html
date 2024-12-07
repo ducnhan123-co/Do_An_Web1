@@ -483,22 +483,6 @@
       const inputFields = document.querySelectorAll(".order-item-input");
 
       // Xử lý sự kiện cho nút "-"
-      decreaseBtns.forEach((btn, index) => {
-        btn.addEventListener("click", () => {
-          let currentValue = parseInt(inputFields[index].value) || 0; // Lấy giá trị hiện tại từ input tương ứng
-          if (currentValue > 0) {
-            inputFields[index].value = currentValue - 1; // Giảm giá trị
-          }
-        });
-      });
-
-      // Xử lý sự kiện cho nút "+"
-      increaseBtns.forEach((btn, index) => {
-        btn.addEventListener("click", () => {
-          let currentValue = parseInt(inputFields[index].value) || 0; // Lấy giá trị hiện tại từ input tương ứng
-          inputFields[index].value = currentValue + 1; // Tăng giá trị
-        });
-      });
     </script>
   </body>
 </html>
