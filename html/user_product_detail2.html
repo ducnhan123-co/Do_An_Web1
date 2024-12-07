@@ -338,23 +338,7 @@
       const quantityInput = document.getElementById("quantity");
       const addToCartButton = document.getElementById("addToCart");
 
-      // Xử lý sự kiện nhấn nút giảm
-      decreaseButton.addEventListener("click", () => {
-        let currentValue = parseInt(quantityInput.value, 10);
-        if (currentValue > 1) {
-          quantityInput.value = currentValue - 1;
-        }
-      });
-
-      // Xử lý sự kiện nhấn nút tăng
-      increaseButton.addEventListener("click", () => {
-        let currentValue = parseInt(quantityInput.value, 10);
-        if (currentValue < 100) {
-          quantityInput.value = currentValue + 1;
-        }
-      });
-
-      // Xử lý sự kiện nhấn nút "Thêm vào giỏ"
+      // kiện nhấn nút "Thêm vào giỏ"
       addToCartButton.addEventListener("click", () => {
         alert("Đã thêm vào giỏ thành công!");
       });
