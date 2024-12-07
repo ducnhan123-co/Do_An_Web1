@@ -299,6 +299,12 @@
   window.location.href = './user_payment.html'; // Thay đường dẫn bằng trang bạn muốn
 }
 
+const xoa=document.querySelector(".btn-delete");
+xoa.addEventListener("click", function()
+{
+  alert("Bạn đã xóa thành công")
+})
+
 // Lấy các nút và input
 const decreaseBtns = document.querySelectorAll('.btn-decrease');
 const increaseBtns = document.querySelectorAll('.btn-increase');
@@ -331,21 +337,9 @@ decreaseBtns.forEach((btn, index) => {
   });
 });
 
-increaseBtns.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    let quantity = parseInt(quantityInputs[index].value) || 0;
-    quantityInputs[index].value = quantity + 1;
-    updateTotal();
-  });
-});
 
 // Xử lý xóa sản phẩm
-deleteBtns.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    btn.closest('tr').remove();
-    updateTotal();
-  });
-});
+
 
 // Gán giá trị giá sản phẩm vào dataset
 itemTotals.forEach((item, index) => {

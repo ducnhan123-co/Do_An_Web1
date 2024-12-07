@@ -90,7 +90,17 @@
         </div>
         <div class="main-header-cart">
           <i class="bx bxs-shopping-bag"></i>
-          <a href="">Giỏ Hàng</a>
+          <a href="" id="myLink">Giỏ Hàng</a>
+          <script>
+            // Lấy phần tử thẻ a
+            const link = document.getElementById("myLink");
+
+            // Thêm sự kiện click
+            link.addEventListener("click", function (event) {
+              event.preventDefault(); // Ngăn không cho thực hiện hành động mặc định
+              alert("Bạn phải đăng nhập vào tài khoản trước!");
+            });
+          </script>
         </div>
       </div>
 
